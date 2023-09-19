@@ -54,7 +54,9 @@ Es programación no lineal, es decir, puede saltar de una línea a otra y despu�
 Sirve para realizar alguna acción asíncronamente, es decir, el programa sigue realizando acciones y, cuando recibe una respuesta vuelve al punto donde se realizó la promesa.
 
 8. Pregunta 8: Escribe un código JavaScript que demuestre cómo realizar una solicitud AJAX utilizando el método `fetch()` para obtener datos de una API externa y mostrarlos en una página web.
-
+fetch(url)
+   .then(respuesta => respuesta.json())
+   .catch(error => reject(error));
 
 
 Pregunta 9: Imagina que estás desarrollando una aplicación de lista de tareas pendientes. Debes escribir un algoritmo en Java o JavaScript que permita al usuario agregar nuevas tareas a la lista y marcar las tareas como completadas. El algoritmo debe incluir lo siguiente:
@@ -65,3 +67,38 @@ c. Funciones para marcar una tarea como completada.
 d. Un ejemplo de cómo se utilizaría este algoritmo en un programa principal.
 
 Puedes elegir implementar este algoritmo en Java o JavaScript, pero asegúrate de que esté claro y bien comentado.
+
+class Servicio {
+   constructor() {
+      this.tareas = [];
+   }
+
+   agregarTarea(Tarea tarea) {
+      this.tareas.push(tarea);
+   }
+
+   //este método se llamaría al marcar una tarea como completada, y elimina la tarea buscándola en la lista de tareas por su id
+   completarTarea(Tarea tareaABorrar) {
+      this.tareas.splice(this.tareas.findIndex((tarea) => tarea.getId() == tareaABorrar.getId()), 1);
+   }
+}
+
+let servicio, btnAgregar, btnCompletar;
+
+function main() {
+   servicio = new Servicio();
+   //aquí apuntaríamos a los dos botones con el método querySelector
+   btnAgregar.addEventListener('click', addTarea);
+   //cada tarea añadida tendría un botón completar haciendo referencia a ella, no se apuntaría desde la función main, sino que se le añadiría el evento al crear una nueva tarea con su botón correspondiente
+   btnCompletar.addEventListener('click', removeTarea);
+}
+
+function addTarea() {
+   //aquí se instanciaría un objeto de clase Tarea con los datos introducidos por el usuario
+   servicio.agregarTarea(tarea);
+}
+
+function removeTarea() {
+   //aquí se apuntaría al objeto Tarea al que se refiere el botón
+   servicio.completarTarea(tarea);
+}
