@@ -3,33 +3,55 @@ Parte 1: Orientación a Objetos (20 minutos)
 1. Pregunta 1: Define brevemente los siguientes conceptos en el contexto de la programación orientada a objetos:
 
    a. Clase
-   Es un "esquema" con el que se definen las propiedades y métodos de un objeto
+   Es un "esquema" con el que se definen las propiedades y métodos de un objeto.
 
    b. Objeto
    Es una instancia de una clase
 
    c. Herencia
+   Una clase que hereda de otra tiene las mismas propiedades y métodos que la clase madre.
 
    d. Polimorfismo
+   Posibilidad de llamar a varios métodos con el mismo nombre, pero con diferentes parámetros.
 
    e. Encapsulamiento
+   Protección de las propiedades de una clase. En vez de establecerlas como públicas, se establecen como privadas y se añaden get y set para poder acceder a ellas desde fuera de la clase.
 
 
 2. Pregunta 2: Escribe un ejemplo de una clase en Java que represente un "Coche" con al menos tres atributos y dos métodos.
 
+public class Coche {
+   public int numPuertas;
+   public float peso;
+   public Color color;
+
+   public void pintarCoche(Color color) {
+      this.color = color;
+   }
+
+   public float calcularPrecio(float precioPorKg) {
+      return precioPorKg * peso;
+   }
+}
+
 Parte 2: Patrón Modelo-Vista-Controlador (MVC) (20 minutos)
 
 3. Pregunta 3:Explica en tus propias palabras qué es el patrón MVC y por qué es importante en el desarrollo de aplicaciones.
+Es la separación del código en 3 partes: Modelo(clases), Vista (interfaz de usuario) y Controlador(conecta el modelo y la vista). Es importante para la reutilización de código; así es posible usar cualquier cosa del modelo en otro proyecto.
 
 4. Pregunta 4: Enumera y describe brevemente las responsabilidades de cada una de las partes del patrón MVC: Modelo, Vista y Controlador.
+Descrito en la Pregunta 3.
 
 5. Pregunta 5: Proporciona un ejemplo de una situación en la que sería beneficioso utilizar el patrón MVC en el desarrollo de una aplicación.
+Cuando se usan clases muy genéricas y, por tanto, reutilizables.
 
 Parte 3: Programación Asíncrona (20 minutos)
 
 6. Pregunta 6: Explica qué significa programación asíncrona y por qué es útil en el desarrollo de aplicaciones web.
+Es programación no lineal, es decir, puede saltar de una línea a otra y después de un tiempo volver a la línea anterior. Es útil porque permite la interacción con el usuario sin parar el programa entero; mientras espera a que el usuario realice una acción el programa puede seguir realizando otra acciones.
 
 7. Pregunta 7: En JavaScript, ¿qué es una promesa (Promise)? ¿Cuál es su propósito principal y cómo se utiliza?
+Sirve para realizar alguna acción asíncronamente, es decir, el programa sigue realizando acciones y, cuando recibe una respuesta vuelve al punto donde se realizó la promesa.
 
 8. Pregunta 8: Escribe un código JavaScript que demuestre cómo realizar una solicitud AJAX utilizando el método `fetch()` para obtener datos de una API externa y mostrarlos en una página web.
 
