@@ -1,0 +1,16 @@
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Prueba\2-Formulario\bin\Debug\net6.0-windows\2-Formulario.exe
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Prueba\2-Formulario\bin\Debug\net6.0-windows\2-Formulario.deps.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Prueba\2-Formulario\bin\Debug\net6.0-windows\2-Formulario.runtimeconfig.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Prueba\2-Formulario\bin\Debug\net6.0-windows\2-Formulario.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Prueba\2-Formulario\bin\Debug\net6.0-windows\2-Formulario.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Prueba\2-Formulario\obj\Debug\net6.0-windows\_2_Formulario.Form1.resources
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Prueba\2-Formulario\obj\Debug\net6.0-windows\2-Formulario.csproj.GenerateResource.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Prueba\2-Formulario\obj\Debug\net6.0-windows\2-Formulario.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Prueba\2-Formulario\obj\Debug\net6.0-windows\2-Formulario.AssemblyInfoInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Prueba\2-Formulario\obj\Debug\net6.0-windows\2-Formulario.AssemblyInfo.cs
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Prueba\2-Formulario\obj\Debug\net6.0-windows\2-Formulario.csproj.CoreCompileInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Prueba\2-Formulario\obj\Debug\net6.0-windows\2-Formulario.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Prueba\2-Formulario\obj\Debug\net6.0-windows\refint\2-Formulario.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Prueba\2-Formulario\obj\Debug\net6.0-windows\2-Formulario.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Prueba\2-Formulario\obj\Debug\net6.0-windows\2-Formulario.genruntimeconfig.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Prueba\2-Formulario\obj\Debug\net6.0-windows\ref\2-Formulario.dll
