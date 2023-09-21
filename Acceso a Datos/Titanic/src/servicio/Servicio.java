@@ -42,7 +42,43 @@ public class Servicio {
 		}
 	}
 	
-	public Map<BoteSalvavidas, Persona> realizarEvacuacion() {
-		LinkedHashMap<BoteSalvavidas, Persona> asignaciones;
+	public Map<BoteSalvavidas, ArrayList<Persona>> realizarEvacuacion() {
+		LinkedHashMap<BoteSalvavidas, ArrayList<Persona>> asignaciones;
+		
+		Zona zona = Zona.BABOR;
+		
+		BoteSalvavidas bote = null;
+		
+		while (!personas.isEmpty()) {
+			switch (zona) {
+			case BABOR:
+				bote = botesBabor.remove(botesBabor.size() - 1);
+				zona = Zona.ESTRIBOR;
+				break;
+			case ESTRIBOR:
+				bote = botesBabor.remove(botesBabor.size() - 1);
+				zona = Zona.POPA;
+				break;
+			case POPA:
+				bote = botesBabor.remove(botesBabor.size() - 1);
+				zona = Zona.PROA;
+				break;
+			case PROA:
+				bote = botesBabor.remove(botesBabor.size() - 1);
+				zona = Zona.BABOR;
+				break;
+			default: 
+				break;
+			}
+			
+			Boolean encontrado = false;
+			Integer numPersonas = 0;
+			
+			for (int i = 0; i <= bote.getNumPlazas(); i++) {
+				for (int j = 0; j < personas.size() && !encontrado; j++) {
+					
+				}
+			}
+		}
 	}
 }
