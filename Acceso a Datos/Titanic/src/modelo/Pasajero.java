@@ -17,4 +17,9 @@ public class Pasajero extends Persona {
 	public void setNumHabitacion(Integer numHabitacion) {
 		this.numHabitacion = numHabitacion;
 	}
+
+	@Override
+	public String toString() {
+		return "Pasajero [" + super.toString() + "numHabitacion=" + numHabitacion + "]";
+	}
 }

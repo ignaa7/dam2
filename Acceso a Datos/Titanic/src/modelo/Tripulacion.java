@@ -17,5 +17,10 @@ public class Tripulacion extends Persona {
 	public void setNivelResponsabilidad(NivelResponsabilidad nivelResponsabilidad) {
 		this.nivelResponsabilidad = nivelResponsabilidad;
 	}
+
+	@Override
+	public String toString() {
+		return "Tripulacion [" + super.toString() +  "nivelResponsabilidad=" + nivelResponsabilidad + "]";
+	}
 	
 }

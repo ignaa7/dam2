@@ -37,12 +37,9 @@ public class BoteSalvavidas {
 		this.zona = zona;
 	}
 
-	public static Integer getGeneradorId() {
-		return generadorId;
-	}
-
-	public static void setGeneradorId(Integer generadorId) {
-		BoteSalvavidas.generadorId = generadorId;
+	@Override
+	public String toString() {
+		return "BoteSalvavidas [id=" + id + ", numPlazas=" + numPlazas + ", zona=" + zona + "]";
 	}
 	
 }

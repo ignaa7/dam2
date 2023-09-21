@@ -91,6 +91,19 @@ public class Persona implements Comparable<Persona> {
 	public void setFechaNacimiento(LocalDate fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
+	
+	
+	public Integer getEdad() {
+		return LocalDate.now().getYear() - fechaNacimiento.getYear();
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "dni=" + dni + ", pais=" + pais + ", zona=" + zona + ", nombre=" + nombre + ", minusvalia="
+				+ minusvalia + ", fechaNacimiento=" + fechaNacimiento + ", ";
+	}
 
 
 
