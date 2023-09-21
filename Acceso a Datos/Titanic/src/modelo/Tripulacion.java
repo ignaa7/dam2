@@ -9,4 +9,13 @@ public class Tripulacion extends Persona {
 		super(dni, pais, zona, nombre, minusvalia, fechaNacimiento);
 		this.nivelResponsabilidad = nivelResponsabilidad;
 	}
+
+	public NivelResponsabilidad getNivelResponsabilidad() {
+		return nivelResponsabilidad;
+	}
+
+	public void setNivelResponsabilidad(NivelResponsabilidad nivelResponsabilidad) {
+		this.nivelResponsabilidad = nivelResponsabilidad;
+	}
+	
 }

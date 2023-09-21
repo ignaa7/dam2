@@ -9,4 +9,12 @@ public class Pasajero extends Persona {
 		super(dni, pais, zona, nombre, minusvalia, fechaNacimiento);
 		this.numHabitacion = numHabitacion;
 	}
+
+	public Integer getNumHabitacion() {
+		return numHabitacion;
+	}
+
+	public void setNumHabitacion(Integer numHabitacion) {
+		this.numHabitacion = numHabitacion;
+	}
 }
