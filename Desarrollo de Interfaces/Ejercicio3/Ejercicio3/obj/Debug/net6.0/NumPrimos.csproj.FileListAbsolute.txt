@@ -1,0 +1,14 @@
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\Ejercicio3\bin\Debug\net6.0\NumPrimos.exe
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\Ejercicio3\bin\Debug\net6.0\NumPrimos.deps.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\Ejercicio3\bin\Debug\net6.0\NumPrimos.runtimeconfig.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\Ejercicio3\bin\Debug\net6.0\NumPrimos.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\Ejercicio3\bin\Debug\net6.0\NumPrimos.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\Ejercicio3\obj\Debug\net6.0\NumPrimos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\Ejercicio3\obj\Debug\net6.0\NumPrimos.AssemblyInfoInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\Ejercicio3\obj\Debug\net6.0\NumPrimos.AssemblyInfo.cs
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\Ejercicio3\obj\Debug\net6.0\NumPrimos.csproj.CoreCompileInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\Ejercicio3\obj\Debug\net6.0\NumPrimos.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\Ejercicio3\obj\Debug\net6.0\refint\NumPrimos.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\Ejercicio3\obj\Debug\net6.0\NumPrimos.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\Ejercicio3\obj\Debug\net6.0\NumPrimos.genruntimeconfig.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\Ejercicio3\obj\Debug\net6.0\ref\NumPrimos.dll

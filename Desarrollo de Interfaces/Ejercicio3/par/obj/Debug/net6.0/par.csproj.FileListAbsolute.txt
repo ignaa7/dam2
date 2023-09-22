@@ -1,0 +1,14 @@
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\par\bin\Debug\net6.0\par.exe
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\par\bin\Debug\net6.0\par.deps.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\par\bin\Debug\net6.0\par.runtimeconfig.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\par\bin\Debug\net6.0\par.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\par\bin\Debug\net6.0\par.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\par\obj\Debug\net6.0\par.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\par\obj\Debug\net6.0\par.AssemblyInfoInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\par\obj\Debug\net6.0\par.AssemblyInfo.cs
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\par\obj\Debug\net6.0\par.csproj.CoreCompileInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\par\obj\Debug\net6.0\par.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\par\obj\Debug\net6.0\refint\par.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\par\obj\Debug\net6.0\par.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\par\obj\Debug\net6.0\par.genruntimeconfig.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio3\par\obj\Debug\net6.0\ref\par.dll
