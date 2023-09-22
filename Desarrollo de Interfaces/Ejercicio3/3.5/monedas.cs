@@ -6,6 +6,8 @@ int numMonedas50cts = 0;
 int numMonedas1euro = 0;
 int numMonedas2euros = 0;
 
+Console.OutputEncoding = System.Text.Encoding.UTF8;
+
 Console.WriteLine("Introduzca la cantidad introducida en euros");
 precioIntroducido = Convert.ToDouble(Console.ReadLine()) * 100;
 
