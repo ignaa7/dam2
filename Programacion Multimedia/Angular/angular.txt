@@ -1,0 +1,12 @@
+-ng new nombreProyecto
+create project
+
+
+-ng serve
+abrir servidor temporal (como LiveServer)
+
+-package.json
+archivo donde se guardan los nombres de las librerías usadas en el proyecto
+
+-npm install
+instalar librerías necesarias de un proyecto para ejecutarlo
