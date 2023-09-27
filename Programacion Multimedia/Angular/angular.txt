@@ -2,7 +2,8 @@
 create project
 
 
--ng serve
+-ng serve -o
+ng serve --open
 abrir servidor temporal (como LiveServer)
 
 -package.json
@@ -10,3 +11,7 @@ archivo donde se guardan los nombres de las librerías usadas en el proyecto
 
 -npm install
 instalar librerías necesarias de un proyecto para ejecutarlo
+
+-ng g c nombreComponente
+ng generate component nombreComponente
+genera un nuevo componente
