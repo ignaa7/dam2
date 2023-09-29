@@ -1,0 +1,14 @@
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\diccionarios\diccionarios\bin\Debug\net6.0\diccionarios.exe
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\diccionarios\diccionarios\bin\Debug\net6.0\diccionarios.deps.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\diccionarios\diccionarios\bin\Debug\net6.0\diccionarios.runtimeconfig.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\diccionarios\diccionarios\bin\Debug\net6.0\diccionarios.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\diccionarios\diccionarios\bin\Debug\net6.0\diccionarios.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\diccionarios\diccionarios\obj\Debug\net6.0\diccionarios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\diccionarios\diccionarios\obj\Debug\net6.0\diccionarios.AssemblyInfoInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\diccionarios\diccionarios\obj\Debug\net6.0\diccionarios.AssemblyInfo.cs
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\diccionarios\diccionarios\obj\Debug\net6.0\diccionarios.csproj.CoreCompileInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\diccionarios\diccionarios\obj\Debug\net6.0\diccionarios.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\diccionarios\diccionarios\obj\Debug\net6.0\refint\diccionarios.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\diccionarios\diccionarios\obj\Debug\net6.0\diccionarios.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\diccionarios\diccionarios\obj\Debug\net6.0\diccionarios.genruntimeconfig.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\diccionarios\diccionarios\obj\Debug\net6.0\ref\diccionarios.dll
