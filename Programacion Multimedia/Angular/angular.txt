@@ -6,6 +6,9 @@ create project
 ng serve --open
 abrir servidor temporal (como LiveServer)
 
+-ng build
+show errors
+
 -package.json
 archivo donde se guardan los nombres de las librerías usadas en el proyecto
 
@@ -15,3 +18,7 @@ instalar librerías necesarias de un proyecto para ejecutarlo
 -ng g c nombreComponente
 ng generate component nombreComponente
 genera un nuevo componente
+
+-directivas:
+	*ngFor -> se muestran varias etiquetas
+	*ngIf -> se muestra la etiqueta o no según la condición

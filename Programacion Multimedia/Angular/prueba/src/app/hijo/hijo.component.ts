@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-hijo',
+  selector: 'hijo',
   templateUrl: './hijo.component.html',
   styleUrls: ['./hijo.component.css']
 })
