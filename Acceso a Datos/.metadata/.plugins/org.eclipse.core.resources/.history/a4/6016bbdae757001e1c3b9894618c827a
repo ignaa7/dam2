@@ -1,0 +1,11 @@
+package modelo;
+
+import java.sql.Date;
+
+public class Tripulacion extends Persona {
+	private NivelResponsabilidad nivelResponsabilidad;
+	
+	public Tripulacion(String dni, Pais pais, Zona zona, String nombre, Boolean minusvalia, Date fechaNacimiento) {
+		super(dni, pais, zona, nombre, minusvalia, fechaNacimiento);
+	}
+}

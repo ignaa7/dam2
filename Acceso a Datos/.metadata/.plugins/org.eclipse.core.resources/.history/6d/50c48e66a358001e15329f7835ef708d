@@ -1,0 +1,9 @@
+package controlador;
+
+import servicio.Servicio;
+
+public class Controlador {
+	public static void main(String[] args) {
+		Servicio servicio = new Servicio();
+	}
+}

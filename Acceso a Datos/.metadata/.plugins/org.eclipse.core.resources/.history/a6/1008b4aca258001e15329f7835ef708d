@@ -1,0 +1,11 @@
+package vista;
+
+import java.util.Scanner;
+
+public class Vista {
+	public static Scanner leer = new Scanner(System.in);
+	
+	public static void mostrarMensaje(String mensaje) {
+		System.out.println(mensaje + "\n");
+	}
+}

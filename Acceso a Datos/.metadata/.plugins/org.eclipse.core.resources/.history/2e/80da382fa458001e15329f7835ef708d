@@ -1,0 +1,15 @@
+package controlador;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+
+import modelo.BoteSalvavidas;
+import modelo.Persona;
+import servicio.Servicio;
+
+public class Controlador {
+	public static void main(String[] args) {
+		Servicio servicio = new Servicio();
+		LinkedHashMap<BoteSalvavidas, ArrayList<Persona>> asignaciones = servicio.realizarEvacuacion();
+	}
+}

@@ -1,0 +1,20 @@
+package modelo;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class DAOPersonas {
+	public static ArrayList<Persona> getPersonas() {
+		return new ArrayList<>(Arrays.asList(new Persona("47263723T", Pais.ALEMANIA, Zona.BABOR, "Laura", false, LocalDate.of(2002, 02, 11)),
+				new Persona("47263723T", Pais.ALEMANIA, Zona.BABOR, "Laura", false, LocalDate.of(2002, 02, 11)),
+				new Persona("47263723T", Pais.ALEMANIA, Zona.BABOR, "Laura", false, LocalDate.of(2002, 02, 11)),
+				new Persona("47263723T", Pais.ALEMANIA, Zona.BABOR, "Laura", false, LocalDate.of(2002, 02, 11)),
+				new Persona("47263723T", Pais.ALEMANIA, Zona.BABOR, "Laura", false, LocalDate.of(2002, 02, 11)),
+				new Persona("47263723T", Pais.ALEMANIA, Zona.BABOR, "Laura", false, LocalDate.of(2002, 02, 11)),
+				new Persona("47263723T", Pais.ALEMANIA, Zona.BABOR, "Laura", false, LocalDate.of(2002, 02, 11)),
+				new Persona("47263723T", Pais.ALEMANIA, Zona.BABOR, "Laura", false, LocalDate.of(2002, 02, 11)),
+				new Persona("47263723T", Pais.ALEMANIA, Zona.BABOR, "Laura", false, LocalDate.of(2002, 02, 11)),
+				new Persona("47263723T", Pais.ALEMANIA, Zona.BABOR, "Laura", false, LocalDate.of(2002, 02, 11))));
+	}
+}
