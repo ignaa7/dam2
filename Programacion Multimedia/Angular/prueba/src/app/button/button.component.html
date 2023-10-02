@@ -1,2 +1,9 @@
 <p>{{texto}}</p>
-<button (click) = 'mostrarTexto()'>Pulsa aquí</button>
+<div [ngStyle]="{'background-color': divColor}">
+    <img *ngIf="buttonPressed" src="https://media.pronunciationstudio.com/2016/02/ok.png" alt="ok">
+</div>
+<p></p>
+<button *ngIf="buttonPressed" (click) = 'setDivColor("red")'>Rojo</button>
+<button *ngIf="buttonPressed" (click) = 'setDivColor("green")'>Verde</button>
+<button *ngIf="buttonPressed" (click) = 'setDivColor("blue")'>Azul</button>
+<button *ngIf="!buttonPressed" (click) = 'mostrarTexto()'>Pulsa aquí</button>

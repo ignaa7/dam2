@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'prueba';
+  textos : string[] = [];
+
+  constructor() {
+    for (let i = 1; i <= 3; i++) {
+      this.textos.push(`patata${i}`);
+    }
+  }
 }
