@@ -1,7 +1,0 @@
-package Servicio;
-
-import java.util.TreeMap;
-
-public class Servicio {
-	private TreeMap<String, TreeMap<Pais, Persona>> personas;
-}

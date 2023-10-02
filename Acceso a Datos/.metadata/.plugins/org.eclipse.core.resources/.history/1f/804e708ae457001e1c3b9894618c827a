@@ -1,5 +1,0 @@
-package modelo;
-
-public class Pasajero extends Persona {
-	private Integer numHabitacion;
-}
