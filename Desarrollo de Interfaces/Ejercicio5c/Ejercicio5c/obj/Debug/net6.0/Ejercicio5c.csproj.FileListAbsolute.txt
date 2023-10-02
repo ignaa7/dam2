@@ -1,0 +1,14 @@
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio5c\Ejercicio5c\bin\Debug\net6.0\Ejercicio5c.exe
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio5c\Ejercicio5c\bin\Debug\net6.0\Ejercicio5c.deps.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio5c\Ejercicio5c\bin\Debug\net6.0\Ejercicio5c.runtimeconfig.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio5c\Ejercicio5c\bin\Debug\net6.0\Ejercicio5c.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio5c\Ejercicio5c\bin\Debug\net6.0\Ejercicio5c.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio5c\Ejercicio5c\obj\Debug\net6.0\Ejercicio5c.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio5c\Ejercicio5c\obj\Debug\net6.0\Ejercicio5c.AssemblyInfoInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio5c\Ejercicio5c\obj\Debug\net6.0\Ejercicio5c.AssemblyInfo.cs
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio5c\Ejercicio5c\obj\Debug\net6.0\Ejercicio5c.csproj.CoreCompileInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio5c\Ejercicio5c\obj\Debug\net6.0\Ejercicio5c.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio5c\Ejercicio5c\obj\Debug\net6.0\refint\Ejercicio5c.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio5c\Ejercicio5c\obj\Debug\net6.0\Ejercicio5c.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio5c\Ejercicio5c\obj\Debug\net6.0\Ejercicio5c.genruntimeconfig.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio5c\Ejercicio5c\obj\Debug\net6.0\ref\Ejercicio5c.dll
