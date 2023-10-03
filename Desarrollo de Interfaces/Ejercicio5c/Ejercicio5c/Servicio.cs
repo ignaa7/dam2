@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio5c
 {
-    internal class Servicio
+    public class Servicio
     {
         public static bool validar(string cadena)
         {

@@ -1,0 +1,14 @@
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\pruebasUnitarias\pruebasUnitarias\obj\Debug\net6.0\pruebasUnitarias.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\pruebasUnitarias\pruebasUnitarias\obj\Debug\net6.0\pruebasUnitarias.AssemblyInfoInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\pruebasUnitarias\pruebasUnitarias\obj\Debug\net6.0\pruebasUnitarias.AssemblyInfo.cs
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\pruebasUnitarias\pruebasUnitarias\obj\Debug\net6.0\pruebasUnitarias.csproj.CoreCompileInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\pruebasUnitarias\pruebasUnitarias\bin\Debug\net6.0\pruebasUnitarias.exe
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\pruebasUnitarias\pruebasUnitarias\bin\Debug\net6.0\pruebasUnitarias.deps.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\pruebasUnitarias\pruebasUnitarias\bin\Debug\net6.0\pruebasUnitarias.runtimeconfig.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\pruebasUnitarias\pruebasUnitarias\bin\Debug\net6.0\pruebasUnitarias.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\pruebasUnitarias\pruebasUnitarias\bin\Debug\net6.0\pruebasUnitarias.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\pruebasUnitarias\pruebasUnitarias\obj\Debug\net6.0\pruebasUnitarias.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\pruebasUnitarias\pruebasUnitarias\obj\Debug\net6.0\refint\pruebasUnitarias.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\pruebasUnitarias\pruebasUnitarias\obj\Debug\net6.0\pruebasUnitarias.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\pruebasUnitarias\pruebasUnitarias\obj\Debug\net6.0\pruebasUnitarias.genruntimeconfig.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\pruebasUnitarias\pruebasUnitarias\obj\Debug\net6.0\ref\pruebasUnitarias.dll
