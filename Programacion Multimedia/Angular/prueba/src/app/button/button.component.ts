@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ImagenOk } from 'src/classes/imagenOk/imagen-ok';
 
 @Component({
   selector: 'buttonComponent',
@@ -6,9 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent {
+  imagen : ImagenOk = new ImagenOk('https://media.pronunciationstudio.com/2016/02/ok.png');
   texto : String = '';
   buttonPressed : boolean = false;
-  divColor : string = '';
+  divColor : string = this.imagen.getColorFondo();
+  ruta = this.imagen.getRuta();
 
   constructor(){}
 
@@ -18,6 +21,7 @@ export class ButtonComponent {
   }
 
   setDivColor(color : string) {
-    this.divColor = color;
+    this.imagen.setColorFondo(color);
+    this.divColor = this.imagen.getColorFondo();
   }
 }

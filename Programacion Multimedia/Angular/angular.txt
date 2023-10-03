@@ -15,9 +15,13 @@ archivo donde se guardan los nombres de las librerías usadas en el proyecto
 -npm install
 instalar librerías necesarias de un proyecto para ejecutarlo
 
--ng g c nombreComponente
-ng generate component nombreComponente
+-ng g c [ruta/]nombreComponente
+ng generate component [ruta/]nombreComponente
 genera un nuevo componente
+
+-ng g cl [ruta/]nombreClase
+ng generate class [ruta/]nombreClase
+genera una nueva clase
 
 -directivas:
 	*ngFor -> se muestran varias etiquetas
