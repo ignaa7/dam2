@@ -10,7 +10,7 @@ export class AppComponent {
 
   constructor() {
     for (let i = 1; i <= 3; i++) {
-      this.textos.push(`patata${i}`);
+      this.textos.push(`texto${i}`);
     }
   }
 }

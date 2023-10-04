@@ -1,9 +1,12 @@
 <p>{{texto}}</p>
-<div [ngStyle]="{'background-color': divColor}">
-    <img *ngIf="buttonPressed" src="{{ruta}}" alt="ok">
+<div>
+    <button (click) = 'cambiarImagen()'>{{btnTexto}}</button>
 </div>
-<p></p>
-<button *ngIf="buttonPressed" (click) = 'setDivColor("red")'>Rojo</button>
-<button *ngIf="buttonPressed" (click) = 'setDivColor("green")'>Verde</button>
-<button *ngIf="buttonPressed" (click) = 'setDivColor("blue")'>Azul</button>
-<button *ngIf="!buttonPressed" (click) = 'mostrarTexto()'>Pulsa aquí</button>
+<div>
+    <button *ngIf="buttonPressed" (click) = 'setDivColor("red")'>Rojo</button>
+    <button *ngIf="buttonPressed" (click) = 'setDivColor("green")'>Verde</button>
+    <button *ngIf="buttonPressed" (click) = 'setDivColor("blue")'>Azul</button>
+</div>
+<div [ngStyle]="{'background-color': imagen.getColorFondo()}">
+    <img *ngIf="buttonPressed" src="{{imagen.getRuta()}}" alt="ok">
+</div>

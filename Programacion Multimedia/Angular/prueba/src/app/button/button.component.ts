@@ -10,18 +10,16 @@ export class ButtonComponent {
   imagen : ImagenOk = new ImagenOk('https://media.pronunciationstudio.com/2016/02/ok.png');
   texto : String = '';
   buttonPressed : boolean = false;
-  divColor : string = this.imagen.getColorFondo();
-  ruta = this.imagen.getRuta();
+  btnTexto : string = 'Mostrar imagen';
 
   constructor(){}
 
-  mostrarTexto() {
-    this.texto = 'Has pulsado el botón';
-    this.buttonPressed = true;
+  cambiarImagen() {
+    this.buttonPressed = !this.buttonPressed;
+    this.buttonPressed ? this.btnTexto = 'Ocultar imagen' : this.btnTexto = 'Mostrar imagen';
   }
 
   setDivColor(color : string) {
     this.imagen.setColorFondo(color);
-    this.divColor = this.imagen.getColorFondo();
   }
 }
