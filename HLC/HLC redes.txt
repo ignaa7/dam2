@@ -1,0 +1,4 @@
+IP:
+-no es fiable (en la capa de transporte sí hay mecanismos fiables)
+-se han agotado las direcciones
+-IPV4 no es segura (los paquetes pueden no llegar)
