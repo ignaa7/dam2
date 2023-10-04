@@ -1,0 +1,14 @@
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\4-genericos\4-genericos\bin\Debug\net6.0\4-genericos.exe
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\4-genericos\4-genericos\bin\Debug\net6.0\4-genericos.deps.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\4-genericos\4-genericos\bin\Debug\net6.0\4-genericos.runtimeconfig.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\4-genericos\4-genericos\bin\Debug\net6.0\4-genericos.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\4-genericos\4-genericos\bin\Debug\net6.0\4-genericos.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\4-genericos\4-genericos\obj\Debug\net6.0\4-genericos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\4-genericos\4-genericos\obj\Debug\net6.0\4-genericos.AssemblyInfoInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\4-genericos\4-genericos\obj\Debug\net6.0\4-genericos.AssemblyInfo.cs
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\4-genericos\4-genericos\obj\Debug\net6.0\4-genericos.csproj.CoreCompileInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\4-genericos\4-genericos\obj\Debug\net6.0\4-genericos.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\4-genericos\4-genericos\obj\Debug\net6.0\refint\4-genericos.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\4-genericos\4-genericos\obj\Debug\net6.0\4-genericos.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\4-genericos\4-genericos\obj\Debug\net6.0\4-genericos.genruntimeconfig.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\4-genericos\4-genericos\obj\Debug\net6.0\ref\4-genericos.dll

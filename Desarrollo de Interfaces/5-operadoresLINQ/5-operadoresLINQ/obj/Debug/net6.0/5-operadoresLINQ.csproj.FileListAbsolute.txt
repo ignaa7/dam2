@@ -1,0 +1,14 @@
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\5-operadoresLINQ\5-operadoresLINQ\bin\Debug\net6.0\5-operadoresLINQ.exe
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\5-operadoresLINQ\5-operadoresLINQ\bin\Debug\net6.0\5-operadoresLINQ.deps.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\5-operadoresLINQ\5-operadoresLINQ\bin\Debug\net6.0\5-operadoresLINQ.runtimeconfig.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\5-operadoresLINQ\5-operadoresLINQ\bin\Debug\net6.0\5-operadoresLINQ.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\5-operadoresLINQ\5-operadoresLINQ\bin\Debug\net6.0\5-operadoresLINQ.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\5-operadoresLINQ\5-operadoresLINQ\obj\Debug\net6.0\5-operadoresLINQ.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\5-operadoresLINQ\5-operadoresLINQ\obj\Debug\net6.0\5-operadoresLINQ.AssemblyInfoInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\5-operadoresLINQ\5-operadoresLINQ\obj\Debug\net6.0\5-operadoresLINQ.AssemblyInfo.cs
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\5-operadoresLINQ\5-operadoresLINQ\obj\Debug\net6.0\5-operadoresLINQ.csproj.CoreCompileInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\5-operadoresLINQ\5-operadoresLINQ\obj\Debug\net6.0\5-operadoresLINQ.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\5-operadoresLINQ\5-operadoresLINQ\obj\Debug\net6.0\refint\5-operadoresLINQ.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\5-operadoresLINQ\5-operadoresLINQ\obj\Debug\net6.0\5-operadoresLINQ.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\5-operadoresLINQ\5-operadoresLINQ\obj\Debug\net6.0\5-operadoresLINQ.genruntimeconfig.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\5-operadoresLINQ\5-operadoresLINQ\obj\Debug\net6.0\ref\5-operadoresLINQ.dll
