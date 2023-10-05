@@ -10,6 +10,8 @@
         android:id="@+id/txtNumero"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -22,8 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="22dp"
-        android:onClick="MainActivity"
-        android:text="+"
+        android:text="@string/txtBtnMas"
+        android:textSize="34sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnMenos"
         app:layout_constraintEnd_toStartOf="@+id/btnMenos"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -35,7 +37,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="57dp"
         android:layout_marginEnd="21dp"
-        android:text="-"
+        android:text="@string/txtBtnMenos"
+        android:textSize="34sp"
         app:layout_constraintEnd_toStartOf="@+id/btnReset"
         app:layout_constraintStart_toEndOf="@+id/btnMas"
         app:layout_constraintTop_toBottomOf="@+id/txtNumero" />
@@ -45,9 +48,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
-        android:text="Reset"
+        android:text="@string/txtBtnReset"
+        android:textSize="32sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnMenos"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnMenos" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
