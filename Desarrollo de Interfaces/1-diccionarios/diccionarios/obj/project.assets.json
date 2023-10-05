@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\diccionarios\\diccionarios\\diccionarios.csproj",
+      "projectUniqueName": "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\1-diccionarios\\diccionarios\\diccionarios.csproj",
       "projectName": "diccionarios",
-      "projectPath": "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\diccionarios\\diccionarios\\diccionarios.csproj",
+      "projectPath": "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\1-diccionarios\\diccionarios\\diccionarios.csproj",
       "packagesPath": "C:\\Users\\dam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\diccionarios\\diccionarios\\obj\\",
+      "outputPath": "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\1-diccionarios\\diccionarios\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

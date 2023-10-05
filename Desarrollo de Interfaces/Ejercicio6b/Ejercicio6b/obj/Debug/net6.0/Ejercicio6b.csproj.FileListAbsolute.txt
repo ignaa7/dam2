@@ -1,0 +1,14 @@
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio6b\Ejercicio6b\bin\Debug\net6.0\Ejercicio6b.exe
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio6b\Ejercicio6b\bin\Debug\net6.0\Ejercicio6b.deps.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio6b\Ejercicio6b\bin\Debug\net6.0\Ejercicio6b.runtimeconfig.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio6b\Ejercicio6b\bin\Debug\net6.0\Ejercicio6b.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio6b\Ejercicio6b\bin\Debug\net6.0\Ejercicio6b.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio6b\Ejercicio6b\obj\Debug\net6.0\Ejercicio6b.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio6b\Ejercicio6b\obj\Debug\net6.0\Ejercicio6b.AssemblyInfoInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio6b\Ejercicio6b\obj\Debug\net6.0\Ejercicio6b.AssemblyInfo.cs
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio6b\Ejercicio6b\obj\Debug\net6.0\Ejercicio6b.csproj.CoreCompileInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio6b\Ejercicio6b\obj\Debug\net6.0\Ejercicio6b.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio6b\Ejercicio6b\obj\Debug\net6.0\refint\Ejercicio6b.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio6b\Ejercicio6b\obj\Debug\net6.0\Ejercicio6b.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio6b\Ejercicio6b\obj\Debug\net6.0\Ejercicio6b.genruntimeconfig.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio6b\Ejercicio6b\obj\Debug\net6.0\ref\Ejercicio6b.dll
