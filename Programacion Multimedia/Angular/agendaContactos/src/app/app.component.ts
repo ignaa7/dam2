@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
+import { Contacto } from 'src/classes/Contacto/contacto';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'agendaContactos';
+
+  contactos : Contacto[] = [];
+
+  agregarContacto(contacto : Contacto) {
+    this.contactos.push(contacto);
+  }
+
+  eliminarContacto(contacto : Contacto) {
+    this.contactos.splice(this.contactos.indexOf(contacto), 1);
+  }
 }

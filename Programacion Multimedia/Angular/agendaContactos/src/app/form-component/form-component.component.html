@@ -1,1 +1,9 @@
-<p>form-component works!</p>
+<form>
+    <label for="nombre">Nombre </label>
+    <input type="text" [(ngModel)]="nombre" name="nombre" id="nombre">
+    <br><br>
+    <label for="numero">Número de teléfono </label>
+    <input type="text" [(ngModel)]="numero" name="numero" id="numero">
+    <br><br>
+    <button type="button" (click) = 'enviarDatos()'>Agregar contacto</button>
+</form>
