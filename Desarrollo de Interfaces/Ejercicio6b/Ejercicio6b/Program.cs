@@ -27,7 +27,7 @@ foreach (var grupo in numerosAgrupados)
 
 
 //2
-var Libros = new List<Libro>()
+var libros = new List<Libro>()
 {
     new Libro("Don Quijote de la Mancha", 1, 1605, 500),
     new Libro("Historia de dos ciudades", 2, 1859, 200),
@@ -43,7 +43,7 @@ var Libros = new List<Libro>()
     new Libro("El alquimista", 11, 1988, 65),
 };
 
-var Autores = new List<Autor>()
+var autores = new List<Autor>()
 {
     new Autor(1, "Miguel de Cervantes"),
     new Autor(2, "Charles Dickens"),
@@ -56,3 +56,59 @@ var Autores = new List<Autor>()
     new Autor(9, "Dan Brown"),
     new Autor(10, "J. D. Salinger"),
 };
+
+var librosMasVentas = libros.OrderByDescending(libro => libro.ventas).Take(3);
+Console.WriteLine("\nLibros con más ventas:");
+foreach (var libro in librosMasVentas)
+{
+    Console.WriteLine(libro.titulo + ": " + libro.ventas);
+}
+
+
+var librosMenosVentas = libros.OrderBy(libro => libro.ventas).Take(3);
+Console.WriteLine("\nLibros con menos ventas:");
+foreach (var libro in librosMenosVentas)
+{
+    Console.WriteLine(libro.titulo + ": " + libro.ventas);
+}
+
+
+var autoresNombresPequeños = autores.Where(autor => autor.nombre.Replace(" ", "").Length < 10);
+Console.WriteLine("\nAutores con menos de 10 letras:");
+foreach (var autor in autoresNombresPequeños)
+{
+    Console.WriteLine(autor.nombre);
+}
+
+
+var librosAgrupadosPorAutor = libros.GroupBy(libro => libro.idAutor);
+Console.WriteLine("\nLibros agrupados por autor:");
+foreach (var grupoLibros in librosAgrupadosPorAutor)
+{
+    foreach (var libro in grupoLibros)
+    {
+        Console.WriteLine(libro.titulo);
+        Console.WriteLine(libro.idAutor);
+    }
+}
+
+
+var librosNuevos = libros.Where(libro => DateTime.Now.Year - libro.fechaPublicacion < 50);
+Console.WriteLine("\nLibros publicados hace menos de 50 años:");
+foreach (var libro in librosNuevos)
+{
+    Console.WriteLine(libro.titulo + ": " + libro.fechaPublicacion);
+}
+
+
+var libroMasViejo = libros.MaxBy(libro => DateTime.Now.Year - libro.fechaPublicacion);
+Console.WriteLine("\nLibro más viejo:");
+Console.WriteLine(libroMasViejo.titulo + ": " + libroMasViejo.fechaPublicacion);
+
+
+var librosComenzadosPorEl = libros.Where(libro => libro.titulo.StartsWith("El"));
+Console.WriteLine("\nLibros que comienzan por \"El\":");
+foreach (var libro in librosComenzadosPorEl)
+{
+    Console.WriteLine(libro.titulo);
+}
