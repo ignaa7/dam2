@@ -12,3 +12,17 @@ C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio7\Ejercicio7\obj\Deb
 C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio7\Ejercicio7\obj\Debug\net6.0\Ejercicio7.pdb
 C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio7\Ejercicio7\obj\Debug\net6.0\Ejercicio7.genruntimeconfig.cache
 C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio7\Ejercicio7\obj\Debug\net6.0\ref\Ejercicio7.dll
+D:\dam2\Desarrollo de Interfaces\Ejercicio7\Ejercicio7\obj\Debug\net6.0\Ejercicio7.GeneratedMSBuildEditorConfig.editorconfig
+D:\dam2\Desarrollo de Interfaces\Ejercicio7\Ejercicio7\obj\Debug\net6.0\Ejercicio7.AssemblyInfoInputs.cache
+D:\dam2\Desarrollo de Interfaces\Ejercicio7\Ejercicio7\obj\Debug\net6.0\Ejercicio7.AssemblyInfo.cs
+D:\dam2\Desarrollo de Interfaces\Ejercicio7\Ejercicio7\obj\Debug\net6.0\Ejercicio7.csproj.CoreCompileInputs.cache
+D:\dam2\Desarrollo de Interfaces\Ejercicio7\Ejercicio7\obj\Debug\net6.0\Ejercicio7.dll
+D:\dam2\Desarrollo de Interfaces\Ejercicio7\Ejercicio7\obj\Debug\net6.0\refint\Ejercicio7.dll
+D:\dam2\Desarrollo de Interfaces\Ejercicio7\Ejercicio7\obj\Debug\net6.0\Ejercicio7.pdb
+D:\dam2\Desarrollo de Interfaces\Ejercicio7\Ejercicio7\bin\Debug\net6.0\Ejercicio7.exe
+D:\dam2\Desarrollo de Interfaces\Ejercicio7\Ejercicio7\bin\Debug\net6.0\Ejercicio7.deps.json
+D:\dam2\Desarrollo de Interfaces\Ejercicio7\Ejercicio7\bin\Debug\net6.0\Ejercicio7.runtimeconfig.json
+D:\dam2\Desarrollo de Interfaces\Ejercicio7\Ejercicio7\bin\Debug\net6.0\Ejercicio7.dll
+D:\dam2\Desarrollo de Interfaces\Ejercicio7\Ejercicio7\bin\Debug\net6.0\Ejercicio7.pdb
+D:\dam2\Desarrollo de Interfaces\Ejercicio7\Ejercicio7\obj\Debug\net6.0\Ejercicio7.genruntimeconfig.cache
+D:\dam2\Desarrollo de Interfaces\Ejercicio7\Ejercicio7\obj\Debug\net6.0\ref\Ejercicio7.dll

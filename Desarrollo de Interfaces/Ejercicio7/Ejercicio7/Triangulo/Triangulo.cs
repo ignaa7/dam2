@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejercicio7
+namespace Ejercicio7.Triangulo
 {
     internal class Triangulo
     {
@@ -28,7 +28,7 @@ namespace Ejercicio7
 
         public double CalcularArea()
         {
-            return LongitudLadoDistinto * Altura / 2;
+            return Math.Round(LongitudLadoDistinto * Altura / 2, 2);
         }
     }
 }
