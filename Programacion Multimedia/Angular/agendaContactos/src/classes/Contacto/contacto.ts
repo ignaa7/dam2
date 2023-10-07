@@ -13,9 +13,21 @@ export class Contacto {
     }
 
     
+    public set nombre(v : string) {
+        this._nombre = v;
+    }
+    
+
+    
     public get numero() : string {
         return this._numero;
     }
+
+    
+    public set numero(v : string) {
+        this._numero = v;
+    }
+    
     
     
 }

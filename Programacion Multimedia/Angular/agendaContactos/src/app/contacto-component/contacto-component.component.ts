@@ -7,10 +7,15 @@ import { Contacto } from 'src/classes/Contacto/contacto';
   styleUrls: ['./contacto-component.component.css']
 })
 export class ContactoComponentComponent {
-  @Input('contacto') contacto! : Contacto;
+  @Input() contacto! : Contacto;
   @Output() eventoEliminarContacto = new EventEmitter<Contacto>();
+  @Output() eventoEditarContacto = new EventEmitter<Contacto>();
 
   enviarContactoAEliminar() {
     this.eventoEliminarContacto.emit(this.contacto);
+  }
+
+  enviarContactoAEditar() {
+    this.eventoEditarContacto.emit(this.contacto);
   }
 }

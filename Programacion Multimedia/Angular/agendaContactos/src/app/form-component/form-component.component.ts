@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
 import { Contacto } from 'src/classes/Contacto/contacto';
 
 @Component({
@@ -8,12 +8,19 @@ import { Contacto } from 'src/classes/Contacto/contacto';
 })
 export class FormComponentComponent {
   @Output() eventoNuevoContacto = new EventEmitter<Contacto>();
-  nombre : string = '';
-  numero : string = '';
+  @Output() eventoEditarContacto = new EventEmitter<Object>();
+  @Input() nombre : string | undefined;
+  @Input() numero : string | undefined;
+  @Input() edicion : boolean = false;
 
   enviarDatos(){
-    this.eventoNuevoContacto.emit(new Contacto(this.nombre, this.numero));
-    this.nombre = '';
-    this.numero = '';
+    if (this.nombre != null && this.numero != null) {
+      this.edicion
+      ? this.eventoEditarContacto.emit({nombre : this.nombre, numero : this.numero})
+      : this.eventoNuevoContacto.emit(new Contacto(this.nombre, this.numero));
+
+      this.nombre = undefined;
+      this.numero = undefined;
+    }
   }
 }

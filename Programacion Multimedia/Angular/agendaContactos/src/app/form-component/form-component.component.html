@@ -5,5 +5,5 @@
     <label for="numero">Número de teléfono </label>
     <input type="text" [(ngModel)]="numero" name="numero" id="numero">
     <br><br>
-    <button type="button" (click) = 'enviarDatos()'>Agregar contacto</button>
+    <button type="button" (click) = 'enviarDatos()' [innerText]="edicion ? 'Confirmar' : 'Agregar'"></button>
 </form>
