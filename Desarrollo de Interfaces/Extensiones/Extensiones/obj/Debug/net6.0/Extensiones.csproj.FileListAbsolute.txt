@@ -1,0 +1,14 @@
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Extensiones\Extensiones\bin\Debug\net6.0\Extensiones.exe
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Extensiones\Extensiones\bin\Debug\net6.0\Extensiones.deps.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Extensiones\Extensiones\bin\Debug\net6.0\Extensiones.runtimeconfig.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Extensiones\Extensiones\bin\Debug\net6.0\Extensiones.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Extensiones\Extensiones\bin\Debug\net6.0\Extensiones.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Extensiones\Extensiones\obj\Debug\net6.0\Extensiones.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Extensiones\Extensiones\obj\Debug\net6.0\Extensiones.AssemblyInfoInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Extensiones\Extensiones\obj\Debug\net6.0\Extensiones.AssemblyInfo.cs
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Extensiones\Extensiones\obj\Debug\net6.0\Extensiones.csproj.CoreCompileInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Extensiones\Extensiones\obj\Debug\net6.0\Extensiones.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Extensiones\Extensiones\obj\Debug\net6.0\refint\Extensiones.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Extensiones\Extensiones\obj\Debug\net6.0\Extensiones.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Extensiones\Extensiones\obj\Debug\net6.0\Extensiones.genruntimeconfig.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Extensiones\Extensiones\obj\Debug\net6.0\ref\Extensiones.dll
