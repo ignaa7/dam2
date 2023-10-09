@@ -2,3 +2,12 @@ IP:
 -no es fiable (en la capa de transporte sí hay mecanismos fiables)
 -se han agotado las direcciones
 -IPV4 no es segura (los paquetes pueden no llegar)
+
+
+NAT:
+-Solo sirve para comunicaciones salientes
+-Permite que todas las IPs privadas de una red utilicen una misma IP pública
+
+PortForwarding:
+-Se configura manualmente en la configuración del router
+-Sirve para las comunicaciones de fuera hacia dentro, para poder diferenciar a qué IP se ha de hacer referencia cuando mandan un mensaje por un puerto
