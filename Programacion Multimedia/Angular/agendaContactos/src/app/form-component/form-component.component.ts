@@ -14,7 +14,7 @@ export class FormComponentComponent {
   @Input() edicion : boolean = false;
 
   enviarDatos(){
-    if (this.nombre != null && this.numero != null) {
+    if (this.nombre != null && this.nombre != '' && this.numero != null && this.numero != '') {
       this.edicion
       ? this.eventoEditarContacto.emit({nombre : this.nombre, numero : this.numero})
       : this.eventoNuevoContacto.emit(new Contacto(this.nombre, this.numero));

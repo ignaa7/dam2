@@ -1,5 +1,6 @@
-import { Component, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { Contacto } from 'src/classes/Contacto/contacto';
+import { Servicio } from 'src/service/servicio';
 
 @Component({
   selector: 'app-root',
@@ -9,16 +10,17 @@ import { Contacto } from 'src/classes/Contacto/contacto';
 export class AppComponent {
   title = 'agendaContactos';
 
-  contactos : Contacto[] = [];
+  servicio : Servicio = new Servicio();
+
   contactoAEditar : Contacto | undefined;
   edicion : boolean = false;
 
   agregarContacto(contacto : Contacto) {
-    this.contactos.push(contacto);
+    this.servicio.addContacto(contacto);
   }
 
   eliminarContacto(contacto : Contacto) {
-    if (!this.edicion) this.contactos.splice(this.contactos.indexOf(contacto), 1);
+    if (!this.edicion) this.servicio.removeContacto(contacto);
   }
 
   comenzarEdicionContacto(contacto : Contacto) {
@@ -29,8 +31,7 @@ export class AppComponent {
   }
 
   editarContacto(datosContacto : any) {
-    this.contactoAEditar!.nombre = datosContacto.nombre;
-    this.contactoAEditar!.numero = datosContacto.numero;
+    this.servicio.editContacto(this.contactoAEditar!, datosContacto);
     this.contactoAEditar = undefined;
     this.edicion = false;
   }

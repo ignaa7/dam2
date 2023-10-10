@@ -1,4 +1,4 @@
 <div>
     <app-form-component (eventoNuevoContacto)="agregarContacto($event)" (eventoEditarContacto)="editarContacto($event)" [edicion]="edicion" [nombre]="contactoAEditar?.nombre" [numero]="contactoAEditar?.numero"></app-form-component>
-    <app-contacto-component *ngFor="let contacto of contactos" [contacto]="contacto" (eventoEliminarContacto)="eliminarContacto($event)" (eventoEditarContacto)="comenzarEdicionContacto($event)"></app-contacto-component>
+    <app-contacto-component *ngFor="let contacto of servicio.getContactos()" [contacto]="contacto" (eventoEliminarContacto)="eliminarContacto($event)" (eventoEditarContacto)="comenzarEdicionContacto($event)"></app-contacto-component>
 </div>
