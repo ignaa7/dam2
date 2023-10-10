@@ -11,3 +11,18 @@ NAT:
 PortForwarding:
 -Se configura manualmente en la configuración del router
 -Sirve para las comunicaciones de fuera hacia dentro, para poder diferenciar a qué IP se ha de hacer referencia cuando mandan un mensaje por un puerto
+
+
+
+Capa de transporte:
+-Extremo a extremo: solo se conectan un PC con otro, no hay dispositivos de por medio
+-Aporta fiabilidad (no seguridad)
+
+Número de puerto:
+Sirve para distinguir a qué programa de dentro de un ordenador se está dirigiendo un mensaje
+
+
+
+TCP vs UDP
+-TCP aporta fiabilidad y UDP no
+-UDP es más rápido, al no tener que realizar comprobaciones
