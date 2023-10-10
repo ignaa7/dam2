@@ -1,4 +1,21 @@
 <resources>
     <string name="app_name">1_Calculadora</string>
     <string name="txtIgual">=</string>
+    <string name="txt0">0</string>
+    <string name="txtPunto">.</string>
+    <string name="txt1">1</string>
+    <string name="txt2">2</string>
+    <string name="txt3">3</string>
+    <string name="txt4">4</string>
+    <string name="txt5">5</string>
+    <string name="txt6">6</string>
+    <string name="txt7">7</string>
+    <string name="txt8">8</string>
+    <string name="txt9">9</string>
+    <string name="txtDivision">÷</string>
+    <string name="txtAC">AC</string>
+    <string name="txtDEL">DEL</string>
+    <string name="txtMultiplicacion">x</string>
+    <string name="txtResta">-</string>
+    <string name="txtSuma">+</string>
 </resources>
