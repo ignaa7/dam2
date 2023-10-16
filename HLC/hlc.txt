@@ -1,0 +1,3 @@
+socket -> conexión con la capa de transporte. TCP / UDP. Es como una tubería que permite mandar mensajes para ambos lados
+
+URL -> protocolo://dirección:puerto/ruta
