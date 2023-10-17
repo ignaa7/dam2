@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PruebaVariasPantallas</string>
+    <string name="txtBtnIrPantalla2">Ir a Pantalla 2</string>
+    <string name="txtPantalla1">Pantalla 1</string>
+    <string name="txtBtnIrPantalla1">Ir a Pantalla 1</string>
+    <string name="txtPantalla2">Pantalla 2</string>
+    <string name="txtBtnVolver">Volver</string>
+</resources>
