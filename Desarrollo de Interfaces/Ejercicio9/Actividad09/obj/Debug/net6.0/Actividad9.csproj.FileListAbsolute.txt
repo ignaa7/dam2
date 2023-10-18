@@ -12,3 +12,17 @@ C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio9\Actividad09\obj\De
 C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio9\Actividad09\obj\Debug\net6.0\Actividad9.pdb
 C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio9\Actividad09\obj\Debug\net6.0\Actividad9.genruntimeconfig.cache
 C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio9\Actividad09\obj\Debug\net6.0\ref\Actividad9.dll
+D:\dam2\Desarrollo de Interfaces\Ejercicio9\Actividad09\bin\Debug\net6.0\Actividad9.exe
+D:\dam2\Desarrollo de Interfaces\Ejercicio9\Actividad09\bin\Debug\net6.0\Actividad9.deps.json
+D:\dam2\Desarrollo de Interfaces\Ejercicio9\Actividad09\bin\Debug\net6.0\Actividad9.runtimeconfig.json
+D:\dam2\Desarrollo de Interfaces\Ejercicio9\Actividad09\bin\Debug\net6.0\Actividad9.dll
+D:\dam2\Desarrollo de Interfaces\Ejercicio9\Actividad09\bin\Debug\net6.0\Actividad9.pdb
+D:\dam2\Desarrollo de Interfaces\Ejercicio9\Actividad09\obj\Debug\net6.0\Actividad9.GeneratedMSBuildEditorConfig.editorconfig
+D:\dam2\Desarrollo de Interfaces\Ejercicio9\Actividad09\obj\Debug\net6.0\Actividad9.AssemblyInfoInputs.cache
+D:\dam2\Desarrollo de Interfaces\Ejercicio9\Actividad09\obj\Debug\net6.0\Actividad9.AssemblyInfo.cs
+D:\dam2\Desarrollo de Interfaces\Ejercicio9\Actividad09\obj\Debug\net6.0\Actividad9.csproj.CoreCompileInputs.cache
+D:\dam2\Desarrollo de Interfaces\Ejercicio9\Actividad09\obj\Debug\net6.0\Actividad9.dll
+D:\dam2\Desarrollo de Interfaces\Ejercicio9\Actividad09\obj\Debug\net6.0\refint\Actividad9.dll
+D:\dam2\Desarrollo de Interfaces\Ejercicio9\Actividad09\obj\Debug\net6.0\Actividad9.pdb
+D:\dam2\Desarrollo de Interfaces\Ejercicio9\Actividad09\obj\Debug\net6.0\Actividad9.genruntimeconfig.cache
+D:\dam2\Desarrollo de Interfaces\Ejercicio9\Actividad09\obj\Debug\net6.0\ref\Actividad9.dll

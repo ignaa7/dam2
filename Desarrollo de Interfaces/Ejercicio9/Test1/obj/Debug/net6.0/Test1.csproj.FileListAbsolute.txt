@@ -102,3 +102,6 @@ C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio9\Test1\obj\Debug\ne
 C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio9\Test1\obj\Debug\net6.0\Test1.pdb
 C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio9\Test1\obj\Debug\net6.0\Test1.genruntimeconfig.cache
 C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Ejercicio9\Test1\obj\Debug\net6.0\ref\Test1.dll
+D:\dam2\Desarrollo de Interfaces\Ejercicio9\Test1\obj\Debug\net6.0\Test1.dll
+D:\dam2\Desarrollo de Interfaces\Ejercicio9\Test1\obj\Debug\net6.0\refint\Test1.dll
+D:\dam2\Desarrollo de Interfaces\Ejercicio9\Test1\obj\Debug\net6.0\Test1.pdb
