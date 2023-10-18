@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XBk0HKsr6bAKOG+xadfSmUJyWEPzopcQmy0Y2IMaFGssec+7EWHGY8Rz0tr9bwyEbreTN1UOE3BynNG1UUpJgQ==",
+  "dgSpecHash": "i8Dzan3vO0KKHkrJRbugIfM7yOY8rMkAtoecWKhFhKLMKiDzOiAS2L7izsm+ojJs5d8d5DPHvm47DU30c0UcSQ==",
   "success": false,
   "projectFilePath": "D:\\dam2\\Desarrollo de Interfaces\\Ejercicio9\\Test1\\Test1.csproj",
   "expectedPackageFiles": [
@@ -136,7 +136,7 @@
     {
       "code": "NU1102",
       "level": "Error",
-      "message": "No se encuentra el paquete NuGet.Frameworks con la versión (>= 5.0.0)\r\n  - Versiones encontradas en Microsoft Visual Studio Offline Packages: 1 [ versión más cercana: 4.6.4 ]\r\n  - Versiones encontradas en C:\\Program Files\\dotnet\\library-packs: 0",
+      "message": "No se encuentra el paquete NuGet.Frameworks con la versión (>= 5.0.0)\r\n  - Versiones encontradas en Microsoft Visual Studio Offline Packages: 1 [ versión más cercana: 4.6.4 ]",
       "libraryId": "NuGet.Frameworks",
       "targetGraphs": [
         "net6.0"
