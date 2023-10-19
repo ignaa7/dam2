@@ -32,21 +32,20 @@ namespace Ejercicio9
 
         public static bool comprobarFormatoIp(string cadena)
         {
-            string patron = @"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$";
+            string patron = @"^\d{1,3}(\.\d{1,3}){3}$";
 
             return Regex.Match(cadena, patron).Success;
         }
 
         public static bool comprobarFormatoMac(string cadena)
         {
-            string patron = @"^\w{2}:\w{2}:\w{2}:\w{2}:\w{2}:\w{2}$";
+            string patron = @"^\w{2}(:\w{2}){5}$";
 
             return Regex.Match(cadena, patron).Success;
         }
 
         public static string buscarPalabrasPorLetra(string cadena, char letra)
         {
-            String[] palabras = cadena.Split(" ");
             MatchCollection palabrasLetra = Regex.Matches(cadena, $@"{letra}\w*");
 
             string cadenaPalabrasLetra = " ";
