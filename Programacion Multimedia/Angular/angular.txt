@@ -26,3 +26,17 @@ genera una nueva clase
 -directivas:
 	*ngFor -> se muestran varias etiquetas
 	*ngIf -> se muestra la etiqueta o no según la condición
+
+
+Componentes:
+1.Hooks
+	Métodos que se llaman solos al ocurrir algo (onInit)
+	Se añaden al implementar una interfaz
+2.Acceso a componentes desde vista:
+	-@ViewChild(selector) variable : tipo
+	-@ViewChildren(selector) variable : tipo
+3.Proyección de contenido
+	<hijo>...</hijo>
+
+	Hijo HTML
+	<ng-Content select="#">
