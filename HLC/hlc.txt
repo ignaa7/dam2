@@ -1,3 +1,10 @@
 socket -> conexión con la capa de transporte. TCP / UDP. Es como una tubería que permite mandar mensajes para ambos lados
+TCP proporciona fiabilidad (existe el socket del servidor y el del cliente) y UDP no (solo existe un socket, no diferencia entre servidor y cliente)
 
 URL -> protocolo://dirección:puerto/ruta
+
+
+
+
+Server iterativo: un solo hilo, así que para realizar varias acciones tiene que usar bucles, no puede hacerlas a la vez
+Server concurrente: varios hilos
