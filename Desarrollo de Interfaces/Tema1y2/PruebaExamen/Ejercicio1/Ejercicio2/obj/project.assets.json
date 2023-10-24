@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\PruebaExamen\\Ejercicio1\\Ejercicio2\\Ejercicio2.csproj",
+      "projectUniqueName": "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\Tema1y2\\PruebaExamen\\Ejercicio1\\Ejercicio2\\Ejercicio2.csproj",
       "projectName": "Ejercicio2",
-      "projectPath": "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\PruebaExamen\\Ejercicio1\\Ejercicio2\\Ejercicio2.csproj",
+      "projectPath": "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\Tema1y2\\PruebaExamen\\Ejercicio1\\Ejercicio2\\Ejercicio2.csproj",
       "packagesPath": "C:\\Users\\dam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\PruebaExamen\\Ejercicio1\\Ejercicio2\\obj\\",
+      "outputPath": "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\Tema1y2\\PruebaExamen\\Ejercicio1\\Ejercicio2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
