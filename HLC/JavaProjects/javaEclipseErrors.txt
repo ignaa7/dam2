@@ -1,0 +1,2 @@
+taking project or workspace from one pc to another one and there are many errors:
+Right click on the project -> Properties -> Java Build Path -> Libraries -> JRE System Library -> Edit -> Workspace default JRE
