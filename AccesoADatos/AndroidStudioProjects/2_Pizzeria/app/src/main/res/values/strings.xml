@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">2_Pizzeria</string>
     <string name="txtTitle">Pizzería\nMamma Mia</string>
+    <string name="txtUser">Usuario</string>
+    <string name="txtPassword">Contraseña</string>
+    <string name="txtLogIn">Iniciar sesión</string>
+    <string name="autoFillTitle">title</string>
+    <string name="userDescription">Usuario</string>
+    <string name="passwordDescription">Contraseña</string>
+    <string name="passwordHint">Contraseña</string>
+    <string name="userHint">Usuario</string>
 </resources>
