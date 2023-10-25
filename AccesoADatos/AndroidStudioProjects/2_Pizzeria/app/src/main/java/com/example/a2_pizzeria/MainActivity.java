@@ -25,5 +25,6 @@ public class MainActivity extends AppCompatActivity {
     public void signUpUser() {
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(binding.edtName.getText().toString(), binding.edtPassword.getText().toString());
+        editor.commit();
     }
 }
