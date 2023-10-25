@@ -26,17 +26,25 @@ public class HiloServidor extends Thread {
 				String nombreArchivo = cadena.split(" ")[1];
 				File file = new File("src/html" + nombreArchivo);
 				
-				FileInputStream lecturaArchivo = new FileInputStream(file);
-				byte[] buffer = new byte[1024];
-				int bytesRead;
-				
-				while ((bytesRead = lecturaArchivo.read(buffer)) != -1) {
-					fsalida.write(buffer, 0, bytesRead);
+				if (file.exists()) {
+					fsalida.write("HTTP/1.1 200 OK\r\n\r\n".getBytes());
+					FileInputStream lecturaArchivo = new FileInputStream(file);
+					byte[] buffer = new byte[1024];
+					int bytesRead;
+					
+					while ((bytesRead = lecturaArchivo.read(buffer)) != -1) {
+						fsalida.write(buffer, 0, bytesRead);
+					}
+					
+					lecturaArchivo.close();
+				}
+				else {
+					String errorMessage = "HTTP/1.1 404 Not Found\r\n\r\n No se ha encontrado el archivo.";
+					fsalida.write(errorMessage.getBytes());
 				}
 				
 				fsalida.close();
 				fentrada.close();
-				lecturaArchivo.close();
 				socketCliente.close();
 			} catch (Exception e) {
 				System.err.println(e.getMessage());
