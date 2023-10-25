@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ejercicio2
+{
+    internal class ExcepcionCodigo : Exception
+    {
+        public ExcepcionCodigo() : base("Formato de código inválido")
+        {
+            
+        }
+    }
+}
