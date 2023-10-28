@@ -8,7 +8,7 @@ import java.net.Socket;
 
 public class Ejemplo2Cliente {
 	public static void main(String[] args) throws IOException {
-		String Host = "172.20.33.200";
+		String Host = "localhost";
 		int Puerto = 6000;// puerto remoto
 		Socket servidor = new Socket(Host, Puerto);
 		// CREO FLUJO DE SALIDA AL SERVIDOR
