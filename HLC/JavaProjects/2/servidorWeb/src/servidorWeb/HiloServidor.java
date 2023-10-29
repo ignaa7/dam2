@@ -25,6 +25,7 @@ public class HiloServidor extends Thread {
 				String cadena = fentrada.readLine();
 				String nombreArchivo = cadena.split(" ")[1];
 				File file = new File("src/html" + nombreArchivo);
+				System.out.println(cadena);
 				
 				if (file.exists()) {
 					fsalida.write("HTTP/1.1 200 OK\r\n\r\n".getBytes());

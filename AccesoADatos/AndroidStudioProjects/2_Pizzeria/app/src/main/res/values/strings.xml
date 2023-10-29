@@ -9,4 +9,11 @@
     <string name="passwordDescription">Contraseña</string>
     <string name="passwordHint">Contraseña</string>
     <string name="userHint">Usuario</string>
+    <string name="txtSignUp">Registrarse</string>
+    <string name="txtRemember">Recuérdame</string>
+    <string name="txtOrder">Hacer un pedido</string>
+    <string name="txtConfiguration">Configuración</string>
+    <string name="txtWebsite">Visitar página web</string>
+    <string name="txtExit">Salir</string>
+    <string name="txtTxtLogout">Cerrar sesión</string>
 </resources>
