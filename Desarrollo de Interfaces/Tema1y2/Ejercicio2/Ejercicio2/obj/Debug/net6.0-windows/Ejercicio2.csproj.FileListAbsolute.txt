@@ -1,0 +1,16 @@
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema1y2\Ejercicio2\Ejercicio2\bin\Debug\net6.0-windows\Ejercicio2.exe
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema1y2\Ejercicio2\Ejercicio2\bin\Debug\net6.0-windows\Ejercicio2.deps.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema1y2\Ejercicio2\Ejercicio2\bin\Debug\net6.0-windows\Ejercicio2.runtimeconfig.json
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema1y2\Ejercicio2\Ejercicio2\bin\Debug\net6.0-windows\Ejercicio2.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema1y2\Ejercicio2\Ejercicio2\bin\Debug\net6.0-windows\Ejercicio2.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema1y2\Ejercicio2\Ejercicio2\obj\Debug\net6.0-windows\Ejercicio2.Form1.resources
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema1y2\Ejercicio2\Ejercicio2\obj\Debug\net6.0-windows\Ejercicio2.csproj.GenerateResource.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema1y2\Ejercicio2\Ejercicio2\obj\Debug\net6.0-windows\Ejercicio2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema1y2\Ejercicio2\Ejercicio2\obj\Debug\net6.0-windows\Ejercicio2.AssemblyInfoInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema1y2\Ejercicio2\Ejercicio2\obj\Debug\net6.0-windows\Ejercicio2.AssemblyInfo.cs
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema1y2\Ejercicio2\Ejercicio2\obj\Debug\net6.0-windows\Ejercicio2.csproj.CoreCompileInputs.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema1y2\Ejercicio2\Ejercicio2\obj\Debug\net6.0-windows\Ejercicio2.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema1y2\Ejercicio2\Ejercicio2\obj\Debug\net6.0-windows\refint\Ejercicio2.dll
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema1y2\Ejercicio2\Ejercicio2\obj\Debug\net6.0-windows\Ejercicio2.pdb
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema1y2\Ejercicio2\Ejercicio2\obj\Debug\net6.0-windows\Ejercicio2.genruntimeconfig.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema1y2\Ejercicio2\Ejercicio2\obj\Debug\net6.0-windows\ref\Ejercicio2.dll
