@@ -53,5 +53,10 @@ public class Jugador implements Serializable{
         this.posicion = posicion;
     }
     
+    @Override
+    public String toString() {
+        return "id: " + id + "\npuntuación: " + puntuacion + "\nposición: " + posicion;
+    }
+    
     
 }

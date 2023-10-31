@@ -6,12 +6,16 @@ package com.mycompany.cliente;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFrame;
 import modelo.Jugador;
 
 /**
@@ -19,13 +23,19 @@ import modelo.Jugador;
  * @author dam
  */
 public class Cliente extends javax.swing.JFrame {
+    
+    private JFrame jFrame;
+    private static Socket socket;
+    private static DataOutputStream dataOutputStream;
 
     /**
      * Creates new form Cliente
      */
     public Cliente() {
+        jFrame = this.jFrame;
         initComponents();
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -36,77 +46,57 @@ public class Cliente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("jLabel1");
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(157, 157, 157)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1)
+                    .addComponent(jLabel1))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel1)
+                .addGap(56, 56, 56)
+                .addComponent(jButton1)
+                .addContainerGap(156, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try {
+            dataOutputStream.writeUTF("a");
+        } catch (IOException ex) {
+            Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) throws IOException {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    public static void main(String args[]) throws IOException, ClassNotFoundException {        
         
-        String host = "localhost";
-		int puerto = 2000;
-		Socket socket = new Socket(host, puerto);
-		PrintWriter fsalida = new PrintWriter(socket.getOutputStream(), true);
-		ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream());
-                DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());
-                
-		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-                
-                ArrayList<Jugador> jugadores = (ArrayList<Jugador>) objectInputStream.readObject();
-
-		String cadena = "";
-                boolean fin = false;
-                
-		do {
-                    fin = dataInputStream.readBoolean();
-                    System.out.print("Introduce cadena: ");
-                    cadena = in.readLine();
-
-                    fsalida.println(cadena);
-		} while (!fin);
-                
-		fsalida.close();
-		objectInputStream.close();
-                dataInputStream.close();
-		System.out.println("Fin del envío... ");
-		in.close();
-		socket.close();
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -114,8 +104,40 @@ public class Cliente extends javax.swing.JFrame {
                 new Cliente().setVisible(true);
             }
         });
+        
+        socket = new Socket("localhost", 2000);
+        dataOutputStream = new DataOutputStream(socket.getOutputStream());
+        
+        ejecutar();
+    }
+    
+    private static void ejecutar() throws IOException, ClassNotFoundException {
+		
+		ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream());
+                
+                
+                ArrayList<Jugador> jugadores = null;
+                
+                HiloCliente hilo = new HiloCliente(socket, jugadores);
+
+                boolean fin = false;
+                
+		while (!fin) {
+                    jugadores = (ArrayList<Jugador>) objectInputStream.readObject();
+                    for (Jugador jugador : jugadores) {
+                        System.out.println(jugador.toString());
+                        if (jugador.getPuntuacion() == 5) fin = true;
+                    }
+		}
+                
+		objectInputStream.close();
+                dataOutputStream.close();
+		System.out.println("Fin del envío... ");
+		socket.close();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

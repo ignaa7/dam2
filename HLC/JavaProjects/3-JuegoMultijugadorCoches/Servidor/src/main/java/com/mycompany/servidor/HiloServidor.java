@@ -12,35 +12,34 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.ArrayList;
 
 /**
  *
  * @author Ignacio
  */
 public class HiloServidor extends Thread {
-        Socket socketCliente = null;
-	BufferedReader fentrada;
-	DataOutputStream dataOutputStream;
-        Jugador jugador;
+        private Socket socketCliente = null;
+	private BufferedReader fentrada;
+	private DataOutputStream dataOutputStream;
+        private ArrayList jugadores;
+        private Jugador jugador;
 	
-	public HiloServidor (Socket socketCliente, Jugador jugador) throws IOException {
+	public HiloServidor (Socket socketCliente, ArrayList<Jugador> jugadores) throws IOException {
 		this.socketCliente = socketCliente;
-                this.jugador = jugador;
+                this.jugadores = jugadores;
+                this.jugador = new Jugador();
                 
-		dataOutputStream = new DataOutputStream(socketCliente.getOutputStream());
                 fentrada = new BufferedReader(new InputStreamReader(socketCliente.getInputStream()));
 	}
 	
 	public void run () {
             try {
-                while (jugador.getPuntuacion() < 5) {
+                while (jugador.getPuntuacion() < 1) {
                     System.out.println(fentrada.readLine());
                     jugador.setPuntuacion(jugador.getPuntuacion() + 1);
                 }
                 
-                dataOutputStream.writeBoolean(true);
-                
-		dataOutputStream.close();
 		fentrada.close();
 		socketCliente.close();
             } catch (Exception e) {
