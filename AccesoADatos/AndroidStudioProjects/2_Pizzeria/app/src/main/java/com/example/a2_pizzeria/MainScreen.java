@@ -16,6 +16,7 @@ import com.example.a2_pizzeria.databinding.ActivityMainScreenBinding;
 public class MainScreen extends AppCompatActivity {
 
     private SharedPreferences currentUserPreferences;
+    private SharedPreferences screensColorPreferences;
     private ActivityMainScreenBinding binding;
 
     @Override
@@ -30,6 +31,10 @@ public class MainScreen extends AppCompatActivity {
         currentUserPreferences = getSharedPreferences("currentUser", Context.MODE_PRIVATE);
         String username = currentUserPreferences.getString("username", null);
         binding.txtUsername.setText(username);
+
+        screensColorPreferences = getSharedPreferences("screensColor", Context.MODE_PRIVATE);
+        int color = screensColorPreferences.getInt("color", 0);
+        binding.getRoot().setBackgroundColor(color);
     }
 
     public void visitWebsite(View view) {

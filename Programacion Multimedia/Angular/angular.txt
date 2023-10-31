@@ -23,6 +23,10 @@ genera un nuevo componente
 ng generate class [ruta/]nombreClase
 genera una nueva clase
 
+-ng g d [ruta/]nombreDirectiva
+ng generate directive [ruta/]nombreDirectiva
+genera una nueva directiva
+
 -directivas:
 	*ngFor -> se muestran varias etiquetas
 	*ngIf -> se muestra la etiqueta o no según la condición
@@ -40,3 +44,9 @@ Componentes:
 
 	Hijo HTML
 	<ng-Content select="#">
+
+
+Directivas:
+1.Inyección del elemento
+2.@HostListener
+3.@HostBinding

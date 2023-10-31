@@ -16,4 +16,5 @@
     <string name="txtWebsite">Visitar página web</string>
     <string name="txtExit">Salir</string>
     <string name="txtTxtLogout">Cerrar sesión</string>
+    <string name="txtSettings">Ajustes</string>
 </resources>

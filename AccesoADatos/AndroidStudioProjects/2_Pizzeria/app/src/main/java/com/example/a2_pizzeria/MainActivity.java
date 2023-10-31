@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private SharedPreferences usersPreferences;
     private SharedPreferences currentUserPreferences;
+    private SharedPreferences screensColorPreferences;
     private ActivityMainBinding binding;
 
     @Override
@@ -27,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
         usersPreferences = getSharedPreferences("users", Context.MODE_PRIVATE);
         currentUserPreferences = getSharedPreferences("currentUser", Context.MODE_PRIVATE);
+        screensColorPreferences = getSharedPreferences("screensColor", Context.MODE_PRIVATE);
+
         if (!currentUserPreferences.getAll().isEmpty()) {
             if (currentUserPreferences.getBoolean("remember", false)) {
                 String user = currentUserPreferences.getString("username", "");
@@ -42,6 +46,19 @@ public class MainActivity extends AppCompatActivity {
                 editor.apply();
             }
         }
+
+        int color = Color.parseColor("#F6ECCC");
+
+        if (screensColorPreferences.getAll().isEmpty()) {
+            SharedPreferences.Editor editor = screensColorPreferences.edit();
+            editor.putInt("color", color);
+            editor.apply();
+        }
+        else {
+            color = screensColorPreferences.getInt("color", color);
+        }
+
+        binding.getRoot().setBackgroundColor(color);
     }
 
     public void signUpUser(View view) {
