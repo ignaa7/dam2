@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.example.a2_pizzeria.databinding.ActivityMainScreenBinding;
@@ -15,6 +16,7 @@ import yuku.ambilwarna.AmbilWarnaDialog;
 public class SettingsScreen extends AppCompatActivity {
 
     private SharedPreferences screensColorPreferences;
+    private SharedPreferences favoritePreferences;
     private ActivitySettingsScreenBinding binding;
 
     int color;
@@ -30,19 +32,38 @@ public class SettingsScreen extends AppCompatActivity {
         screensColorPreferences = getSharedPreferences("screensColor", Context.MODE_PRIVATE);
         color = screensColorPreferences.getInt("color", 0);
         binding.getRoot().setBackgroundColor(color);
+
+        favoritePreferences = getSharedPreferences("favorite", Context.MODE_PRIVATE);
+        //seguir
     }
 
-    public void changeBackgroundColor() {
-        AmbilWarnaDialog colorDialog = new AmbilWarnaDialog(this, color, new AmbilWarnaDialog.OnAmbilWarnaListener() {
-            @Override
-            public void onCancel(AmbilWarnaDialog dialog) {
+    public void changeBackgroundColor(View view) {
+        try {
+            AmbilWarnaDialog colorDialog = new AmbilWarnaDialog(this, color, new AmbilWarnaDialog.OnAmbilWarnaListener() {
+                @Override
+                public void onCancel(AmbilWarnaDialog dialog) {
 
-            }
+                }
 
-            @Override
-            public void onOk(AmbilWarnaDialog dialog, int color) {
+                @Override
+                public void onOk(AmbilWarnaDialog dialog, int color) {
+                    SharedPreferences.Editor editor = screensColorPreferences.edit();
+                    editor.putInt("color", color);
+                    editor.apply();
+                }
+            });
 
-            }
-        })
+            colorDialog.show();
+        } catch (Exception e) {
+            Log.e("ErrorMessage", e.getStackTrace().toString());
+        }
+    }
+
+    public void toggleShowFavorite(View view) {
+
+    }
+
+    public void goBack(View view) {
+        finish();
     }
 }
