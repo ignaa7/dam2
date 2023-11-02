@@ -50,3 +50,6 @@ Directivas:
 1.Inyección del elemento
 2.@HostListener
 3.@HostBinding
+
+
+Tuberías:
