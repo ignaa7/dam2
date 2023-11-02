@@ -7,6 +7,8 @@ package modelo;
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.UUID;
+import java.util.concurrent.Flow;
+import java.util.concurrent.SubmissionPublisher;
 
 /**
  *
@@ -18,6 +20,7 @@ public class Jugador implements Serializable{
     private String id;
     private int puntuacion;
     private int posicion;
+    private final SubmissionPublisher<EventoCambioJugador> publisher = new SubmissionPublisher<>();
     
     public Jugador() {
         id = UUID.randomUUID().toString();
@@ -36,7 +39,16 @@ public class Jugador implements Serializable{
      * @param puntuacion the puntuacion to set
      */
     public void setPuntuacion(int puntuacion) {
+        int puntuacionAnterior = this.puntuacion;
         this.puntuacion = puntuacion;
+        
+        if (puntuacionAnterior != puntuacion) {
+            publisher.submit(new EventoCambioJugador(this));
+        }
+    }
+    
+    public void subscribe(Flow.Subscriber<? super EventoCambioJugador> subscriber) {
+        publisher.subscribe(subscriber);
     }
 
     /**

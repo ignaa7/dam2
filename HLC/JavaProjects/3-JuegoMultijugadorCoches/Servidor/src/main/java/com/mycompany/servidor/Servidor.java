@@ -18,13 +18,22 @@ import modelo.Jugador;
 public class Servidor {
     public static void main(String[] args) throws IOException {
         ServerSocket servidor = new ServerSocket(2000);
-        ArrayList jugadores = new ArrayList();
+        ArrayList<Jugador> jugadores = new ArrayList();
+        ArrayList<Socket> clientes = new ArrayList();
+        
+        HiloObservable hiloObservable = new HiloObservable(jugadores, clientes);
+        hiloObservable.start();
 	
         System.out.println("Servidor iniciado...");
 		
 	while (true) {
 		Socket socketCliente = servidor.accept();
-		HiloServidor hilo = new HiloServidor(socketCliente, jugadores);
+                Jugador jugador = new Jugador();
+                
+                clientes.add(socketCliente);
+                jugadores.add(jugador);
+                
+		HiloServidor hilo = new HiloServidor(socketCliente, jugador);
 		hilo.start();
 	}
     }

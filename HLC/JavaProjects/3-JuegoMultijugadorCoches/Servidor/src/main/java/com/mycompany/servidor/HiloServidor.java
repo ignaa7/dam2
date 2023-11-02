@@ -5,44 +5,36 @@
 package com.mycompany.servidor;
 
 import modelo.Jugador;
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
+import java.io.DataInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.PrintWriter;
 import java.net.Socket;
-import java.util.ArrayList;
 
 /**
  *
  * @author Ignacio
  */
 public class HiloServidor extends Thread {
-        private Socket socketCliente = null;
-	private BufferedReader fentrada;
-	private DataOutputStream dataOutputStream;
-        private ArrayList jugadores;
+	private DataInputStream dataInputStream;
         private Jugador jugador;
 	
-	public HiloServidor (Socket socketCliente, ArrayList<Jugador> jugadores) throws IOException {
-		this.socketCliente = socketCliente;
-                this.jugadores = jugadores;
-                this.jugador = new Jugador();
+	public HiloServidor (Socket socketCliente, Jugador jugador) throws IOException {
+                this.jugador = jugador;
                 
-                fentrada = new BufferedReader(new InputStreamReader(socketCliente.getInputStream()));
+                dataInputStream = new DataInputStream(socketCliente.getInputStream());
+                
 	}
 	
+        @Override
 	public void run () {
             try {
-                while (jugador.getPuntuacion() < 1) {
-                    System.out.println(fentrada.readLine());
+                while (jugador.getPuntuacion() < 20) {
+                    String a = dataInputStream.readUTF();
+                    System.out.println(a);
                     jugador.setPuntuacion(jugador.getPuntuacion() + 1);
                 }
                 
-		fentrada.close();
-		socketCliente.close();
-            } catch (Exception e) {
+		dataInputStream.close();
+            } catch (IOException e) {
 		System.err.println(e.getMessage());
             }
 	}

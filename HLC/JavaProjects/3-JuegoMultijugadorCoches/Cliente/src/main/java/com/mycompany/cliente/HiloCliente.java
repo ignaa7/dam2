@@ -27,14 +27,20 @@ public class HiloCliente extends Thread {
         this.socket = socket;
         this.jugadores = jugadores;
         
-        objectInputStream = new ObjectInputStream(socket.getInputStream());
+        
     }
 
     @Override
     public void run() {
+        try {
+            objectInputStream = new ObjectInputStream(socket.getInputStream());
+        } catch (IOException ex) {
+            Logger.getLogger(HiloCliente.class.getName()).log(Level.SEVERE, null, ex);
+        }
         while (true) {
             try {
-                jugadores = (ArrayList) objectInputStream.readObject();
+                jugadores = (ArrayList<Jugador>) objectInputStream.readObject();
+                jugadores.forEach(System.out::println);
             } catch (IOException ex) {
                 Logger.getLogger(HiloCliente.class.getName()).log(Level.SEVERE, null, ex);
             } catch (ClassNotFoundException ex) {
