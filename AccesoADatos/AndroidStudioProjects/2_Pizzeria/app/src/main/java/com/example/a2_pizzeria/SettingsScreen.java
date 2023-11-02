@@ -10,10 +10,14 @@ import android.view.View;
 import com.example.a2_pizzeria.databinding.ActivityMainScreenBinding;
 import com.example.a2_pizzeria.databinding.ActivitySettingsScreenBinding;
 
+import yuku.ambilwarna.AmbilWarnaDialog;
+
 public class SettingsScreen extends AppCompatActivity {
 
     private SharedPreferences screensColorPreferences;
     private ActivitySettingsScreenBinding binding;
+
+    int color;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +28,21 @@ public class SettingsScreen extends AppCompatActivity {
         setContentView(view);
 
         screensColorPreferences = getSharedPreferences("screensColor", Context.MODE_PRIVATE);
-        int color = screensColorPreferences.getInt("color", 0);
+        color = screensColorPreferences.getInt("color", 0);
         binding.getRoot().setBackgroundColor(color);
+    }
+
+    public void changeBackgroundColor() {
+        AmbilWarnaDialog colorDialog = new AmbilWarnaDialog(this, color, new AmbilWarnaDialog.OnAmbilWarnaListener() {
+            @Override
+            public void onCancel(AmbilWarnaDialog dialog) {
+
+            }
+
+            @Override
+            public void onOk(AmbilWarnaDialog dialog, int color) {
+
+            }
+        })
     }
 }

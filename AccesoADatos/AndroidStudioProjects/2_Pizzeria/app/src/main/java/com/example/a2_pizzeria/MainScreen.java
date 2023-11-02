@@ -51,6 +51,10 @@ public class MainScreen extends AppCompatActivity {
         }
     }
 
+    public void openSettingsScreen(View view) {
+        startActivity(new Intent(this, SettingsScreen.class));
+    }
+
     public void logOut(View view) {
         finish();
     }

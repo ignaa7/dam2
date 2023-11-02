@@ -17,4 +17,6 @@
     <string name="txtExit">Salir</string>
     <string name="txtTxtLogout">Cerrar sesión</string>
     <string name="txtSettings">Ajustes</string>
+    <string name="txtColor">Color de fondo</string>
+    <string name="txtBtnColor">Cambiar color de fondo</string>
 </resources>

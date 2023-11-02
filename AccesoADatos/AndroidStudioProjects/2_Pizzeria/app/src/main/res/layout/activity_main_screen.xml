@@ -34,6 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="56dp"
+        android:onClick="openSettingsScreen"
         android:text="@string/txtConfiguration"
         app:layout_constraintBottom_toTopOf="@+id/btnWebsite"
         app:layout_constraintEnd_toEndOf="parent"
