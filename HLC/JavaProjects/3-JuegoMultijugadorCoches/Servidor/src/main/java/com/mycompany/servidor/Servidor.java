@@ -30,6 +30,8 @@ public class Servidor {
 		Socket socketCliente = servidor.accept();
                 Jugador jugador = new Jugador();
                 
+                jugador.subscribe(hiloObservable);
+                
                 clientes.add(socketCliente);
                 jugadores.add(jugador);
                 

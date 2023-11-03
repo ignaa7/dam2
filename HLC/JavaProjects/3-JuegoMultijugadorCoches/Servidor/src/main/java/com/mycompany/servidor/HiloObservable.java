@@ -45,6 +45,7 @@ public class HiloObservable extends Thread implements Subscriber<EventoCambioJug
             try {
                 ObjectOutputStream objectOutputStream = new ObjectOutputStream(socketCliente.getOutputStream());
                 objectOutputStream.writeObject(jugadores);
+                
             } catch (IOException ex) {
                 Logger.getLogger(HiloObservable.class.getName()).log(Level.SEVERE, null, ex);
             }
