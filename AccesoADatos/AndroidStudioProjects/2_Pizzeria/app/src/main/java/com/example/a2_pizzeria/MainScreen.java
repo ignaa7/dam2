@@ -1,6 +1,7 @@
 package com.example.a2_pizzeria;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,6 +19,10 @@ public class MainScreen extends AppCompatActivity {
     private SharedPreferences currentUserPreferences;
     private SharedPreferences screensColorPreferences;
     private ActivityMainScreenBinding binding;
+
+    public static void setScreenBackgroundColor(ConstraintLayout screen) {
+        
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

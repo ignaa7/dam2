@@ -50,6 +50,7 @@ public class SettingsScreen extends AppCompatActivity {
                     SharedPreferences.Editor editor = screensColorPreferences.edit();
                     editor.putInt("color", color);
                     editor.apply();
+                    MainS
                 }
             });
 
