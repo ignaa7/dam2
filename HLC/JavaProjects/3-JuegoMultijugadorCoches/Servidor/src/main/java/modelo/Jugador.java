@@ -4,8 +4,6 @@
  */
 package modelo;
 
-import java.io.Serial;
-import java.io.Serializable;
 import java.util.UUID;
 import java.util.concurrent.Flow;
 import java.util.concurrent.SubmissionPublisher;
@@ -14,9 +12,7 @@ import java.util.concurrent.SubmissionPublisher;
  *
  * @author Ignacio
  */
-public class Jugador implements Serializable{
-    @Serial
-    private static final long serialVersionUID = 1L;
+public class Jugador{
     private String id;
     private int puntuacion;
     private int posicion;
@@ -28,41 +24,32 @@ public class Jugador implements Serializable{
         posicion = 0;
     }
 
-    /**
-     * @return the puntuacion
-     */
     public int getPuntuacion() {
         return puntuacion;
     }
+    
+    public void sumarPunto() {
+        puntuacion += 1;
+        publisher.submit(new EventoCambioJugador(this));
+    }
 
-    /**
-     * @param puntuacion the puntuacion to set
-     */
-    public void setPuntuacion(int puntuacion) {
-        int puntuacionAnterior = this.puntuacion;
-        this.puntuacion = puntuacion;
-        
-        if (puntuacionAnterior != puntuacion) {
+    public int getPosicion() {
+        return posicion;
+    }
+    
+    public void mover(String movimiento) {
+        if (movimiento.equals("derecha")) {
+            posicion += 1;
+            publisher.submit(new EventoCambioJugador(this));
+        }
+        else if (movimiento.equals("izquierda")) {
+            posicion -= 1;
             publisher.submit(new EventoCambioJugador(this));
         }
     }
     
     public void subscribe(Flow.Subscriber<? super EventoCambioJugador> subscriber) {
         publisher.subscribe(subscriber);
-    }
-
-    /**
-     * @return the posicion
-     */
-    public int getPosicion() {
-        return posicion;
-    }
-
-    /**
-     * @param posicion the posicion to set
-     */
-    public void setPosicion(int posicion) {
-        this.posicion = posicion;
     }
     
     @Override

@@ -4,8 +4,6 @@
  */
 package modelo;
 
-import java.io.Serial;
-import java.io.Serializable;
 import java.util.UUID;
 import java.util.concurrent.Flow;
 import java.util.concurrent.SubmissionPublisher;
@@ -14,9 +12,7 @@ import java.util.concurrent.SubmissionPublisher;
  *
  * @author Ignacio
  */
-public class Jugador implements Serializable{
-    @Serial
-    private static final long serialVersionUID = 1L;
+public class Jugador{
     private String id;
     private int puntuacion;
     private int posicion;

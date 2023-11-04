@@ -4,8 +4,8 @@
  */
 package com.mycompany.servidor;
 
+import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.concurrent.Flow;
@@ -14,7 +14,7 @@ import modelo.Jugador;
 import java.util.concurrent.Flow.Subscriber;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 
 /**
@@ -43,9 +43,12 @@ public class HiloObservable extends Thread implements Subscriber<EventoCambioJug
         // Puedes enviar la información actualizada a todos los clientes aquí
         clientes.forEach((socketCliente) -> {
             try {
-                ObjectOutputStream objectOutputStream = new ObjectOutputStream(socketCliente.getOutputStream());
-                objectOutputStream.writeObject(jugadores);
-                
+                //ObjectOutputStream objectOutputStream = new ObjectOutputStream(socketCliente.getOutputStream());
+                //objectOutputStream.writeObject(jugadores);
+                ObjectMapper objectMapper = new ObjectMapper();
+                String json = objectMapper.writeValueAsString(jugadores);
+                DataOutputStream dataOutputStream = new DataOutputStream(socketCliente.getOutputStream());
+                dataOutputStream.writeUTF(json);
             } catch (IOException ex) {
                 Logger.getLogger(HiloObservable.class.getName()).log(Level.SEVERE, null, ex);
             }

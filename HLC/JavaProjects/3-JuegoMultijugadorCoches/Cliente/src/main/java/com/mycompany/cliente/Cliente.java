@@ -4,6 +4,8 @@
  */
 package com.mycompany.cliente;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -46,12 +48,12 @@ public class Cliente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        lblNombre = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("jLabel1");
+        lblNombre.setText("jLabel1");
 
         jButton1.setText("jButton1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -68,15 +70,17 @@ public class Cliente extends javax.swing.JFrame {
                 .addGap(157, 157, 157)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1)
-                    .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(lblNombre)))
                 .addContainerGap(164, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(jLabel1)
-                .addGap(56, 56, 56)
+                .addGap(23, 23, 23)
+                .addComponent(lblNombre)
+                .addGap(78, 78, 78)
                 .addComponent(jButton1)
                 .addContainerGap(156, Short.MAX_VALUE))
         );
@@ -112,25 +116,27 @@ public class Cliente extends javax.swing.JFrame {
     }
     
     private static void ejecutar() throws IOException, ClassNotFoundException {
-		
-		ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream());
-                
-                
                 ArrayList<Jugador> jugadores = null;
                 
-                HiloCliente hilo = new HiloCliente(socket, jugadores);
+                //HiloCliente hilo = new HiloCliente(socket, jugadores);
 
                 boolean fin = false;
                 
 		while (!fin) {
-                    jugadores = (ArrayList<Jugador>) objectInputStream.readObject();
+                    DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());
+                    String json = dataInputStream.readUTF();
+                    
+                    ObjectMapper objectMapper = new ObjectMapper();
+                    jugadores = objectMapper.readValue(json, new TypeReference<ArrayList<Jugador>>() {});
+                    
                     for (Jugador jugador : jugadores) {
                         System.out.println(jugador.toString());
                         if (jugador.getPuntuacion() == 5) fin = true;
                     }
+                    System.out.println("\n");
 		}
                 
-		objectInputStream.close();
+		//objectInputStream.close();
                 dataOutputStream.close();
 		System.out.println("Fin del envío... ");
 		socket.close();
@@ -138,6 +144,6 @@ public class Cliente extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel lblNombre;
     // End of variables declaration//GEN-END:variables
 }
