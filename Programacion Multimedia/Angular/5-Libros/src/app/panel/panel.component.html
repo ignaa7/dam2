@@ -1,0 +1,7 @@
+<div [ngClass]="'panel'">
+    <p>Título: {{libro.titulo}}</p>
+    <p>Autor: {{libro.autor}}</p>
+    <p>Editorial: {{libro.editorial}}</p>
+    <p>Fecha de publicación: {{libro.fechaPublicacion | date: "dd/MM/YYYY"}}</p>
+    <p>Años editado: {{libro.fechaPublicacion | diferenciaFechas}}</p>
+</div>
