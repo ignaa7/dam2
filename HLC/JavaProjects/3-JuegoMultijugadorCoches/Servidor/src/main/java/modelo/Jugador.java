@@ -23,7 +23,7 @@ public class Jugador{
     public Jugador(int id) {
         this.id = id;
         puntuacion = 0;
-        posicion = 0;
+        posicion = 230;
     }
     
     public Jugador() {
