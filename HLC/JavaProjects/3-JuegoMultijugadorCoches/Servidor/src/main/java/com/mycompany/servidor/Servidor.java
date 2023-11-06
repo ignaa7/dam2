@@ -4,6 +4,7 @@
 
 package com.mycompany.servidor;
 
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -19,16 +20,21 @@ public class Servidor {
         ServerSocket servidor = new ServerSocket(2000);
         ArrayList<Jugador> jugadores = new ArrayList();
         ArrayList<Socket> clientes = new ArrayList();
-        
-        HiloObservable hiloObservable = new HiloObservable(jugadores, clientes);
-        hiloObservable.start();
 	
         System.out.println("Servidor iniciado...");
+        
+        int idCont = 1;
 		
-	while (true) {
+	while (jugadores.size() < 4) {
 		Socket socketCliente = servidor.accept();
-                Jugador jugador = new Jugador();
                 
+                Jugador jugador = new Jugador(idCont);
+                DataOutputStream playerDataOutputStream = new DataOutputStream(socketCliente.getOutputStream());
+                playerDataOutputStream.writeUTF("Jugador " + idCont);
+                idCont++;
+                
+                HiloObservable hiloObservable = new HiloObservable(jugadores, clientes);
+                hiloObservable.start();
                 jugador.subscribe(hiloObservable);
                 
                 clientes.add(socketCliente);

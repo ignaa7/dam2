@@ -27,10 +27,10 @@ public class HiloServidor extends Thread {
         @Override
 	public void run () {
             try {
-                while (jugador.getPuntuacion() < 20) {
+                while (jugador.getPuntuacion() < 5) {
                     String movimiento = dataInputStream.readUTF();
                     
-                    if (movimiento.equals("derecha")) jugador.setPuntuacion(jugador.getPuntuacion() + 1);
+                    jugador.mover(movimiento);
                 }
                 
 		dataInputStream.close();

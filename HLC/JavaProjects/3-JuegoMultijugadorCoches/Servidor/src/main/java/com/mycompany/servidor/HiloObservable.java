@@ -40,15 +40,16 @@ public class HiloObservable extends Thread implements Subscriber<EventoCambioJug
     @Override
     public void onNext(EventoCambioJugador item) {
         // Se llama cuando se produce un cambio en cualquier jugador
-        // Puedes enviar la información actualizada a todos los clientes aquí
+        // Envía el array actualizado a todos los clientes
         clientes.forEach((socketCliente) -> {
             try {
-                //ObjectOutputStream objectOutputStream = new ObjectOutputStream(socketCliente.getOutputStream());
-                //objectOutputStream.writeObject(jugadores);
-                ObjectMapper objectMapper = new ObjectMapper();
-                String json = objectMapper.writeValueAsString(jugadores);
-                DataOutputStream dataOutputStream = new DataOutputStream(socketCliente.getOutputStream());
-                dataOutputStream.writeUTF(json);
+                if (!socketCliente.isClosed()) {
+                    ObjectMapper objectMapper = new ObjectMapper();
+                    String json = objectMapper.writeValueAsString(jugadores);
+
+                    DataOutputStream dataOutputStream = new DataOutputStream(socketCliente.getOutputStream());
+                    dataOutputStream.writeUTF(json);
+                }
             } catch (IOException ex) {
                 Logger.getLogger(HiloObservable.class.getName()).log(Level.SEVERE, null, ex);
             }
