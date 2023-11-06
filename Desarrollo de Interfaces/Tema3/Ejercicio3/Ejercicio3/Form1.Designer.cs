@@ -40,6 +40,7 @@
             btnCiclos.TabIndex = 0;
             btnCiclos.Text = "Ciclos";
             btnCiclos.UseVisualStyleBackColor = true;
+            btnCiclos.Click += btnCiclos_Click;
             // 
             // btnEstudiantes
             // 
@@ -49,6 +50,7 @@
             btnEstudiantes.TabIndex = 1;
             btnEstudiantes.Text = "Estudiantes";
             btnEstudiantes.UseVisualStyleBackColor = true;
+            btnEstudiantes.Click += btnEstudiantes_Click;
             // 
             // Form1
             // 

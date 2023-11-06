@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdminIES.DLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace AdminIES.forms
         public FormEstudiante()
         {
             InitializeComponent();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

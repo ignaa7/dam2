@@ -30,8 +30,8 @@
         {
             lblID = new Label();
             lblNombreCiclo = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtId = new TextBox();
+            txtNombreCiclo = new TextBox();
             btnAgregar = new Button();
             btnModificar = new Button();
             btnBorrar = new Button();
@@ -58,19 +58,19 @@
             lblNombreCiclo.TabIndex = 1;
             lblNombreCiclo.Text = "Nombre Ciclo";
             // 
-            // textBox1
+            // txtId
             // 
-            textBox1.Location = new Point(48, 44);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(154, 23);
-            textBox1.TabIndex = 2;
+            txtId.Location = new Point(48, 44);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(154, 23);
+            txtId.TabIndex = 2;
             // 
-            // textBox2
+            // txtNombreCiclo
             // 
-            textBox2.Location = new Point(256, 44);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(510, 23);
-            textBox2.TabIndex = 3;
+            txtNombreCiclo.Location = new Point(256, 44);
+            txtNombreCiclo.Name = "txtNombreCiclo";
+            txtNombreCiclo.Size = new Size(510, 23);
+            txtNombreCiclo.TabIndex = 3;
             // 
             // btnAgregar
             // 
@@ -80,6 +80,7 @@
             btnAgregar.TabIndex = 4;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // btnModificar
             // 
@@ -127,8 +128,8 @@
             Controls.Add(btnBorrar);
             Controls.Add(btnModificar);
             Controls.Add(btnAgregar);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtNombreCiclo);
+            Controls.Add(txtId);
             Controls.Add(lblNombreCiclo);
             Controls.Add(lblID);
             Name = "FormCiclo";
@@ -142,8 +143,8 @@
 
         private Label lblID;
         private Label lblNombreCiclo;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtId;
+        private TextBox txtNombreCiclo;
         private Button btnAgregar;
         private Button btnModificar;
         private Button btnBorrar;

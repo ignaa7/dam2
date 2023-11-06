@@ -9,7 +9,7 @@ namespace AdminIES.DLL
 {
     internal class Conexion
     {
-        private string cadenaConexion = "Data Source=DAM2-15\\SQLEXPRESS; Initial Catalog=db.Sistema; Integrated Security = True";
+        private string cadenaConexion = "Data Source=DAM2-15; Initial Catalog=db.Sistema; Integrated Security = True";
         SqlConnection sqlConnection;
 
         SqlConnection EstablecerConexion()
