@@ -22,8 +22,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * @author Ignacio
  */
 public class HiloObservable extends Thread implements Subscriber<EventoCambioJugador> {
-    private ArrayList<Jugador> jugadores;
-    private ArrayList<Socket> clientes;
+    private final ArrayList<Jugador> jugadores;
+    private final ArrayList<Socket> clientes;
     private Flow.Subscription subscription;
     
     public HiloObservable(ArrayList<Jugador> jugadores, ArrayList<Socket> clientes) {

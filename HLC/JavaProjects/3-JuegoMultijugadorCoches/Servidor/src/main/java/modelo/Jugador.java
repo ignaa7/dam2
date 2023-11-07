@@ -17,13 +17,15 @@ public class Jugador{
     private int id;
     private int puntuacion;
     private int posicion;
-    private int ultimoExtremoTocado = 0;
+    private int ultimoExtremoTocado = -1;
+    private final int extremoIzquierdo = -225;
+    private final int extremoDerecho = 250;
     private final SubmissionPublisher<EventoCambioJugador> publisher = new SubmissionPublisher<>();
     
     public Jugador(int id) {
         this.id = id;
         puntuacion = 0;
-        posicion = 230;
+        posicion = 0;
     }
     
     public Jugador() {
@@ -40,30 +42,29 @@ public class Jugador{
     
     public void sumarPunto() {
         puntuacion += 1;
-        publisher.submit(new EventoCambioJugador(this));
     }
 
     public int getPosicion() {
         return posicion;
     }
     
-    public void mover(String movimiento) {
-        if (movimiento.equals("derecha")) {
-            posicion += 1;
+    public void mover(int movimiento) {
+        if (movimiento == 0 && posicion < extremoDerecho) {
+            posicion += 3;
             
-            if (posicion == 5 && ultimoExtremoTocado != 5) {
+            if (posicion >= extremoDerecho && ultimoExtremoTocado != 0) {
                 sumarPunto();
-                ultimoExtremoTocado = 5;
+                ultimoExtremoTocado = 0;
             }
             
             publisher.submit(new EventoCambioJugador(this));
         }
-        else if (movimiento.equals("izquierda")) {
-            posicion -= 1;
+        else if (movimiento == 1 && posicion > extremoIzquierdo) {
+            posicion -= 3;
             
-            if (posicion == -5 && ultimoExtremoTocado != -5) {
+            if (posicion <= extremoIzquierdo && ultimoExtremoTocado != 1) {
                 sumarPunto();
-                ultimoExtremoTocado = -5;
+                ultimoExtremoTocado = 1;
             }
             
             publisher.submit(new EventoCambioJugador(this));

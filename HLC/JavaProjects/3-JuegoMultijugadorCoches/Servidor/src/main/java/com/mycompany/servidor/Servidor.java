@@ -20,8 +20,6 @@ public class Servidor {
         ServerSocket servidor = new ServerSocket(2000);
         ArrayList<Jugador> jugadores = new ArrayList();
         ArrayList<Socket> clientes = new ArrayList();
-	
-        System.out.println("Servidor iniciado...");
         
         int idCont = 1;
 		
