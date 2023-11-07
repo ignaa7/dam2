@@ -14,10 +14,12 @@ namespace Ejercicio2
             if (!Regex.IsMatch(txtNif.Text, @"^\d{8}[A-Z]$"))
             {
                 errNif.SetError(txtNif, "NIF inválido");
+                e.Cancel = true;
             }
             else
             {
                 errNif.SetError(txtNif, "");
+                e.Cancel = false;
             }
         }
 
@@ -26,10 +28,12 @@ namespace Ejercicio2
             if (string.IsNullOrEmpty(txtName.Text))
             {
                 errName.SetError(txtName, "Campo obligatorio");
+                e.Cancel = true;
             }
             else
             {
                 errName.SetError(txtName, "");
+                e.Cancel = false;
             }
         }
 
@@ -38,10 +42,12 @@ namespace Ejercicio2
             if (string.IsNullOrEmpty(txtSurname.Text))
             {
                 errSurname.SetError(txtSurname, "Campo obligatorio");
+                e.Cancel = true;
             }
             else
             {
                 errSurname.SetError(txtSurname, "");
+                e.Cancel = false;
             }
         }
 
@@ -50,10 +56,12 @@ namespace Ejercicio2
             if (!Regex.IsMatch(txtEmail.Text, @"^\w+@\w+.\w+$"))
             {
                 errEmail.SetError(txtEmail, "Email inválido");
+                e.Cancel = true;
             }
             else
             {
                 errEmail.SetError(txtEmail, "");
+                e.Cancel = false;
             }
         }
 

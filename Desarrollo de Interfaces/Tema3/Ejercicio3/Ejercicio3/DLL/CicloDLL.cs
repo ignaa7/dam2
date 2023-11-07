@@ -15,7 +15,17 @@ namespace AdminIES.DLL
         }
         public bool Agregar(string nombreCiclo)
         {
-            return conexion.EjecutarComandoSinRetornarDatos("Insert into Ciclo(nombre) values ('" + nombreCiclo + "')");
+            return conexion.EjecutarComandoSinRetornarDatos($"insert into Ciclo(nombre) values ('{nombreCiclo}')");
+        }
+
+        public bool Modificar(int idCiclo, string nombreCiclo)
+        {
+            return conexion.EjecutarComandoSinRetornarDatos($"update Ciclo set nombre = '{nombreCiclo}' where id = {idCiclo}");
+        }
+
+        public bool Borrar(int idCiclo)
+        {
+            return conexion.EjecutarComandoSinRetornarDatos($"delete from Ciclo where id = {idCiclo}");
         }
     }
 }

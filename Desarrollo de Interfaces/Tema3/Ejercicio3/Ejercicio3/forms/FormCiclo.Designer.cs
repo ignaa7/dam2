@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lblID = new Label();
             lblNombreCiclo = new Label();
             txtId = new TextBox();
@@ -37,7 +38,9 @@
             btnBorrar = new Button();
             btnCancelar = new Button();
             dgvCiclos = new DataGridView();
+            errNombreCiclo = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)dgvCiclos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errNombreCiclo).BeginInit();
             SuspendLayout();
             // 
             // lblID
@@ -71,6 +74,7 @@
             txtNombreCiclo.Name = "txtNombreCiclo";
             txtNombreCiclo.Size = new Size(510, 23);
             txtNombreCiclo.TabIndex = 3;
+            txtNombreCiclo.Validating += txtNombreCiclo_Validating;
             // 
             // btnAgregar
             // 
@@ -90,6 +94,7 @@
             btnModificar.TabIndex = 5;
             btnModificar.Text = "Modificar";
             btnModificar.UseVisualStyleBackColor = true;
+            btnModificar.Click += btnModificar_Click;
             // 
             // btnBorrar
             // 
@@ -99,6 +104,7 @@
             btnBorrar.TabIndex = 6;
             btnBorrar.Text = "Borrar";
             btnBorrar.UseVisualStyleBackColor = true;
+            btnBorrar.Click += btnBorrar_Click;
             // 
             // btnCancelar
             // 
@@ -108,6 +114,7 @@
             btnCancelar.TabIndex = 7;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // dgvCiclos
             // 
@@ -117,6 +124,10 @@
             dgvCiclos.RowTemplate.Height = 25;
             dgvCiclos.Size = new Size(718, 298);
             dgvCiclos.TabIndex = 8;
+            // 
+            // errNombreCiclo
+            // 
+            errNombreCiclo.ContainerControl = this;
             // 
             // FormCiclo
             // 
@@ -135,6 +146,7 @@
             Name = "FormCiclo";
             Text = "FormCiclo";
             ((System.ComponentModel.ISupportInitialize)dgvCiclos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errNombreCiclo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -150,5 +162,6 @@
         private Button btnBorrar;
         private Button btnCancelar;
         private DataGridView dgvCiclos;
+        private ErrorProvider errNombreCiclo;
     }
 }
