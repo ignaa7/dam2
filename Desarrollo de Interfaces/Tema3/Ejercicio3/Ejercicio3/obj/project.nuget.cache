@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "w4PLeQMQ3sqSCk64ivKvkwLfBSAns9cdspCkvVsqQJL/o7TdmFQyU3DNBkGQdjI+w3Ac0NBUSBOm65O8CCyRBQ==",
+  "success": false,
+  "projectFilePath": "D:\\dam2\\Desarrollo de Interfaces\\Tema3\\Ejercicio3\\Ejercicio3\\AdminIES.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "No se encuentra el paquete System.Data.SqlClient. No existe ningún paquete con este id. en los orígenes: Microsoft Visual Studio Offline Packages",
+      "libraryId": "System.Data.SqlClient",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}
