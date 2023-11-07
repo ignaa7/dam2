@@ -4,6 +4,9 @@
  */
 package com.mycompany.piscina;
 
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
+
 /**
  *
  * @author dam
@@ -15,6 +18,18 @@ public class EleccionPiscina extends javax.swing.JFrame {
      */
     public EleccionPiscina() {
         initComponents();
+        setLocationRelativeTo(null);
+        
+        DefaultListModel<Double> model = new DefaultListModel<>();
+        JList<Double> lista = new JList<>(model);
+
+        for (double i = 1; i <= 2; i+=0.1) {
+            double roundedValue = Math.round(i * 10.0) / 10.0;
+            model.addElement(roundedValue);
+        }
+        
+        
+        spMetrosCubicos.setViewportView(lista);
     }
 
     /**
@@ -26,17 +41,32 @@ public class EleccionPiscina extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        spMetrosCubicos = new javax.swing.JScrollPane();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("Capacidad de la piscina en metros cúbicos");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(spMetrosCubicos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addComponent(jLabel1)
+                .addGap(41, 41, 41)
+                .addComponent(spMetrosCubicos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(74, Short.MAX_VALUE))
         );
 
         pack();
@@ -78,5 +108,7 @@ public class EleccionPiscina extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane spMetrosCubicos;
     // End of variables declaration//GEN-END:variables
 }

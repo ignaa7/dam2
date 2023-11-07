@@ -187,7 +187,7 @@ public class Cliente extends javax.swing.JFrame implements Runnable{
 
     public static void main(String args[]) throws IOException, ClassNotFoundException {   
         
-        socket = new Socket("192.168.1.40", 2000);
+        socket = new Socket("localhost", 2000);
         dataOutputStream = new DataOutputStream(socket.getOutputStream());
         
         DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());

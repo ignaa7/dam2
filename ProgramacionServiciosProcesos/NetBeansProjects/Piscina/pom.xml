@@ -11,4 +11,5 @@
         <maven.compiler.target>20</maven.compiler.target>
         <exec.mainClass>com.mycompany.piscina.Piscina</exec.mainClass>
     </properties>
+    <name>Piscina</name>
 </project>
