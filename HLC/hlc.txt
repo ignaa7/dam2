@@ -8,3 +8,13 @@ URL -> protocolo://dirección:puerto/ruta
 
 Server iterativo: un solo hilo, así que para realizar varias acciones tiene que usar bucles, no puede hacerlas a la vez
 Server concurrente: varios hilos
+
+
+UDP:
+no diferencia entre cliente y servidor, sino que ambos crean sockets de UDP (DatagramSocket)
+no hay fiabilidad ni control de flujo
+
+
+Capas:
+Física -> Enlace -> Red -> Transporte -> Aplicación
+En la de transporte están TCP y UDP
