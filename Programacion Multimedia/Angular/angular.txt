@@ -53,3 +53,22 @@ Directivas:
 
 
 Tuberías:
+
+
+Model Driven:
+1- vista (html)
+	<form>
+	</form>
+2. ts (controller)
+	new Form
+	new Input
+	new Button
+3. Enlazar el modelo a la vista
+	<form directiva>
+	<input directiva>
+
+
+Template Driven:
+	<form directiva>
+	<input directiva>
+Internamente se crea el modelo, pero nosotros no tenemos nada en el ts, solo en la vista
