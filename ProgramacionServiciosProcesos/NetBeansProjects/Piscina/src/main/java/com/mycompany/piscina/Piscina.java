@@ -24,18 +24,20 @@ public class Piscina {
     }
     
     public void vaciar (int cantidad) throws Exception {
-        nivel -= cantidad;
-        
-        if (nivel < 0) {
+        if (nivel - cantidad < 0) {
             throw new Exception("Nivel por debajo de 0");
+        }
+        else {
+            nivel -= cantidad;
         }
     }
     
     public void llenar (int cantidad) throws Exception {
-        nivel += cantidad;
-        
-        if (nivel > MAX_NIVEL) {
+        if (nivel + cantidad > MAX_NIVEL) {
             throw new Exception("Nivel por encima del nivel máximo");
+        }
+        else {
+            nivel += cantidad;
         }
     }
 }

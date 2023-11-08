@@ -12,6 +12,10 @@ import javax.swing.JList;
  * @author dam
  */
 public class EleccionPiscina extends javax.swing.JFrame {
+    
+    private int litrosPiscina;
+    private JList<Double> lista;
+    private Piscina piscina;
 
     /**
      * Creates new form EleccionPiscina
@@ -20,8 +24,19 @@ public class EleccionPiscina extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         
+        panel.setVisible(false);
+        
+        jsCapacidad.setMinimum(0); //Valor Mínimo
+        
+        jsCapacidad.setMajorTickSpacing(100); //Definir marcas mayores cada 100 unidades
+        jsCapacidad.setMinorTickSpacing(10); //Definir marcas menores cada 10 unidades
+        jsCapacidad.setValue(0); //Asignación del valor inicial
+        jsCapacidad.setPaintTicks(true); //Mostrar marcas mayores y menores
+        jsCapacidad.setPaintLabels(true); //Mostrar numeración de marcas mayores
+        jsCapacidad.setEnabled(false); //desactivar jSlider
+        
         DefaultListModel<Double> model = new DefaultListModel<>();
-        JList<Double> lista = new JList<>(model);
+        lista = new JList<>(model);
 
         for (double i = 1; i <= 2; i+=0.1) {
             double roundedValue = Math.round(i * 10.0) / 10.0;
@@ -41,36 +56,169 @@ public class EleccionPiscina extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        lblCapacidad = new javax.swing.JLabel();
         spMetrosCubicos = new javax.swing.JScrollPane();
+        btnProbar = new javax.swing.JButton();
+        panel = new javax.swing.JPanel();
+        btnLlenar = new javax.swing.JButton();
+        btnVaciar = new javax.swing.JButton();
+        jsCapacidad = new javax.swing.JSlider();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        taOperaciones = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Capacidad de la piscina en metros cúbicos");
+        lblCapacidad.setText("Capacidad de la piscina en metros cúbicos");
+
+        btnProbar.setText("Probar piscina");
+        btnProbar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnProbarMouseClicked(evt);
+            }
+        });
+        btnProbar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProbarActionPerformed(evt);
+            }
+        });
+
+        btnLlenar.setText("Llenar");
+        btnLlenar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnLlenarMouseClicked(evt);
+            }
+        });
+        btnLlenar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLlenarActionPerformed(evt);
+            }
+        });
+
+        btnVaciar.setText("Vaciar");
+        btnVaciar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnVaciarMouseClicked(evt);
+            }
+        });
+
+        taOperaciones.setColumns(20);
+        taOperaciones.setRows(5);
+        jScrollPane1.setViewportView(taOperaciones);
+
+        javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
+        panel.setLayout(panelLayout);
+        panelLayout.setHorizontalGroup(
+            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelLayout.createSequentialGroup()
+                .addGap(105, 105, 105)
+                .addComponent(btnLlenar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 242, Short.MAX_VALUE)
+                .addComponent(btnVaciar)
+                .addGap(174, 174, 174))
+            .addGroup(panelLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jScrollPane1)
+                .addContainerGap())
+            .addGroup(panelLayout.createSequentialGroup()
+                .addComponent(jsCapacidad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        panelLayout.setVerticalGroup(
+            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnLlenar)
+                    .addComponent(btnVaciar))
+                .addGap(18, 18, 18)
+                .addComponent(jsCapacidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(spMetrosCubicos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lblCapacidad)
+                        .addGap(95, 95, 95))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnProbar)
+                        .addGap(133, 133, 133)))
+                .addComponent(spMetrosCubicos, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(137, 137, 137))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(12, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(69, 69, 69)
-                .addComponent(jLabel1)
-                .addGap(41, 41, 41)
-                .addComponent(spMetrosCubicos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(spMetrosCubicos, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblCapacidad)
+                        .addGap(65, 65, 65)
+                        .addComponent(btnProbar)))
+                .addGap(28, 28, 28)
+                .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnProbarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProbarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnProbarActionPerformed
+
+    private void btnProbarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProbarMouseClicked
+        if (lista.getSelectedValue() != null) {
+            litrosPiscina = (int)(lista.getSelectedValue() * 1000);
+            jsCapacidad.setMaximum(litrosPiscina);
+            
+            piscina = new Piscina(litrosPiscina);
+            
+            panel.setVisible(true);
+        }
+    }//GEN-LAST:event_btnProbarMouseClicked
+
+    private void btnLlenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLlenarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLlenarActionPerformed
+
+    private void btnLlenarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLlenarMouseClicked
+        int numero = (int) (Math.random() * 1000 + 1);
+        
+        try {
+            piscina.llenar(numero);
+            jsCapacidad.setValue(piscina.getNivel());
+            taOperaciones.append("llenando..." + numero + " nivel=" + piscina.getNivel() + "\n-----------------------------------------------\n");
+        }
+        catch (Exception e) {
+            taOperaciones.append("llenando..." + numero + " " + e.getMessage() + " Se queda con " + piscina.getNivel() + "\n-----------------------------------------------\n");
+        }
+    }//GEN-LAST:event_btnLlenarMouseClicked
+
+    private void btnVaciarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVaciarMouseClicked
+        int numero = (int) (Math.random() * 1000 + 1);
+        
+        try {
+            piscina.vaciar(numero);
+            jsCapacidad.setValue(piscina.getNivel());
+            taOperaciones.append("vaciando..." + numero + " nivel=" + piscina.getNivel() + "\n-----------------------------------------------\n");
+        }
+        catch (Exception e) {
+            taOperaciones.append("vaciando..." + numero + " " + e.getMessage() + " Se queda con " + piscina.getNivel() + "\n-----------------------------------------------\n");
+        }
+    }//GEN-LAST:event_btnVaciarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -108,7 +256,14 @@ public class EleccionPiscina extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnLlenar;
+    private javax.swing.JButton btnProbar;
+    private javax.swing.JButton btnVaciar;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSlider jsCapacidad;
+    private javax.swing.JLabel lblCapacidad;
+    private javax.swing.JPanel panel;
     private javax.swing.JScrollPane spMetrosCubicos;
+    private javax.swing.JTextArea taOperaciones;
     // End of variables declaration//GEN-END:variables
 }
