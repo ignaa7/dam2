@@ -1,18 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "w4PLeQMQ3sqSCk64ivKvkwLfBSAns9cdspCkvVsqQJL/o7TdmFQyU3DNBkGQdjI+w3Ac0NBUSBOm65O8CCyRBQ==",
-  "success": false,
-  "projectFilePath": "D:\\dam2\\Desarrollo de Interfaces\\Tema3\\Ejercicio3\\Ejercicio3\\AdminIES.csproj",
-  "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1101",
-      "level": "Error",
-      "message": "No se encuentra el paquete System.Data.SqlClient. No existe ningún paquete con este id. en los orígenes: Microsoft Visual Studio Offline Packages",
-      "libraryId": "System.Data.SqlClient",
-      "targetGraphs": [
-        "net6.0-windows7.0"
-      ]
-    }
-  ]
+  "dgSpecHash": "iQCGcg0t6PPWUhCuItAhcxx3Xx7kXP7eX56QV1tlymQoWez/E9io2l686HrL0Z/w9GRR5zXzru8cyWVscgvonA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\Tema3\\Ejercicio3\\Ejercicio3\\AdminIES.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dam\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\dam\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\dam\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\dam\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\dam\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\dam\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\dam\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\system.data.sqlclient.4.8.5.nupkg.sha512",
+    "C:\\Users\\dam\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\dam\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
 }

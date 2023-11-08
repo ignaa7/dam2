@@ -14,20 +14,31 @@ namespace AdminIES.forms
 {
     public partial class FormCiclo : Form
     {
-        CicloDLL cicloDLL = new CicloDLL();
+        CicloDLL cicloDLL;
 
-        public FormCiclo()
+        public FormCiclo(CicloDLL ciclo)
         {
+            cicloDLL = ciclo;
+
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
+
+            GetCiclos();
+        }
+
+        private void GetCiclos()
+        {
+            dgvCiclos.DataSource = cicloDLL.MostrarCiclos().Tables[0];
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (this.ValidateChildren())
+            if (ValidateChildren())
             {
                 if (cicloDLL.Agregar(txtNombreCiclo.Text))
                 {
                     MessageBox.Show("Ciclo añadido correctamente");
+                    GetCiclos();
                 }
                 else
                 {
@@ -61,6 +72,7 @@ namespace AdminIES.forms
                 if (cicloDLL.Modificar(Convert.ToInt32(txtId.Text), txtNombreCiclo.Text))
                 {
                     MessageBox.Show("Ciclo modificado correctamente");
+                    GetCiclos();
                 }
                 else
                 {
@@ -80,6 +92,7 @@ namespace AdminIES.forms
                 if (cicloDLL.Borrar(Convert.ToInt32(txtId.Text)))
                 {
                     MessageBox.Show("Ciclo borrado correctamente");
+                    GetCiclos();
                 }
                 else
                 {

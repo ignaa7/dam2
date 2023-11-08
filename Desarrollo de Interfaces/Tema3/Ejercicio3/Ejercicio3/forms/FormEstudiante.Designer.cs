@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             pbImagen = new PictureBox();
             lblClave = new Label();
             lblNombre = new Label();
@@ -47,8 +48,18 @@
             btnBorrar = new Button();
             btnCancelar = new Button();
             dgvEstudiante = new DataGridView();
+            errNombre = new ErrorProvider(components);
+            errPrimerApellido = new ErrorProvider(components);
+            errSegundoApellido = new ErrorProvider(components);
+            errCorreo = new ErrorProvider(components);
+            errCiclo = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)pbImagen).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvEstudiante).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errNombre).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errPrimerApellido).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errSegundoApellido).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errCorreo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errCiclo).BeginInit();
             SuspendLayout();
             // 
             // pbImagen
@@ -126,6 +137,7 @@
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(386, 23);
             txtNombre.TabIndex = 8;
+            txtNombre.Validating += txtNombre_Validating;
             // 
             // txtSegundoApellido
             // 
@@ -133,6 +145,7 @@
             txtSegundoApellido.Name = "txtSegundoApellido";
             txtSegundoApellido.Size = new Size(268, 23);
             txtSegundoApellido.TabIndex = 9;
+            txtSegundoApellido.Validating += txtSegundoApellido_Validating;
             // 
             // txtPrimerApellido
             // 
@@ -140,6 +153,7 @@
             txtPrimerApellido.Name = "txtPrimerApellido";
             txtPrimerApellido.Size = new Size(238, 23);
             txtPrimerApellido.TabIndex = 10;
+            txtPrimerApellido.Validating += txtPrimerApellido_Validating;
             // 
             // txtCorreo
             // 
@@ -147,6 +161,7 @@
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(541, 23);
             txtCorreo.TabIndex = 11;
+            txtCorreo.Validating += txtCorreo_Validating;
             // 
             // cmbCiclo
             // 
@@ -155,6 +170,7 @@
             cmbCiclo.Name = "cmbCiclo";
             cmbCiclo.Size = new Size(541, 23);
             cmbCiclo.TabIndex = 13;
+            cmbCiclo.Validating += cmbCiclo_Validating;
             // 
             // btnExaminar
             // 
@@ -211,6 +227,26 @@
             dgvEstudiante.Size = new Size(747, 150);
             dgvEstudiante.TabIndex = 19;
             // 
+            // errNombre
+            // 
+            errNombre.ContainerControl = this;
+            // 
+            // errPrimerApellido
+            // 
+            errPrimerApellido.ContainerControl = this;
+            // 
+            // errSegundoApellido
+            // 
+            errSegundoApellido.ContainerControl = this;
+            // 
+            // errCorreo
+            // 
+            errCorreo.ContainerControl = this;
+            // 
+            // errCiclo
+            // 
+            errCiclo.ContainerControl = this;
+            // 
             // FormEstudiante
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -239,6 +275,11 @@
             Text = "FormEstudiante";
             ((System.ComponentModel.ISupportInitialize)pbImagen).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvEstudiante).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errNombre).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errPrimerApellido).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errSegundoApellido).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errCorreo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errCiclo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -264,5 +305,10 @@
         private Button btnBorrar;
         private Button btnCancelar;
         private DataGridView dgvEstudiante;
+        private ErrorProvider errNombre;
+        private ErrorProvider errPrimerApellido;
+        private ErrorProvider errSegundoApellido;
+        private ErrorProvider errCorreo;
+        private ErrorProvider errCiclo;
     }
 }

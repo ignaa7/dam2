@@ -1,24 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace AdminIES.DLL
 {
-    public class CicloDLL
+    public class EstudianteDLL
     {
         Conexion conexion;
-        public CicloDLL(Conexion conexion)
+
+        public EstudianteDLL()
         {
-            this.conexion = conexion;
+            conexion = new Conexion();
         }
 
-        public bool Agregar(string nombreCiclo)
+        public bool Agregar(string nombre, string primerApellido, string segundoApellido, string correo, int idCiclo)
         {
-            return conexion.EjecutarComandoSinRetornarDatos($"insert into Ciclo(nombre) values ('{nombreCiclo}')");
+            bool consulta1 = conexion.EjecutarComandoSinRetornarDatos($"insert into Estudiante(nombre, primerapellido, segundoapellido, email) values ('{nombre}', '{primerApellido}', '{segundoApellido}', '{correo}')");
+
+            int idEstudiante = conexion.SelectId("select id from Estudiante having max(id)");
+
+            bool consulta2 = conexion.EjecutarComandoSinRetornarDatos($"insert into Estudiante_Asignar_Ciclo(id_estudiante, id_ciclo) values ('{idEstudiante}', '{idCiclo}')");
+
+            return consulta1 && consulta2;
         }
 
         public bool Modificar(int idCiclo, string nombreCiclo)
