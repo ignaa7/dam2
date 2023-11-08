@@ -12,36 +12,46 @@ namespace AdminIES.DLL
     {
         Conexion conexion;
 
-        public EstudianteDLL()
+        public EstudianteDLL(Conexion conexion)
         {
-            conexion = new Conexion();
+            this.conexion = conexion;
         }
 
-        public bool Agregar(string nombre, string primerApellido, string segundoApellido, string correo, int idCiclo)
+        public DataSet GetCiclos()
+        {
+            SqlCommand sentencia = new SqlCommand("select nombre from Ciclo");
+            return conexion.EjecutarSentencia(sentencia);
+        }
+
+        public bool Agregar(string nombre, string primerApellido, string segundoApellido, string correo, string nombreCiclo)
         {
             bool consulta1 = conexion.EjecutarComandoSinRetornarDatos($"insert into Estudiante(nombre, primerapellido, segundoapellido, email) values ('{nombre}', '{primerApellido}', '{segundoApellido}', '{correo}')");
 
-            int idEstudiante = conexion.SelectId("select id from Estudiante having max(id)");
+            int idEstudiante = conexion.SelectId("select id from Estudiante group by id having id = max(id)");
+
+            int idCiclo = conexion.SelectId($"select id from Ciclo group by id, nombre having nombre = '{nombreCiclo}'");
 
             bool consulta2 = conexion.EjecutarComandoSinRetornarDatos($"insert into Estudiante_Asignar_Ciclo(id_estudiante, id_ciclo) values ('{idEstudiante}', '{idCiclo}')");
 
             return consulta1 && consulta2;
         }
 
-        public bool Modificar(int idCiclo, string nombreCiclo)
+        public bool Modificar(int idEstudiante, string nombreEstudiante, string primerApellido, string segundoApellido, string correo, string nombreCiclo)
         {
-            return conexion.EjecutarComandoSinRetornarDatos($"update Ciclo set nombre = '{nombreCiclo}' where id = {idCiclo}");
+            int idCiclo = conexion.SelectId($"select id from Ciclo group by id, nombre having nombre = '{nombreCiclo}'");
+
+            return conexion.EjecutarComandoSinRetornarDatos($"update Estudiante set nombre = '{nombreEstudiante}', primerapellido = '{primerApellido}', segundoapellido = '{segundoApellido}', email = '{correo}' where id = {idEstudiante}");
         }
 
-        public bool Borrar(int idCiclo)
+        public bool Borrar(int idEstudiante)
         {
-            return conexion.EjecutarComandoSinRetornarDatos($"delete from Ciclo where id = {idCiclo}");
+            return conexion.EjecutarComandoSinRetornarDatos($"delete from Estudiante where id = {idEstudiante}");
         }
 
 
-        public DataSet MostrarCiclos()
+        public DataSet MostrarEstudiantes()
         {
-            SqlCommand sentencia = new SqlCommand("select * from Ciclo");
+            SqlCommand sentencia = new SqlCommand("select nombre, primerapellido, segundoapellido, email from Estudiante");
             return conexion.EjecutarSentencia(sentencia);
         }
     }

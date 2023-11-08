@@ -21,7 +21,7 @@ namespace Ejercicio3
             estudianteDLL = new EstudianteDLL(conexion);
             cicloDLL = new CicloDLL(conexion);
 
-            formEstudiante = new FormEstudiante(cicloDLL);
+            formEstudiante = new FormEstudiante(estudianteDLL);
             formCiclo = new FormCiclo(cicloDLL);
         }
 

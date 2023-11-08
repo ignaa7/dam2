@@ -13,27 +13,37 @@ namespace AdminIES.forms
 {
     public partial class FormEstudiante : Form
     {
-        CicloDLL cicloDLL;
-        public FormEstudiante(CicloDLL ciclo)
+        EstudianteDLL estudianteDLL;
+        public FormEstudiante(EstudianteDLL estudianteDLL)
         {
-            cicloDLL = ciclo;
+            this.estudianteDLL = estudianteDLL;
 
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
+
+            foreach (DataRow fila in estudianteDLL.GetCiclos().Tables[0].Rows)
+            {
+                cmbCiclo.Items.Add(fila[0].ToString());
+            }
+        }
+
+        private void GetEstudiantes()
+        {
+            dgvEstudiante.DataSource = estudianteDLL.MostrarEstudiantes().Tables[0];
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (ValidateChildren())
             {
-                if (cicloDLL.Agregar(txtNombre.Text, txtPrimerApellido.Text, txtSegundoApellido.Text, txtCorreo.Text, ))
+                if (estudianteDLL.Agregar(txtNombre.Text, txtPrimerApellido.Text, txtSegundoApellido.Text, txtCorreo.Text, cmbCiclo.SelectedItem.ToString()!))
                 {
-                    MessageBox.Show("Ciclo añadido correctamente");
-                    GetCiclos();
+                    MessageBox.Show("Estudiante añadido correctamente");
+                    GetEstudiantes();
                 }
                 else
                 {
-                    MessageBox.Show("Error al añadir el ciclo");
+                    MessageBox.Show("Error al añadir el estudiante");
                 }
             }
             else
@@ -110,6 +120,51 @@ namespace AdminIES.forms
                 errCiclo.SetError(cmbCiclo, "");
                 e.Cancel = false;
             }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtClave.Text) && this.ValidateChildren())
+            {
+                if (estudianteDLL.Modificar(Convert.ToInt32(txtClave.Text), txtNombre.Text, txtPrimerApellido.Text, txtSegundoApellido.Text, txtCorreo.Text, cmbCiclo.SelectedItem.ToString()!))
+                {
+                    MessageBox.Show("Estudiante modificado correctamente");
+                    GetEstudiantes();
+                }
+                else
+                {
+                    MessageBox.Show("Error al modificar el estudiante");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Datos inválidos");
+            }
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtClave.Text))
+            {
+                if (estudianteDLL.Borrar(Convert.ToInt32(txtClave.Text)))
+                {
+                    MessageBox.Show("Estudiante borrado correctamente");
+                    GetEstudiantes();
+                }
+                else
+                {
+                    MessageBox.Show("Error al borrar el estudiante");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Datos inválidos");
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

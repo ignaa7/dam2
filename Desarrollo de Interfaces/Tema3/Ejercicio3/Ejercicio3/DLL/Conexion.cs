@@ -10,7 +10,7 @@ namespace AdminIES.DLL
 {
     public class Conexion
     {
-        private string cadenaConexion = "Data Source=DAM2-15; Initial Catalog=db_Sistema; Integrated Security = True";
+        private string cadenaConexion = "Data Source=LAPTOP-EEG5NT53; Initial Catalog=db_Sistema; Integrated Security = True";
         SqlConnection sqlConnection;
 
         SqlConnection EstablecerConexion()
@@ -70,9 +70,9 @@ namespace AdminIES.DLL
                 object resultado = sqlCommand.ExecuteScalar();
                 sqlConnection.Close();
 
-                if (resultado != null && resultado != DBNull.Value)
+                if (resultado != null)
                 {
-                    idEstudiante = Convert.ToInt32(resultado);
+                    idEstudiante = Convert.ToInt32(resultado.ToString());
                 }
 
                 return idEstudiante;
