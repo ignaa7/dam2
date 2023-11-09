@@ -67,6 +67,7 @@
             pbImagen.Location = new Point(29, 26);
             pbImagen.Name = "pbImagen";
             pbImagen.Size = new Size(146, 202);
+            pbImagen.SizeMode = PictureBoxSizeMode.StretchImage;
             pbImagen.TabIndex = 0;
             pbImagen.TabStop = false;
             // 
@@ -180,6 +181,7 @@
             btnExaminar.TabIndex = 14;
             btnExaminar.Text = "Examinar";
             btnExaminar.UseVisualStyleBackColor = true;
+            btnExaminar.Click += btnExaminar_Click;
             // 
             // btnAgregar
             // 

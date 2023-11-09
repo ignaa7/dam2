@@ -23,9 +23,9 @@ namespace AdminIES.DLL
             return conexion.EjecutarSentencia(sentencia);
         }
 
-        public bool Agregar(string nombre, string primerApellido, string segundoApellido, string correo, string nombreCiclo)
+        public bool Agregar(string nombre, string primerApellido, string segundoApellido, string correo, string nombreCiclo, string imagen)
         {
-            bool consulta1 = conexion.EjecutarComandoSinRetornarDatos($"insert into Estudiante(nombre, primerapellido, segundoapellido, email) values ('{nombre}', '{primerApellido}', '{segundoApellido}', '{correo}')");
+            bool consulta1 = conexion.EjecutarComandoSinRetornarDatos($"insert into Estudiante(nombre, primerapellido, segundoapellido, email, foto) values ('{nombre}', '{primerApellido}', '{segundoApellido}', '{correo}', '{imagen}')");
 
             int idEstudiante = conexion.SelectId("select id from Estudiante group by id having id = max(id)");
 
@@ -51,7 +51,7 @@ namespace AdminIES.DLL
 
         public DataSet MostrarEstudiantes()
         {
-            SqlCommand sentencia = new SqlCommand("select nombre, primerapellido, segundoapellido, email from Estudiante");
+            SqlCommand sentencia = new SqlCommand("select id, nombre, primerapellido, segundoapellido, email from Estudiante");
             return conexion.EjecutarSentencia(sentencia);
         }
     }

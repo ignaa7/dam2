@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ignac\\OneDrive\\Escritorio\\dam2\\Desarrollo de Interfaces\\Tema3\\Ejercicio3\\Ejercicio3\\AdminIES.csproj": {}
+    "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\Tema3\\Ejercicio3\\Ejercicio3\\AdminIES.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ignac\\OneDrive\\Escritorio\\dam2\\Desarrollo de Interfaces\\Tema3\\Ejercicio3\\Ejercicio3\\AdminIES.csproj": {
+    "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\Tema3\\Ejercicio3\\Ejercicio3\\AdminIES.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ignac\\OneDrive\\Escritorio\\dam2\\Desarrollo de Interfaces\\Tema3\\Ejercicio3\\Ejercicio3\\AdminIES.csproj",
+        "projectUniqueName": "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\Tema3\\Ejercicio3\\Ejercicio3\\AdminIES.csproj",
         "projectName": "AdminIES",
-        "projectPath": "C:\\Users\\ignac\\OneDrive\\Escritorio\\dam2\\Desarrollo de Interfaces\\Tema3\\Ejercicio3\\Ejercicio3\\AdminIES.csproj",
-        "packagesPath": "C:\\Users\\ignac\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ignac\\OneDrive\\Escritorio\\dam2\\Desarrollo de Interfaces\\Tema3\\Ejercicio3\\Ejercicio3\\obj\\",
+        "projectPath": "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\Tema3\\Ejercicio3\\Ejercicio3\\AdminIES.csproj",
+        "packagesPath": "C:\\Users\\dam\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\Tema3\\Ejercicio3\\Ejercicio3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ignac\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dam\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -69,7 +69,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

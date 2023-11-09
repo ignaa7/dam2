@@ -14,6 +14,8 @@ namespace AdminIES.forms
     public partial class FormEstudiante : Form
     {
         EstudianteDLL estudianteDLL;
+        byte[] imagenByte;
+
         public FormEstudiante(EstudianteDLL estudianteDLL)
         {
             this.estudianteDLL = estudianteDLL;
@@ -25,6 +27,8 @@ namespace AdminIES.forms
             {
                 cmbCiclo.Items.Add(fila[0].ToString());
             }
+
+            GetEstudiantes();
         }
 
         private void GetEstudiantes()
@@ -36,7 +40,9 @@ namespace AdminIES.forms
         {
             if (ValidateChildren())
             {
-                if (estudianteDLL.Agregar(txtNombre.Text, txtPrimerApellido.Text, txtSegundoApellido.Text, txtCorreo.Text, cmbCiclo.SelectedItem.ToString()!))
+                string imagen = ImageToBase64(pbImagen.Image, pbImagen.Image.RawFormat);
+
+                if (estudianteDLL.Agregar(txtNombre.Text, txtPrimerApellido.Text, txtSegundoApellido.Text, txtCorreo.Text, cmbCiclo.SelectedItem.ToString()!, imagen))
                 {
                     MessageBox.Show("Estudiante añadido correctamente");
                     GetEstudiantes();
@@ -166,5 +172,41 @@ namespace AdminIES.forms
         {
             Close();
         }
+
+        private void btnExaminar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog selectorImagen = new OpenFileDialog();
+            selectorImagen.Title = "Seleccionar imagen";
+
+            if (selectorImagen.ShowDialog() == DialogResult.OK)
+            {
+                pbImagen.Image = Image.FromStream(selectorImagen.OpenFile());
+                MemoryStream memoryStream = new MemoryStream();
+                pbImagen.Image.Save(memoryStream, System.Drawing.Imaging.ImageFormat.Png);
+                imagenByte = memoryStream.ToArray();
+            }
+        }
+
+        public string ImageToBase64(Image image, System.Drawing.Imaging.ImageFormat format)
+        {
+            using MemoryStream ms = new MemoryStream();
+            // Convert Image to byte[]
+            image.Save(ms, format);
+            byte[] imageBytes = ms.ToArray();
+            // Convert byte[] to base 64 string
+            string base64String = Convert.ToBase64String(imageBytes).ToString();
+            return base64String;
+        }
+
+        public Image Base64ToImage(string base64String)
+        {
+            // Convert base 64 string to byte[]
+            byte[] imageBytes = Convert.FromBase64String(base64String);
+            // Convert byte[] to Image
+            using var ms = new MemoryStream(imageBytes, 0, imageBytes.Length);
+            Image image = Image.FromStream(ms, true);
+            return image;
+        }
+
     }
 }
