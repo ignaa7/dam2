@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Contacto } from 'src/classes/Contacto/contacto';
-import { Servicio } from 'src/service/servicio';
+import { Service } from 'src/service/service.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { Servicio } from 'src/service/servicio';
 export class AppComponent {
   title = '6-AgendaContactosValidada';
 
-  servicio : Servicio = new Servicio();
+  constructor(protected servicio : Service) {}
 
   contactoAEditar : Contacto | undefined;
   edicion : boolean = false;

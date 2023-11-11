@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { FormComponentComponent } from './form-component/form-component.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactoComponentComponent } from './contacto-component/contacto-component.component';
+import { Service } from 'src/service/service.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { ContactoComponentComponent } from './contacto-component/contacto-compon
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

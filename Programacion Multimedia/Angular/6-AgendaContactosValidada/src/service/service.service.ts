@@ -1,7 +1,11 @@
-import { Contacto } from "src/classes/Contacto/contacto";
+import { Injectable } from '@angular/core';
+import { Contacto } from 'src/classes/Contacto/contacto';
 
-export class Servicio {
-    private contactos : Contacto[];
+@Injectable({
+  providedIn: 'root'
+})
+export class Service {
+  private contactos : Contacto[];
 
     constructor() {
         this.contactos = [];
