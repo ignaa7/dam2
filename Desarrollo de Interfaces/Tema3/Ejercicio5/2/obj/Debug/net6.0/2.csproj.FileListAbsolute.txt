@@ -1,0 +1,14 @@
+D:\dam2\Desarrollo de Interfaces\Tema3\Ejercicio5\2\bin\Debug\net6.0\2.exe
+D:\dam2\Desarrollo de Interfaces\Tema3\Ejercicio5\2\bin\Debug\net6.0\2.deps.json
+D:\dam2\Desarrollo de Interfaces\Tema3\Ejercicio5\2\bin\Debug\net6.0\2.runtimeconfig.json
+D:\dam2\Desarrollo de Interfaces\Tema3\Ejercicio5\2\bin\Debug\net6.0\2.dll
+D:\dam2\Desarrollo de Interfaces\Tema3\Ejercicio5\2\bin\Debug\net6.0\2.pdb
+D:\dam2\Desarrollo de Interfaces\Tema3\Ejercicio5\2\obj\Debug\net6.0\2.GeneratedMSBuildEditorConfig.editorconfig
+D:\dam2\Desarrollo de Interfaces\Tema3\Ejercicio5\2\obj\Debug\net6.0\2.AssemblyInfoInputs.cache
+D:\dam2\Desarrollo de Interfaces\Tema3\Ejercicio5\2\obj\Debug\net6.0\2.AssemblyInfo.cs
+D:\dam2\Desarrollo de Interfaces\Tema3\Ejercicio5\2\obj\Debug\net6.0\2.csproj.CoreCompileInputs.cache
+D:\dam2\Desarrollo de Interfaces\Tema3\Ejercicio5\2\obj\Debug\net6.0\2.dll
+D:\dam2\Desarrollo de Interfaces\Tema3\Ejercicio5\2\obj\Debug\net6.0\refint\2.dll
+D:\dam2\Desarrollo de Interfaces\Tema3\Ejercicio5\2\obj\Debug\net6.0\2.pdb
+D:\dam2\Desarrollo de Interfaces\Tema3\Ejercicio5\2\obj\Debug\net6.0\2.genruntimeconfig.cache
+D:\dam2\Desarrollo de Interfaces\Tema3\Ejercicio5\2\obj\Debug\net6.0\ref\2.dll

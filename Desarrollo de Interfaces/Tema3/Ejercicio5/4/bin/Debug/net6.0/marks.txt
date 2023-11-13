@@ -1,0 +1,4 @@
+Pepe matemáticas 10 informática 1
+Paula matemáticas 4 informática 5
+Pedro matemáticas 9 informática 7
+Sandra matemáticas 7 informática 4
