@@ -49,7 +49,16 @@ public class CustomPizzasScreen extends AppCompatActivity {
 
         if (showFavorite) {
             String size = favoritePizzaPreferences.getString("size", "");
-            ArrayList<String> ingredients = new ArrayList<>(favoritePizzaPreferences.getStringSet("ingredients", null));
+            ArrayList<String> favoriteIngredients = new ArrayList<>(favoritePizzaPreferences.getStringSet("ingredients", null));
+
+            for (String ingredientName : favoriteIngredients) {
+                Ingredient ingredient = ingredients.stream()
+                        .filter(obj -> obj.getName().equals(ingredientName))
+                        .findFirst()
+                        .orElse(null);
+
+                selectedIngredients.add(ingredient);
+            }
 
             if (size.equals("Pequeña")) {
                 binding.rbSmall.setChecked(true);
@@ -61,7 +70,7 @@ public class CustomPizzasScreen extends AppCompatActivity {
                 binding.rbBig.setChecked(true);
             }
 
-            for (String ingredient : ingredients) {
+            for (String ingredient : favoriteIngredients) {
                 if (ingredient.equals("Queso")) {
                     binding.cbCheese.setChecked(true);
                 }
