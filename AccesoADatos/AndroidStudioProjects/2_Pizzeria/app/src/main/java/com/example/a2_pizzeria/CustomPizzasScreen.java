@@ -42,14 +42,56 @@ public class CustomPizzasScreen extends AppCompatActivity {
         ingredients.add(new Ingredient("Salchichas", 6.5f));
         ingredients.add(new Ingredient("Aceitunas", 3.5f));
 
-        SharedPreferences favoritePizzaPreferences = getSharedPreferences("favoritePizza", Context.MODE_PRIVATE);
+        SharedPreferences favoritePizzaPreferences = getSharedPreferences("customPizzaOrder", Context.MODE_PRIVATE);
+        SharedPreferences showFavoritePizzaPreferences = getSharedPreferences("favorite", Context.MODE_PRIVATE);
 
-        if (!favoritePizzaPreferences.getAll().isEmpty()) {
+        boolean showFavorite = showFavoritePizzaPreferences.getBoolean("showFavorite", false);
+
+        if (showFavorite) {
             String size = favoritePizzaPreferences.getString("size", "");
-            Set<String> ingredients = favoritePizzaPreferences.getStringSet("ingredients", null);
+            ArrayList<String> ingredients = new ArrayList<>(favoritePizzaPreferences.getStringSet("ingredients", null));
 
-            
+            if (size.equals("Pequeña")) {
+                binding.rbSmall.setChecked(true);
+            }
+            else if (size.equals("Mediana")) {
+                binding.rbMedium.setChecked(true);
+            }
+            else if (size.equals("Grande")) {
+                binding.rbBig.setChecked(true);
+            }
+
+            for (String ingredient : ingredients) {
+                if (ingredient.equals("Queso")) {
+                    binding.cbCheese.setChecked(true);
+                }
+                else if (ingredient.equals("Pepperoni")) {
+                    binding.cbPepperoni.setChecked(true);
+                }
+                else if (ingredient.equals("Piña")) {
+                    binding.cbPineapple.setChecked(true);
+                }
+                else if (ingredient.equals("Pollo")) {
+                    binding.cbChicken.setChecked(true);
+                }
+                else if (ingredient.equals("Salchichas")) {
+                    binding.cbSausages.setChecked(true);
+                }
+                else if (ingredient.equals("Aceitunas")) {
+                    binding.cbOlives.setChecked(true);
+                }
+            }
         }
+
+
+
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MainActivity.setScreenBackgroundColor(binding.getRoot());
     }
 
     public void selectIngredient(View view) {
@@ -67,6 +109,7 @@ public class CustomPizzasScreen extends AppCompatActivity {
                 }
                 else {
                     Toast.makeText(this, "No puede seleccionar más de 3 ingredientes", Toast.LENGTH_SHORT).show();
+                    ((CheckBox)view).setChecked(false);
                 }
             }
             else {
@@ -80,7 +123,7 @@ public class CustomPizzasScreen extends AppCompatActivity {
     public void confirm(View view) {
         int idSelectedSize = binding.rgSizes.getCheckedRadioButtonId();
 
-        if (idSelectedSize == -1 && selectedIngredients.size() == 3) {
+        if (idSelectedSize == -1 || selectedIngredients.size() != 3) {
             Toast.makeText(this, "Seleccione un tamaño y 3 ingredientes", Toast.LENGTH_SHORT).show();
         }
         else {

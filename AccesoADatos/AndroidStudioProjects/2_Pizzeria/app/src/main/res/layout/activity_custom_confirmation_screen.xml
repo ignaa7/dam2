@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:text="@string/txtIngredientsLbl"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,6 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:text="TextView"
+        android:textColor="#000000"
         app:layout_constraintEnd_toStartOf="@+id/txtIngredient2"
         app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,6 +48,7 @@
         android:layout_marginTop="44dp"
         android:layout_marginEnd="52dp"
         android:text="TextView"
+        android:textColor="#000000"
         app:layout_constraintEnd_toStartOf="@+id/txtIngredient3"
         app:layout_constraintTop_toBottomOf="@+id/txtIngredients" />
 
@@ -56,6 +59,7 @@
         android:layout_marginTop="44dp"
         android:layout_marginEnd="72dp"
         android:text="TextView"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtIngredients" />
 
@@ -66,6 +70,7 @@
         android:layout_marginStart="60dp"
         android:layout_marginTop="52dp"
         android:text="@string/txtSizeLbl"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtIngredient1" />
 
@@ -75,6 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:text="TextView"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.429"
         app:layout_constraintStart_toEndOf="@+id/txtSizeName"
@@ -86,6 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:text="@string/txtPriceLbl"
+        android:textColor="#000000"
         app:layout_constraintEnd_toStartOf="@+id/txtPrice"
         app:layout_constraintHorizontal_bias="0.385"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,6 +105,7 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="132dp"
         android:text="TextView"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSize" />
 

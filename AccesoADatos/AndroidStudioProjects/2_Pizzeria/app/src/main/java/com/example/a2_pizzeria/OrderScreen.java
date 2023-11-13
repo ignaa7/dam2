@@ -46,10 +46,10 @@ public class OrderScreen extends AppCompatActivity {
         String lastOrder = lastOrderPreferences.getString("lastOrder", "");
 
         if (lastOrder.equals("default")) {
-            startActivity(new Intent(this, DefaultPizzasScreen.class));
+            startActivity(new Intent(this, ConfirmationScreen.class));
         }
         else {
-            startActivity(new Intent(this, CustomPizzasScreen.class));
+            startActivity(new Intent(this, CustomConfirmationScreen.class));
         }
     }
 

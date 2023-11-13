@@ -62,6 +62,7 @@
         android:layout_marginTop="36dp"
         android:onClick="selectIngredient"
         android:text="@string/txtCheese"
+        android:textColor="#000000"
         app:layout_constraintEnd_toStartOf="@+id/cbPepperoni"
         app:layout_constraintHorizontal_bias="0.383"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,6 +74,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="24dp"
         android:text="@string/txtSelectPizzaIngredients"
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,6 +88,7 @@
         android:layout_marginEnd="80dp"
         android:onClick="selectIngredient"
         android:text="@string/txtPepperoni"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSelectIngredients" />
 
@@ -96,6 +99,7 @@
         android:layout_marginTop="36dp"
         android:onClick="selectIngredient"
         android:text="@string/txtPineapple"
+        android:textColor="#000000"
         app:layout_constraintEnd_toStartOf="@+id/cbChicken"
         app:layout_constraintHorizontal_bias="0.352"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,6 +113,7 @@
         android:layout_marginEnd="112dp"
         android:onClick="selectIngredient"
         android:text="@string/txtChicken"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cbPepperoni" />
 
@@ -119,6 +124,7 @@
         android:layout_marginTop="36dp"
         android:onClick="selectIngredient"
         android:text="@string/txtSausages"
+        android:textColor="#000000"
         app:layout_constraintEnd_toStartOf="@+id/cbOlives"
         app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="parent"
@@ -144,6 +150,7 @@
         android:layout_marginEnd="80dp"
         android:onClick="selectIngredient"
         android:text="@string/txtOlives"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cbChicken" />
 
