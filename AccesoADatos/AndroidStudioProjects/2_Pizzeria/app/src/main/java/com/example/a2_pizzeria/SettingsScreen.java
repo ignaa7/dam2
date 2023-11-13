@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import com.example.a2_pizzeria.databinding.ActivityMainScreenBinding;
 import com.example.a2_pizzeria.databinding.ActivitySettingsScreenBinding;
 
 import yuku.ambilwarna.AmbilWarnaDialog;
@@ -34,7 +33,17 @@ public class SettingsScreen extends AppCompatActivity {
         binding.getRoot().setBackgroundColor(color);
 
         favoritePreferences = getSharedPreferences("favorite", Context.MODE_PRIVATE);
-        //seguir
+        if (favoritePreferences.getAll().isEmpty()) {
+            SharedPreferences.Editor editor = favoritePreferences.edit();
+            editor.putBoolean("showFavorite", false);
+            editor.apply();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        binding.swFavorite.setChecked(favoritePreferences.getBoolean("showFavorite", false));
     }
 
     public void changeBackgroundColor(View view) {
@@ -50,7 +59,7 @@ public class SettingsScreen extends AppCompatActivity {
                     SharedPreferences.Editor editor = screensColorPreferences.edit();
                     editor.putInt("color", color);
                     editor.apply();
-                    MainS
+                    MainActivity.setScreenBackgroundColor(binding.getRoot());
                 }
             });
 
@@ -61,7 +70,9 @@ public class SettingsScreen extends AppCompatActivity {
     }
 
     public void toggleShowFavorite(View view) {
-
+        SharedPreferences.Editor editor = favoritePreferences.edit();
+        editor.putBoolean("showFavorite", binding.swFavorite.isChecked());
+        editor.apply();
     }
 
     public void goBack(View view) {

@@ -1,6 +1,7 @@
 package com.example.a2_pizzeria;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,8 +17,13 @@ public class MainActivity extends AppCompatActivity {
 
     private SharedPreferences usersPreferences;
     private SharedPreferences currentUserPreferences;
-    private SharedPreferences screensColorPreferences;
+    private static SharedPreferences screensColorPreferences;
     private ActivityMainBinding binding;
+
+    public static void setScreenBackgroundColor(ConstraintLayout screen) {
+        int color = screensColorPreferences.getInt("color", 0);
+        screen.setBackgroundColor(color);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,8 +63,12 @@ public class MainActivity extends AppCompatActivity {
         else {
             color = screensColorPreferences.getInt("color", color);
         }
+    }
 
-        binding.getRoot().setBackgroundColor(color);
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setScreenBackgroundColor(binding.getRoot());
     }
 
     public void signUpUser(View view) {

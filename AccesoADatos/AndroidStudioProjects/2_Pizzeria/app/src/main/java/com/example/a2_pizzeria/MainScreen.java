@@ -1,9 +1,11 @@
 package com.example.a2_pizzeria;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -17,12 +19,9 @@ import com.example.a2_pizzeria.databinding.ActivityMainScreenBinding;
 public class MainScreen extends AppCompatActivity {
 
     private SharedPreferences currentUserPreferences;
-    private SharedPreferences screensColorPreferences;
     private ActivityMainScreenBinding binding;
 
-    public static void setScreenBackgroundColor(ConstraintLayout screen) {
-        
-    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +35,12 @@ public class MainScreen extends AppCompatActivity {
         currentUserPreferences = getSharedPreferences("currentUser", Context.MODE_PRIVATE);
         String username = currentUserPreferences.getString("username", null);
         binding.txtUsername.setText(username);
+    }
 
-        screensColorPreferences = getSharedPreferences("screensColor", Context.MODE_PRIVATE);
-        int color = screensColorPreferences.getInt("color", 0);
-        binding.getRoot().setBackgroundColor(color);
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MainActivity.setScreenBackgroundColor(binding.getRoot());
     }
 
     public void visitWebsite(View view) {
@@ -60,7 +61,35 @@ public class MainScreen extends AppCompatActivity {
         startActivity(new Intent(this, SettingsScreen.class));
     }
 
+    public void openOrderScreen(View view) {
+        startActivity(new Intent(this, OrderScreen.class));
+    }
+
     public void logOut(View view) {
         finish();
+    }
+
+    public void exit(View view) {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+
+        alertDialogBuilder.setTitle("Salir");
+        alertDialogBuilder.setMessage("¿Desea salir?");
+
+        alertDialogBuilder.setPositiveButton("Salir", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finishAffinity();
+            }
+        });
+
+        alertDialogBuilder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
     }
 }

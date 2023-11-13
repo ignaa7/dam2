@@ -19,4 +19,23 @@
     <string name="txtSettings">Ajustes</string>
     <string name="txtColor">Color de fondo</string>
     <string name="txtBtnColor">Cambiar color de fondo</string>
+    <string name="txtDefaultPizzas">Pizzas predeterminadas</string>
+    <string name="txtCustomPizzas">Pizzas personalizadas</string>
+    <string name="txtReorder">Repetir último pedido</string>
+    <string name="txtGoBack">Volver</string>
+    <string name="txtCancel">Cancelar</string>
+    <string name="txtSelectAPizza">Selecciona una pizza y un tamaño:</string>
+    <string name="txtConfirm">Confirmar</string>
+    <string name="txtBig">Grande</string>
+    <string name="txtMedium">Mediana</string>
+    <string name="txtSmall">Pequeña</string>
+    <string name="txtSelectPizzaIngredients">Seleccione 3 ingredientes y un tamaño:</string>
+    <string name="txtCancelCustomPizza">Cancelar</string>
+    <string name="txtConfirmCustomPizza">Confirmar</string>
+    <string name="txtOlives">Aceitunas</string>
+    <string name="txtSausages">Salchichas</string>
+    <string name="txtChicken">Pollo</string>
+    <string name="txtPineapple">Piña</string>
+    <string name="txtPepperoni">Pepperoni</string>
+    <string name="txtCheese">Queso</string>
 </resources>
