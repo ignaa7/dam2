@@ -38,4 +38,9 @@
     <string name="txtPineapple">Piña</string>
     <string name="txtPepperoni">Pepperoni</string>
     <string name="txtCheese">Queso</string>
+    <string name="txtIngredientsLbl">Ingredientes:</string>
+    <string name="txtSizeLbl">Tamaño:</string>
+    <string name="txtPriceLbl">Precio:</string>
+    <string name="txtConfirmCustom">Confirmar</string>
+    <string name="txtCancelCustom">Cancelar</string>
 </resources>
