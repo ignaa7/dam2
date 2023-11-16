@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace Ejercicio7
 {
     public partial class Form1 : Form
@@ -6,6 +8,8 @@ namespace Ejercicio7
         {
             InitializeComponent();
         }
+
+        private string filePath;
 
         private void tsmNew_Click(object sender, EventArgs e)
         {
@@ -16,40 +20,92 @@ namespace Ejercicio7
                 switch (response)
                 {
                     case DialogResult.Yes:
-                        SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                        SaveFileDialog saveFileDialog = new SaveFileDialog();
 
-                        saveFileDialog1.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
-                        saveFileDialog1.Title = "Save a Text File";
-                        saveFileDialog1.FileName = "example.txt"; // Default file name (optional)
+                        saveFileDialog.Filter = "Archivos de texto (*.txt)|*.txt|Archivos de texto enriquecido (*.rtf)|*.rtf";
+                        saveFileDialog.Title = "Guardar archivo";
 
-                        // Show the SaveFileDialog and get the result
-                        DialogResult result = saveFileDialog1.ShowDialog();
+                        DialogResult result = saveFileDialog.ShowDialog();
 
-                        // Process the result
                         if (result == DialogResult.OK)
                         {
-                            // Get the selected file name and display it
-                            string fileName = saveFileDialog1.FileName;
-                            Console.WriteLine("File saved as: " + fileName);
+                            filePath = saveFileDialog.FileName;
 
-                            // You can now write your data to the selected file, for example:
-                            // File.WriteAllText(fileName, "Hello, world!");
+                            File.WriteAllText(filePath, rtbText.Text);
                         }
-                        else
-                        {
-                            Console.WriteLine("File saving canceled");
-                        }
+
+                        rtbText.Text = "";
+
                         break;
                     case DialogResult.No:
-                        Console.WriteLine("User clicked No");
-                        // Perform actions for No
+                        rtbText.Text = "";
                         break;
                     case DialogResult.Cancel:
-                        Console.WriteLine("User clicked Cancel");
-                        // Perform actions for Cancel
                         break;
                 }
             }
+        }
+
+        private void tsmOpen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.Filter = "Archivos de texto (*.txt)|*.txt|Archivos de texto enriquecido (*.rtf)|*.rtf";
+            openFileDialog.Title = "Abrir archivo";
+
+            DialogResult result = openFileDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                filePath = openFileDialog.FileName;
+
+                string content = File.ReadAllText(filePath);
+                rtbText.Text = content;
+            }
+        }
+
+        private void tsmSave_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(filePath))
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+                saveFileDialog.Filter = "Archivos de texto (*.txt)|*.txt|Archivos de texto enriquecido (*.rtf)|*.rtf";
+                saveFileDialog.Title = "Guardar archivo";
+
+                DialogResult result = saveFileDialog.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    filePath = saveFileDialog.FileName;
+
+                    File.WriteAllText(filePath, rtbText.Text);
+                }
+            }
+            else
+            {
+                File.WriteAllText(filePath, rtbText.Text);
+            }
+        }
+
+        private void tsmExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void tsmCut_Click(object sender, EventArgs e)
+        {
+            rtbText.Cut();
+        }
+
+        private void tsmCopy_Click(object sender, EventArgs e)
+        {
+            rtbText.Copy();
+        }
+
+        private void tsmPaste_Click(object sender, EventArgs e)
+        {
+            rtbText.Paste();
         }
     }
 }

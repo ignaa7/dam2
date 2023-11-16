@@ -29,22 +29,24 @@
         private void InitializeComponent()
         {
             mnuMenu = new MenuStrip();
-            tsToolbar = new ToolStrip();
-            toolStripLabel1 = new ToolStripLabel();
-            rtbText = new RichTextBox();
-            statusStrip1 = new StatusStrip();
             tsmFile = new ToolStripMenuItem();
-            tsmEdit = new ToolStripMenuItem();
             tsmNew = new ToolStripMenuItem();
             tsmOpen = new ToolStripMenuItem();
             tsmSave = new ToolStripMenuItem();
             tsmExit = new ToolStripMenuItem();
+            tsmEdit = new ToolStripMenuItem();
             tsmCut = new ToolStripMenuItem();
             tsmCopy = new ToolStripMenuItem();
             tsmPaste = new ToolStripMenuItem();
-            tsmFind = new ToolStripMenuItem();
+            tsmOpenSearch = new ToolStripMenuItem();
             tsmFont = new ToolStripMenuItem();
             tsmColor = new ToolStripMenuItem();
+            tsToolbar = new ToolStrip();
+            toolStripLabel1 = new ToolStripLabel();
+            rtbText = new RichTextBox();
+            statusStrip1 = new StatusStrip();
+            tsmSearchBox = new ToolStripTextBox();
+            tsmSearch = new ToolStripMenuItem();
             mnuMenu.SuspendLayout();
             tsToolbar.SuspendLayout();
             SuspendLayout();
@@ -57,6 +59,88 @@
             mnuMenu.Size = new Size(800, 24);
             mnuMenu.TabIndex = 0;
             mnuMenu.Text = "menuStrip1";
+            // 
+            // tsmFile
+            // 
+            tsmFile.DropDownItems.AddRange(new ToolStripItem[] { tsmNew, tsmOpen, tsmSave, tsmExit });
+            tsmFile.Name = "tsmFile";
+            tsmFile.Size = new Size(60, 20);
+            tsmFile.Text = "Archivo";
+            // 
+            // tsmNew
+            // 
+            tsmNew.Name = "tsmNew";
+            tsmNew.Size = new Size(116, 22);
+            tsmNew.Text = "Nuevo";
+            tsmNew.Click += tsmNew_Click;
+            // 
+            // tsmOpen
+            // 
+            tsmOpen.Name = "tsmOpen";
+            tsmOpen.Size = new Size(116, 22);
+            tsmOpen.Text = "Abrir";
+            tsmOpen.Click += tsmOpen_Click;
+            // 
+            // tsmSave
+            // 
+            tsmSave.Name = "tsmSave";
+            tsmSave.Size = new Size(116, 22);
+            tsmSave.Text = "Guardar";
+            tsmSave.Click += tsmSave_Click;
+            // 
+            // tsmExit
+            // 
+            tsmExit.Name = "tsmExit";
+            tsmExit.Size = new Size(116, 22);
+            tsmExit.Text = "Salir";
+            tsmExit.Click += tsmExit_Click;
+            // 
+            // tsmEdit
+            // 
+            tsmEdit.DropDownItems.AddRange(new ToolStripItem[] { tsmCut, tsmCopy, tsmPaste, tsmOpenSearch, tsmFont, tsmColor });
+            tsmEdit.Name = "tsmEdit";
+            tsmEdit.Size = new Size(49, 20);
+            tsmEdit.Text = "Editar";
+            // 
+            // tsmCut
+            // 
+            tsmCut.Name = "tsmCut";
+            tsmCut.Size = new Size(180, 22);
+            tsmCut.Text = "Cortar";
+            tsmCut.Click += tsmCut_Click;
+            // 
+            // tsmCopy
+            // 
+            tsmCopy.Name = "tsmCopy";
+            tsmCopy.Size = new Size(180, 22);
+            tsmCopy.Text = "Copiar";
+            tsmCopy.Click += tsmCopy_Click;
+            // 
+            // tsmPaste
+            // 
+            tsmPaste.Name = "tsmPaste";
+            tsmPaste.Size = new Size(180, 22);
+            tsmPaste.Text = "Pegar";
+            tsmPaste.Click += tsmPaste_Click;
+            // 
+            // tsmOpenSearch
+            // 
+            tsmOpenSearch.DropDownItems.AddRange(new ToolStripItem[] { tsmSearchBox, tsmSearch });
+            tsmOpenSearch.Name = "tsmOpenSearch";
+            tsmOpenSearch.Size = new Size(180, 22);
+            tsmOpenSearch.Text = "Buscar";
+            // 
+            // tsmFont
+            // 
+            tsmFont.Name = "tsmFont";
+            tsmFont.Size = new Size(180, 22);
+            tsmFont.Text = "Fuente";
+            // 
+            // tsmColor
+            // 
+            tsmColor.Name = "tsmColor";
+            tsmColor.Size = new Size(180, 22);
+            tsmColor.Text = "Color";
             // 
             // tsToolbar
             // 
@@ -89,80 +173,16 @@
             statusStrip1.TabIndex = 3;
             statusStrip1.Text = "statusStrip1";
             // 
-            // tsmFile
+            // tsmSearchBox
             // 
-            tsmFile.DropDownItems.AddRange(new ToolStripItem[] { tsmNew, tsmOpen, tsmSave, tsmExit });
-            tsmFile.Name = "tsmFile";
-            tsmFile.Size = new Size(60, 20);
-            tsmFile.Text = "Archivo";
+            tsmSearchBox.Name = "tsmSearchBox";
+            tsmSearchBox.Size = new Size(100, 23);
             // 
-            // tsmEdit
+            // tsmSearch
             // 
-            tsmEdit.DropDownItems.AddRange(new ToolStripItem[] { tsmCut, tsmCopy, tsmPaste, tsmFind, tsmFont, tsmColor });
-            tsmEdit.Name = "tsmEdit";
-            tsmEdit.Size = new Size(49, 20);
-            tsmEdit.Text = "Editar";
-            // 
-            // tsmNew
-            // 
-            tsmNew.Name = "tsmNew";
-            tsmNew.Size = new Size(180, 22);
-            tsmNew.Text = "Nuevo";
-            tsmNew.Click += tsmNew_Click;
-            // 
-            // tsmOpen
-            // 
-            tsmOpen.Name = "tsmOpen";
-            tsmOpen.Size = new Size(180, 22);
-            tsmOpen.Text = "Abrir";
-            // 
-            // tsmSave
-            // 
-            tsmSave.Name = "tsmSave";
-            tsmSave.Size = new Size(180, 22);
-            tsmSave.Text = "Guardar";
-            // 
-            // tsmExit
-            // 
-            tsmExit.Name = "tsmExit";
-            tsmExit.Size = new Size(180, 22);
-            tsmExit.Text = "Salir";
-            // 
-            // tsmCut
-            // 
-            tsmCut.Name = "tsmCut";
-            tsmCut.Size = new Size(180, 22);
-            tsmCut.Text = "Cortar";
-            // 
-            // tsmCopy
-            // 
-            tsmCopy.Name = "tsmCopy";
-            tsmCopy.Size = new Size(180, 22);
-            tsmCopy.Text = "Copiar";
-            // 
-            // tsmPaste
-            // 
-            tsmPaste.Name = "tsmPaste";
-            tsmPaste.Size = new Size(180, 22);
-            tsmPaste.Text = "Pegar";
-            // 
-            // tsmFind
-            // 
-            tsmFind.Name = "tsmFind";
-            tsmFind.Size = new Size(180, 22);
-            tsmFind.Text = "Buscar";
-            // 
-            // tsmFont
-            // 
-            tsmFont.Name = "tsmFont";
-            tsmFont.Size = new Size(180, 22);
-            tsmFont.Text = "Fuente";
-            // 
-            // tsmColor
-            // 
-            tsmColor.Name = "tsmColor";
-            tsmColor.Size = new Size(180, 22);
-            tsmColor.Text = "Color";
+            tsmSearch.Name = "tsmSearch";
+            tsmSearch.Size = new Size(180, 22);
+            tsmSearch.Text = "Buscar";
             // 
             // Form1
             // 
@@ -200,8 +220,10 @@
         private ToolStripMenuItem tsmCut;
         private ToolStripMenuItem tsmCopy;
         private ToolStripMenuItem tsmPaste;
-        private ToolStripMenuItem tsmFind;
+        private ToolStripMenuItem tsmOpenSearch;
         private ToolStripMenuItem tsmFont;
         private ToolStripMenuItem tsmColor;
+        private ToolStripTextBox tsmSearchBox;
+        private ToolStripMenuItem tsmSearch;
     }
 }
