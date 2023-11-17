@@ -7,6 +7,8 @@ namespace Ejercicio7
         public Form1()
         {
             InitializeComponent();
+
+            tsslCurrentLine.Text = $"Línea {rtbText.GetLineFromCharIndex(rtbText.SelectionStart)}";
         }
 
         private string filePath;
@@ -106,6 +108,123 @@ namespace Ejercicio7
         private void tsmPaste_Click(object sender, EventArgs e)
         {
             rtbText.Paste();
+        }
+
+        private void tsmSearch_Click(object sender, EventArgs e)
+        {
+            rtbText.SelectAll();
+            rtbText.SelectionBackColor = rtbText.BackColor;
+
+            int index = rtbText.Text.IndexOf(tsmSearchBox.Text);
+
+            while (index != -1)
+            {
+                rtbText.Select(index, tsmSearchBox.Text.Length);
+                rtbText.SelectionBackColor = Color.Yellow;
+
+                if (index < rtbText.Text.Length - 1)
+                {
+                    index = rtbText.Text.IndexOf(tsmSearchBox.Text, index + 1);
+                }
+                else
+                {
+                    index = -1;
+                }
+            }
+
+            ActiveControl = null;
+        }
+
+        private void tsmFont_Click(object sender, EventArgs e)
+        {
+            FontDialog fontDialog = new FontDialog();
+            DialogResult result = fontDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                rtbText.SelectionFont = fontDialog.Font;
+            }
+        }
+
+        private void tsmColor_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            DialogResult result = colorDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                rtbText.SelectionColor = colorDialog.Color;
+            }
+        }
+
+        private void tsbNew_Click(object sender, EventArgs e)
+        {
+            tsmNew_Click(sender, e);
+        }
+
+        private void tsbOpen_Click(object sender, EventArgs e)
+        {
+            tsmOpen_Click(sender, e);
+        }
+
+        private void tsbSave_Click(object sender, EventArgs e)
+        {
+            tsmSave_Click(sender, e);
+        }
+
+        private void tsbCut_Click(object sender, EventArgs e)
+        {
+            tsmCut_Click(sender, e);
+        }
+
+        private void tsbCopy_Click(object sender, EventArgs e)
+        {
+            tsmCopy_Click(sender, e);
+        }
+
+        private void tsbPaste_Click(object sender, EventArgs e)
+        {
+            tsmPaste_Click(sender, e);
+        }
+
+        private void tsbSearch_Click(object sender, EventArgs e)
+        {
+            rtbText.SelectAll();
+            rtbText.SelectionBackColor = rtbText.BackColor;
+
+            int index = rtbText.Text.IndexOf(tsbSearchBox.Text);
+
+            while (index != -1)
+            {
+                rtbText.Select(index, tsbSearchBox.Text.Length);
+                rtbText.SelectionBackColor = Color.Yellow;
+
+                if (index < rtbText.Text.Length - 1)
+                {
+                    index = rtbText.Text.IndexOf(tsbSearchBox.Text, index + 1);
+                }
+                else
+                {
+                    index = -1;
+                }
+            }
+
+            ActiveControl = null;
+        }
+
+        private void tsbFont_Click(object sender, EventArgs e)
+        {
+            tsmFont_Click(sender, e);
+        }
+
+        private void tsbColor_Click(object sender, EventArgs e)
+        {
+            tsmColor_Click(sender, e);
+        }
+
+        private void rtbText_SelectionChanged(object sender, EventArgs e)
+        {
+            tsslCurrentLine.Text = $"Línea {rtbText.GetLineFromCharIndex(rtbText.SelectionStart)}";
         }
     }
 }

@@ -39,16 +39,27 @@
             tsmCopy = new ToolStripMenuItem();
             tsmPaste = new ToolStripMenuItem();
             tsmOpenSearch = new ToolStripMenuItem();
+            tsmSearchBox = new ToolStripTextBox();
+            tsmSearch = new ToolStripMenuItem();
             tsmFont = new ToolStripMenuItem();
             tsmColor = new ToolStripMenuItem();
             tsToolbar = new ToolStrip();
-            toolStripLabel1 = new ToolStripLabel();
+            tsbNew = new ToolStripButton();
+            tsbOpen = new ToolStripButton();
+            tsbSave = new ToolStripButton();
+            tsbCut = new ToolStripButton();
+            tsbCopy = new ToolStripButton();
+            tsbPaste = new ToolStripButton();
+            tsbFont = new ToolStripButton();
+            tsbColor = new ToolStripButton();
+            tsbSearchBox = new ToolStripTextBox();
+            tsbSearch = new ToolStripButton();
             rtbText = new RichTextBox();
             statusStrip1 = new StatusStrip();
-            tsmSearchBox = new ToolStripTextBox();
-            tsmSearch = new ToolStripMenuItem();
+            tsslCurrentLine = new ToolStripStatusLabel();
             mnuMenu.SuspendLayout();
             tsToolbar.SuspendLayout();
+            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // mnuMenu
@@ -105,21 +116,21 @@
             // tsmCut
             // 
             tsmCut.Name = "tsmCut";
-            tsmCut.Size = new Size(180, 22);
+            tsmCut.Size = new Size(110, 22);
             tsmCut.Text = "Cortar";
             tsmCut.Click += tsmCut_Click;
             // 
             // tsmCopy
             // 
             tsmCopy.Name = "tsmCopy";
-            tsmCopy.Size = new Size(180, 22);
+            tsmCopy.Size = new Size(110, 22);
             tsmCopy.Text = "Copiar";
             tsmCopy.Click += tsmCopy_Click;
             // 
             // tsmPaste
             // 
             tsmPaste.Name = "tsmPaste";
-            tsmPaste.Size = new Size(180, 22);
+            tsmPaste.Size = new Size(110, 22);
             tsmPaste.Text = "Pegar";
             tsmPaste.Click += tsmPaste_Click;
             // 
@@ -127,35 +138,140 @@
             // 
             tsmOpenSearch.DropDownItems.AddRange(new ToolStripItem[] { tsmSearchBox, tsmSearch });
             tsmOpenSearch.Name = "tsmOpenSearch";
-            tsmOpenSearch.Size = new Size(180, 22);
+            tsmOpenSearch.Size = new Size(110, 22);
             tsmOpenSearch.Text = "Buscar";
+            // 
+            // tsmSearchBox
+            // 
+            tsmSearchBox.BorderStyle = BorderStyle.FixedSingle;
+            tsmSearchBox.Name = "tsmSearchBox";
+            tsmSearchBox.Size = new Size(100, 23);
+            // 
+            // tsmSearch
+            // 
+            tsmSearch.Name = "tsmSearch";
+            tsmSearch.Size = new Size(160, 22);
+            tsmSearch.Text = "Buscar";
+            tsmSearch.Click += tsmSearch_Click;
             // 
             // tsmFont
             // 
             tsmFont.Name = "tsmFont";
-            tsmFont.Size = new Size(180, 22);
+            tsmFont.Size = new Size(110, 22);
             tsmFont.Text = "Fuente";
+            tsmFont.Click += tsmFont_Click;
             // 
             // tsmColor
             // 
             tsmColor.Name = "tsmColor";
-            tsmColor.Size = new Size(180, 22);
+            tsmColor.Size = new Size(110, 22);
             tsmColor.Text = "Color";
+            tsmColor.Click += tsmColor_Click;
             // 
             // tsToolbar
             // 
-            tsToolbar.Items.AddRange(new ToolStripItem[] { toolStripLabel1 });
+            tsToolbar.Items.AddRange(new ToolStripItem[] { tsbNew, tsbOpen, tsbSave, tsbCut, tsbCopy, tsbPaste, tsbFont, tsbColor, tsbSearchBox, tsbSearch });
             tsToolbar.Location = new Point(0, 24);
             tsToolbar.Name = "tsToolbar";
             tsToolbar.Size = new Size(800, 25);
             tsToolbar.TabIndex = 1;
             tsToolbar.Text = "toolStrip1";
             // 
-            // toolStripLabel1
+            // tsbNew
             // 
-            toolStripLabel1.Name = "toolStripLabel1";
-            toolStripLabel1.Size = new Size(86, 22);
-            toolStripLabel1.Text = "toolStripLabel1";
+            tsbNew.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tsbNew.Image = Properties.Resources._new;
+            tsbNew.ImageTransparentColor = Color.Magenta;
+            tsbNew.Name = "tsbNew";
+            tsbNew.Size = new Size(23, 22);
+            tsbNew.Text = "toolStripButton1";
+            tsbNew.Click += tsbNew_Click;
+            // 
+            // tsbOpen
+            // 
+            tsbOpen.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tsbOpen.Image = Properties.Resources.open;
+            tsbOpen.ImageTransparentColor = Color.Magenta;
+            tsbOpen.Name = "tsbOpen";
+            tsbOpen.Size = new Size(23, 22);
+            tsbOpen.Text = "toolStripButton1";
+            tsbOpen.Click += tsbOpen_Click;
+            // 
+            // tsbSave
+            // 
+            tsbSave.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tsbSave.Image = Properties.Resources.save;
+            tsbSave.ImageTransparentColor = Color.Magenta;
+            tsbSave.Name = "tsbSave";
+            tsbSave.Size = new Size(23, 22);
+            tsbSave.Text = "toolStripButton2";
+            tsbSave.Click += tsbSave_Click;
+            // 
+            // tsbCut
+            // 
+            tsbCut.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tsbCut.Image = Properties.Resources.cut;
+            tsbCut.ImageTransparentColor = Color.Magenta;
+            tsbCut.Name = "tsbCut";
+            tsbCut.Size = new Size(23, 22);
+            tsbCut.Text = "toolStripButton3";
+            tsbCut.Click += tsbCut_Click;
+            // 
+            // tsbCopy
+            // 
+            tsbCopy.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tsbCopy.Image = Properties.Resources.copy;
+            tsbCopy.ImageTransparentColor = Color.Magenta;
+            tsbCopy.Name = "tsbCopy";
+            tsbCopy.Size = new Size(23, 22);
+            tsbCopy.Text = "toolStripButton4";
+            tsbCopy.Click += tsbCopy_Click;
+            // 
+            // tsbPaste
+            // 
+            tsbPaste.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tsbPaste.Image = Properties.Resources.paste;
+            tsbPaste.ImageTransparentColor = Color.Magenta;
+            tsbPaste.Name = "tsbPaste";
+            tsbPaste.Size = new Size(23, 22);
+            tsbPaste.Text = "toolStripButton5";
+            tsbPaste.Click += tsbPaste_Click;
+            // 
+            // tsbFont
+            // 
+            tsbFont.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tsbFont.Image = Properties.Resources.font;
+            tsbFont.ImageTransparentColor = Color.Magenta;
+            tsbFont.Name = "tsbFont";
+            tsbFont.Size = new Size(23, 22);
+            tsbFont.Text = "toolStripButton7";
+            tsbFont.Click += tsbFont_Click;
+            // 
+            // tsbColor
+            // 
+            tsbColor.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tsbColor.Image = Properties.Resources.color1;
+            tsbColor.ImageTransparentColor = Color.Magenta;
+            tsbColor.Name = "tsbColor";
+            tsbColor.Size = new Size(23, 22);
+            tsbColor.Text = "toolStripButton8";
+            tsbColor.Click += tsbColor_Click;
+            // 
+            // tsbSearchBox
+            // 
+            tsbSearchBox.BorderStyle = BorderStyle.FixedSingle;
+            tsbSearchBox.Name = "tsbSearchBox";
+            tsbSearchBox.Size = new Size(100, 25);
+            // 
+            // tsbSearch
+            // 
+            tsbSearch.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tsbSearch.Image = Properties.Resources.search;
+            tsbSearch.ImageTransparentColor = Color.Magenta;
+            tsbSearch.Name = "tsbSearch";
+            tsbSearch.Size = new Size(23, 22);
+            tsbSearch.Text = "toolStripButton6";
+            tsbSearch.Click += tsbSearch_Click;
             // 
             // rtbText
             // 
@@ -164,25 +280,22 @@
             rtbText.Size = new Size(800, 373);
             rtbText.TabIndex = 2;
             rtbText.Text = "";
+            rtbText.SelectionChanged += rtbText_SelectionChanged;
             // 
             // statusStrip1
             // 
+            statusStrip1.Items.AddRange(new ToolStripItem[] { tsslCurrentLine });
             statusStrip1.Location = new Point(0, 428);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(800, 22);
             statusStrip1.TabIndex = 3;
             statusStrip1.Text = "statusStrip1";
             // 
-            // tsmSearchBox
+            // tsslCurrentLine
             // 
-            tsmSearchBox.Name = "tsmSearchBox";
-            tsmSearchBox.Size = new Size(100, 23);
-            // 
-            // tsmSearch
-            // 
-            tsmSearch.Name = "tsmSearch";
-            tsmSearch.Size = new Size(180, 22);
-            tsmSearch.Text = "Buscar";
+            tsslCurrentLine.Name = "tsslCurrentLine";
+            tsslCurrentLine.Size = new Size(118, 17);
+            tsslCurrentLine.Text = "toolStripStatusLabel1";
             // 
             // Form1
             // 
@@ -200,6 +313,8 @@
             mnuMenu.PerformLayout();
             tsToolbar.ResumeLayout(false);
             tsToolbar.PerformLayout();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -210,7 +325,6 @@
         private ToolStrip tsToolbar;
         private RichTextBox rtbText;
         private StatusStrip statusStrip1;
-        private ToolStripLabel toolStripLabel1;
         private ToolStripMenuItem tsmFile;
         private ToolStripMenuItem tsmNew;
         private ToolStripMenuItem tsmOpen;
@@ -225,5 +339,16 @@
         private ToolStripMenuItem tsmColor;
         private ToolStripTextBox tsmSearchBox;
         private ToolStripMenuItem tsmSearch;
+        private ToolStripButton tsbNew;
+        private ToolStripButton tsbOpen;
+        private ToolStripButton tsbSave;
+        private ToolStripButton tsbCut;
+        private ToolStripButton tsbCopy;
+        private ToolStripButton tsbPaste;
+        private ToolStripButton tsbSearch;
+        private ToolStripButton tsbFont;
+        private ToolStripButton tsbColor;
+        private ToolStripStatusLabel tsslCurrentLine;
+        private ToolStripTextBox tsbSearchBox;
     }
 }

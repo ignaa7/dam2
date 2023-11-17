@@ -30,3 +30,4 @@ D:\dam2\Desarrollo de Interfaces\Tema3\Ejercicio7\Ejercicio7\obj\Debug\net6.0-wi
 D:\dam2\Desarrollo de Interfaces\Tema3\Ejercicio7\Ejercicio7\obj\Debug\net6.0-windows\Ejercicio7.pdb
 D:\dam2\Desarrollo de Interfaces\Tema3\Ejercicio7\Ejercicio7\obj\Debug\net6.0-windows\Ejercicio7.genruntimeconfig.cache
 D:\dam2\Desarrollo de Interfaces\Tema3\Ejercicio7\Ejercicio7\obj\Debug\net6.0-windows\ref\Ejercicio7.dll
+D:\dam2\Desarrollo de Interfaces\Tema3\Ejercicio7\Ejercicio7\obj\Debug\net6.0-windows\Ejercicio7.Properties.Resources.resources
