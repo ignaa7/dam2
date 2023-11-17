@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { Book } from 'src/classes/book/book';
 
 @Injectable({
@@ -10,15 +10,16 @@ export class Service {
   //properties
 
   private _books : Book[];
-  private _subject: Subject<Object[]>;
+  private _subject: BehaviorSubject<Object[]>;
 
   constructor() { 
     this._books = [];
-    this._subject = new Subject<Object[]>();
 
     this._books.push(new Book("El corredor del laberinto", "James Dashner", "1", new Date(2010,7, 24)));
     this._books.push(new Book("Los juegos del hambre", "Suzanne Collins", "2", new Date(2008, 8, 14)));
     this._books.push(new Book("Percy Jackson", "Rick Riordan", "3", new Date(2005,5,28)));
+
+    this._subject = new BehaviorSubject<Object[]>(this.books);
   }
 
   //getters
