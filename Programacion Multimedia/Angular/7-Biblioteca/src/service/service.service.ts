@@ -15,6 +15,10 @@ export class Service {
   constructor() { 
     this._books = [];
     this._subject = new Subject<Object[]>();
+
+    this._books.push(new Book("El corredor del laberinto", "James Dashner", "1", new Date(2010,7, 24)));
+    this._books.push(new Book("Los juegos del hambre", "Suzanne Collins", "2", new Date(2008, 8, 14)));
+    this._books.push(new Book("Percy Jackson", "Rick Riordan", "3", new Date(2005,5,28)));
   }
 
   //getters
@@ -30,7 +34,8 @@ export class Service {
   //methods
 
   public getFilteredBooks(filter: string): void {
-    this._subject.next(this.getBooksCopy(this._books.filter(book => book.title.includes(filter))));
+    let filteredBooks: Book[] = this._books.filter(book => book.title.includes(filter));
+    this._subject.next(this.getBooksCopy(filteredBooks));
   }
 
   private getBooksCopy(books : Book[]): Object[] {

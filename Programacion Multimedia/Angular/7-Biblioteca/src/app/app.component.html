@@ -1,5 +1,6 @@
-<header ()="logIn"></header>
-
+<div>
+  <header (logInEvent)="logIn()"></header>
+</div>
 <div *ngIf="isLoggedIn">
   <filters-panel></filters-panel>
   <books-list></books-list>

@@ -1,1 +1,5 @@
-<p>filters-panel works!</p>
+<div>
+    <label for="txtBox">Filtro:</label>
+    <input #txtBox type="text" id="txtBox" name="txtBox">
+    <button (click)="applyFilter(txtBox.value)">Buscar</button>
+</div>

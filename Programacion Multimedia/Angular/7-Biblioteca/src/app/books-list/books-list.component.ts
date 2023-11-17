@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Book } from 'src/classes/book/book';
 import { Service } from 'src/service/service.service';
 
 @Component({
@@ -7,13 +8,11 @@ import { Service } from 'src/service/service.service';
   styleUrls: ['./books-list.component.css']
 })
 export class BooksListComponent {
-  books: Object[];
+  books: any[];
 
-  constructor(private service: Service) {}
+  constructor(private service: Service) {
+    this.books = service.books;
 
-
-  ngOnInit() {
-    this.service.subject.subscribe( books => this.books = books );
-  }
+    this.service.subject.subscribe(books => this.books = books);
   }
 }
