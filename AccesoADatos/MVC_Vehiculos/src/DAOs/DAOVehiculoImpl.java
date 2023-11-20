@@ -1,6 +1,10 @@
 package DAOs;
 
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +16,9 @@ import Recursos.Vehiculo;
 public class DAOVehiculoImpl implements IDAOVehiculo {
 	
 	private List<Vehiculo> falsaBD;
-	private static IDAOVehiculo dao=null; 
+	private static IDAOVehiculo dao=null;
+	private DbConnection dbConnection;
+	private Connection connection;
 
 	private DAOVehiculoImpl() {
 		super();
@@ -22,13 +28,32 @@ public class DAOVehiculoImpl implements IDAOVehiculo {
 		falsaBD.add(new Vehiculo("Tesla","3","2422FHT"));
 		falsaBD.add(new Vehiculo("Tesla","X","1221FDF"));
 		
+		try {
+			dbConnection = new DbConnection();
+			connection = dbConnection.getConnection();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 	@Override
 	public int insertarVehiculo(Vehiculo vehiculo) {
-	 falsaBD.add(vehiculo);
+		String sqlQuery = "INSERT INTO vehiculos (marca, modelo, matricula) VALUES (?, ?, ?)";
 		
-		return 1;
+        try (PreparedStatement statement = connection.prepareStatement(sqlQuery)) {
+            statement.setString(1, vehiculo.getMarca());
+            statement.setString(2, vehiculo.getModelo());
+            statement.setString(3, vehiculo.getMatricula());
+
+            int rowsInserted = statement.executeUpdate();
+            if (rowsInserted > 0) {
+                return 1;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
 	}
 
 	
@@ -53,8 +78,23 @@ public class DAOVehiculoImpl implements IDAOVehiculo {
 
 	@Override
 	public List<Vehiculo> getVehiculos() {
-		// TODO Auto-generated method stub
-		return this.falsaBD;
+		List<Vehiculo> vehiculos = new ArrayList<>();
+
+        String sqlQuery = "SELECT * FROM vehiculos";
+        try (PreparedStatement statement = connection.prepareStatement(sqlQuery)) {
+            ResultSet resultSet = statement.executeQuery();
+            
+            while (resultSet.next()) {
+                String marca = resultSet.getString("marca");
+                String modelo = resultSet.getString("modelo");
+                String matricula = resultSet.getString("matricula");
+                vehiculos.add(new Vehiculo(marca, modelo, matricula));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        return vehiculos;
 	}
 
 	

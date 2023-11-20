@@ -10,20 +10,20 @@ public class DbConnection {
 	static String user = "root";
 	static String password = "root";
 	static String url = "jdbc:mysql://localhost:3306/" + bd;
-	private Connection conn = null;
+	private Connection connection = null;
 
 	public DbConnection() throws SQLException {
-		conn = DriverManager.getConnection(url, user, password);
+		connection = DriverManager.getConnection(url, user, password);
 	}
 
 	public Connection getConnection() {
-		return conn;
+		return connection;
 	}
 
 	public void disconnect() throws SQLException {
-		if (conn != null) {
-			System.err.println("Closing database:[" + conn + "]...");
-			conn.close();
+		if (connection != null) {
+			System.err.println("Closing database:[" + connection + "]...");
+			connection.close();
 			System.err.println("DB disconnect.");
 		}
 	}
