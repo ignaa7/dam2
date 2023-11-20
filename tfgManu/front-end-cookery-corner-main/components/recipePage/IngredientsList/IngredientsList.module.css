@@ -1,0 +1,40 @@
+.container {
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 77px;
+
+    @media (max-width: 1200px) {
+        width: 992px;
+    }
+
+    @media (max-width: 992px) {
+        width: 768px;
+    }
+
+    @media (max-width: 768px) {
+        width: 576px;
+    }
+
+    @media (max-width: 576px) {
+        width: 100%;
+    }
+}
+
+.ingredient {
+    text-align: center;
+    background-color: #ebcded;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.nameIng {
+    font-weight: 400;
+}
+
+.title {
+    width: 100%;
+    margin: 40px auto;
+}

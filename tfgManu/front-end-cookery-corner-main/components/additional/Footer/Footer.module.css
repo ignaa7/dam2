@@ -1,0 +1,28 @@
+.authorText {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.description {
+    text-align: justify;
+}
+
+.footer {
+    background-color: #424242;
+    color: #ffffff;
+    margin-top: auto;
+    padding: 24px 16px;
+}
+
+.support {
+    color: blueviolet;
+    text-decoration-color: rgb(100, 31, 164);
+    text-decoration: none;
+}
+
+.textContainer {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

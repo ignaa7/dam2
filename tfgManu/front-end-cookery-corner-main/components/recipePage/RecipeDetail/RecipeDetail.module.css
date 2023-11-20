@@ -1,0 +1,93 @@
+.author {
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px;
+    font-size: medium;
+}
+
+.button {
+    margin: 40px auto;
+    display: flex;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.buy {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.buy .button {
+    margin-left: 20px;
+}
+
+.container {
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 77px;
+
+    @media (max-width: 1200px) {
+        width: 992px;
+    }
+
+    @media (max-width: 992px) {
+        width: 768px;
+    }
+
+    @media (max-width: 768px) {
+        width: 576px;
+    }
+
+    @media (max-width: 576px) {
+        width: 100%;
+    }
+}
+
+.iconAuthor {
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.valuation {
+    margin-left: auto;
+    margin-right: 0;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    margin: 40px 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 80px;
+
+    @media (max-width: 576px) {
+        font-size: 50px;
+    }
+}
+
+.description {
+    width: 100%;
+    text-align: justify;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-size: large;
+}
