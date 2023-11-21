@@ -5,6 +5,10 @@ import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle;
 
 import Controller.ControllerCRUD;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -24,6 +28,23 @@ public class PanelCRUD extends javax.swing.JPanel {
         initComponents();
         this.inicializarPanel();
         ControllerCRUD.cargarTabla(tablaVehiculos);
+        add(jScrollPane1);
+        add(jLabel1);
+        add(jLabel2);
+        add(jLabelMatricula);
+        add(txtModelo);
+        add(txtMarca);
+        add(txtMatricula);
+        add(btRegistrar);
+        setLayout(null);
+        add(jScrollPane1);
+        add(jLabel1);
+        add(jLabel2);
+        add(jLabelMatricula);
+        add(txtModelo);
+        add(txtMarca);
+        add(txtMatricula);
+        add(btRegistrar);
         
     }
 
@@ -84,11 +105,6 @@ public javax.swing.JTextField getTxtModelo() {
 public void setTxtModelo(javax.swing.JTextField txtModelo) {
 	this.txtModelo = txtModelo;
 }
-
-
-				
- 
-private javax.swing.JButton btLeer;
  
 private javax.swing.JButton btRegistrar;
  
@@ -122,17 +138,6 @@ private javax.swing.JTextField txtModelo;
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 547, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 386, Short.MAX_VALUE)
-        );
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -145,24 +150,30 @@ private void inicializarPanel() {
  
  
 	 jLabel1 = new javax.swing.JLabel();
+	 jLabel1.setBounds(10, 14, 29, 14);
  
 	 jScrollPane1 = new javax.swing.JScrollPane();
+	 jScrollPane1.setBounds(10, 122, 375, 181);
  
 	 tablaVehiculos = new javax.swing.JTable();
  
 	 txtMarca = new javax.swing.JTextField();
+	 txtMarca.setBounds(63, 11, 196, 20);
  
 	 txtModelo = new javax.swing.JTextField();
+	 txtModelo.setBounds(63, 40, 210, 25);
  
 	 jLabel2 = new javax.swing.JLabel();
+	 jLabel2.setBounds(10, 45, 34, 14);
  
 	 jLabelMatricula = new javax.swing.JLabel();
+	 jLabelMatricula.setBounds(10, 79, 43, 14);
  
 	 txtMatricula = new javax.swing.JTextField();
+	 txtMatricula.setBounds(63, 76, 196, 20);
  
 	 btRegistrar = new javax.swing.JButton();
- 
-	 btLeer = new javax.swing.JButton();
+	 btRegistrar.setBounds(314, 41, 77, 23);
  
  
  
@@ -224,7 +235,7 @@ private void inicializarPanel() {
  
  
  
-	 jLabelMatricula.setText("Matricula");
+	 jLabelMatricula.setText("Matrícula");
  
  
  
@@ -247,76 +258,11 @@ private void inicializarPanel() {
 		 }
  
 	 });
- 
- 
- 
-	 btLeer.setText("Leer");
- 
-	 btLeer.setToolTipText("");
- 
-	 btLeer.setName("btLeer"); // NOI18N
- 
- 
- 
-	 javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-	 layout.setHorizontalGroup(
-	 	layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-	 		.addGroup(layout.createSequentialGroup()
-	 			.addContainerGap()
-	 			.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-	 				.addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 375, GroupLayout.PREFERRED_SIZE)
-	 				.addGroup(layout.createSequentialGroup()
-	 					.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-	 						.addComponent(jLabel1)
-	 						.addComponent(jLabel2)
-	 						.addComponent(jLabelMatricula))
-	 					.addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-	 					.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-	 						.addComponent(txtModelo)
-	 						.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-	 							.addComponent(txtMarca)
-	 							.addComponent(txtMatricula, GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)))
-	 					.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-	 					.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-	 						.addComponent(btRegistrar, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-	 						.addComponent(btLeer, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-	 			.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-	 );
-	 layout.setVerticalGroup(
-	 	layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-	 		.addGroup(layout.createSequentialGroup()
-	 			.addContainerGap()
-	 			.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-	 				.addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-	 					.addComponent(jLabel1)
-	 					.addComponent(txtMarca, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-	 				.addComponent(btRegistrar))
-	 			.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-	 				.addGroup(layout.createSequentialGroup()
-	 					.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-	 					.addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-	 						.addComponent(jLabel2)
-	 						.addComponent(txtModelo, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE))
-	 					.addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-	 					.addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-	 						.addComponent(jLabelMatricula)
-	 						.addComponent(txtMatricula, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-	 				.addGroup(layout.createSequentialGroup()
-	 					.addGap(15)
-	 					.addComponent(btLeer)))
-	 			.addGap(26)
-	 			.addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 181, GroupLayout.PREFERRED_SIZE)
-	 			.addContainerGap(32, Short.MAX_VALUE))
-	 );
- 
-	 this.setLayout(layout);
+	 setLayout(null);
  
  
  
 	 
  
 }// </editor-fold>	
-
-
-
 }
