@@ -143,7 +143,7 @@ namespace Ejercicio8
                 errNombre.SetError(txtNumeroCuentaCorriente, "");
                 e.Cancel = false;
 
-                Direccion = txtNumeroCuentaCorriente.Text;
+                NumeroCuentaCorriente = txtNumeroCuentaCorriente.Text;
             }
         }
 

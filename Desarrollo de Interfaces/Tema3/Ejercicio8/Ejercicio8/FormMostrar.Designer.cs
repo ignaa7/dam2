@@ -53,6 +53,7 @@
             btnVolver.TabIndex = 59;
             btnVolver.Text = "Volver";
             btnVolver.UseVisualStyleBackColor = true;
+            btnVolver.Click += btnVolver_Click;
             // 
             // txtTelefono
             // 

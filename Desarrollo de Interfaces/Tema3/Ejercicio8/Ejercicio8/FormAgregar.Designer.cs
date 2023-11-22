@@ -118,6 +118,7 @@
             txtNumeroCuentaCorriente.Name = "txtNumeroCuentaCorriente";
             txtNumeroCuentaCorriente.Size = new Size(342, 23);
             txtNumeroCuentaCorriente.TabIndex = 7;
+            txtNumeroCuentaCorriente.Validating += txtNumeroCuentaCorriente_Validating;
             // 
             // lblNumeroCuentaCorriente
             // 

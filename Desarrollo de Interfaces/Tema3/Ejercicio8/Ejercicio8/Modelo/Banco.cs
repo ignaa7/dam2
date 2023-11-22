@@ -120,17 +120,22 @@ namespace Ejercicio8.Modelo
 
         private List<Cliente> GetClientes()
         {
-            using (TextReader reader = new StreamReader("people.xml"))
+            if (File.Exists("banco.xml"))
             {
-                object? clientes = serializer.Deserialize(reader);
-
-                if (clientes != null)
+                using(TextReader reader = new StreamReader("banco.xml"))
                 {
-                    return (List<Cliente>)clientes;
-                }
+                    object? clientes = serializer.Deserialize(reader);
 
-                return new List<Cliente>();
+                    if (clientes != null)
+                    {
+                        return (List<Cliente>)clientes;
+                    }
+
+                    return new List<Cliente>();
+                }
             }
+            
+            return new List<Cliente>();
         }
     }
 }
