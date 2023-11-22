@@ -8,6 +8,7 @@ import java.util.List;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
+import DAOs.DAOCliente;
 import DAOs.DAOVehiculoImpl;
 import Recursos.Vehiculo;
 import Vista.PanelCRUD;
@@ -76,6 +77,11 @@ public class ControllerCRUD
 		cargarTabla( tablaVehiculos);
 		}
      return insertado;		
+	}
+
+
+	public static void insertarUsuario(String nombreUsuario) {
+		DAOCliente
 	}
 	
 	

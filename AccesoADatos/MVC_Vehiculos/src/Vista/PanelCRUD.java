@@ -9,6 +9,10 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -45,6 +49,34 @@ public class PanelCRUD extends javax.swing.JPanel {
         add(txtMarca);
         add(txtMatricula);
         add(btRegistrar);
+        
+        txtNombreUsuario = new JTextField();
+        txtNombreUsuario.setBounds(584, 144, 230, 20);
+        add(txtNombreUsuario);
+        txtNombreUsuario.setColumns(10);
+        
+        JButton btnAgregarUsuario = new JButton("Agregar usuario");
+        btnAgregarUsuario.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		if (!txtNombreUsuario.getText().isEmpty()) {
+        			ControllerCRUD.insertarUsuario(txtNombreUsuario.getText());
+        		}
+        	}
+        });
+        btnAgregarUsuario.setBounds(584, 193, 122, 23);
+        add(btnAgregarUsuario);
+        
+        JLabel lblNombreUsuario = new JLabel("Nombre de usuario");
+        lblNombreUsuario.setBounds(477, 147, 102, 14);
+        add(lblNombreUsuario);
+        
+        JComboBox cmbClientes = new JComboBox();
+        cmbClientes.setBounds(367, 41, 216, 22);
+        add(cmbClientes);
+        
+        JLabel lblCliente = new JLabel("Cliente");
+        lblCliente.setBounds(325, 45, 46, 14);
+        add(lblCliente);
         
     }
 
@@ -123,6 +155,7 @@ private javax.swing.JTextField txtMatricula;
 private javax.swing.JTextField txtMarca;
  
 private javax.swing.JTextField txtModelo;
+private JTextField txtNombreUsuario;
     /**
      * Creates new form PanelCRUD
      */
@@ -173,7 +206,7 @@ private void inicializarPanel() {
 	 txtMatricula.setBounds(63, 76, 196, 20);
  
 	 btRegistrar = new javax.swing.JButton();
-	 btRegistrar.setBounds(314, 41, 77, 23);
+	 btRegistrar.setBounds(614, 41, 77, 23);
  
  
  

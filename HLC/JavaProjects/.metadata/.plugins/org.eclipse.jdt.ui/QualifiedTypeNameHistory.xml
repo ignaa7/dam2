@@ -15,4 +15,6 @@
     <fullyQualifiedTypeName name="java.awt.dnd.DnDConstants"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="Controller.ControllerCRUD"/>
+    <fullyQualifiedTypeName name="DAOs.DAOCliente"/>
 </qualifiedTypeNameHistroy>
