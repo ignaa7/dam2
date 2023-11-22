@@ -14,10 +14,24 @@ namespace Ejercicio8.Modelo
 
         public XmlSerializer serializer { get; set; }
 
-        public Banco()
+        public static Banco? BancoObjeto { get; set; }
+
+        private Banco()
         {
             serializer = new XmlSerializer(typeof(List<Cliente>));
             Clientes = GetClientes();
+        }
+
+        public static Banco getInstance()
+        {
+            if (BancoObjeto == null)
+            {
+                return new Banco();
+            }
+            else
+            {
+                return BancoObjeto;
+            }
         }
 
         public void AgregarCliente(string dni, string nombre, string direccion, int edad, string telefono, string numeroCuentaCorriente)
@@ -77,6 +91,23 @@ namespace Ejercicio8.Modelo
             }
 
             return "";
+        }
+
+        public List<string> GetDnis()
+        {
+            List<string> dnis = new List<string>();
+
+            foreach (Cliente cliente in Clientes)
+            {
+                dnis.Add(cliente.Dni);
+            }
+
+            return dnis;
+        }
+
+        public Cliente? GetCliente(string dni)
+        {
+            return Clientes.Find(cliente => cliente.Dni == dni);
         }
 
         private void GuardarClientes()

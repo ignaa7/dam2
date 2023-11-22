@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio8.Modelo
 {
-    internal class Cliente
+    public class Cliente
     {
         public string Dni { get; set; }
         public string Nombre { get; set; }
@@ -24,6 +24,8 @@ namespace Ejercicio8.Modelo
             Telefono = telefono;
             NumeroCuentaCorriente = numeroCuentaCorriente;
         }
+
+        public Cliente() { }
 
         public override string ToString()
         {

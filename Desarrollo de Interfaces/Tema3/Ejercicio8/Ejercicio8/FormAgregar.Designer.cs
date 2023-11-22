@@ -28,21 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             btnConfirmar = new Button();
             lblDni = new Label();
             txtDni = new TextBox();
             lblAgregar = new Label();
-            textBox2 = new TextBox();
+            txtEdad = new TextBox();
             lblEdad = new Label();
-            textBox3 = new TextBox();
+            txtNumeroCuentaCorriente = new TextBox();
             lblNumeroCuentaCorriente = new Label();
             txtDireccion = new TextBox();
             lblDireccion = new Label();
             txtNombre = new TextBox();
             lblNombre = new Label();
-            textBox6 = new TextBox();
+            txtTelefono = new TextBox();
             lblTelefono = new Label();
             btnCancelar = new Button();
+            errDni = new ErrorProvider(components);
+            errNombre = new ErrorProvider(components);
+            errDireccion = new ErrorProvider(components);
+            errEdad = new ErrorProvider(components);
+            errTelefono = new ErrorProvider(components);
+            errNumeroCuentaCorriente = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errDni).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errNombre).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errDireccion).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errEdad).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errTelefono).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errNumeroCuentaCorriente).BeginInit();
             SuspendLayout();
             // 
             // btnConfirmar
@@ -53,6 +66,7 @@
             btnConfirmar.TabIndex = 0;
             btnConfirmar.Text = "Confirmar";
             btnConfirmar.UseVisualStyleBackColor = true;
+            btnConfirmar.Click += btnConfirmar_Click;
             // 
             // lblDni
             // 
@@ -69,6 +83,7 @@
             txtDni.Name = "txtDni";
             txtDni.Size = new Size(342, 23);
             txtDni.TabIndex = 2;
+            txtDni.Validating += txtDni_Validating;
             // 
             // lblAgregar
             // 
@@ -76,16 +91,17 @@
             lblAgregar.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             lblAgregar.Location = new Point(288, 29);
             lblAgregar.Name = "lblAgregar";
-            lblAgregar.Size = new Size(190, 37);
+            lblAgregar.Size = new Size(197, 37);
             lblAgregar.TabIndex = 3;
-            lblAgregar.Text = "Agregar ciente";
+            lblAgregar.Text = "Agregar cliente";
             // 
-            // textBox2
+            // txtEdad
             // 
-            textBox2.Location = new Point(220, 226);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(342, 23);
-            textBox2.TabIndex = 5;
+            txtEdad.Location = new Point(220, 226);
+            txtEdad.Name = "txtEdad";
+            txtEdad.Size = new Size(342, 23);
+            txtEdad.TabIndex = 5;
+            txtEdad.Validating += txtEdad_Validating;
             // 
             // lblEdad
             // 
@@ -96,12 +112,12 @@
             lblEdad.TabIndex = 4;
             lblEdad.Text = "Edad";
             // 
-            // textBox3
+            // txtNumeroCuentaCorriente
             // 
-            textBox3.Location = new Point(220, 307);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(342, 23);
-            textBox3.TabIndex = 7;
+            txtNumeroCuentaCorriente.Location = new Point(220, 307);
+            txtNumeroCuentaCorriente.Name = "txtNumeroCuentaCorriente";
+            txtNumeroCuentaCorriente.Size = new Size(342, 23);
+            txtNumeroCuentaCorriente.TabIndex = 7;
             // 
             // lblNumeroCuentaCorriente
             // 
@@ -118,6 +134,7 @@
             txtDireccion.Name = "txtDireccion";
             txtDireccion.Size = new Size(342, 23);
             txtDireccion.TabIndex = 9;
+            txtDireccion.Validating += txtDireccion_Validating;
             // 
             // lblDireccion
             // 
@@ -134,6 +151,7 @@
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(342, 23);
             txtNombre.TabIndex = 11;
+            txtNombre.Validating += txtNombre_Validating;
             // 
             // lblNombre
             // 
@@ -144,12 +162,13 @@
             lblNombre.TabIndex = 10;
             lblNombre.Text = "Nombre";
             // 
-            // textBox6
+            // txtTelefono
             // 
-            textBox6.Location = new Point(220, 266);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(342, 23);
-            textBox6.TabIndex = 13;
+            txtTelefono.Location = new Point(220, 266);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(342, 23);
+            txtTelefono.TabIndex = 13;
+            txtTelefono.Validating += txtTelefono_Validating;
             // 
             // lblTelefono
             // 
@@ -168,6 +187,31 @@
             btnCancelar.TabIndex = 14;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
+            // errDni
+            // 
+            errDni.ContainerControl = this;
+            // 
+            // errNombre
+            // 
+            errNombre.ContainerControl = this;
+            // 
+            // errDireccion
+            // 
+            errDireccion.ContainerControl = this;
+            // 
+            // errEdad
+            // 
+            errEdad.ContainerControl = this;
+            // 
+            // errTelefono
+            // 
+            errTelefono.ContainerControl = this;
+            // 
+            // errNumeroCuentaCorriente
+            // 
+            errNumeroCuentaCorriente.ContainerControl = this;
             // 
             // FormAgregar
             // 
@@ -175,15 +219,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(btnCancelar);
-            Controls.Add(textBox6);
+            Controls.Add(txtTelefono);
             Controls.Add(lblTelefono);
             Controls.Add(txtNombre);
             Controls.Add(lblNombre);
             Controls.Add(txtDireccion);
             Controls.Add(lblDireccion);
-            Controls.Add(textBox3);
+            Controls.Add(txtNumeroCuentaCorriente);
             Controls.Add(lblNumeroCuentaCorriente);
-            Controls.Add(textBox2);
+            Controls.Add(txtEdad);
             Controls.Add(lblEdad);
             Controls.Add(lblAgregar);
             Controls.Add(txtDni);
@@ -191,6 +235,12 @@
             Controls.Add(btnConfirmar);
             Name = "FormAgregar";
             Text = "FormAgregar";
+            ((System.ComponentModel.ISupportInitialize)errDni).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errNombre).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errDireccion).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errEdad).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errTelefono).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errNumeroCuentaCorriente).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -201,16 +251,22 @@
         private Label lblDni;
         private TextBox txtDni;
         private Label lblAgregar;
-        private TextBox textBox2;
+        private TextBox txtEdad;
         private Label lblEdad;
-        private TextBox textBox3;
+        private TextBox txtNumeroCuentaCorriente;
         private Label lblNumeroCuentaCorriente;
         private TextBox txtDireccion;
         private Label lblDireccion;
         private TextBox txtNombre;
         private Label lblNombre;
-        private TextBox textBox6;
+        private TextBox txtTelefono;
         private Label lblTelefono;
         private Button btnCancelar;
+        private ErrorProvider errDni;
+        private ErrorProvider errNombre;
+        private ErrorProvider errDireccion;
+        private ErrorProvider errEdad;
+        private ErrorProvider errTelefono;
+        private ErrorProvider errNumeroCuentaCorriente;
     }
 }

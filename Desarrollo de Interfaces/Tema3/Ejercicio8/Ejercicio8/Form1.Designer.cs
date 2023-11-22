@@ -42,6 +42,7 @@
             btnAgregar.TabIndex = 0;
             btnAgregar.Text = "Agregar cliente";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // btnModificar
             // 
@@ -51,6 +52,7 @@
             btnModificar.TabIndex = 1;
             btnModificar.Text = "Modificar cliente";
             btnModificar.UseVisualStyleBackColor = true;
+            btnModificar.Click += btnModificar_Click;
             // 
             // btnEliminar
             // 
@@ -60,6 +62,7 @@
             btnEliminar.TabIndex = 2;
             btnEliminar.Text = "Eliminar cliente";
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnMostrar
             // 
@@ -69,6 +72,7 @@
             btnMostrar.TabIndex = 3;
             btnMostrar.Text = "Mostrar cliente";
             btnMostrar.UseVisualStyleBackColor = true;
+            btnMostrar.Click += btnMostrar_Click;
             // 
             // Form1
             // 

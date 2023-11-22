@@ -6,5 +6,25 @@ namespace Ejercicio8
         {
             InitializeComponent();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            new FormAgregar().ShowDialog();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            new FormModificar().ShowDialog();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            new FormEliminar().ShowDialog();
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            new FormMostrar().ShowDialog();
+        }
     }
 }
