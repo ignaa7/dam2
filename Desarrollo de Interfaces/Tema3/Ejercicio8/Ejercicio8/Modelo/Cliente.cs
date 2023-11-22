@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejercicio8
+namespace Ejercicio8.Modelo
 {
     internal class Cliente
     {
@@ -17,12 +17,12 @@ namespace Ejercicio8
 
         public Cliente(string dni, string nombre, string direccion, int edad, string telefono, string numeroCuentaCorriente)
         {
-            this.Dni = dni;
-            this.Nombre = nombre;
-            this.Direccion = direccion;
-            this.Edad = edad;
-            this.Telefono = telefono;
-            this.NumeroCuentaCorriente = numeroCuentaCorriente;
+            Dni = dni;
+            Nombre = nombre;
+            Direccion = direccion;
+            Edad = edad;
+            Telefono = telefono;
+            NumeroCuentaCorriente = numeroCuentaCorriente;
         }
 
         public override string ToString()
