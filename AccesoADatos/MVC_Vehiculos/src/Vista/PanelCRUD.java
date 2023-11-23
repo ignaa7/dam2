@@ -97,8 +97,14 @@ private void btRegistrarActionPerformed(java.awt.event.ActionEvent evt) {
 	
 
   //  DAOVehiculoImpl.getInstance().insertarVehiculo(new Vehiculo(txtMatricula.getText(), ))
+	
+	if (!txtNombreUsuario.getText().isEmpty()) {
+		ControllerCRUD.insertarCliente(txtNombreUsuario.getText(), cbClientes);
+		ControllerCRUD.insertarVehiculo(this, tablaVehiculos, Integer.parseInt(cbClientes.getSelectedItem().toString()));
+		txtNombreUsuario.setText("");
+	}
 
-    ControllerCRUD.insertarVehiculo(this, tablaVehiculos);
+    
 
  
  

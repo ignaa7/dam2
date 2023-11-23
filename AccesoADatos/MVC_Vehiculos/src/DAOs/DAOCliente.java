@@ -43,12 +43,10 @@ public class DAOCliente {
 	}
 	
 	public int insertarCliente(String nombreUsuario) {
-		String sqlQuery = "INSERT INTO clientes (nombreUsuario) VALUES (?, ?, ?)";
+		String sqlQuery = "INSERT INTO clientes (nombreUsuario) VALUES (?)";
 		
         try (PreparedStatement statement = connection.prepareStatement(sqlQuery)) {
-            statement.setString(1, "a");
-            statement.setString(2, "a");
-            statement.setString(3, "a");
+            statement.setString(1, nombreUsuario);
 
             int rowsInserted = statement.executeUpdate();
             if (rowsInserted > 0) {

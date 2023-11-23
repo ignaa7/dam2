@@ -71,7 +71,7 @@ public class ControllerCRUD
 	}
 	
 	
-	public static boolean insertarVehiculo( PanelCRUD frmVehiculo, JTable tablaVehiculos)
+	public static boolean insertarVehiculo( PanelCRUD frmVehiculo, JTable tablaVehiculos, int idCliente)
 	{ boolean insertado=false;
 	Vehiculo vehiculo=new Vehiculo();
 	 
@@ -82,6 +82,8 @@ public class ControllerCRUD
 	 vehiculo.setModelo(frmVehiculo.getTxtModelo().getText());
 
 	 vehiculo.setMatricula(frmVehiculo.getTxtMatricula().getText());
+	 
+	 vehiculo.setIdCliente(idCliente);
 	 
 		if (DAOVehiculoImpl.getInstance().insertarVehiculo(vehiculo)!=0)
 		{insertado=true;

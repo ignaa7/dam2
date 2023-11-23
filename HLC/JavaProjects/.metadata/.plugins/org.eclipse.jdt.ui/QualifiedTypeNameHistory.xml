@@ -20,4 +20,6 @@
     <fullyQualifiedTypeName name="Recursos.Cliente"/>
     <fullyQualifiedTypeName name="DAOs.DAOCliente"/>
     <fullyQualifiedTypeName name="javax.swing.JComboBox"/>
+    <fullyQualifiedTypeName name="java.io.InvalidClassException"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>

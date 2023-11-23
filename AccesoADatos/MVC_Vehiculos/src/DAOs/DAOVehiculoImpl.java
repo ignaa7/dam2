@@ -22,12 +22,6 @@ public class DAOVehiculoImpl implements IDAOVehiculo {
 
 	private DAOVehiculoImpl() {
 		super();
-		this.falsaBD = new ArrayList<Vehiculo>();
-		falsaBD.add(new Vehiculo("Renault","Zoe","2345FDF"));
-		falsaBD.add(new Vehiculo("Renault","Fluence","0000FTL"));
-		falsaBD.add(new Vehiculo("Tesla","3","2422FHT"));
-		falsaBD.add(new Vehiculo("Tesla","X","1221FDF"));
-		
 		try {
 			dbConnection = new DbConnection();
 			connection = dbConnection.getConnection();
@@ -39,12 +33,13 @@ public class DAOVehiculoImpl implements IDAOVehiculo {
 
 	@Override
 	public int insertarVehiculo(Vehiculo vehiculo) {
-		String sqlQuery = "INSERT INTO vehiculos (marca, modelo, matricula) VALUES (?, ?, ?)";
+		String sqlQuery = "INSERT INTO vehiculos (marca, modelo, matricula) VALUES (?, ?, ?, ?)";
 		
         try (PreparedStatement statement = connection.prepareStatement(sqlQuery)) {
             statement.setString(1, vehiculo.getMarca());
             statement.setString(2, vehiculo.getModelo());
             statement.setString(3, vehiculo.getMatricula());
+            statement.setInt(3, vehiculo.getIdCliente());
 
             int rowsInserted = statement.executeUpdate();
             if (rowsInserted > 0) {
@@ -88,7 +83,8 @@ public class DAOVehiculoImpl implements IDAOVehiculo {
                 String marca = resultSet.getString("marca");
                 String modelo = resultSet.getString("modelo");
                 String matricula = resultSet.getString("matricula");
-                vehiculos.add(new Vehiculo(marca, modelo, matricula));
+                int idCliente = resultSet.getInt("id_cliente");
+                vehiculos.add(new Vehiculo(marca, modelo, matricula, idCliente));
             }
         } catch (SQLException e) {
             e.printStackTrace();
