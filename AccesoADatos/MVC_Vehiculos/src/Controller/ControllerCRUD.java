@@ -64,6 +64,10 @@ public class ControllerCRUD
 	
 	public static void cargarClientes(JComboBox<String> cbClientes) {
 		List<Cliente> clientes = DAOCliente.getInstance().getClientes();
+		
+		for (Cliente cliente : clientes) {
+			cbClientes.addItem(cliente.getNombreUsuario());
+		}
 	}
 	
 	
@@ -87,8 +91,15 @@ public class ControllerCRUD
 	}
 
 
-	public static void insertarCliente(String nombreUsuario) {
-		DAOCliente.getInstance().insertarCliente(nombreUsuario);
+	public static boolean insertarCliente(String nombreUsuario, JComboBox<String> cbClientes) {
+		boolean insertado = false;
+		
+		if (DAOCliente.getInstance().insertarCliente(nombreUsuario) != 0) {
+			insertado = true;
+			cargarClientes(cbClientes);
+		}
+		
+		return insertado;
 	}
 	
 	

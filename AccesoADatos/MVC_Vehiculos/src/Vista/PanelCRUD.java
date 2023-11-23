@@ -25,6 +25,8 @@ import java.awt.event.ActionEvent;
  * @author Luis
  */
 public class PanelCRUD extends javax.swing.JPanel {
+	
+	private JComboBox<String> cbClientes;
 
     private ControllerCRUD controller;
     
@@ -59,7 +61,7 @@ public class PanelCRUD extends javax.swing.JPanel {
         btnAgregarUsuario.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		if (!txtNombreUsuario.getText().isEmpty()) {
-        			ControllerCRUD.insertarCliente(txtNombreUsuario.getText());
+        			ControllerCRUD.insertarCliente(txtNombreUsuario.getText(), cbClientes);
         			txtNombreUsuario.setText("");
         		}
         	}
@@ -71,9 +73,9 @@ public class PanelCRUD extends javax.swing.JPanel {
         lblNombreUsuario.setBounds(477, 147, 102, 14);
         add(lblNombreUsuario);
         
-        JComboBox cmbClientes = new JComboBox();
-        cmbClientes.setBounds(367, 41, 216, 22);
-        add(cmbClientes);
+        cbClientes = new JComboBox();
+        cbClientes.setBounds(367, 41, 216, 22);
+        add(cbClientes);
         
         JLabel lblCliente = new JLabel("Cliente");
         lblCliente.setBounds(325, 45, 46, 14);
