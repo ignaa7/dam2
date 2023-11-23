@@ -5,11 +5,13 @@ package Controller;
 
 import java.util.List;
 
+import javax.swing.JComboBox;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 import DAOs.DAOCliente;
 import DAOs.DAOVehiculoImpl;
+import Recursos.Cliente;
 import Recursos.Vehiculo;
 import Vista.PanelCRUD;
 
@@ -60,6 +62,11 @@ public class ControllerCRUD
 	}
 	
 	
+	public static void cargarClientes(JComboBox<String> cbClientes) {
+		List<Cliente> clientes = DAOCliente.getInstance().getClientes();
+	}
+	
+	
 	public static boolean insertarVehiculo( PanelCRUD frmVehiculo, JTable tablaVehiculos)
 	{ boolean insertado=false;
 	Vehiculo vehiculo=new Vehiculo();
@@ -80,8 +87,8 @@ public class ControllerCRUD
 	}
 
 
-	public static void insertarUsuario(String nombreUsuario) {
-		DAOCliente
+	public static void insertarCliente(String nombreUsuario) {
+		DAOCliente.getInstance().insertarCliente(nombreUsuario);
 	}
 	
 	

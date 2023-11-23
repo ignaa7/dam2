@@ -59,7 +59,8 @@ public class PanelCRUD extends javax.swing.JPanel {
         btnAgregarUsuario.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		if (!txtNombreUsuario.getText().isEmpty()) {
-        			ControllerCRUD.insertarUsuario(txtNombreUsuario.getText());
+        			ControllerCRUD.insertarCliente(txtNombreUsuario.getText());
+        			txtNombreUsuario.setText("");
         		}
         	}
         });
