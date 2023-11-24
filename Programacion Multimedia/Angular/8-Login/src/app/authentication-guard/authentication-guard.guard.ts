@@ -14,16 +14,3 @@ export const authenticationGuard: CanActivateFn = (route, state) => {
     return false;
   }  
 };
-
-// export class AuthenticationGuard implements CanActivate {
-//   constructor(private authService: AuthenticationService, private router: Router) {}
-
-//   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-//     if (this.authService.isLoggedInUser()) {
-//       return true;
-//     } else {
-//       this.router.navigate(['/loginPage']);
-//       return false;
-//     }
-//   }
-// }
