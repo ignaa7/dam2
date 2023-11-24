@@ -32,14 +32,44 @@ public class DAOVehiculoImpl implements IDAOVehiculo {
 	}
 
 	@Override
-	public int insertarVehiculo(Vehiculo vehiculo) {
-		String sqlQuery = "INSERT INTO vehiculos (marca, modelo, matricula) VALUES (?, ?, ?, ?)";
+	public int insertarVehiculo(Vehiculo vehiculo, String nombreUsuario) {
+		int idCliente = 0;
+				
+		String sqlQueryId = "SELECT id FROM clientes WHERE nombre_usuario='" + nombreUsuario + "'";
+        try (PreparedStatement statement = connection.prepareStatement(sqlQueryId)) {
+            ResultSet resultSet = statement.executeQuery();
+            
+            while (resultSet.next()) {
+                idCliente = resultSet.getInt("id");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+		String sqlQuery = "INSERT INTO vehiculos (marca, modelo, matricula, id_cliente) VALUES (?, ?, ?, ?)";
 		
         try (PreparedStatement statement = connection.prepareStatement(sqlQuery)) {
             statement.setString(1, vehiculo.getMarca());
             statement.setString(2, vehiculo.getModelo());
             statement.setString(3, vehiculo.getMatricula());
-            statement.setInt(3, vehiculo.getIdCliente());
+            statement.setInt(4, idCliente);
+
+            int rowsInserted = statement.executeUpdate();
+            if (rowsInserted > 0) {
+                return 1;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+	}
+	
+	public int modificarVehiculo(String marca, String modelo, String matricula) {
+String sqlQuery = "UPDATE vehiculos SET marca = ?, modelo = ? WHERE matricula='" + matricula + "'";
+		
+        try (PreparedStatement statement = connection.prepareStatement(sqlQuery)) {
+            statement.setString(1, marca);
+            statement.setString(2, modelo);
 
             int rowsInserted = statement.executeUpdate();
             if (rowsInserted > 0) {
@@ -55,8 +85,18 @@ public class DAOVehiculoImpl implements IDAOVehiculo {
 
 	@Override
 	public int eliminarVehiculo(String matricula) {
-		// TODO Auto-generated method stub
-		return 0;
+		String sqlQuery = "DELETE FROM vehiculos WHERE matricula='" + matricula + "'";
+		
+        try (PreparedStatement statement = connection.prepareStatement(sqlQuery)) {
+
+            int rowsDeleted = statement.executeUpdate();
+            if (rowsDeleted > 0) {
+                return 1;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
 	}
 
 	@Override

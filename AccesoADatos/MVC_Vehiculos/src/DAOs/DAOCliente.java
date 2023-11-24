@@ -42,14 +42,44 @@ public class DAOCliente {
         return clientes;
 	}
 	
+	public String getNombreCliente(int id) {
+		String sqlQuery = "SELECT nombre_usuario FROM clientes WHERE id=" + id;
+        try (PreparedStatement statement = connection.prepareStatement(sqlQuery)) {
+            ResultSet resultSet = statement.executeQuery();
+            
+            while (resultSet.next()) {
+                return resultSet.getString("nombre_usuario");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        return "";
+	}
+	
 	public int insertarCliente(String nombreUsuario) {
-		String sqlQuery = "INSERT INTO clientes (nombreUsuario) VALUES (?)";
+		String sqlQuery = "INSERT INTO clientes (nombre_usuario) VALUES (?)";
 		
         try (PreparedStatement statement = connection.prepareStatement(sqlQuery)) {
             statement.setString(1, nombreUsuario);
 
             int rowsInserted = statement.executeUpdate();
             if (rowsInserted > 0) {
+                return 1;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+	}
+	
+	public int eliminarCliente(String nombreUsuario) {
+		String sqlQuery = "DELETE FROM clientes WHERE nombre_usuario='" + nombreUsuario + "'";
+		
+        try (PreparedStatement statement = connection.prepareStatement(sqlQuery)) {
+
+            int rowsDeleted = statement.executeUpdate();
+            if (rowsDeleted > 0) {
                 return 1;
             }
         } catch (SQLException e) {

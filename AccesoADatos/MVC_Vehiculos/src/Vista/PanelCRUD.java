@@ -5,6 +5,8 @@ import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle;
 
 import Controller.ControllerCRUD;
+import DAOs.DAOCliente;
+
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JTextField;
@@ -12,6 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import java.awt.event.ActionListener;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 
 /*
@@ -33,6 +36,8 @@ public class PanelCRUD extends javax.swing.JPanel {
        public PanelCRUD() {
         initComponents();
         this.inicializarPanel();
+        this.setPreferredSize(new Dimension(1000, 392));
+        
         ControllerCRUD.cargarTabla(tablaVehiculos);
         add(jScrollPane1);
         add(jLabel1);
@@ -66,11 +71,11 @@ public class PanelCRUD extends javax.swing.JPanel {
         		}
         	}
         });
-        btnAgregarUsuario.setBounds(584, 193, 122, 23);
+        btnAgregarUsuario.setBounds(584, 193, 164, 23);
         add(btnAgregarUsuario);
         
         JLabel lblNombreUsuario = new JLabel("Nombre de usuario");
-        lblNombreUsuario.setBounds(477, 147, 102, 14);
+        lblNombreUsuario.setBounds(432, 147, 147, 14);
         add(lblNombreUsuario);
         
         cbClientes = new JComboBox();
@@ -80,6 +85,28 @@ public class PanelCRUD extends javax.swing.JPanel {
         JLabel lblCliente = new JLabel("Cliente");
         lblCliente.setBounds(325, 45, 46, 14);
         add(lblCliente);
+        
+        
+        controller.cargarTabla(tablaVehiculos);
+        controller.cargarClientes(cbClientes);
+        
+        JButton btnEliminarCliente = new JButton("Eliminar cliente");
+        btnEliminarCliente.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		ControllerCRUD.eliminarCliente(cbClientes.getSelectedItem().toString(), cbClientes, tablaVehiculos);
+        	}
+        });
+        btnEliminarCliente.setBounds(621, 41, 127, 23);
+        add(btnEliminarCliente);
+        
+        btnEliminarVehiculo = new JButton("Eliminar vehículo");
+        btnEliminarVehiculo.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		ControllerCRUD.eliminarVehiculo(tablaVehiculos);
+        	}
+        });
+        btnEliminarVehiculo.setBounds(395, 277, 134, 23);
+        add(btnEliminarVehiculo);
         
     }
 
@@ -98,10 +125,11 @@ private void btRegistrarActionPerformed(java.awt.event.ActionEvent evt) {
 
   //  DAOVehiculoImpl.getInstance().insertarVehiculo(new Vehiculo(txtMatricula.getText(), ))
 	
-	if (!txtNombreUsuario.getText().isEmpty()) {
-		ControllerCRUD.insertarCliente(txtNombreUsuario.getText(), cbClientes);
-		ControllerCRUD.insertarVehiculo(this, tablaVehiculos, Integer.parseInt(cbClientes.getSelectedItem().toString()));
-		txtNombreUsuario.setText("");
+	if (!txtMarca.getText().isEmpty() && !txtModelo.getText().isEmpty() && !txtMatricula.getText().isEmpty()) {
+		ControllerCRUD.insertarVehiculo(this, tablaVehiculos, cbClientes.getSelectedItem().toString());
+		txtMarca.setText("");
+		txtModelo.setText("");
+		txtMatricula.setText("");
 	}
 
     
@@ -165,6 +193,7 @@ private javax.swing.JTextField txtMarca;
  
 private javax.swing.JTextField txtModelo;
 private JTextField txtNombreUsuario;
+private JButton btnEliminarVehiculo;
     /**
      * Creates new form PanelCRUD
      */
@@ -192,30 +221,30 @@ private void inicializarPanel() {
  
  
 	 jLabel1 = new javax.swing.JLabel();
-	 jLabel1.setBounds(10, 14, 29, 14);
+	 jLabel1.setBounds(10, 14, 65, 14);
  
 	 jScrollPane1 = new javax.swing.JScrollPane();
-	 jScrollPane1.setBounds(10, 122, 375, 181);
+	 jScrollPane1.setBounds(10, 196, 375, 181);
  
 	 tablaVehiculos = new javax.swing.JTable();
  
 	 txtMarca = new javax.swing.JTextField();
-	 txtMarca.setBounds(63, 11, 196, 20);
+	 txtMarca.setBounds(80, 11, 196, 20);
  
 	 txtModelo = new javax.swing.JTextField();
-	 txtModelo.setBounds(63, 40, 210, 25);
+	 txtModelo.setBounds(80, 40, 210, 25);
  
 	 jLabel2 = new javax.swing.JLabel();
-	 jLabel2.setBounds(10, 45, 34, 14);
+	 jLabel2.setBounds(10, 45, 79, 14);
  
 	 jLabelMatricula = new javax.swing.JLabel();
-	 jLabelMatricula.setBounds(10, 79, 43, 14);
+	 jLabelMatricula.setBounds(10, 79, 93, 14);
  
 	 txtMatricula = new javax.swing.JTextField();
-	 txtMatricula.setBounds(63, 76, 196, 20);
+	 txtMatricula.setBounds(80, 76, 196, 20);
  
 	 btRegistrar = new javax.swing.JButton();
-	 btRegistrar.setBounds(614, 41, 77, 23);
+	 btRegistrar.setBounds(103, 121, 163, 23);
  
  
  
@@ -285,7 +314,7 @@ private void inicializarPanel() {
  
  
  
-	 btRegistrar.setText("Registrar");
+	 btRegistrar.setText("Registrar vehículo");
  
 	 btRegistrar.setActionCommand("btRegistrar");
  

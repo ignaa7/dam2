@@ -18,8 +18,14 @@
     <fullyQualifiedTypeName name="Controller.ControllerCRUD"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="Recursos.Cliente"/>
-    <fullyQualifiedTypeName name="DAOs.DAOCliente"/>
     <fullyQualifiedTypeName name="javax.swing.JComboBox"/>
     <fullyQualifiedTypeName name="java.io.InvalidClassException"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.awt.Dimension"/>
+    <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
+    <fullyQualifiedTypeName name="javax.swing.DefaultComboBoxModel"/>
+    <fullyQualifiedTypeName name="javax.swing.event.TableModelListener"/>
+    <fullyQualifiedTypeName name="javax.swing.event.TableModelEvent"/>
+    <fullyQualifiedTypeName name="DAOs.DAOCliente"/>
+    <fullyQualifiedTypeName name="DAOs.DAOVehiculoImpl"/>
 </qualifiedTypeNameHistroy>
