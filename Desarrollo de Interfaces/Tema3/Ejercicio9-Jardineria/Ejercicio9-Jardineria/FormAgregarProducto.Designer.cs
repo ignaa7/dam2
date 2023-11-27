@@ -54,6 +54,7 @@
             errCantidadStock = new ErrorProvider(components);
             errPrecioVenta = new ErrorProvider(components);
             errPrecioProveedor = new ErrorProvider(components);
+            btnCancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)errCodigo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errNombre).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errGama).BeginInit();
@@ -153,12 +154,13 @@
             // 
             // btnConfirmar
             // 
-            btnConfirmar.Location = new Point(497, 337);
+            btnConfirmar.Location = new Point(406, 337);
             btnConfirmar.Name = "btnConfirmar";
             btnConfirmar.Size = new Size(145, 54);
             btnConfirmar.TabIndex = 10;
             btnConfirmar.Text = "Confirmar";
             btnConfirmar.UseVisualStyleBackColor = true;
+            btnConfirmar.Click += btnConfirmar_Click;
             // 
             // txtNombre
             // 
@@ -195,6 +197,7 @@
             txtPrecioVenta.Name = "txtPrecioVenta";
             txtPrecioVenta.Size = new Size(188, 23);
             txtPrecioVenta.TabIndex = 16;
+            txtPrecioVenta.Validating += txtPrecioVenta_Validating;
             // 
             // txtCantidadStock
             // 
@@ -202,6 +205,7 @@
             txtCantidadStock.Name = "txtCantidadStock";
             txtCantidadStock.Size = new Size(188, 23);
             txtCantidadStock.TabIndex = 17;
+            txtCantidadStock.Validating += txtCantidadStock_Validating;
             // 
             // txtPrecioProveedor
             // 
@@ -209,6 +213,7 @@
             txtPrecioProveedor.Name = "txtPrecioProveedor";
             txtPrecioProveedor.Size = new Size(188, 23);
             txtPrecioProveedor.TabIndex = 18;
+            txtPrecioProveedor.Validating += txtPrecioProveedor_Validating;
             // 
             // cmbGama
             // 
@@ -243,11 +248,22 @@
             // 
             errPrecioProveedor.ContainerControl = this;
             // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(603, 337);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(145, 54);
+            btnCancelar.TabIndex = 20;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
             // FormAgregarProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnCancelar);
             Controls.Add(cmbGama);
             Controls.Add(txtPrecioProveedor);
             Controls.Add(txtCantidadStock);
@@ -306,5 +322,6 @@
         private ErrorProvider errCantidadStock;
         private ErrorProvider errPrecioVenta;
         private ErrorProvider errPrecioProveedor;
+        private Button btnCancelar;
     }
 }
