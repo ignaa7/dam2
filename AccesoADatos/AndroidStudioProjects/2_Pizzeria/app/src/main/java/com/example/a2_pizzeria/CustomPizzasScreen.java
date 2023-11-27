@@ -13,18 +13,22 @@ import android.widget.Toast;
 
 import com.example.a2_pizzeria.databinding.ActivityCustomPizzasScreenBinding;
 import com.example.a2_pizzeria.databinding.ActivityOrderScreenBinding;
+import com.example.a2_pizzeria.dbHelpers.DbHelper;
 import com.example.a2_pizzeria.model.Ingredient;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class CustomPizzasScreen extends AppCompatActivity {
 
     private ActivityCustomPizzasScreenBinding binding;
 
-    private ArrayList<Ingredient> ingredients = new ArrayList<>();
-    private ArrayList<Ingredient> selectedIngredients = new ArrayList<>();
+    private DbHelper dbHelper = new DbHelper(this);
+
+    private List<Ingredient> ingredients;
+    private List<Ingredient> selectedIngredients = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +39,7 @@ public class CustomPizzasScreen extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-        ingredients.add(new Ingredient("Queso", 2));
-        ingredients.add(new Ingredient("Pepperoni", 6));
-        ingredients.add(new Ingredient("Piña", 3));
-        ingredients.add(new Ingredient("Pollo", 5.5f));
-        ingredients.add(new Ingredient("Salchichas", 6.5f));
-        ingredients.add(new Ingredient("Aceitunas", 3.5f));
+        ingredients = dbHelper.getIngredients();
 
         SharedPreferences favoritePizzaPreferences = getSharedPreferences("customPizzaOrder", Context.MODE_PRIVATE);
         SharedPreferences showFavoritePizzaPreferences = getSharedPreferences("favorite", Context.MODE_PRIVATE);
@@ -50,15 +49,6 @@ public class CustomPizzasScreen extends AppCompatActivity {
         if (showFavorite) {
             String size = favoritePizzaPreferences.getString("size", "");
             ArrayList<String> favoriteIngredients = new ArrayList<>(favoritePizzaPreferences.getStringSet("ingredients", null));
-
-            for (String ingredientName : favoriteIngredients) {
-                Ingredient ingredient = ingredients.stream()
-                        .filter(obj -> obj.getName().equals(ingredientName))
-                        .findFirst()
-                        .orElse(null);
-
-                selectedIngredients.add(ingredient);
-            }
 
             if (size.equals("Pequeña")) {
                 binding.rbSmall.setChecked(true);
@@ -70,23 +60,30 @@ public class CustomPizzasScreen extends AppCompatActivity {
                 binding.rbBig.setChecked(true);
             }
 
-            for (String ingredient : favoriteIngredients) {
-                if (ingredient.equals("Queso")) {
+            for (String ingredientName : favoriteIngredients) {
+                Ingredient ingredient = ingredients.stream()
+                        .filter(obj -> obj.getName().equals(ingredientName))
+                        .findFirst()
+                        .orElse(null);
+
+                selectedIngredients.add(ingredient);
+
+                if (ingredientName.equals("Queso")) {
                     binding.cbCheese.setChecked(true);
                 }
-                else if (ingredient.equals("Pepperoni")) {
+                else if (ingredientName.equals("Pepperoni")) {
                     binding.cbPepperoni.setChecked(true);
                 }
-                else if (ingredient.equals("Piña")) {
+                else if (ingredientName.equals("Piña")) {
                     binding.cbPineapple.setChecked(true);
                 }
-                else if (ingredient.equals("Pollo")) {
+                else if (ingredientName.equals("Pollo")) {
                     binding.cbChicken.setChecked(true);
                 }
-                else if (ingredient.equals("Salchichas")) {
+                else if (ingredientName.equals("Salchichas")) {
                     binding.cbSausages.setChecked(true);
                 }
-                else if (ingredient.equals("Aceitunas")) {
+                else if (ingredientName.equals("Aceitunas")) {
                     binding.cbOlives.setChecked(true);
                 }
             }

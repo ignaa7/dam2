@@ -12,13 +12,15 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.a2_pizzeria.databinding.ActivityMainBinding;
+import com.example.a2_pizzeria.dbHelpers.DbHelper;
 
 public class MainActivity extends AppCompatActivity {
 
-    private SharedPreferences usersPreferences;
     private SharedPreferences currentUserPreferences;
     private static SharedPreferences screensColorPreferences;
     private ActivityMainBinding binding;
+
+    private DbHelper dbHelper = new DbHelper(this);
 
     public static void setScreenBackgroundColor(ConstraintLayout screen) {
         int color = screensColorPreferences.getInt("color", 0);
@@ -33,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-        usersPreferences = getSharedPreferences("users", Context.MODE_PRIVATE);
         currentUserPreferences = getSharedPreferences("currentUser", Context.MODE_PRIVATE);
         screensColorPreferences = getSharedPreferences("screensColor", Context.MODE_PRIVATE);
 
@@ -60,9 +61,6 @@ public class MainActivity extends AppCompatActivity {
             editor.putInt("color", color);
             editor.apply();
         }
-        else {
-            color = screensColorPreferences.getInt("color", color);
-        }
     }
 
     @Override
@@ -72,19 +70,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void signUpUser(View view) {
-        String user = binding.edtName.getText().toString();
+        String username = binding.edtName.getText().toString();
         String password = binding.edtPassword.getText().toString();
 
-        if (!user.isEmpty() && !password.isEmpty()) {
-            if (usersPreferences.contains(user)) {
+        if (!username.isEmpty() && !password.isEmpty()) {
+            if (!dbHelper.signUpUser(username, password)) {
                 showUserExistsMessage();
             }
             else {
-                SharedPreferences.Editor editor = usersPreferences.edit();
-                editor.putString(user, password);
-                editor.apply();
-                showUserSignedUpMessage();
-
                 binding.edtName.setText("");
                 binding.edtPassword.setText("");
                 binding.cbRemember.setChecked(false);
@@ -97,24 +90,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void logInUser(View view) {
         boolean isCorrect = false;
-        String user = binding.edtName.getText().toString();
+        String username = binding.edtName.getText().toString();
         String password = binding.edtPassword.getText().toString();
 
-        if (usersPreferences.contains(user)) {
-            String savedPassword = usersPreferences.getString(user, null);
-
-            if (savedPassword != null) {
-                if (savedPassword.equals(password)) {
-                    isCorrect = true;
-                }
-            }
-        }
+        isCorrect = dbHelper.logInUser(username, password);
 
         if (isCorrect) {
             boolean remember = binding.cbRemember.isChecked();
 
             SharedPreferences.Editor editor = currentUserPreferences.edit();
-            editor.putString("username", user);
+            editor.putString("username", username);
             editor.putString("password", password);
             editor.putBoolean("remember", remember);
             editor.apply();

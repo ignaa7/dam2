@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.example.a2_pizzeria.adapters.PizzaAdapter;
 import com.example.a2_pizzeria.databinding.ActivityDefaultPizzasScreenBinding;
 import com.example.a2_pizzeria.databinding.ActivityOrderScreenBinding;
+import com.example.a2_pizzeria.dbHelpers.DbHelper;
 import com.example.a2_pizzeria.model.Pizza;
 
 import java.util.ArrayList;
@@ -24,6 +25,8 @@ public class DefaultPizzasScreen extends AppCompatActivity {
     private ActivityDefaultPizzasScreenBinding binding;
 
     private PizzaAdapter pizzaAdapter;
+
+    private DbHelper dbHelper = new DbHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +39,7 @@ public class DefaultPizzasScreen extends AppCompatActivity {
 
         binding.rwPizzas.setLayoutManager(new LinearLayoutManager(this));
 
-        List<Pizza> pizzaList = new ArrayList<>();
-        pizzaList.add(new Pizza("Pizza Carbonara", "carbonara", 12));
-        pizzaList.add(new Pizza("Pizza Pepperoni", "pepperoni", 15));
-        pizzaList.add(new Pizza("Pizza Vegetal", "vegetal", 10));
-        pizzaList.add(new Pizza("Pizza Hawaiana", "hawaiana", 13));
+        List<Pizza> pizzaList = dbHelper.getDefaultPizzas();
 
 
         pizzaAdapter = new PizzaAdapter(pizzaList, new PizzaAdapter.OnItemClickListener() {
