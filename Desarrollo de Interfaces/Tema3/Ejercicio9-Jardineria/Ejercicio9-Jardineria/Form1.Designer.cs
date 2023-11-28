@@ -54,6 +54,7 @@
             btnEliminarGama.TabIndex = 1;
             btnEliminarGama.Text = "Eliminar gama";
             btnEliminarGama.UseVisualStyleBackColor = true;
+            btnEliminarGama.Click += btnEliminarGama_Click;
             // 
             // btnConsultarPedidosEntregados
             // 
@@ -63,6 +64,7 @@
             btnConsultarPedidosEntregados.TabIndex = 2;
             btnConsultarPedidosEntregados.Text = "Consultar pedidos entregados";
             btnConsultarPedidosEntregados.UseVisualStyleBackColor = true;
+            btnConsultarPedidosEntregados.Click += btnConsultarPedidosEntregados_Click;
             // 
             // btnConsultarEmpleadosJefe
             // 
@@ -72,6 +74,7 @@
             btnConsultarEmpleadosJefe.TabIndex = 3;
             btnConsultarEmpleadosJefe.Text = "Consultar empleados de un jefe determinado";
             btnConsultarEmpleadosJefe.UseVisualStyleBackColor = true;
+            btnConsultarEmpleadosJefe.Click += btnConsultarEmpleadosJefe_Click;
             // 
             // btnConsultarClientesNoPagan
             // 

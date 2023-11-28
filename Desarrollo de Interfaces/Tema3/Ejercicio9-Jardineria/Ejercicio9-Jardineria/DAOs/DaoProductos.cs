@@ -12,12 +12,12 @@ namespace Ejercicio9_Jardineria.DAOs
 {
     internal class DaoProductos
     {
-        private static Conexion Conexion { get; set; }
-
         public static List<Producto> GetProductos()
         {
+            Conexion conexion = new Conexion();
+
             SqlCommand sentencia = new SqlCommand("SELECT codigo_producto, nombre, gama, dimensiones, proveedor, descripcion, cantidad_en_stock, precio_venta, precio_proveedor FROM producto");
-            DataSet resultado = Conexion.EjecutarSentencia(sentencia);
+            DataSet resultado = conexion.EjecutarSentencia(sentencia);
 
             List<Producto> productos = new List<Producto>();
 
@@ -36,12 +36,14 @@ namespace Ejercicio9_Jardineria.DAOs
                 productos.Add(new Producto(codigoProducto, nombre, gama, dimensiones, proveedor, descripcion, cantidadEnStock, precioVenta, precioProveedor));
             }
 
-            return new List<Producto>();
+            return productos;
         }
 
         public static bool AgregarProducto(string codigo, string nombre, string gama, string dimensiones, string proveedor, string descripcion, int cantidadStock, double precioVenta, double precioProveedor)
         {
-            return Conexion.EjecutarComandoSinRetornarDatos($"insert into producto() values ('{codigo}', '{nombre}', '{gama}', '{dimensiones}', '{proveedor}', '{descripcion}', {cantidadStock}, {precioVenta}, {precioProveedor})");
+            Conexion conexion = new Conexion();
+
+            return conexion.EjecutarComandoSinRetornarDatos($"insert into producto(codigo_producto, nombre, gama, dimensiones, proveedor, descripcion, cantidad_en_stock, precio_venta, precio_proveedor) values ('{codigo}', '{nombre}', '{gama}', '{dimensiones}', '{proveedor}', '{descripcion}', {cantidadStock}, {precioVenta}, {precioProveedor})");
         }
     }
 }

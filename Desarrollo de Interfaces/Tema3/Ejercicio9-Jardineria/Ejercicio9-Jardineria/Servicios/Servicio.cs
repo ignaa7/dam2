@@ -38,9 +38,39 @@ namespace Ejercicio9_Jardineria.Servicios
             return DaoProductos.GetProductos();
         }
 
-        public static bool AgregarProducto(string codigo, string nombre, string gama, string dimensiones, string proveedor, string descripcion, int cantidadStock, double precioVenta, double precioProveedor)
+        public bool AgregarProducto(string codigo, string nombre, string gama, string dimensiones, string proveedor, string descripcion, int cantidadStock, double precioVenta, double precioProveedor)
         {
             return DaoProductos.AgregarProducto(codigo, nombre, gama, dimensiones, proveedor, descripcion, cantidadStock, precioVenta, precioProveedor);
+        }
+
+        public List<string> GetGamas()
+        {
+            return DaoGamas.GetGamas();
+        }
+
+        public Object GetGama(string gama)
+        {
+            return DaoGamas.GetGama(gama);
+        }
+
+        public bool EliminarGama(string gama)
+        {
+            return DaoGamas.EliminarGama(gama);
+        }
+
+        public DataSet ConsultarPedidosEntregados(int mes)
+        {
+            return DaoPedidos.ConsultarPedidosEntregados(mes);
+        }
+
+        public List<int> GetCodigosJefes()
+        {
+            return DaoEmpleados.GetCodigosJefes();
+        }
+
+        public List<Object> ConsultarEmpleadosDeJefe(int codigoJefe)
+        {
+            return DaoEmpleados.ConsultarEmpleadosDeJefe(codigoJefe);
         }
     }
 }

@@ -11,5 +11,20 @@ namespace Ejercicio9_Jardineria
         {
             new FormAgregarProducto().ShowDialog();
         }
+
+        private void btnEliminarGama_Click(object sender, EventArgs e)
+        {
+            new FormEliminarGama().ShowDialog();
+        }
+
+        private void btnConsultarPedidosEntregados_Click(object sender, EventArgs e)
+        {
+            new FormConsultarProductosEntregados().ShowDialog();
+        }
+
+        private void btnConsultarEmpleadosJefe_Click(object sender, EventArgs e)
+        {
+            new FormConsultarEmpleados().ShowDialog();
+        }
     }
 }

@@ -31,6 +31,11 @@ namespace Ejercicio9_Jardineria
             InitializeComponent();
 
             Servicio = Servicio.GetInstance();
+
+            foreach (string gama in Servicio.GetGamas())
+            {
+                cmbGama.Items.Add(gama);
+            }
         }
 
         private void txtCodigo_Validating(object sender, CancelEventArgs e)
@@ -74,7 +79,7 @@ namespace Ejercicio9_Jardineria
             }
             else
             {
-                Gama = cmbGama.SelectedText;
+                Gama = cmbGama.SelectedItem.ToString()!;
 
                 errGama.SetError(txtNombre, "");
                 e.Cancel = false;
@@ -143,9 +148,17 @@ namespace Ejercicio9_Jardineria
         {
             if (ValidateChildren())
             {
+                Dimensiones = txtDimensiones.Text;
+                Proveedor = txtProveedor.Text;
+                Descripcion = txtDescripcion.Text;
+
                 Servicio.AgregarProducto(Codigo, Nombre, Gama, Dimensiones, Proveedor, Descripcion, CantidadStock, PrecioVenta, PrecioProveedor);
                 MessageBox.Show("Producto añadido correctamente");
                 Close();
+            }
+            else
+            {
+                MessageBox.Show("Error al añadir el producto");
             }
         }
 
