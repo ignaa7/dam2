@@ -56,7 +56,7 @@ public class Main {
             return mayor;
 		};
 		
-		Object mayor = numeroMayor.calcular();
+		Object mayor = numeroMayor.calcular(3, 5, 2, 4, 6);
 		
 		if (mayor == null) {
 			System.out.println("No ha introducido ningún número");
@@ -80,7 +80,7 @@ public class Main {
             return menor;
 		};
 		
-		Object menor = numeroMayor.calcular();
+		Object menor = numeroMenor.calcular(2, 4, 6, 4, 5);
 		
 		if (menor == null) {
 			System.out.println("No ha introducido ningún número");
@@ -114,12 +114,12 @@ public class Main {
             return numeroModa;
 		};
 		
-		Object numeroModa = moda.calcular();
+		Object numeroModa = moda.calcular(1, 1, 2, 5, 6, 3, 2, 1);
 		
 		if (numeroModa == null) {
 			System.out.println("No ha introducido ningún número");
 		} else {
-			System.out.println(moda);
+			System.out.println(numeroModa);
 		}
 		
 		
@@ -133,9 +133,23 @@ public class Main {
             return numMayor;
 		};
 		
-		int numMayor = numeroMayorEntre3(1, 2, 3);
+		int numMayor = numeroMayorEntre3.getMayor(1, 2, 3);
 		
 		System.out.println(numMayor);
+		
+		
+		// 8
+		InterfazFuncionalMultiplicacion multiplicacion = (String cadena, int numero) -> {
+			String cadenaMultiplicacion = "";
+			
+			for (int i = 0; i < numero; i++) {
+				cadenaMultiplicacion += cadena;
+			}
+			
+			return cadenaMultiplicacion;
+		};
+		
+		System.out.println(multiplicacion.multiplicar("hola ", 3));
 	}
 
 }

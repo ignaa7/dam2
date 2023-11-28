@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Ejercicio9_Jardineria.Dao
 {
-    internal class Dao
+    internal class Conexion
     {
-        private string cadenaConexion = "Data Source=DAM2-15; Initial Catalog=db_Sistema; Integrated Security = True";
+        private string cadenaConexion = "Data Source=DAM2-15; Initial Catalog=jardineria; Integrated Security = True";
         SqlConnection sqlConnection;
 
         SqlConnection EstablecerConexion()
