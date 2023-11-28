@@ -9,11 +9,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejercicio9_Jardineria.Servicio
+namespace Ejercicio9_Jardineria.Servicios
 {
-    internal class Servicio
+    public class Servicio
     {
-        private Servicio? ServicioObjeto { get; set; }
+        private static Servicio? ServicioObjeto { get; set; }
         private Conexion Conexion { get; set; }
 
         private Servicio()
@@ -21,7 +21,7 @@ namespace Ejercicio9_Jardineria.Servicio
             Conexion = new Conexion();
         }
 
-        public Servicio GetInstance()
+        public static Servicio GetInstance()
         {
             if (ServicioObjeto == null)
             {
@@ -36,6 +36,11 @@ namespace Ejercicio9_Jardineria.Servicio
         private List<Producto> GetProductos()
         {
             return DaoProductos.GetProductos();
+        }
+
+        public static bool AgregarProducto(string codigo, string nombre, string gama, string dimensiones, string proveedor, string descripcion, int cantidadStock, double precioVenta, double precioProveedor)
+        {
+            return DaoProductos.AgregarProducto(codigo, nombre, gama, dimensiones, proveedor, descripcion, cantidadStock, precioVenta, precioProveedor);
         }
     }
 }

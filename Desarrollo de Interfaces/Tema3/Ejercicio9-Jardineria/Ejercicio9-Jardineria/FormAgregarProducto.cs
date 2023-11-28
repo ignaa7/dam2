@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ejercicio9_Jardineria.Servicios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,23 @@ namespace Ejercicio9_Jardineria
 {
     public partial class FormAgregarProducto : Form
     {
+        private Servicio Servicio;
+
+        public String Codigo { get; set; }
+        public String Nombre { get; set; }
+        public String Gama { get; set; }
+        public String Dimensiones { get; set; }
+        public String Proveedor { get; set; }
+        public String Descripcion { get; set; }
+        public int CantidadStock { get; set; }
+        public double PrecioVenta { get; set; }
+        public double PrecioProveedor { get; set; }
+
         public FormAgregarProducto()
         {
             InitializeComponent();
+
+            Servicio = Servicio.GetInstance();
         }
 
         private void txtCodigo_Validating(object sender, CancelEventArgs e)
@@ -27,6 +42,8 @@ namespace Ejercicio9_Jardineria
             }
             else
             {
+                Codigo = txtCodigo.Text;
+
                 errCodigo.SetError(txtCodigo, "");
                 e.Cancel = false;
             }
@@ -41,6 +58,8 @@ namespace Ejercicio9_Jardineria
             }
             else
             {
+                Nombre = txtNombre.Text;
+
                 errNombre.SetError(txtNombre, "");
                 e.Cancel = false;
             }
@@ -55,6 +74,8 @@ namespace Ejercicio9_Jardineria
             }
             else
             {
+                Gama = cmbGama.SelectedText;
+
                 errGama.SetError(txtNombre, "");
                 e.Cancel = false;
             }
@@ -74,6 +95,8 @@ namespace Ejercicio9_Jardineria
             }
             else
             {
+                CantidadStock = Convert.ToInt32(txtCantidadStock.Text);
+
                 errCantidadStock.SetError(txtCantidadStock, "");
                 e.Cancel = false;
             }
@@ -93,6 +116,8 @@ namespace Ejercicio9_Jardineria
             }
             else
             {
+                PrecioVenta = Convert.ToDouble(txtPrecioVenta.Text);
+
                 errPrecioVenta.SetError(txtPrecioVenta, "");
                 e.Cancel = false;
             }
@@ -107,6 +132,8 @@ namespace Ejercicio9_Jardineria
             }
             else
             {
+                PrecioProveedor = Convert.ToDouble(txtPrecioProveedor.Text);
+
                 errPrecioProveedor.SetError(txtPrecioProveedor, "");
                 e.Cancel = false;
             }
@@ -116,7 +143,9 @@ namespace Ejercicio9_Jardineria
         {
             if (ValidateChildren())
             {
-                //Servicio
+                Servicio.AgregarProducto(Codigo, Nombre, Gama, Dimensiones, Proveedor, Descripcion, CantidadStock, PrecioVenta, PrecioProveedor);
+                MessageBox.Show("Producto añadido correctamente");
+                Close();
             }
         }
 

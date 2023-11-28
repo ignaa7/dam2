@@ -39,9 +39,9 @@ namespace Ejercicio9_Jardineria.DAOs
             return new List<Producto>();
         }
 
-        public static void AgregarProducto()
+        public static bool AgregarProducto(string codigo, string nombre, string gama, string dimensiones, string proveedor, string descripcion, int cantidadStock, double precioVenta, double precioProveedor)
         {
-
+            return Conexion.EjecutarComandoSinRetornarDatos($"insert into producto() values ('{codigo}', '{nombre}', '{gama}', '{dimensiones}', '{proveedor}', '{descripcion}', {cantidadStock}, {precioVenta}, {precioProveedor})");
         }
     }
 }
