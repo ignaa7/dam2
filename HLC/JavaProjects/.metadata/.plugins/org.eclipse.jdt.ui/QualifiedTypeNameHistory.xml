@@ -28,4 +28,8 @@
     <fullyQualifiedTypeName name="javax.swing.event.TableModelEvent"/>
     <fullyQualifiedTypeName name="DAOs.DAOCliente"/>
     <fullyQualifiedTypeName name="DAOs.DAOVehiculoImpl"/>
+    <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+    <fullyQualifiedTypeName name="lambdas.MediaEnteros"/>
+    <fullyQualifiedTypeName name="lambdas.InterfazFuncional"/>
+    <fullyQualifiedTypeName name="javax.print.attribute.IntegerSyntax"/>
 </qualifiedTypeNameHistroy>
