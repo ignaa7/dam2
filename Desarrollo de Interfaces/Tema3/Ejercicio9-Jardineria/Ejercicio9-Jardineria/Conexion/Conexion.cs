@@ -10,7 +10,7 @@ namespace Ejercicio9_Jardineria.Dao
 {
     internal class Conexion
     {
-        private string cadenaConexion = "Data Source=LAPTOP-EEG5NT53; Initial Catalog=jardineria; Integrated Security = True";
+        private string cadenaConexion = "Data Source=DAM2-15; Initial Catalog=jardineria; Integrated Security = True";
         SqlConnection sqlConnection;
 
         SqlConnection EstablecerConexion()

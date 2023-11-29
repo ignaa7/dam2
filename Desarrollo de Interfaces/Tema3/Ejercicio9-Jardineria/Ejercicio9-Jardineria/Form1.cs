@@ -26,5 +26,15 @@ namespace Ejercicio9_Jardineria
         {
             new FormConsultarEmpleados().ShowDialog();
         }
+
+        private void btnConsultarClientesNoPagan_Click(object sender, EventArgs e)
+        {
+            new FormConsultarClientes().ShowDialog();
+        }
+
+        private void btnConsultarPrecioCaroBarato_Click(object sender, EventArgs e)
+        {
+            new FormConsultarPrecio().ShowDialog();
+        }
     }
 }

@@ -72,5 +72,15 @@ namespace Ejercicio9_Jardineria.Servicios
         {
             return DaoEmpleados.ConsultarEmpleadosDeJefe(codigoJefe);
         }
+
+        public DataSet ConsultarClientesNoPagan()
+        {
+            return DaoClientes.ConsultarClientesNoPagan();
+        }
+
+        public static DataSet ConsultarPrecioMasCaroYMasBarato()
+        {
+            return DaoProductos.ConsultarPrecioMasCaroYMasBarato();
+        }
     }
 }

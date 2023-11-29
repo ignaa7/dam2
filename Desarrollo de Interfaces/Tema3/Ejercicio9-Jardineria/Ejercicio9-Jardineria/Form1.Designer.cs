@@ -84,6 +84,7 @@
             btnConsultarClientesNoPagan.TabIndex = 4;
             btnConsultarClientesNoPagan.Text = "Consultar clientes que no pagan";
             btnConsultarClientesNoPagan.UseVisualStyleBackColor = true;
+            btnConsultarClientesNoPagan.Click += btnConsultarClientesNoPagan_Click;
             // 
             // btnConsultarPrecioCaroBarato
             // 
@@ -93,6 +94,7 @@
             btnConsultarPrecioCaroBarato.TabIndex = 5;
             btnConsultarPrecioCaroBarato.Text = "Consultar precio del producto más caro y más barato";
             btnConsultarPrecioCaroBarato.UseVisualStyleBackColor = true;
+            btnConsultarPrecioCaroBarato.Click += btnConsultarPrecioCaroBarato_Click;
             // 
             // Form1
             // 

@@ -51,3 +51,8 @@ C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema3\Ejercicio
 C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema3\Ejercicio9-Jardineria\Ejercicio9-Jardineria\obj\Debug\net6.0-windows\ref\Ejercicio9-Jardineria.dll
 C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema3\Ejercicio9-Jardineria\Ejercicio9-Jardineria\obj\Debug\net6.0-windows\Ejercicio9_Jardineria.FormConsultarProductosEntregados.resources
 C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema3\Ejercicio9-Jardineria\Ejercicio9-Jardineria\obj\Debug\net6.0-windows\Ejercicio9_Jardineria.FormConsultarEmpleados.resources
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema3\Ejercicio9-Jardineria\Ejercicio9-Jardineria\obj\Debug\net6.0-windows\Ejercicio9_Jardineria.FormConsultarClientes.resources
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema3\Ejercicio9-Jardineria\Ejercicio9-Jardineria\obj\Debug\net6.0-windows\Ejercicio9_Jardineria.FormConsultarEmpleados.resources
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema3\Ejercicio9-Jardineria\Ejercicio9-Jardineria\obj\Debug\net6.0-windows\Ejercicio9_Jardineria.FormConsultarProductosEntregados.resources
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema3\Ejercicio9-Jardineria\Ejercicio9-Jardineria\obj\Debug\net6.0-windows\Ejercicio9_Jardineria.FormEliminarGama.resources
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema3\Ejercicio9-Jardineria\Ejercicio9-Jardineria\obj\Debug\net6.0-windows\Ejercicio9_Jardineria.FormConsultarPrecio.resources

@@ -45,5 +45,15 @@ namespace Ejercicio9_Jardineria.DAOs
 
             return conexion.EjecutarComandoSinRetornarDatos($"insert into producto(codigo_producto, nombre, gama, dimensiones, proveedor, descripcion, cantidad_en_stock, precio_venta, precio_proveedor) values ('{codigo}', '{nombre}', '{gama}', '{dimensiones}', '{proveedor}', '{descripcion}', {cantidadStock}, {precioVenta}, {precioProveedor})");
         }
+
+        public static DataSet ConsultarPrecioMasCaroYMasBarato()
+        {
+            Conexion conexion = new Conexion();
+
+            SqlCommand sentencia = new SqlCommand("SELECT MAX(precio_venta) 'Precio más caro', MIN(precio_venta) 'Precio más barato' FROM producto");
+            DataSet resultado = conexion.EjecutarSentencia(sentencia);
+
+            return resultado;
+        }
     }
 }
