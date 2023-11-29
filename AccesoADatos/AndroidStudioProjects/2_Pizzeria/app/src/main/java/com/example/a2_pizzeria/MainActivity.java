@@ -7,10 +7,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.a2_pizzeria.asyncTasks.LoadingAsyncTask;
 import com.example.a2_pizzeria.databinding.ActivityMainBinding;
 import com.example.a2_pizzeria.dbHelpers.DbHelper;
 
