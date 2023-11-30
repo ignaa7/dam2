@@ -43,4 +43,6 @@
     <string name="txtPriceLbl">Precio:</string>
     <string name="txtConfirmCustom">Confirmar</string>
     <string name="txtCancelCustom">Cancelar</string>
+    <string name="txtBtnShowTicket">Mostrar ticket</string>
+    <string name="txtLoadingText">Realizando el pedido...</string>
 </resources>

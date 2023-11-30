@@ -54,12 +54,13 @@ public class CustomConfirmationScreen extends AppCompatActivity {
         editor.putString("lastOrder", "custom");
         editor.apply();
 
-        Toast.makeText(this, "Su pizza está en camino...", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, LoadingScreen.class);
+        startActivity(intent);
 
-        Intent intent = new Intent(this, MainScreen.class);
+        /*Intent intent = new Intent(this, MainScreen.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
-        finish();
+        finish();*/
     }
 
     public void cancel(View view) {
