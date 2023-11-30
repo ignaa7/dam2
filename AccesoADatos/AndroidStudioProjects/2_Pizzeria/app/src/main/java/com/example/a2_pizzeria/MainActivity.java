@@ -12,7 +12,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.a2_pizzeria.asyncTasks.LoadingAsyncTask;
 import com.example.a2_pizzeria.databinding.ActivityMainBinding;
 import com.example.a2_pizzeria.dbHelpers.DbHelper;
 
