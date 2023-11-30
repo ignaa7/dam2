@@ -1,10 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "+LRw7Tuyi3HrbZkcdTbeRa+w7wHJ8x+DTV0qCSVjUE+i+hfKRzUsDT7ZLKdABGnRF35HfSRNHQCUk8tv7AJF7Q==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\Tema3\\Ejercicio8\\Ejercicio8\\Ejercicio8.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\dam\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
-  ],
-  "logs": []
+  "dgSpecHash": "BwVgvQaj27u9TDM9Fdrp6HWkcU3wV4+1VdcwiGvSZx/C06FdbLlzzDSyY5MwMQDi1qHSftjWJVtloHYJD+l3vg==",
+  "success": false,
+  "projectFilePath": "D:\\dam2\\Desarrollo de Interfaces\\Tema3\\Ejercicio8\\Ejercicio8\\Ejercicio8.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "No se encuentra el paquete Newtonsoft.Json con la versión (>= 13.0.3)\r\n  - Versiones encontradas en Microsoft Visual Studio Offline Packages: 1 [ versión más cercana: 9.0.1 ]",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }
