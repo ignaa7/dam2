@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { UsersService } from 'src/services/users-service/users.service';
+import { AuthService } from 'src/services/auth-service/auth.service';
 
 @Component({
   selector: 'app-signup-page',
@@ -8,9 +8,13 @@ import { UsersService } from 'src/services/users-service/users.service';
   styleUrls: ['./signup-page.component.css']
 })
 export class SignupPageComponent {
-  constructor(private router: Router, private usersService: UsersService) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   goToLoginPage() {
     this.router.navigate(['/loginPage']);
+  }
+
+  signUpUser() {
+    a
   }
 }
