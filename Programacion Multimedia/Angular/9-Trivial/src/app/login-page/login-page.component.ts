@@ -8,9 +8,21 @@ import { AuthService } from 'src/services/auth-service/auth.service';
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent {
+  public error = false;
+  
   constructor(private router: Router, private authService: AuthService) {}
 
   goToSignupPage() {
     this.router.navigate(['/signupPage']);
+  }
+
+  logInUser(username: string, password: string) {
+    if (password.length >= 8) {
+      if (this.authService.logInUser(username, password)) {
+        this.router.navigate(['/loginPage']);
+      }
+    } else {
+      this.error = true;
+    }
   }
 }
