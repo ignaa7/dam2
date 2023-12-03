@@ -19,11 +19,10 @@
                 <input type="password" #password id="password" name="password" required>
 
                 <div *ngIf="error">
-                    <p class="error">Introduzca una contraseña</p>
-                    <p class="error">de 8 caracteres como mínimo</p>
+                    <p class="error">{{errorText}}</p>
                 </div>
         
-                <button type="button" (click)="signUpUser(name.textContent!, surnames.textContent!, email.textContent!, username.textContent!, password.textContent!)">Registrarse</button>
+                <button type="button" (click)="signUpUser(name.value, surnames.value, email.value, username.value, password.value)">Registrarse</button>
             </form>
         </div>
     <a (click)="goToLoginPage()">¿Ya tienes una cuenta? Inicia sesión</a>
