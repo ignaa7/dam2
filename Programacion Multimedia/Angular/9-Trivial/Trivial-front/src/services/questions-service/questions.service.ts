@@ -26,7 +26,7 @@ export class QuestionsService {
 
         return {
           questionText: response.questionText,
-          answers: [response.correctAnswer, ...response.wrongAnswers],
+          answers: [response.correctAnswer, ...response.wrongAnswers].sort(() => Math.random() - 0.5),
         };
       })
     );
