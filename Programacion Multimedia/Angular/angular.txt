@@ -32,6 +32,8 @@ genera una nueva directiva
 	*ngIf -> se muestra la etiqueta o no según la condición
 
 
+
+/////////////////////1
 Componentes:
 1.Hooks
 	Métodos que se llaman solos al ocurrir algo (onInit)
@@ -46,15 +48,20 @@ Componentes:
 	<ng-Content select="#">
 
 
+/////////////////////2
 Directivas:
 1.Inyección del elemento
 2.@HostListener
 3.@HostBinding
 
 
+
+/////////////////////3
 Tuberías:
 
 
+/////////////////////4
+Forms:
 Model Driven:
 1- vista (html)
 	<form>
@@ -67,8 +74,23 @@ Model Driven:
 	<form directiva>
 	<input directiva>
 
-
+(No entra en el examen, solo los Model Driven)
 Template Driven:
 	<form directiva>
 	<input directiva>
 Internamente se crea el modelo, pero nosotros no tenemos nada en el ts, solo en la vista
+
+
+
+//////////////////////5
+Servicios: (http)
+Inyección
+Observables
+
+
+
+
+//////////////////////6
+Routing:
+Rutas
+Guards

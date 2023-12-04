@@ -10,7 +10,6 @@ import { QuestionsService } from 'src/services/questions-service/questions.servi
 export class GameComponent {
   public question: any;
   public scoreboard: any;
-  private questionSubscription: Subscription | undefined;
 
   constructor(private questionsService: QuestionsService) {
     this.scoreboard = {
@@ -20,29 +19,23 @@ export class GameComponent {
   }
 
   ngOnInit() {
-    this.questionSubscription = this.questionsService.getQuestion().subscribe({
+    this.getNewQuestion();
+  }
+
+  getNewQuestion() {
+    this.questionsService.getQuestion().subscribe({
       next: (question) => {
+        this.questionsService.getQuestion();
         this.question = question;
       },
       error: (error) => {
         console.error('Error obteniendo la pregunta: ', error);
       },
     });
-
-    this.getNewQuestion();
-  }
-
-  getNewQuestion() {
-    this.questionsService.getQuestion();
-  }
-
-  ngOnDestroy() {
-    if (this.questionSubscription) {
-      this.questionSubscription.unsubscribe();
-    }
   }
 
   checkAnswer(answer: any) {
     this.scoreboard = this.questionsService.checkAnswer(answer);
+    this.getNewQuestion();
   }
 }

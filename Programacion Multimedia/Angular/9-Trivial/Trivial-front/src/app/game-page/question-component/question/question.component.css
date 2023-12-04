@@ -23,3 +23,7 @@
   justify-content: center;
   cursor: pointer;
 }
+
+.answer-box:hover {
+  background-color: rgb(166, 212, 243)
+}

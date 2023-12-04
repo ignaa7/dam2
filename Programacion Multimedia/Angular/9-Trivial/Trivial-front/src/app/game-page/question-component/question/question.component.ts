@@ -11,9 +11,7 @@ export class QuestionComponent {
   public questionText: string | undefined;
   public answers: string[] | undefined;
 
-  constructor() {
-    this.ngOnChanges();
-  }
+  constructor() {}
 
   ngOnChanges() {
     if (this.question) {

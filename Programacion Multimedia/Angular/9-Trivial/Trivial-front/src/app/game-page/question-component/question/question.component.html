@@ -1,4 +1,4 @@
-<div class="question-container">
+<div class="question-container" *ngIf="question">
     <p class="question-text">{{questionText}}</p>
     <div class="answers-container">
       <div class="answer-box" (click)="checkAnswer(answer)" *ngFor="let answer of answers">
