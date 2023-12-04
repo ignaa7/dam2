@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { QuestionsService } from 'src/services/questions-service/questions.service';
 
 @Component({
