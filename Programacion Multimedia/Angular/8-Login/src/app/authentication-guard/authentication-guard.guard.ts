@@ -12,5 +12,5 @@ export const authenticationGuard: CanActivateFn = (route, state) => {
   else {
     router.navigate(['/loginPage']);
     return false;
-  }  
+  }
 };

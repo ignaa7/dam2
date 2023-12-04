@@ -1,0 +1,14 @@
+.scoreboard-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+  
+  .scoreboard-container > div {
+    margin: 10px;
+  }
+  
+  .scoreboard-container p {
+    font-size: 18px;
+    margin: 5px 0;
+}  
