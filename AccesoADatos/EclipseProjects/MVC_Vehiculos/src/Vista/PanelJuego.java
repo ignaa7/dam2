@@ -28,17 +28,17 @@ public class PanelJuego extends JPanel implements ActionListener{
 		txtRespuesta.setColumns(10);
 		
 		 etiSecreta = new JLabel("Pulse nuevo para comenzar");
-		etiSecreta.setBounds(77, 58, 137, 19);
+		etiSecreta.setBounds(42, 58, 172, 19);
 		add(etiSecreta);
 		
 		 btnNuevoCoche = new JButton("Pulse nuevo para comenzar");
 		btnNuevoCoche.addActionListener(this);
-		btnNuevoCoche.setBounds(241, 54, 89, 23);
+		btnNuevoCoche.setBounds(241, 54, 235, 41);
 		add(btnNuevoCoche);
 		
 		 btnComprobar = new JButton("Comprobar");
 		btnComprobar.addActionListener(this);
-		btnComprobar.setBounds(241, 121, 89, 23);
+		btnComprobar.setBounds(241, 121, 107, 41);
 		add(btnComprobar);
 		
 		
