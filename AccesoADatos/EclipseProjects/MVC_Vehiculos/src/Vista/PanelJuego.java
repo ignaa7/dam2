@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import Controller.ControllerJuego;
+import Recursos.GestionVehiculos;
 
 public class PanelJuego extends JPanel implements ActionListener{
 	public JTextField txtRespuesta;
@@ -18,7 +19,7 @@ public class PanelJuego extends JPanel implements ActionListener{
 	 * Create the panel.
 	 */
 	public PanelJuego() {
-		conJuego = new ControllerJuego(this);
+		conJuego = new ControllerJuego(this, new GestionVehiculos());
 		
 		setLayout(null);
 		

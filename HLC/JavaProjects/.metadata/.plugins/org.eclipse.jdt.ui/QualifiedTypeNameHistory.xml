@@ -34,4 +34,18 @@
     <fullyQualifiedTypeName name="lambdas.InterfazFuncionalMayor"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="lambdas.InterfazFuncionalMultiplicacion"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.extension.ExtendWith"/>
+    <fullyQualifiedTypeName name="java.util.ResourceBundle.Control"/>
+    <fullyQualifiedTypeName name="TestVehiculos.ControllerJuegoTest"/>
+    <fullyQualifiedTypeName name="Controller.ControllerJuego"/>
+    <fullyQualifiedTypeName name="Vista.PanelJuego"/>
+    <fullyQualifiedTypeName name="Recursos.GestionVehiculos"/>
+    <fullyQualifiedTypeName name="org.junit.runners.JUnit4"/>
+    <fullyQualifiedTypeName name="org.mockito.InjectMocks"/>
+    <fullyQualifiedTypeName name="org.mockito.Mock"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeAll"/>
+    <fullyQualifiedTypeName name="org.mockito.Mockito"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
+    <fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
+    <fullyQualifiedTypeName name="org.mockito.junit.MockitoJUnitRunner"/>
 </qualifiedTypeNameHistroy>

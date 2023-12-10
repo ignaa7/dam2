@@ -11,10 +11,10 @@ public class ControllerJuego{
 	
 	private PanelJuego panelJuego;
 	
-	public ControllerJuego(PanelJuego panelJuego) 
+	public ControllerJuego(PanelJuego panelJuego, GestionVehiculos gestionVehiculos) 
 	{
 		
-		gestionVehiculos = new GestionVehiculos();
+		this.gestionVehiculos = gestionVehiculos;
 		this.panelJuego= panelJuego;
 	}
 
