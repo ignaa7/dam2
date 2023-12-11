@@ -58,6 +58,10 @@ export class HijoComponent {
 
 
   navegar() {
-    this.router.navigate(['hijo2']);
+    this.router.navigate(['hijo2'], {
+      queryParams: {
+        usuario:'asa'
+      }
+    });
   }
 }

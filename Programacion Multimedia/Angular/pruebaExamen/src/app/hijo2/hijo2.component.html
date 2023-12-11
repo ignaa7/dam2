@@ -1,1 +1,12 @@
 <button (click)="volver()">Volver</button>
+
+<form [formGroup]="formName">
+    <label for="algo">Algo</label>
+    <input type="text" name="algo" id="algo" formControlName="algo">
+</form>
+
+<p>{{observable | async}}</p>
+
+<p>{{usuario}}</p>
+
+<button (click)="navegarHijo3()">Ir a hijo3</button>
