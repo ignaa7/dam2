@@ -7,4 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class PanelComponent {
   @Input() libro : any;
+  classNames: any = {
+    panel: true,
+    error: true
+  }
 }

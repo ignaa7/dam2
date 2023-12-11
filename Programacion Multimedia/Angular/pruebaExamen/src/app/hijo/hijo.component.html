@@ -1,0 +1,21 @@
+<p>{{texto}}</p>
+<input type="text" #cuadro>
+<button (click)="mandarTexto(cuadro.value)">Pulsa</button>
+<ng-content select="#p1"></ng-content>
+<p #parrafo></p>
+<p directiva>soy un texto con directiva</p>
+<p>{{1 | tuberia:2:3:4}}</p>
+
+<form [formGroup]="form" (ngSubmit)="recibir()">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" formControlName="nombre">
+    <button type="submit">Enviar</button>
+</form>
+
+<p>{{nombreTexto}}</p>
+
+<p>Número: {{numero}}</p>
+<p>Número con async: {{observable | async}}</p>
+<button (click)="sumar()">Sumar</button>
+
+<button (click)="navegar()">Ir a hijo2</button>

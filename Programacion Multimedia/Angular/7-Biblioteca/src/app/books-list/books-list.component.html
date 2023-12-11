@@ -1,8 +1,9 @@
-<ul *ngIf="observable | async as books">
-    <li *ngFor="let book of books">
+<ul>
+    <li *ngFor="let book of observable | async">
         <p>Título: {{book.title}}</p>
         <p>Autor/a: {{book.author}}</p>
         <p>ISBN: {{book.isbn}}</p>
         <p>Fecha de publicación: {{book.date | date: "dd/MM/YYYY"}}</p>
     </li>
 </ul>
+

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Book } from 'src/classes/book/book';
 import { Service } from 'src/service/service.service';
 
 @Component({

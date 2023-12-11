@@ -15,10 +15,8 @@ export class FormComponentComponent {
   @Input() edicion : boolean = false;
 
   form! : FormGroup;
-  private formBuilder : FormBuilder;
 
-  constructor(formBuilder: FormBuilder) {
-    this.formBuilder = formBuilder;
+  constructor(private formBuilder: FormBuilder) {
   }
 
   ngOnChanges(): void {
