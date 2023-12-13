@@ -18,10 +18,8 @@ import org.mockito.Mock;
  */
 public class OperacionesConMockTest {
     
-    @InjectMocks
     private static OperacionesConMock operaciones;
     
-    @Mock
     private static IServicio servicio;
     
     public OperacionesConMockTest() {
