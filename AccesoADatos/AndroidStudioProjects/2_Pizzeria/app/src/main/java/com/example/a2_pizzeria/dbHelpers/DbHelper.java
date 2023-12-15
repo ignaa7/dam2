@@ -203,4 +203,25 @@ public class DbHelper extends SQLiteOpenHelper {
 
         return ingredients;
     }
+
+    /*public void updateRecord(long id, String newName) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("column_name", newName);
+
+        // Update the record with the specified ID
+        db.update("your_table_name", values, "_id = ?", new String[]{String.valueOf(id)});
+
+        db.close();
+    }
+
+    public void deleteRecord(long id) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        // Delete the record with the specified ID
+        db.delete("your_table_name", "_id = ?", new String[]{String.valueOf(id)});
+
+        db.close();
+    }*/
 }
