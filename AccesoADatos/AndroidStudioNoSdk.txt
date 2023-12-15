@@ -1,0 +1,10 @@
+AndroidStudio>Settings>Languages&Frameworks>AndroidSDK
+o
+AndroidStudio>SDKManager
+
+Ahí pulsar Edit e introducir este path:
+C:\Users\Ignacio\AppData\Local\Android\Sdk
+
+Si no existe, crearlo
+
+Después, pulsar Next y se instalará el Sdk
