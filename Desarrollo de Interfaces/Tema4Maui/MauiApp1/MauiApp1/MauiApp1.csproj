@@ -53,7 +53,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="NewPage1.xaml">
+	  <Compile Update="Layouts\StackLayoutDemo.xaml.cs">
+	    <DependentUpon>StackLayoutDemo.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Controles\ControlesPresentacion.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Layouts\AbsoluteLayoutDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Layouts\FlexLayoutDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Layouts\StackLayoutDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

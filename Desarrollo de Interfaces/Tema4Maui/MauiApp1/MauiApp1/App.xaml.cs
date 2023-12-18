@@ -1,4 +1,7 @@
-﻿namespace MauiApp1
+﻿using MauiApp1.Controles;
+using MauiApp1.Layouts;
+
+namespace MauiApp1
 {
     public partial class App : Application
     {
@@ -6,7 +9,7 @@
         {
             InitializeComponent();
 
-            MainPage = new NewPage1();
+            MainPage = new StackLayoutDemo();
         }
     }
 }
