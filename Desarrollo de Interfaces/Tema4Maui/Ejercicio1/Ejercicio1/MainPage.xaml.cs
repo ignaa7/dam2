@@ -5,6 +5,7 @@
         int redColorValue;
         int greenColorValue;
         int blueColorValue;
+        string hexColorValue;
 
         public MainPage()
         {
@@ -18,6 +19,10 @@
             greenColorValue = random.Next(0, 256);
             blueColorValue = random.Next(0, 256);
             updateColor();
+
+            sliderRed.Value = redColorValue;
+            sliderGreen.Value = greenColorValue;
+            sliderBlue.Value = blueColorValue;
         }
 
         private void sliderRed_ValueChanged(object sender, ValueChangedEventArgs e)
@@ -28,19 +33,27 @@
 
         private void sliderGreen_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            greenColorValue= (int)sliderGreen.Value;
+            greenColorValue = (int)sliderGreen.Value;
             updateColor();
         }
 
         private void sliderBlue_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            blueColorValue= (int)sliderBlue.Value;
+            blueColorValue = (int)sliderBlue.Value;
             updateColor();
         }
 
         private void updateColor()
         {
+            btnCopy.BackgroundColor = new Color(redColorValue, greenColorValue, blueColorValue);
             BackgroundColor = new Color(redColorValue, greenColorValue, blueColorValue);
+            hexColorValue = $"#{redColorValue:X2}{greenColorValue:X2}{blueColorValue:X2}";
+            lblHexColor.Text = $"HEX Value: {hexColorValue}";
+        }
+
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            Clipboard.SetTextAsync(hexColorValue);
         }
     }
 }

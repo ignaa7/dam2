@@ -10,7 +10,7 @@
             VerticalOptions="Center">
 
             <VerticalStackLayout>
-                <Label x:Name="title" Text="Color Picker" />
+                <Label x:Name="title" Text="Color Picker" HorizontalTextAlignment="Center"/>
 
                 <Label x:Name="lblRedSlider" Text="Red value" />
                 <Slider x:Name="sliderRed" Minimum="0" Maximum="255" ValueChanged="sliderRed_ValueChanged"/>
@@ -18,6 +18,11 @@
                 <Slider x:Name="sliderGreen" Minimum="0" Maximum="255" ValueChanged="sliderGreen_ValueChanged"/>
                 <Label x:Name="lblBlueSlider" Text="Blue value" />
                 <Slider x:Name="sliderBlue" Minimum="0" Maximum="255" ValueChanged="sliderBlue_ValueChanged"/>
+
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Label x:Name="lblHexColor" Text="HEX Value: " HorizontalTextAlignment="Center" Padding="20"/>
+                    <ImageButton x:Name="btnCopy" Source="copy_icon.png" WidthRequest="3" HeightRequest="3" Clicked="ImageButton_Clicked" />
+                </HorizontalStackLayout>
 
                 <Button x:Name="btnGenerateRandomColor" Text="Generate random color" Clicked="btnGenerateRandomColor_Clicked"/>
             </VerticalStackLayout>
