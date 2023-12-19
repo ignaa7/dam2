@@ -59,6 +59,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Controles\ControlesComandos.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Controles\ControlesPresentacion.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

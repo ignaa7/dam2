@@ -12,6 +12,9 @@
     <MauiXaml Update="AppShell.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Controles\ControlesComandos.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Controles\ControlesPresentacion.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

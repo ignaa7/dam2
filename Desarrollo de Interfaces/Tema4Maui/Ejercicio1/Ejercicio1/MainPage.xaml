@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <VerticalStackLayout>
+                <Label x:Name="title" Text="Color Picker" />
+
+                <Label x:Name="lblRedSlider" Text="Red value" />
+                <Slider x:Name="sliderRed" Minimum="0" Maximum="255" ValueChanged="sliderRed_ValueChanged"/>
+                <Label x:Name="lblGreenSlider" Text="Green value" />
+                <Slider x:Name="sliderGreen" Minimum="0" Maximum="255" ValueChanged="sliderGreen_ValueChanged"/>
+                <Label x:Name="lblBlueSlider" Text="Blue value" />
+                <Slider x:Name="sliderBlue" Minimum="0" Maximum="255" ValueChanged="sliderBlue_ValueChanged"/>
+
+                <Button x:Name="btnGenerateRandomColor" Text="Generate random color" Clicked="btnGenerateRandomColor_Clicked"/>
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

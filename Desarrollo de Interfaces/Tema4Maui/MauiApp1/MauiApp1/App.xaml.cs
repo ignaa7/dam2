@@ -9,7 +9,7 @@ namespace MauiApp1
         {
             InitializeComponent();
 
-            MainPage = new StackLayoutDemo();
+            MainPage = new ControlesComandos();
         }
     }
 }
