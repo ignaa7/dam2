@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio2.MainPage"
+             BackgroundColor="grey">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            Margin="10">
+
+            <Grid BackgroundColor="LightSlateGrey">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition />
+                    <RowDefinition Height="30" />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".3*"></ColumnDefinition>
+                    <ColumnDefinition Width=".4*"/>
+                    <ColumnDefinition Width=".3*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="TOTAL POR PERSONA" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="1" TextColor="Aqua" FontAttributes="Bold" />
+                <Label x:Name="lblTotal" Text="0.00€" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1" Grid.Column="0" Grid.RowSpan="4" />
+                <Label Text="SUBTOTAL" Grid.Row="1" Grid.Column="2" />
+                <Label x:Name="lblSubtotal" Text="0.00€" Grid.Row="2" Grid.Column="2" />
+                <Label Text="Propina" Grid.Row="3" Grid.Column="2" />
+                <Label x:Name="lblPropina" Text="0.00€" Grid.Row="4" Grid.Column="2" />
+            </Grid>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"></RowDefinition>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="20" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".3*"/>
+                    <ColumnDefinition Width=".7*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Introduce tu cuenta (€):" Grid.Row="0" Grid.Column="0" />
+                <Label Text="Elige tu propina:" Grid.Row="1" Grid.Column="0" />
+                <Label Text="Propina: 0%" Grid.Row="2" Grid.Column="0" />
+                <Label Text="Número de personas:" Grid.Row="3" Grid.Column="0" />
+
+                <Entry x:Name="entryCuenta" Placeholder="0.0" PlaceholderColor="Grey" Grid.Row="0" Grid.Column="1" HeightRequest="20" VerticalOptions="Start" BackgroundColor="DarkGrey" TextChanged="entryCuenta_TextChanged" />
+                <FlexLayout Wrap="Wrap" Direction="Row" AlignItems="Center" JustifyContent="Center" Grid.Row="1" Grid.Column="1" VerticalOptions="Start">
+                    <Button x:Name="btnPropina10" Text="10%" WidthRequest="60" HeightRequest="60" Margin="2" Clicked="btnPropina10_Clicked" />
+                    <Button x:Name="btnPropina20" Text="20%" WidthRequest="60" HeightRequest="60" Margin="2" Clicked="btnPropina20_Clicked" />
+                    <Button x:Name="btnPropina30" Text="30%" WidthRequest="60" HeightRequest="60" Margin="2" Clicked="btnPropina30_Clicked" />
+                </FlexLayout>
+                <Slider x:Name="sliderPropina" Minimum="0" Maximum="30" MinimumTrackColor="DarkGreen" MaximumTrackColor="LightGreen" ThumbColor="DarkRed" Grid.Row="2" Grid.Column="1" VerticalOptions="Start" ValueChanged="sliderPropina_ValueChanged" />
+                <FlexLayout Wrap="Wrap" Direction="Row" AlignItems="Center" JustifyContent="Center" Grid.Row="3" Grid.Column="1" VerticalOptions="Start">
+                    <Button x:Name="btnRestarNumeroPersonas" Text="-" WidthRequest="60" HeightRequest="40" Clicked="btnRestarNumeroPersonas_Clicked" />
+                    <Label x:Name="lblNumeroPersonas" Text="1" FontSize="Large" HorizontalTextAlignment="Center" BackgroundColor="DarkGrey" WidthRequest="60" HeightRequest="40" />
+                    <Button x:Name="btnSumarNumeroPersonas" Text="+" WidthRequest="60" HeightRequest="40" Clicked="btnSumarNumeroPersonas_Clicked" />
+                </FlexLayout>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
