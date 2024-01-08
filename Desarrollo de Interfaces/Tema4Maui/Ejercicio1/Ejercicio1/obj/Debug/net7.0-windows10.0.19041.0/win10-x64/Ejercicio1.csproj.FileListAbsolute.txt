@@ -647,3 +647,4 @@ C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\Ejerc
 C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\Ejercicio1\Ejercicio1\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\Ejercicio1\Ejercicio1\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
 C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\Ejercicio1\Ejercicio1\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\copy_icon.scale-100.png
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\Ejercicio1\Ejercicio1\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\copy_icon.scale-100.png

@@ -54,6 +54,7 @@
         private void sliderPropina_ValueChanged(object sender, ValueChangedEventArgs e)
         {
             propina = sliderPropina.Value;
+            lblPorcentajePropina.Text = $"Propina: {sliderPropina.Value}%";
             calcularPrecio();
         }
 

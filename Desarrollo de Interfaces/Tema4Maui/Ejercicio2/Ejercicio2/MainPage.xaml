@@ -48,7 +48,7 @@
 
                 <Label Text="Introduce tu cuenta (€):" Grid.Row="0" Grid.Column="0" />
                 <Label Text="Elige tu propina:" Grid.Row="1" Grid.Column="0" />
-                <Label Text="Propina: 0%" Grid.Row="2" Grid.Column="0" />
+                <Label x:Name="lblPorcentajePropina" Text="Propina: 0%" Grid.Row="2" Grid.Column="0" />
                 <Label Text="Número de personas:" Grid.Row="3" Grid.Column="0" />
 
                 <Entry x:Name="entryCuenta" Placeholder="0.0" PlaceholderColor="Grey" Grid.Row="0" Grid.Column="1" HeightRequest="20" VerticalOptions="Start" BackgroundColor="DarkGrey" TextChanged="entryCuenta_TextChanged" />
