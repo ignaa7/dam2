@@ -2,6 +2,7 @@ package com.example.gametest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.os.Bundle;
@@ -11,7 +12,7 @@ import android.view.WindowManager;
 
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     class RenderView extends View {
         Random random = new Random();
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             super(context);
         }
 
-        protected  void OnDraw(Canvas canvas) {
+        protected  void onDraw(Canvas canvas) {
             canvas.drawRGB(random.nextInt(256), random.nextInt(256), random.nextInt(256));
 
             invalidate();
