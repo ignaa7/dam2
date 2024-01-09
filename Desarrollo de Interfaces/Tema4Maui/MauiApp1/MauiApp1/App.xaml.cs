@@ -9,7 +9,8 @@ namespace MauiApp1
         {
             InitializeComponent();
 
-            MainPage = new ControlesComandos();
+            //MainPage = new ControlesComandos();
+            MainPage = new NavigationPage(new ControlesComandos());
         }
     }
 }

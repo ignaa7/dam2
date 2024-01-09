@@ -1,3 +1,5 @@
+using MauiApp1.Paginas;
+
 namespace MauiApp1.Controles;
 
 public partial class ControlesComandos : ContentPage
@@ -9,7 +11,7 @@ public partial class ControlesComandos : ContentPage
 
     private void btnTest_Clicked(object sender, EventArgs e)
     {
-
+        Navigation.PushAsync(new FlyoutPageDemo());
     }
 
     private void RadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)

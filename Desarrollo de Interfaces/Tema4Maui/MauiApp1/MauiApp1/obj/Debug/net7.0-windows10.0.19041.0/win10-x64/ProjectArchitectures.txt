@@ -1,1 +1,1 @@
-C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\MauiApp1\MauiApp1\MauiApp1.csproj;x64
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\MauiApp1\MauiApp1\MauiApp1.csproj;x64

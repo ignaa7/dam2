@@ -12,6 +12,9 @@
     <MauiXaml Update="AppShell.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Controles\ControlesColecciones.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Controles\ControlesComandos.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
@@ -28,6 +31,12 @@
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Layouts\StackLayoutDemo.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Paginas\FlyoutPageDemo.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Paginas\TabbedPageDemo.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Platforms\Windows\App.xaml">
