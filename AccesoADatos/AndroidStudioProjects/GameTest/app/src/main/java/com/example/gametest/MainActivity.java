@@ -86,7 +86,7 @@ public class MainActivity extends Activity implements View.OnTouchListener {
         protected  void onDraw(Canvas canvas) {
             //canvas.drawRGB(random.nextInt(256), random.nextInt(256), random.nextInt(256));
 
-            canvas.drawRGB(255, 255, 255);
+            canvas.drawRGB(random.nextInt(256), random.nextInt(256), random.nextInt(256));
             paint.setColor(Color.RED);
             paint.setStrokeWidth(20);
             canvas.drawLine(0, 0, canvas.getWidth() - 1, canvas.getHeight() - 1, paint);
