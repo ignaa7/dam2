@@ -1,0 +1,1 @@
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\DataBindingDemo\DataBindingDemo\DataBindingDemo.csproj;x64
