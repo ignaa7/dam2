@@ -17,15 +17,15 @@ public class TestStream {
 		
 		//1
 		System.out.println("Número de cursos con una duración mayor a 5 horas: " + cursos.stream()
-																						.filter(curso -> curso.getDuracion() > 5)
-																						.count());
+                                                                                                    .filter(curso -> curso.getDuracion() > 5)
+                                                                                                    .count());
 		
 		System.out.println();
 		
 		//2
 		System.out.println("Número de cursos con una duración menor a 2 horas: " + cursos.stream()
-																						.filter(curso -> curso.getDuracion() < 2)
-																						.count());
+                                                                                                    .filter(curso -> curso.getDuracion() < 2)
+                                                                                                    .count());
 		
 		System.out.println();
 		
@@ -61,8 +61,8 @@ public class TestStream {
 		System.out.println("Cursos que superan la duración promedia:");
 		cursos.stream()
 		.filter(curso -> curso.getDuracion() > cursos.stream()
-													.mapToDouble(Curso::getDuracion)
-													.average().orElse(0.0))
+								.mapToDouble(Curso::getDuracion)
+								.average().orElse(0.0))
 		.map(Curso::getTitulo)
 		.forEach(System.out::println);
 		

@@ -34,6 +34,11 @@ public class Empresa implements Comparable<Empresa> {
     }
 
     @Override
+    public String toString() {
+        return "Empresa{" + "codigo=" + codigo + ", nombre=" + nombre + '}';
+    }
+
+    @Override
     public int compareTo(Empresa empresa) {
         return this.getNombre().compareToIgnoreCase(empresa.getNombre());
     }

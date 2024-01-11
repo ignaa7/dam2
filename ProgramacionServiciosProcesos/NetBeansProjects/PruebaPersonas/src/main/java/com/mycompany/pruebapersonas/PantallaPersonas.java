@@ -9,7 +9,9 @@ import DAOs.DAOTrabajador;
 import POJOs.Empresa;
 import POJOs.Trabajador;
 import java.sql.DriverManager;
+import java.util.Collections;
 import java.util.List;
+import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -34,6 +36,8 @@ public class PantallaPersonas extends javax.swing.JFrame {
         daoEmpresa = new DAOEmpresa();
         daoTrabajador = new DAOTrabajador();
         
+        cargarLista();
+        
         cargarTablaEmpresas();
         
         
@@ -45,6 +49,24 @@ public class PantallaPersonas extends javax.swing.JFrame {
         modelo.addColumn("Casado");
         
         tablaTrabajadores.setModel(modelo);
+    }
+    
+    public PantallaPersonas(DAOTrabajador daoTrabajador) {
+        this.daoTrabajador = daoTrabajador;
+    }
+    
+    public void cargarLista() {
+        try {
+            List<Empresa> empresas = daoEmpresa.getEmpresas();
+            DefaultListModel<String> listModel = new DefaultListModel<>();
+            
+            for (Empresa empresa : empresas) {
+                listModel.addElement(empresa.getNombre());
+            }
+            
+            lista.setModel(listModel);
+        } catch (Exception e) {
+        }
     }
 
     public void cargarTablaEmpresas() {
@@ -132,6 +154,8 @@ public class PantallaPersonas extends javax.swing.JFrame {
         lblSueldo = new javax.swing.JLabel();
         btnAgregarTrabajador = new javax.swing.JButton();
         lblError = new javax.swing.JLabel();
+        j = new javax.swing.JScrollPane();
+        lista = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -194,10 +218,6 @@ public class PantallaPersonas extends javax.swing.JFrame {
             }
         });
 
-        txtNombre.setText("jTextField1");
-
-        txtSueldo.setText("jTextField2");
-
         cbCasado.setText("Casado");
 
         lblNombre.setText("Nombre");
@@ -213,6 +233,13 @@ public class PantallaPersonas extends javax.swing.JFrame {
 
         lblError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
+        lista.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        j.setViewportView(lista);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -220,38 +247,45 @@ public class PantallaPersonas extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(btnMostrarEmpresas)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(lblError, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(85, 85, 85)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(btnEliminarEmpresa)
-                                        .addComponent(btnDeshacer)))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(84, 84, 84)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnMostrarEmpresas)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblError, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(85, 85, 85)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(btnEliminarEmpresa)
+                                            .addComponent(btnDeshacer)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(84, 84, 84)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(btnComprobarCasados)
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addGap(17, 17, 17)
+                                                    .addComponent(btnAgregarTrabajador)))
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(lblNombre)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(btnComprobarCasados)
+                                                .addComponent(cbCasado)
+                                                .addGap(44, 44, 44))
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(lblSueldo)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(lblSueldo)
+                                                    .addComponent(lblNombre))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(cbCasado)
-                                                    .addComponent(txtSueldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(17, 17, 17)
-                                            .addComponent(btnAgregarTrabajador))))))))
-                .addContainerGap(106, Short.MAX_VALUE))
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                    .addComponent(txtSueldo)
+                                                    .addComponent(txtNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE))
+                                                .addGap(15, 15, 15)))))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(j, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -262,13 +296,16 @@ public class PantallaPersonas extends javax.swing.JFrame {
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(36, 36, 36)
-                        .addComponent(btnEliminarEmpresa)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnDeshacer)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnMostrarEmpresas)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnComprobarCasados)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(j, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnEliminarEmpresa)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnDeshacer)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnMostrarEmpresas)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnComprobarCasados)))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
@@ -278,12 +315,12 @@ public class PantallaPersonas extends javax.swing.JFrame {
                         .addGap(42, 42, 42))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(55, 55, 55)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblNombre))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblNombre)
+                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtSueldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtSueldo, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblSueldo))
                         .addGap(18, 18, 18)
                         .addComponent(cbCasado)
@@ -304,18 +341,24 @@ public class PantallaPersonas extends javax.swing.JFrame {
         
         if (filaEmpresaSeleccionada == -1) {
             lblError.setText("Ninguna empresa seleccionada");
+            JOptionPane.showMessageDialog(this, "Ninguna empresa seleccionada");
         } else {
             lblError.setText("");
-            int codigoEmpresaSeleccionada = Integer.parseInt(tablaEmpresas.getValueAt(filaEmpresaSeleccionada, 0).toString());
-            String nombreEmpresaSeleccionada = tablaEmpresas.getValueAt(filaEmpresaSeleccionada, 1).toString();
             
-            int resultado = daoEmpresa.eliminarEmpresa(codigoEmpresaSeleccionada);
+            int opcion = JOptionPane.showConfirmDialog(this, "¿Está seguro?", "Eliminar empresa", JOptionPane.YES_NO_CANCEL_OPTION);
             
-            if (resultado == 1) {
-                codigoEmpresaEliminada = codigoEmpresaSeleccionada;
-                nombreEmpresaEliminada = nombreEmpresaSeleccionada;
-                
-                cargarTablaEmpresas();
+            if (opcion == JOptionPane.YES_OPTION) {
+                int codigoEmpresaSeleccionada = Integer.parseInt(tablaEmpresas.getValueAt(filaEmpresaSeleccionada, 0).toString());
+                String nombreEmpresaSeleccionada = tablaEmpresas.getValueAt(filaEmpresaSeleccionada, 1).toString();
+
+                int resultado = daoEmpresa.eliminarEmpresa(codigoEmpresaSeleccionada);
+
+                if (resultado == 1) {
+                    codigoEmpresaEliminada = codigoEmpresaSeleccionada;
+                    nombreEmpresaEliminada = nombreEmpresaSeleccionada;
+
+                    cargarTablaEmpresas();
+                }
             }
         }
     }//GEN-LAST:event_btnEliminarEmpresaActionPerformed
@@ -336,7 +379,8 @@ public class PantallaPersonas extends javax.swing.JFrame {
     private void btnMostrarEmpresasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarEmpresasActionPerformed
         List<Empresa> empresas = daoEmpresa.getEmpresas();
         
-        empresas.sort(null);
+        //empresas.sort(null);
+        Collections.sort(empresas);
         
         for (Empresa empresa : empresas) {
             System.out.println(empresa.toString());
@@ -347,14 +391,12 @@ public class PantallaPersonas extends javax.swing.JFrame {
         int filaEmpresaSeleccionada = tablaEmpresas.getSelectedRow();
         
         if (filaEmpresaSeleccionada == -1) {
-            lblError.setText("Ninguna empresa seleccionada");
+            JOptionPane.showMessageDialog(this, "Ninguna empresa seleccionada");
         } else {
-            lblError.setText("");
             int codigoEmpresaSeleccionada = Integer.parseInt(tablaEmpresas.getValueAt(filaEmpresaSeleccionada, 0).toString());
+            boolean hayCasados = comprobarCasados(codigoEmpresaSeleccionada);
             
-            boolean hayCasado = daoTrabajador.comprobarCasados(codigoEmpresaSeleccionada);
-
-            if (hayCasado) {
+            if (hayCasados) {
                 JOptionPane.showMessageDialog(this, "Hay algún casado");
             } else {
                 JOptionPane.showMessageDialog(this, "No hay ningún casado");
@@ -362,11 +404,22 @@ public class PantallaPersonas extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnComprobarCasadosActionPerformed
 
+    public boolean comprobarCasados(int codigoEmpresaSeleccionada) {
+        boolean hayCasado = daoTrabajador.comprobarCasados(codigoEmpresaSeleccionada);
+
+        if (hayCasado) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
     private void btnAgregarTrabajadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarTrabajadorActionPerformed
         int filaEmpresaSeleccionada = tablaEmpresas.getSelectedRow();
         
         if (filaEmpresaSeleccionada == -1) {
             lblError.setText("Ninguna empresa seleccionada");
+            JOptionPane.showMessageDialog(this, "Ninguna empresa seleccionada");
         } else {
             lblError.setText("");
             int codigoEmpresaSeleccionada = Integer.parseInt(tablaEmpresas.getValueAt(filaEmpresaSeleccionada, 0).toString());
@@ -437,11 +490,13 @@ public class PantallaPersonas extends javax.swing.JFrame {
     private javax.swing.JButton btnEliminarEmpresa;
     private javax.swing.JButton btnMostrarEmpresas;
     private javax.swing.JCheckBox cbCasado;
+    private javax.swing.JScrollPane j;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblError;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblSueldo;
+    private javax.swing.JList<String> lista;
     private javax.swing.JTable tablaEmpresas;
     private javax.swing.JTable tablaTrabajadores;
     private javax.swing.JTextField txtNombre;
