@@ -11,5 +11,11 @@ class Product:
     def get_price(self):
         return self.price
     
+    def get_stock_quantity(self):
+        return self.stock_quantity
+    
+    def get_name(self):
+        return self.name
+    
     def to_string(self):
         return f"ID: {self.id}\nNombre: {self.name}\nPrecio: {self.price}\nCantidad en stock: {self.stock_quantity}"

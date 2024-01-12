@@ -1,5 +1,5 @@
-from store_manager_erp.classes.order import Order
-from store_manager_erp.classes.store import Store
+from classes.order import Order
+from classes.store import Store
 
 
 class Service:

@@ -1,6 +1,5 @@
 from service.service import Service
 
-
 service = Service()
 exit = False
 
@@ -11,9 +10,9 @@ while not exit:
     print("3. Mostrar Inventario") 
     print("4. Salir")
 
-    option = input("Elija una opción: ")
+    option = int(input("Elija una opción: "))
 
-    if (option == 1):
+    if option == 1:
         name = input("Nombre: ")
         price = input("Precio: ")
         stock_quantity = input("Cantidad en stock: ")
@@ -22,20 +21,23 @@ while not exit:
 
         print("Producto añadido correctamente")
     
-    if (option == 2):
+    elif option == 2:
         introduce_product = 's'
         products = {}
 
         while introduce_product == 's':
             name = input("Nombre del producto: ")
             quantity = input("Cantidad del producto: ")
-            products[name] = quantity
+            products[name] = int(quantity)
             introduce_product = input("¿Quiere introducir otro producto? s / n")
         
         service.add_order(products)
     
     if (option == 3):
-        print(service.get_products())
+        products = service.get_products()
+
+        for id, product in products.items():
+            print(product.to_string() + "\n")
     
     if (option == 4):
         exit = True

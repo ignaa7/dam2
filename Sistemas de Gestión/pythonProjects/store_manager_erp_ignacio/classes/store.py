@@ -1,4 +1,4 @@
-from store_manager_erp.classes.product import Product
+from classes.product import Product
 
 
 class Store:
