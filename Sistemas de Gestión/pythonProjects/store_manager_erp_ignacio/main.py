@@ -29,15 +29,15 @@ while not exit:
             name = input("Nombre del producto: ")
             quantity = input("Cantidad del producto: ")
             products[name] = int(quantity)
-            introduce_product = input("¿Quiere introducir otro producto? s / n")
+            introduce_product = input("¿Quiere introducir otro producto? s / n ")
         
         service.add_order(products)
     
-    if (option == 3):
+    elif (option == 3):
         products = service.get_products()
 
         for id, product in products.items():
             print(product.to_string() + "\n")
     
-    if (option == 4):
+    elif (option == 4):
         exit = True
