@@ -16,3 +16,14 @@ class Store:
     
     def get_products(self):
         return self.products
+
+    def update_products_stock(self, order_products):
+        for id, product in self.products.items():
+            for name, quantity in order_products.items():
+                if product.get_name() == name:
+                    product.set_stock_quantity(product.get_stock_quantity() - quantity)
+    
+    def get_product_price(self, name):
+        for id, product in self.products.items():
+            if product.get_name() == name:
+                return product.get_price()

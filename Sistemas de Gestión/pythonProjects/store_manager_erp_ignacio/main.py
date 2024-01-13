@@ -14,8 +14,8 @@ while not exit:
 
     if option == 1:
         name = input("Nombre: ")
-        price = input("Precio: ")
-        stock_quantity = input("Cantidad en stock: ")
+        price = int(input("Precio: "))
+        stock_quantity = int(input("Cantidad en stock: "))
 
         service.add_product(name, price, stock_quantity)
 
@@ -31,7 +31,8 @@ while not exit:
             products[name] = int(quantity)
             introduce_product = input("¿Quiere introducir otro producto? s / n ")
         
-        service.add_order(products)
+        order_price = service.add_order(products)
+        print(f"El precio total del pedido es {order_price}€")
     
     elif (option == 3):
         products = service.get_products()

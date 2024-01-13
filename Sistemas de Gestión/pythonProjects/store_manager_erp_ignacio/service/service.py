@@ -11,7 +11,10 @@ class Service:
         self.store.add_product(name, price, stock_quantity)
     
     def add_order(self, products):
-        self.orders.append(Order(products))
+        order = Order(products, self.store)
+        self.orders.append(order)
+
+        return order.calculate_total_price()
     
     def get_products(self):
         return self.store.get_products()
