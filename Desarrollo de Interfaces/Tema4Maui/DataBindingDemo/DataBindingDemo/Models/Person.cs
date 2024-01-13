@@ -9,32 +9,32 @@ namespace DataBindingDemo.Models
 {
     public class Person: INotifyPropertyChanged
     {
-        private string name;
-        private string phone;
-        private string address;
+        private string _name;
+        private string _phone;
+        private string _address;
 
-        public string Name { get { return name; }
+        public string Name { get { return _name; }
             set
             {
-                name = value;
+                _name = value;
                 OnPropertyChanged("Name");
             }
         }
         public string Phone
         {
-            get { return phone; }
+            get { return _phone; }
             set
             {
-                phone = value;
+                _phone = value;
                 OnPropertyChanged("Phone");
             }
         }
         public string Address
         {
-            get { return address; }
+            get { return _address; }
             set
             {
-                address = value;
+                _address = value;
                 OnPropertyChanged("Address");
             }
         }

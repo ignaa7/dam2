@@ -4,9 +4,19 @@
              x:Class="Ahorcado.MainPage">
 
     <ScrollView>
-        <FlexLayout Wrap="Wrap" Direction="Row" AlignItems="Center" JustifyContent="SpaceBetween">
-            
-        </FlexLayout>
+        <VerticalStackLayout>
+            <Image MaximumHeightRequest="200" Source="{Binding ImageUrl}"/>
+            <Label Text="{Binding Word}" FontSize="Large" HorizontalOptions="Center" />
+            <Label Text="{Binding Message}" FontSize="Large" HorizontalOptions="Center" />
+            <Button Text="Reset" Clicked="resetButtonPressed" WidthRequest="100" HorizontalOptions="Center" />
+            <FlexLayout x:Name="flexLayout" Wrap="Wrap" Direction="Row" AlignItems="Center" JustifyContent="SpaceBetween" BindableLayout.ItemsSource="{Binding Letters}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Button Text="{Binding}" Clicked="letterButtonPressed" />
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+        </VerticalStackLayout>
     </ScrollView>
 
 </ContentPage>
