@@ -38,6 +38,16 @@ public class MoverFiguras extends SurfaceView implements SurfaceHolder.Callback 
 
     @Override
     public void surfaceDestroyed(@NonNull SurfaceHolder surfaceHolder) {
+        boolean retry = true;
+        gameThread.setRunning(false);
 
+        while(retry) {
+            try {
+                gameThread.join();
+                retry = false;
+            } catch (InterruptedException e) {
+
+            }
+        }
     }
 }

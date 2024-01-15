@@ -1,6 +1,7 @@
 package com.example.pruebamoverfiguras;
 
 import android.graphics.Canvas;
+import android.view.Surface;
 import android.view.SurfaceHolder;
 
 public class GameThread extends Thread {
@@ -19,8 +20,26 @@ public class GameThread extends Thread {
     }
 
     public void run() {
-        Canvas canvas = null;
+        Canvas canvas;
 
-        moverFiguras.draw(canvas);
+        while (run) {
+            canvas = null;
+
+            try {
+                if (canvas != null) {
+                    canvas = surfaceHolder.lockCanvas(null);
+
+                    synchronized (surfaceHolder) {
+                        moverFiguras.draw(canvas);
+                    }
+                }
+            } finally {
+                if (canvas != null) {
+                    surfaceHolder.unlockCanvasAndPost(canvas);
+                }
+            }
+        }
+
+        moverFiguras.postInvalidate();
     }
 }
