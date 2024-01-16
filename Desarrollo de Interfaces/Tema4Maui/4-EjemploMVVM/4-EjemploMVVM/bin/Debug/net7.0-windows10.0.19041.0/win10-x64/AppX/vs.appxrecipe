@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\4-EjemploMVVM\4-EjemploMVVM\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-01-15T09:49:20.787</Modified>
+      <Modified>2024-01-16T11:30:11.012</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\4-EjemploMVVM\4-EjemploMVVM\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-01-15T09:47:38.399</Modified>
+      <Modified>2024-01-16T11:30:10.715</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\4-EjemploMVVM\4-EjemploMVVM\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\4-EjemploMVVM.runtimeconfig.json">
       <PackagePath>4-EjemploMVVM.runtimeconfig.json</PackagePath>
@@ -44,15 +44,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\4-EjemploMVVM\4-EjemploMVVM\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\4-EjemploMVVM.dll">
       <PackagePath>4-EjemploMVVM.dll</PackagePath>
-      <Modified>2024-01-15T09:49:19.724</Modified>
+      <Modified>2024-01-16T11:30:09.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\4-EjemploMVVM\4-EjemploMVVM\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>4-EjemploMVVM.exe</PackagePath>
-      <Modified>2024-01-15T09:49:19.724</Modified>
+      <Modified>2024-01-16T11:30:09.372</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\4-EjemploMVVM\4-EjemploMVVM\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\4-EjemploMVVM.deps.json">
       <PackagePath>4-EjemploMVVM.deps.json</PackagePath>
-      <Modified>2024-01-15T09:47:37.897</Modified>
+      <Modified>2024-01-16T11:30:10.497</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.11\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>

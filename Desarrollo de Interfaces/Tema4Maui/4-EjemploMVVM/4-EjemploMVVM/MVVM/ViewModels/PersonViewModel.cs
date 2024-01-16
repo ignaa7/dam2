@@ -17,7 +17,7 @@ namespace _4_EjemploMVVM.MVVM.ViewModels
             {
                 Name = "Héctor",
                 Age = 50,
-                Married = true,
+                Married = "yes",
                 BirthDate = DateTime.Now,
                 Weight = 50,
                 LunchTime = DateTime.Now.TimeOfDay,

@@ -8,7 +8,16 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
-                        <Frame Margin="" />
+                        <Frame
+                    Margin="20"
+                    BorderColor="DarkGray"
+                    CornerRadius="5"
+                    HasShadow="True"
+                    HeightRequest="100"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand">
+                            <Label Text="{Binding Name}" />
+                        </Frame>
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
