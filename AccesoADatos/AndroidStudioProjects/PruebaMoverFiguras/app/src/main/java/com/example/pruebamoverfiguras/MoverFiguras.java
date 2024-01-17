@@ -14,8 +14,7 @@ public class MoverFiguras extends SurfaceView implements SurfaceHolder.Callback 
     private GameThread gameThread;
     private Rectangulo rectangulo;
     private Paint paint;
-    private float xInicial;
-    private float yInicial;
+
 
     public MoverFiguras(Context context) {
         super(context);
@@ -27,9 +26,7 @@ public class MoverFiguras extends SurfaceView implements SurfaceHolder.Callback 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawColor(Color.WHITE);
-        paint.setColor(Color.RED);
-        canvas.drawRect(rectangulo.getX(), rectangulo.getY(), rectangulo.getX()+(float)rectangulo.getWidth(), rectangulo.getY()+(float)rectangulo.getHeight(), paint);
+
         invalidate();
     }
 
@@ -44,10 +41,11 @@ public class MoverFiguras extends SurfaceView implements SurfaceHolder.Callback 
                 }
                 break;
             case MotionEvent.ACTION_MOVE:
-                rectangulo.setX(event.getX());
-                rectangulo.setY(event.getY());
-                //rectangulo.moverRectangulo(xInicial, yInicial, event.getX(), event.getY());
-                //rectangulo.moverRectangulo(xInicial, yInicial, event.getX(), event.getY());
+                float desplazamientoX = event.getX() - xInicial;
+                float desplazamientoY = event.getY() - yInicial;
+                xInicial = event.getX();
+                yInicial = event.getY();
+                rectangulo.moverRectangulo(desplazamientoX, desplazamientoY);
                 break;
             case MotionEvent.ACTION_CANCEL:
                 break;

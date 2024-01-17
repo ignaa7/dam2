@@ -1,4 +1,5 @@
 is_global = true
+build_property.PropertyChangedAnalyzerConfiguration = 
 build_property.TargetFramework = net7.0-android
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
@@ -31,6 +32,18 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _4_EjemploMVVM.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema4Maui/4-EjemploMVVM/4-EjemploMVVM/MVVM/Views/CommandView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _4_EjemploMVVM.MVVM.Views.CommandView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\CommandView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\CommandView.xaml
+
+[C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema4Maui/4-EjemploMVVM/4-EjemploMVVM/MVVM/Views/FodyView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _4_EjemploMVVM.MVVM.Views.FodyView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\FodyView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\FodyView.xaml
 
 [C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema4Maui/4-EjemploMVVM/4-EjemploMVVM/MVVM/Views/PeopleView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

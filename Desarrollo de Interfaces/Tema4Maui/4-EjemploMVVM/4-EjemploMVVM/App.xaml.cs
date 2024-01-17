@@ -8,7 +8,7 @@ namespace _4_EjemploMVVM
         {
             InitializeComponent();
 
-            MainPage = new PeopleView();
+            MainPage = new FodyView();
         }
     }
 }

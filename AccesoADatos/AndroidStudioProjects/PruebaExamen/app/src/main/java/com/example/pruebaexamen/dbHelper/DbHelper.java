@@ -24,9 +24,11 @@ public class DbHelper extends SQLiteOpenHelper {
                 + "nombre TEXT)";
         db.execSQL(createPalabrasQuery);
 
-        if(isTableEmpty("palabras", db)) {
+        insertPalabras(db);
+
+        /*if(isTableEmpty("palabras", db)) {
             insertPalabras(db);
-        }
+        }*/
     }
 
     @Override
