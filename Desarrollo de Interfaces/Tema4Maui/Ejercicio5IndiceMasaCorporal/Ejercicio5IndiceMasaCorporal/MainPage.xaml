@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
              x:Class="Ejercicio5IndiceMasaCorporal.MainPage">
 
     <ScrollView>
@@ -9,31 +10,72 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+            <gauge:SfLinearGauge
+                Margin= "0,15,0,0"
+                Interval= "50"
+                Maximum= "250"
+                Minimum= "25">
+                <gauge:SfLinearGauge.MarkerPointers> <!--Definimos el puntero que vamos a utilizar-->
+                    <gauge:LinearContentPointer
+                                    x:Name="HeightPointer"
+                                    IsInteractive="True"
+                                    Position="Cross"
+                                    Value="{Binding IMC.Altura}">
+                        <gauge:LinearContentPointer.Content> <!--y cómo se va a ver-->
+                            <Grid HeightRequest="25" WidthRequest="50">
+                                <RoundRectangle CornerRadius="5" Fill="#ff0074E3" />
+                                <Label
+                                    HorizontalOptions="Center"
+                                    Text="{Binding Source={x:Reference HeightPointer}, Path=Value,
+                                    StringFormat='{0:0}'}" 
+                                    TextColor="White"
+                                    VerticalOptions="Center"> <!--Enlace entre controles-->
+                                </Label>
+                            </Grid>
+                        </gauge:LinearContentPointer.Content>
+                    </gauge:LinearContentPointer>
+                </gauge:SfLinearGauge.MarkerPointers>
+            </gauge:SfLinearGauge>
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+            <gauge:SfRadialGauge Margin="0,-55,0,-55">
+                <gauge:SfRadialGauge.Axes>
+                    <gauge:RadialAxis
+                        Maximum="50"
+                        Minimum="0"
+                        ShowAxisLine="False"
+                        ShowLabels="False"
+                        ShowTicks="False">
+                        <gauge:RadialAxis.Ranges>
+                            <!--Añadimos cada uno de los rangos-->
+                            <gauge:RadialRange
+                                EndValue="16"
+                                EndWidth="0.65"
+                                Fill="#282E5A"
+                                StartValue="0"
+                                StartWidth="0.65"
+                                WidthUnit="Factor" />
+                            <gauge:RadialRange
+                                EndValue="17"
+                                EndWidth="0.65"
+                                Fill="#616FD9"
+                                StartValue="16"
+                                StartWidth="0.65"
+                                WidthUnit="Factor" />
+                        </gauge:RadialAxis.Ranges>
+                        <gauge:RadialAxis.Pointers>
+                            <!--Ahora añadimos un puntero tipo aguja-->
+                            <gauge:NeedlePointer
+                                x:Name="pointer"
+                                KnobRadius="15"
+                                KnobSizeUnit="Pixel"
+                                NeedleEndWidth="15"
+                                NeedleLength="0.6"
+                                NeedleStartWidth="2"
+                                Value="{Binding IMC.Resultado}" />
+                        </gauge:RadialAxis.Pointers>
+                    </gauge:RadialAxis>
+                </gauge:SfRadialGauge.Axes>
+            </gauge:SfRadialGauge>
 
         </VerticalStackLayout>
     </ScrollView>
