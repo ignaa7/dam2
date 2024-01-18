@@ -52,7 +52,7 @@ public class DbHelper extends SQLiteOpenHelper {
             ContentValues values = new ContentValues();
             values.put("nombre", palabra);
 
-            db.insert("palabras", null, values);
+            db.insert("nombres", null, values);
         }
     }
 

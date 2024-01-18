@@ -75,4 +75,16 @@ public class DbHelper extends SQLiteOpenHelper {
 
         return palabras;
     }
+
+    public void eliminarPalabra(String nombre) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("palabras", "nombre = ?", new String[]{nombre});
+    }
+
+    public void modificarPalabra(String palabra, String nombreNuevo) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("nombre", nombreNuevo);
+        db.update("palabras", values, "nombre = ?", new String[]{palabra});
+    }
 }
