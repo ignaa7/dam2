@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -13,12 +14,16 @@ import androidx.annotation.NonNull;
 public class MoverFiguras extends SurfaceView implements SurfaceHolder.Callback {
     private GameThread gameThread;
     private Rectangulo rectangulo;
+    private Circulo circulo;
+    private Linea linea;
     private Paint paint;
 
 
     public MoverFiguras(Context context) {
         super(context);
         rectangulo = new Rectangulo(200, 400, 700, 500);
+        circulo = new Circulo(100, 100, 100);
+        linea = new Linea(0, 0);
         paint = new Paint();
         setBackgroundColor(Color.BLACK);
     }
@@ -26,7 +31,10 @@ public class MoverFiguras extends SurfaceView implements SurfaceHolder.Callback 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
+        canvas.drawColor(Color.WHITE);
+        rectangulo.onDraw(canvas, paint);
+        circulo.onDraw(canvas, paint);
+        //linea.onDraw(canvas, paint);
         invalidate();
     }
 
@@ -36,16 +44,21 @@ public class MoverFiguras extends SurfaceView implements SurfaceHolder.Callback 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 if (rectangulo.isHovered(event.getX(), event.getY())) {
-                    xInicial = event.getX();
-                    yInicial = event.getY();
+                    rectangulo.setxInicial(event.getX());
+                    rectangulo.setyInicial(event.getY());
                 }
+
+                if (circulo.isHovered(event.getX(), event.getY())) {
+                    circulo.setxInicial(event.getX());
+                    circulo.setyInicial(event.getY());
+                }
+
+                linea.setxInicial(event.getX());
+                linea.setyInicial(event.getY());
                 break;
             case MotionEvent.ACTION_MOVE:
-                float desplazamientoX = event.getX() - xInicial;
-                float desplazamientoY = event.getY() - yInicial;
-                xInicial = event.getX();
-                yInicial = event.getY();
-                rectangulo.moverRectangulo(desplazamientoX, desplazamientoY);
+                rectangulo.mover(event.getX(), event.getY());
+                circulo.mover(event.getX(), event.getY());
                 break;
             case MotionEvent.ACTION_CANCEL:
                 break;

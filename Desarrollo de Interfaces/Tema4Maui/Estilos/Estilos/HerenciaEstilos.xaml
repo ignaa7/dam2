@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Estilos.HerenciaEstilos"
+             Title="HerenciaEstilos">
+    
+    <ContentPage.Resources>
+        <Style TargetType="Button" x:Key="botonBase">
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="FontAttributes" Value="Bold" />
+        </Style>
+
+        <!--BasedOn para heredar de otro estilo-->
+        <Style x:Key="botonAzul" TargetType="Button" BasedOn="{StaticResource botonBase}">
+            <Setter Property="Background" Value="Blue" />
+        </Style>
+    </ContentPage.Resources>
+    
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

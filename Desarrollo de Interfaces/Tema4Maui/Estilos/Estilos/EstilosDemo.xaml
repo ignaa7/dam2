@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Estilos.EstilosDemo"
+             Title="EstilosDemo">
+    
+    <!--aquí se definen los estilos solo para esta view-->
+    <!--los estilos predefinidos están en Resources/Styles/Styles.xaml-->
+    <!--para crear nuevo diccionario de estilos se crea dentro de Resources/Styles, y se añade dentro de Application.Resources, en el archivo App.xaml-->
+    <!--para crear un archivo de diccionario, Agregar/Nuevo elemento/.NET MAUI/Resource Dictionary-->
+    <ContentPage.Resources>
+        <!--al ponerle x:Key, se puede usar el color poniendo el key en vez del código del color-->
+        <Color x:Key="bgColor">#db3a34</Color>
+        
+        <!--definimos estilos que se aplicarán en todos los VerticalStackLayout-->
+        <Style TargetType="VerticalStackLayout">
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="Padding" Value="30" />
+        </Style>
+
+        <!--definimos estilos que se aplicarán en todos los Button-->
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource bgColor}" />
+        </Style>
+
+        <!--al ponerle un x:Key, solo se aplicarán los estilos a los Button que tengan Style="{StaticResource buttonBlue}"-->
+        <Style TargetType="Button" x:Key="buttonBlue">
+            <Setter Property="BackgroundColor" Value="Blue" />
+        </Style>
+    </ContentPage.Resources>
+    
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <!--estilo implícito: el botón tiene un estilo solo por ser un botón-->
+        <Button Text="Texto implícito" />
+        <!--estilo explícito: el botón tiene un estilo definido para él solo-->
+        <Button Style="{StaticResource buttonBlue}" Text="Estilo explícito" />
+        <!--estilos globales: no están definidos en esta view, sino en los diccionarios de estilos, en Resources/Styles-->
+        <Button Style="{StaticResource botonVerde}" Text="Estilo global" />
+    </VerticalStackLayout>
+</ContentPage>

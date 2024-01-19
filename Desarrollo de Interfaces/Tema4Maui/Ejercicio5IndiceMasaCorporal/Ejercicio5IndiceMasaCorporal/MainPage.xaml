@@ -37,6 +37,36 @@
                 </gauge:SfLinearGauge.MarkerPointers>
             </gauge:SfLinearGauge>
 
+            <gauge:SfLinearGauge
+                Margin= "0,15,0,0"
+                Interval= "50"
+                Maximum= "250"
+                Minimum= "25">
+                <gauge:SfLinearGauge.MarkerPointers>
+                    <!--Definimos el puntero que vamos a utilizar-->
+                    <gauge:LinearContentPointer
+                        x:Name="HeightPointer2"
+                        IsInteractive="True"
+                        Position="Cross"
+                        Value="{Binding IMC.Altura}">
+                        <gauge:LinearContentPointer.Content>
+                            <!--y cómo se va a ver-->
+                            <Grid HeightRequest="25" WidthRequest="50">
+                                <RoundRectangle CornerRadius="5" Fill="#ff0074E3" />
+                                <Label
+                        HorizontalOptions="Center"
+                        Text="{Binding Source={x:Reference HeightPointer}, Path=Value,
+                        StringFormat='{0:0}'}" 
+                        TextColor="White"
+                        VerticalOptions="Center">
+                                    <!--Enlace entre controles-->
+                                </Label>
+                            </Grid>
+                        </gauge:LinearContentPointer.Content>
+                    </gauge:LinearContentPointer>
+                </gauge:SfLinearGauge.MarkerPointers>
+            </gauge:SfLinearGauge>
+
             <gauge:SfRadialGauge Margin="0,-55,0,-55">
                 <gauge:SfRadialGauge.Axes>
                     <gauge:RadialAxis

@@ -31,6 +31,7 @@ public class GameThread extends Thread {
 
                     synchronized (surfaceHolder) {
                         moverFiguras.draw(canvas);
+                        //moverFiguras.postInvalidate();
                     }
                 }
             } finally {

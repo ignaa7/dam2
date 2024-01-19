@@ -7,8 +7,6 @@ import android.graphics.Paint;
 public class Rectangulo extends Figura {
     private double width;
     private double height;
-    private float xInicial;
-    private float yInicial;
 
     public Rectangulo(float x, float y, double width, double height) {
         super(x, y);
@@ -37,15 +35,9 @@ public class Rectangulo extends Figura {
         return x >= this.x && x <= this.x + width && y >= this.y && y <= this.y + height;
     }
 
-    public void moverRectangulo(float desplazamientoX, float desplazamientoY) {
-        setX(getX() + desplazamientoX);
-        setY(getY() + desplazamientoY);
-    }
-
     @Override
     public void onDraw(Canvas canvas, Paint paint) {
-        canvas.drawColor(Color.WHITE);
         paint.setColor(Color.RED);
-        canvas.drawRect(rectangulo.getX(), rectangulo.getY(), rectangulo.getX()+(float)rectangulo.getWidth(), rectangulo.getY()+(float)rectangulo.getHeight(), paint);
+        canvas.drawRect(getX(), getY(), getX()+(float)getWidth(), getY()+(float)getHeight(), paint);
     }
 }
