@@ -5,22 +5,34 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 
-public class Linea extends Figura {
-    public Linea(float x, float y) {
-        super(x, y);
+import java.util.HashMap;
+import java.util.Map;
+
+public class Linea {
+    private Map<Float, Float> puntos = new HashMap<>();
+    private Path path = new Path();
+    public Linea() {
+
     }
 
-    @Override
-    public boolean isHovered(float x, float y) {
-        return false;
+    public void guardarPuntoInicial(Float x, Float y) {
+        path.moveTo(x, y);
+        puntos.put(x, y);
     }
 
-    @Override
+    public void guardarPunto(Float x, Float y) {
+        path.lineTo(x, y);
+    }
+
     public void onDraw(Canvas canvas, Paint paint) {
-        canvas.drawColor(Color.WHITE);
-        paint.setColor(Color.RED);
+        paint.setColor(Color.GREEN);
+        paint.setStyle(Paint.Style.FILL);
+        for (Map.Entry<Float, Float> entry : puntos.entrySet()) {
+            canvas.drawCircle(entry.getKey(), entry.getValue(), 10, paint);
+        }
 
-        Path path = new Path();
-        //path.lineTo();
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(20);
+        canvas.drawPath(path, paint);
     }
 }

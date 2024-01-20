@@ -17,14 +17,16 @@ public class MoverFiguras extends SurfaceView implements SurfaceHolder.Callback 
     private Circulo circulo;
     private Linea linea;
     private Paint paint;
+    private Paint linePaint;
 
 
     public MoverFiguras(Context context) {
         super(context);
         rectangulo = new Rectangulo(200, 400, 700, 500);
         circulo = new Circulo(100, 100, 100);
-        linea = new Linea(0, 0);
+        linea = new Linea();
         paint = new Paint();
+        linePaint = new Paint();
         setBackgroundColor(Color.BLACK);
     }
 
@@ -34,7 +36,7 @@ public class MoverFiguras extends SurfaceView implements SurfaceHolder.Callback 
         canvas.drawColor(Color.WHITE);
         rectangulo.onDraw(canvas, paint);
         circulo.onDraw(canvas, paint);
-        //linea.onDraw(canvas, paint);
+        linea.onDraw(canvas, linePaint);
         invalidate();
     }
 
@@ -53,16 +55,20 @@ public class MoverFiguras extends SurfaceView implements SurfaceHolder.Callback 
                     circulo.setyInicial(event.getY());
                 }
 
-                linea.setxInicial(event.getX());
-                linea.setyInicial(event.getY());
+                linea.guardarPuntoInicial(event.getX(), event.getY());
                 break;
             case MotionEvent.ACTION_MOVE:
                 rectangulo.mover(event.getX(), event.getY());
                 circulo.mover(event.getX(), event.getY());
+                linea.guardarPunto(event.getX(), event.getY());
                 break;
             case MotionEvent.ACTION_CANCEL:
                 break;
             case MotionEvent.ACTION_UP:
+                rectangulo.setxInicial(null);
+                rectangulo.setyInicial(null);
+                circulo.setxInicial(null);
+                circulo.setyInicial(null);
                 break;
         }
 

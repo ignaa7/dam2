@@ -6,8 +6,8 @@ import android.graphics.Paint;
 public abstract class Figura {
     protected float x;
     protected float y;
-    protected float xInicial;
-    protected float yInicial;
+    protected Float xInicial;
+    protected Float yInicial;
 
     public Figura(float x, float y) {
         this.x = x;
@@ -30,27 +30,29 @@ public abstract class Figura {
         this.y = y;
     }
 
-    public float getxInicial() {
+    public Float getxInicial() {
         return xInicial;
     }
 
-    public void setxInicial(float xInicial) {
+    public void setxInicial(Float xInicial) {
         this.xInicial = xInicial;
     }
 
-    public float getyInicial() {
+    public Float getyInicial() {
         return yInicial;
     }
 
-    public void setyInicial(float yInicial) {
+    public void setyInicial(Float yInicial) {
         this.yInicial = yInicial;
     }
 
     public void mover(float xActual, float yActual) {
-        setX(getX() + xActual - xInicial);
-        setY(getY() + yActual - yInicial);
-        xInicial = xActual;
-        yInicial = yActual;
+        if (xInicial != null && yInicial != null) {
+            setX(getX() + xActual - xInicial);
+            setY(getY() + yActual - yInicial);
+            xInicial = xActual;
+            yInicial = yActual;
+        }
     }
 
     public abstract boolean isHovered(float x, float y);
