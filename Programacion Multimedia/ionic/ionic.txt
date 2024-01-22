@@ -1,1 +1,17 @@
 ionic start -> create ionic project
+ionic g pg -> generate page
+
+generate random id:
+	npm i uuid
+	npm i --save-dev @types/uuid
+	import { v4 as uuidv4 } from 'uuid';
+
+camera plugin:
+	npm i cordova-plugin-camera
+	npm install @awesome-cordova-plugins/camera
+	ionic cap sync
+
+execute project in android:
+	npm install @capacitor/android
+	npx cap add android -> needs to be runned at the project root
+	npx cap run android

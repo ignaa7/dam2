@@ -1,0 +1,2 @@
+set mongodb path:
+	mongod --dbpath <path-to-your-desired-directory>
