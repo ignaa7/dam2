@@ -6,7 +6,28 @@ generate random id:
 	npm i --save-dev @types/uuid
 	import { v4 as uuidv4 } from 'uuid';
 
-camera plugin:
+use camera:
+	import { Camera, CameraResultType, CameraSource, Photo } from '@capacitor/camera';
+	import { Filesystem, Directory } from '@capacitor/filesystem';
+	import { Preferences } from '@capacitor/preferences';
+
+	npm install @ionic/pwa-elements
+	In your app.component.ts file, import defineCustomElements from the pwa-elements you just installed, and then call it in the class controller:
+	Code:
+	
+	import { defineCustomElements } from '@ionic/pwa-elements/loader';
+	
+	...
+	
+	export class AppComponent {
+	  constructor() {
+	    defineCustomElements(window);
+	  }
+	}
+
+
+
+camera plugin for android:
 	npm i cordova-plugin-camera
 	npm install @awesome-cordova-plugins/camera
 	ionic cap sync
