@@ -11,6 +11,9 @@ import android.view.SurfaceView;
 
 import androidx.annotation.NonNull;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MoverFiguras extends SurfaceView implements SurfaceHolder.Callback {
     private GameThread gameThread;
     private Rectangulo rectangulo;
@@ -18,13 +21,19 @@ public class MoverFiguras extends SurfaceView implements SurfaceHolder.Callback 
     private Linea linea;
     private Paint paint;
     private Paint linePaint;
+    private List<Figura> figuras = new ArrayList<>();
 
 
     public MoverFiguras(Context context) {
         super(context);
         rectangulo = new Rectangulo(200, 400, 700, 500);
+        figuras.add(rectangulo);
+
         circulo = new Circulo(100, 100, 100);
+        figuras.add(circulo);
+
         linea = new Linea();
+
         paint = new Paint();
         linePaint = new Paint();
         setBackgroundColor(Color.BLACK);
@@ -34,8 +43,11 @@ public class MoverFiguras extends SurfaceView implements SurfaceHolder.Callback 
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         canvas.drawColor(Color.WHITE);
-        rectangulo.onDraw(canvas, paint);
-        circulo.onDraw(canvas, paint);
+
+        for (Figura figura : figuras) {
+            figura.onDraw(canvas, paint);
+        }
+
         linea.onDraw(canvas, linePaint);
         invalidate();
     }
@@ -45,30 +57,30 @@ public class MoverFiguras extends SurfaceView implements SurfaceHolder.Callback 
         //return super.onTouchEvent(event);
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                if (rectangulo.isHovered(event.getX(), event.getY())) {
-                    rectangulo.setxInicial(event.getX());
-                    rectangulo.setyInicial(event.getY());
-                }
-
-                if (circulo.isHovered(event.getX(), event.getY())) {
-                    circulo.setxInicial(event.getX());
-                    circulo.setyInicial(event.getY());
+                for (Figura figura : figuras) {
+                    if (figura.isHovered(event.getX(), event.getY())) {
+                        figura.setxInicial(event.getX());
+                        figura.setyInicial(event.getY());
+                    }
                 }
 
                 linea.guardarPuntoInicial(event.getX(), event.getY());
                 break;
             case MotionEvent.ACTION_MOVE:
-                rectangulo.mover(event.getX(), event.getY());
-                circulo.mover(event.getX(), event.getY());
+                for (Figura figura : figuras) {
+                    figura.mover(event.getX(), event.getY());
+                }
+
                 linea.guardarPunto(event.getX(), event.getY());
                 break;
             case MotionEvent.ACTION_CANCEL:
                 break;
             case MotionEvent.ACTION_UP:
-                rectangulo.setxInicial(null);
-                rectangulo.setyInicial(null);
-                circulo.setxInicial(null);
-                circulo.setyInicial(null);
+                for (Figura figura : figuras) {
+                    figura.setxInicial(null);
+                    figura.setyInicial(null);
+                }
+
                 break;
         }
 
