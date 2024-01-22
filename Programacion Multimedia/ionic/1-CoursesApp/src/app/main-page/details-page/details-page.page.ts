@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { CoursesService } from 'src/services/courses-service/courses.service';
-import { Camera, CameraOptions } from '@awesome-cordova-plugins/camera';
+import { PhotoService } from 'src/services/photo-service/photo.service';
 
 @Component({
   selector: 'app-details-page',
@@ -14,15 +14,11 @@ export class DetailsPagePage implements OnInit {
   actionSheetButtons = [
     {
       text: 'Cámara',
-      data: {
-        action: this.pickFromCamera,
-      },
+      handler: () => this.pickFromCamera(),
     },
     {
       text: 'Galería',
-      data: {
-        action: this.selectFromGallery,
-      },
+      handler: () => this.selectFromGallery(),
     },
     {
       text: 'Cancelar',
@@ -38,6 +34,7 @@ export class DetailsPagePage implements OnInit {
     private coursesService: CoursesService,
     private router: Router,
     private alertCtrl: AlertController,
+    private photoService: PhotoService
     ) { }
 
   ngOnInit(): void {
@@ -79,34 +76,10 @@ export class DetailsPagePage implements OnInit {
   }
 
   pickFromCamera(): void {
-    const options: CameraOptions = {
-      quality: 80,
-      destinationType: Camera.DestinationType.FILE_URI,
-      encodingType: Camera.EncodingType.JPEG,
-      mediaType: Camera.MediaType.PICTURE,
-      sourceType: Camera.PictureSourceType.CAMERA,
-    };
-  
-    Camera.getPicture(options).then((url) => {
-      this.course['imageUrl'] = url;
-    }, (error) => {
-      console.error(error);
-    });
+    this.photoService.addNewToGallery();
   }
 
   selectFromGallery(): void {
-    const options: CameraOptions = {
-      quality: 80,
-      destinationType: Camera.DestinationType.FILE_URI,
-      encodingType: Camera.EncodingType.JPEG,
-      mediaType: Camera.MediaType.PICTURE,
-      sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
-    };
-  
-    Camera.getPicture(options).then((url) => {
-      this.course['imageUrl'] = url;
-    }, (error) => {
-      console.error(error);
-    });
+    
   }
 }

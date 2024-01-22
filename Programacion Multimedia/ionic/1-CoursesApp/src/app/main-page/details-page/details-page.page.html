@@ -25,7 +25,7 @@
     <br />
     <h1>Puntos: {{course['points']}}</h1>
     <br />
-    <ion-card id="imageSelection">
+    <ion-card id="imageSelector">
       <ion-card-content>
         <ion-img *ngIf="course['imageUrl']" [src]="course['imageUrl']" alt="Imagen del curso"></ion-img>
         <ion-text *ngIf="!course['imageUrl']" color="medium">Seleccionar una imagen</ion-text>
@@ -33,5 +33,5 @@
     </ion-card>
   </div>
 
-  <ion-action-sheet trigger="imageSelection" header="Selección de imagen" [buttons]="actionSheetButtons"></ion-action-sheet>
+  <ion-action-sheet trigger="imageSelector" header="Selección de imagen" [buttons]="actionSheetButtons"></ion-action-sheet>
 </ion-content>
