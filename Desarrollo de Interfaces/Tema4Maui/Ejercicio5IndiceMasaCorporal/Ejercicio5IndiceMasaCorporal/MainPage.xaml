@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
-             x:Class="Ejercicio5IndiceMasaCorporal.MainPage">
+             x:Class="Ejercicio5IndiceMasaCorporal.MainPage"
+             BackgroundColor="White">
 
     <ScrollView>
         <VerticalStackLayout
@@ -48,7 +49,7 @@
                         x:Name="HeightPointer2"
                         IsInteractive="True"
                         Position="Cross"
-                        Value="{Binding IMC.Altura}">
+                        Value="{Binding IMC.Peso}">
                         <gauge:LinearContentPointer.Content>
                             <!--y cómo se va a ver-->
                             <Grid HeightRequest="25" WidthRequest="50">

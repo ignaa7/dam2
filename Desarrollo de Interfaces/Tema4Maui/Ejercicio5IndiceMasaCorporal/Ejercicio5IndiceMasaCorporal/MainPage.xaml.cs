@@ -1,4 +1,6 @@
-﻿namespace Ejercicio5IndiceMasaCorporal
+﻿using Ejercicio5IndiceMasaCorporal.ViewModels;
+
+namespace Ejercicio5IndiceMasaCorporal
 {
     public partial class MainPage : ContentPage
     {
@@ -7,6 +9,8 @@
         public MainPage()
         {
             InitializeComponent();
+
+            BindingContext = new IMCViewModel();
         }
     }
 }
