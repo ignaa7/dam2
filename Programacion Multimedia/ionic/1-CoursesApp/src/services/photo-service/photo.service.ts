@@ -10,11 +10,13 @@ export class PhotoService {
 
   constructor() { }
 
-  public async addNewToGallery() {
+  public async takePhoto(): Promise<string | undefined> {
     const capturedPhoto = await Camera.getPhoto({
       resultType: CameraResultType.Uri,
       source: CameraSource.Camera,
       quality: 100
     });
+
+    return capturedPhoto.webPath;
   }
 }

@@ -76,7 +76,7 @@ export class DetailsPagePage implements OnInit {
   }
 
   pickFromCamera(): void {
-    this.photoService.addNewToGallery();
+    this.course.imageUrl = this.photoService.takePhoto();
   }
 
   selectFromGallery(): void {
