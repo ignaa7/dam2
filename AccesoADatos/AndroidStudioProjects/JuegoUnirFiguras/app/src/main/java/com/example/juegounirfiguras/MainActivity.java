@@ -18,6 +18,6 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         super.onCreate(savedInstanceState);
-        setContentView(new MoverFiguras(this));
+        setContentView(new VistaSurfaceView(this));
     }
 }
