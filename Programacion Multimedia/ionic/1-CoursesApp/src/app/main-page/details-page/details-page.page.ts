@@ -18,7 +18,7 @@ export class DetailsPagePage implements OnInit {
     },
     {
       text: 'Galería',
-      handler: () => this.selectFromGallery(),
+      handler: () => this.pickFromGallery(),
     },
     {
       text: 'Cancelar',
@@ -75,11 +75,25 @@ export class DetailsPagePage implements OnInit {
       });
   }
 
-  pickFromCamera(): void {
-    this.course.imageUrl = this.photoService.takePhoto();
+  async pickFromCamera(): Promise<void> {
+    let imageUrl = await this.photoService.takePhoto();
+    
+    if (imageUrl) {
+      this.course.imageUrl = imageUrl;
+      this.addCourseImageUrl(this.course['id'], imageUrl);
+    }
   }
 
-  selectFromGallery(): void {
+  async pickFromGallery(): Promise<void> {
+    let imageUrl = await this.photoService.pickFromGallery();
     
+    if (imageUrl) {
+      this.course.imageUrl = imageUrl;
+      this.addCourseImageUrl(this.course['id'], imageUrl);
+    }
+  }
+
+  addCourseImageUrl(id: string, imageUrl: string): void {
+    this.coursesService.addCourseImageUrl(id, imageUrl);
   }
 }

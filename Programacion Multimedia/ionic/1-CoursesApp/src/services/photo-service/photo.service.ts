@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Camera, CameraResultType, CameraSource, Photo } from '@capacitor/camera';
-import { Filesystem, Directory } from '@capacitor/filesystem';
-import { Preferences } from '@capacitor/preferences';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +10,20 @@ export class PhotoService {
 
   public async takePhoto(): Promise<string | undefined> {
     const capturedPhoto = await Camera.getPhoto({
-      resultType: CameraResultType.Uri,
+      resultType: CameraResultType.DataUrl,
       source: CameraSource.Camera,
       quality: 100
     });
 
-    return capturedPhoto.webPath;
+    return capturedPhoto.dataUrl;
+  }
+
+  public async pickFromGallery(): Promise<string | undefined> {
+    const capturedPhoto = await Camera.getPhoto({
+      resultType: CameraResultType.DataUrl,
+      source: CameraSource.Photos
+    });
+
+    return capturedPhoto.dataUrl;
   }
 }

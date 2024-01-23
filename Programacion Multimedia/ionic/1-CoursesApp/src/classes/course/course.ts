@@ -4,10 +4,11 @@ export class Course {
     private _points: number;
     private _imageUrl: string | undefined;
 
-    constructor(id: string, title: string, points: number) {
+    constructor(id: string, title: string, points: number, imageUrl?: string) {
         this._id = id;
         this._title = title;
         this._points = points;
+        this._imageUrl = imageUrl;
     }
 
     public get id(): string {
