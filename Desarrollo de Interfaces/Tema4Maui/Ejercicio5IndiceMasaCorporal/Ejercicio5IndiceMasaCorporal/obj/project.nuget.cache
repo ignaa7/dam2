@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "8coohpxSrC82FhNitne1q1a4Z28eCi4/+GVlBSBNfexkTWoLxNvafzhN2+aV/1D9rT+r49ockyWsg6ChhnNQBg==",
+  "dgSpecHash": "WPb9fvdDkqdeVGnQr6f9hC9pCzirGlg7mSxBUSo81ENPmMwm3F51wCJ1Z+kvrob27djR08kLlzeC+JOxARbLYA==",
   "success": true,
   "projectFilePath": "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\Tema4Maui\\Ejercicio5IndiceMasaCorporal\\Ejercicio5IndiceMasaCorporal\\Ejercicio5IndiceMasaCorporal.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\dam\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",
     "C:\\Users\\dam\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",
     "C:\\Users\\dam\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.0\\microsoft.aspnetcore.authorization.7.0.0.nupkg.sha512",
     "C:\\Users\\dam\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.0\\microsoft.aspnetcore.components.7.0.0.nupkg.sha512",
@@ -32,6 +33,7 @@
     "C:\\Users\\dam\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\dam\\.nuget\\packages\\microsoft.windowsappsdk\\1.2.221209.1\\microsoft.windowsappsdk.1.2.221209.1.nupkg.sha512",
+    "C:\\Users\\dam\\.nuget\\packages\\propertychanged.fody\\4.1.0\\propertychanged.fody.4.1.0.nupkg.sha512",
     "C:\\Users\\dam\\.nuget\\packages\\syncfusion.blazor.core\\24.1.46\\syncfusion.blazor.core.24.1.46.nupkg.sha512",
     "C:\\Users\\dam\\.nuget\\packages\\syncfusion.blazor.lineargauge\\24.1.46\\syncfusion.blazor.lineargauge.24.1.46.nupkg.sha512",
     "C:\\Users\\dam\\.nuget\\packages\\syncfusion.licensing\\24.1.46\\syncfusion.licensing.24.1.46.nupkg.sha512",

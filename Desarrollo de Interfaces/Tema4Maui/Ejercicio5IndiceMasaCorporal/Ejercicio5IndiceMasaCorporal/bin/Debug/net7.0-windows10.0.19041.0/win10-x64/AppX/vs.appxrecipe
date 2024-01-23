@@ -30,29 +30,29 @@
     <AppXManifest Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\Ejercicio5IndiceMasaCorporal\Ejercicio5IndiceMasaCorporal\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-01-22T10:08:37.352</Modified>
+      <Modified>2024-01-23T12:05:04.567</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\Ejercicio5IndiceMasaCorporal\Ejercicio5IndiceMasaCorporal\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-01-22T10:08:37.102</Modified>
+      <Modified>2024-01-23T12:05:04.239</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\Ejercicio5IndiceMasaCorporal\Ejercicio5IndiceMasaCorporal\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Ejercicio5IndiceMasaCorporal.runtimeconfig.json">
       <PackagePath>Ejercicio5IndiceMasaCorporal.runtimeconfig.json</PackagePath>
-      <Modified>2024-01-19T10:10:02.680</Modified>
+      <Modified>2024-01-23T11:55:24.587</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\Ejercicio5IndiceMasaCorporal\Ejercicio5IndiceMasaCorporal\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Ejercicio5IndiceMasaCorporal.dll">
       <PackagePath>Ejercicio5IndiceMasaCorporal.dll</PackagePath>
-      <Modified>2024-01-22T10:08:36.241</Modified>
+      <Modified>2024-01-23T12:05:03.067</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\Ejercicio5IndiceMasaCorporal\Ejercicio5IndiceMasaCorporal\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Ejercicio5IndiceMasaCorporal.exe</PackagePath>
-      <Modified>2024-01-22T10:08:36.253</Modified>
+      <Modified>2024-01-23T12:05:03.114</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\Ejercicio5IndiceMasaCorporal\Ejercicio5IndiceMasaCorporal\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Ejercicio5IndiceMasaCorporal.deps.json">
       <PackagePath>Ejercicio5IndiceMasaCorporal.deps.json</PackagePath>
-      <Modified>2024-01-22T10:05:35.649</Modified>
+      <Modified>2024-01-23T11:55:24.462</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.11\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -961,6 +961,10 @@
     <AppxPackagedFile Include="C:\Users\dam\.nuget\packages\microsoft.windowsappsdk\1.2.221209.1\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
       <Modified>2022-11-08T19:31:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dam\.nuget\packages\propertychanged.fody\4.1.0\lib\netstandard2.1\PropertyChanged.dll">
+      <PackagePath>PropertyChanged.dll</PackagePath>
+      <Modified>2022-11-06T16:42:22.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\.nuget\packages\syncfusion.blazor.core\24.1.46\lib\net7.0\Syncfusion.Blazor.Core.dll">
       <PackagePath>Syncfusion.Blazor.Core.dll</PackagePath>

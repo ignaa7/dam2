@@ -14,6 +14,8 @@ namespace Ejercicio5IndiceMasaCorporal.ViewModels
         public IMCViewModel()
         {
             IMC = new IMC();
+            IMC.Altura = 25;
+            IMC.Peso = 50;
         }
     }
 }

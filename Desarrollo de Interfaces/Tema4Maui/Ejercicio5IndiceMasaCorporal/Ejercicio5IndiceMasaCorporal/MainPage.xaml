@@ -7,14 +7,14 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Spacing="25"
+            Spacing="50"
             Padding="30,0"
             VerticalOptions="Center">
 
             <gauge:SfLinearGauge
                 Margin= "0,15,0,0"
-                Interval= "50"
-                Maximum= "250"
+                Interval= "25"
+                Maximum= "225"
                 Minimum= "25">
                 <gauge:SfLinearGauge.MarkerPointers> <!--Definimos el puntero que vamos a utilizar-->
                     <gauge:LinearContentPointer
@@ -40,13 +40,13 @@
 
             <gauge:SfLinearGauge
                 Margin= "0,15,0,0"
-                Interval= "50"
-                Maximum= "250"
-                Minimum= "25">
+                Interval= "5"
+                Maximum= "140"
+                Minimum= "50">
                 <gauge:SfLinearGauge.MarkerPointers>
                     <!--Definimos el puntero que vamos a utilizar-->
                     <gauge:LinearContentPointer
-                        x:Name="HeightPointer2"
+                        x:Name="WeightPointer"
                         IsInteractive="True"
                         Position="Cross"
                         Value="{Binding IMC.Peso}">
@@ -56,7 +56,7 @@
                                 <RoundRectangle CornerRadius="5" Fill="#ff0074E3" />
                                 <Label
                         HorizontalOptions="Center"
-                        Text="{Binding Source={x:Reference HeightPointer}, Path=Value,
+                        Text="{Binding Source={x:Reference WeightPointer}, Path=Value,
                         StringFormat='{0:0}'}" 
                         TextColor="White"
                         VerticalOptions="Center">
@@ -90,6 +90,48 @@
                                 EndWidth="0.65"
                                 Fill="#616FD9"
                                 StartValue="16"
+                                StartWidth="0.65"
+                                WidthUnit="Factor" />
+                            <gauge:RadialRange
+                                EndValue="18.5"
+                                EndWidth="0.65"
+                                Fill="ForestGreen"
+                                StartValue="17"
+                                StartWidth="0.65"
+                                WidthUnit="Factor" />
+                            <gauge:RadialRange
+                                EndValue="25"
+                                EndWidth="0.65"
+                                Fill="YellowGreen"
+                                StartValue="18.5"
+                                StartWidth="0.65"
+                                WidthUnit="Factor" />
+                            <gauge:RadialRange
+                                EndValue="30"
+                                EndWidth="0.65"
+                                Fill="DarkOrange"
+                                StartValue="25"
+                                StartWidth="0.65"
+                                WidthUnit="Factor" />
+                            <gauge:RadialRange
+                                EndValue="35"
+                                EndWidth="0.65"
+                                Fill="Salmon"
+                                StartValue="30"
+                                StartWidth="0.65"
+                                WidthUnit="Factor" />
+                            <gauge:RadialRange
+                                EndValue="40"
+                                EndWidth="0.65"
+                                Fill="Crimson"
+                                StartValue="35"
+                                StartWidth="0.65"
+                                WidthUnit="Factor" />
+                            <gauge:RadialRange
+                                EndValue="50"
+                                EndWidth="0.65"
+                                Fill="DarkRed"
+                                StartValue="40"
                                 StartWidth="0.65"
                                 WidthUnit="Factor" />
                         </gauge:RadialAxis.Ranges>

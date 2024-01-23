@@ -684,3 +684,5 @@ C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\Ejercicio5IndiceMas
 C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\Ejercicio5IndiceMasaCorporal\Ejercicio5IndiceMasaCorporal\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\Ejercicio5IndiceMasaCorporal\Ejercicio5IndiceMasaCorporal\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\Ejercicio5IndiceMasaCorporal\Ejercicio5IndiceMasaCorporal\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\Ejercicio5IndiceMasaCorporal\Ejercicio5IndiceMasaCorporal\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Ejercicio5IndiceMasaCorporal.csproj.Fody.CopyLocal.cache
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\Ejercicio5IndiceMasaCorporal\Ejercicio5IndiceMasaCorporal\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Ejercicio5IndiceMasaCorporal.csproj.Fody.RuntimeCopyLocal.cache
