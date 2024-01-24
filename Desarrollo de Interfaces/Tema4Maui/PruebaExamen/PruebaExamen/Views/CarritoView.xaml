@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PruebaExamen.Views.CarritoView"
+             Title="CarritoView"
+             BackgroundColor="White">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="Black" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="LightGrey" />
+            <Setter Property="TextColor" Value="Black" />
+        </Style>
+    </ContentPage.Resources>
+    
+    <ScrollView>
+        <VerticalStackLayout Spacing="50" HorizontalOptions="Center">
+            <VerticalStackLayout>
+                <Image Source="nike.png" WidthRequest="100" />
+                <Label Text="{Binding Carrito.PrecioTotal, StringFormat='{}{0:C}'}" HorizontalOptions="Center" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Zapatillas hombre" HorizontalOptions="Start" />
+                    <Label Text="89.95 €" HorizontalOptions="End" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Zapatillas mujer" HorizontalOptions="Start" />
+                    <Label Text="95.95 €" HorizontalOptions="End" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Subtotal" HorizontalOptions="Start" />
+                    <Label Text="185.90 €" HorizontalOptions="End" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout VerticalOptions="Center">
+                    <Label Text="Descuento" HorizontalOptions="Start" />
+                    <Button Text="-" Command="{Binding BtnMenosPulsado}" />
+                    <Button Text="+" Command="{Binding BtnMasPulsado}" />
+                    <Label Text="{Binding Carrito.PorcentajeDescuento, StringFormat='{0}%'}" />
+                    <Label Text="{Binding Carrito.PrecioDescuento, StringFormat='{}{0:C}'}" HorizontalOptions="End" />
+                </HorizontalStackLayout>
+                <Label Text="Nike Store" HorizontalOptions="Center" />
+            </VerticalStackLayout>
+
+            <HorizontalStackLayout>
+                <Button Text="Pagar Luego" Command="{Binding BtnPagarLuegoPulsado}" />
+                <Button Text="Pagar Ahora" Command="{Binding BtnPagarAhoraPulsado}" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

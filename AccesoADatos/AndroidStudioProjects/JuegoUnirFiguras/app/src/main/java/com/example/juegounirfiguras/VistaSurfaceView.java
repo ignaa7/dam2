@@ -10,33 +10,36 @@ import android.view.SurfaceView;
 
 import androidx.annotation.NonNull;
 
-import com.example.juegounirfiguras.clases.Circulo;
-import com.example.juegounirfiguras.clases.Figura;
-import com.example.juegounirfiguras.clases.Rectangulo;
+import com.example.juegounirfiguras.clases.Circle;
+import com.example.juegounirfiguras.clases.Shape;
+import com.example.juegounirfiguras.clases.Rectangle;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class VistaSurfaceView extends SurfaceView implements SurfaceHolder.Callback {
     private GameThread gameThread;
-    private Rectangulo rectangulo;
-    private Circulo circulo;
     private Paint paint;
-    private List<Figura> figuras = new ArrayList<>();
+    private List<Shape> shapes = new ArrayList<>();
 
     //canvas.drawText
 
 
     public VistaSurfaceView(Context context) {
         super(context);
-        rectangulo = new Rectangulo(200, 400, 700, 500);
-        figuras.add(rectangulo);
-
-        circulo = new Circulo(100, 100, 100);
-        figuras.add(circulo);
 
         paint = new Paint();
         setBackgroundColor(Color.BLACK);
+    }
+
+    private void generateRandomShape() {
+        int randomShapeNumber = (int) (Math.random() * 2);
+
+        if (randomShapeNumber == 0) {
+            shapes.add(new Circle(100, 100, 100));
+        } else {
+            shapes.add(new Rectangle(200, 400, 100, 100));
+        }
     }
 
     @Override
@@ -44,8 +47,8 @@ public class VistaSurfaceView extends SurfaceView implements SurfaceHolder.Callb
         super.onDraw(canvas);
         canvas.drawColor(Color.WHITE);
 
-        for (Figura figura : figuras) {
-            figura.onDraw(canvas, paint);
+        for (Shape shape : shapes) {
+            shape.onDraw(canvas, paint);
         }
 
         invalidate();
@@ -55,26 +58,26 @@ public class VistaSurfaceView extends SurfaceView implements SurfaceHolder.Callb
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                for (Figura figura : figuras) {
-                    if (figura.isHovered(event.getX(), event.getY())) {
-                        figura.setxInicial(event.getX());
-                        figura.setyInicial(event.getY());
+                for (Shape shape : shapes) {
+                    if (shape.isHovered(event.getX(), event.getY())) {
+                        shape.setxInicial(event.getX());
+                        shape.setyInicial(event.getY());
                     }
                 }
 
                 break;
             case MotionEvent.ACTION_MOVE:
-                for (Figura figura : figuras) {
-                    figura.mover(event.getX(), event.getY());
+                for (Shape shape : shapes) {
+                    shape.mover(event.getX(), event.getY());
                 }
 
                 break;
             case MotionEvent.ACTION_CANCEL:
                 break;
             case MotionEvent.ACTION_UP:
-                for (Figura figura : figuras) {
-                    figura.setxInicial(null);
-                    figura.setyInicial(null);
+                for (Shape shape : shapes) {
+                    shape.setxInicial(null);
+                    shape.setyInicial(null);
                 }
 
                 break;

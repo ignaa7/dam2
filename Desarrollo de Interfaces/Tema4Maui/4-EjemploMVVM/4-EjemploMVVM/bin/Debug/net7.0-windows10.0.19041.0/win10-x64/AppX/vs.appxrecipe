@@ -30,7 +30,7 @@
     <AppXManifest Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema4Maui\4-EjemploMVVM\4-EjemploMVVM\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-01-23T08:13:56.574</Modified>
+      <Modified>2024-01-24T10:14:35.480</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
