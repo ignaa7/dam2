@@ -1,0 +1,3 @@
+-NodeJS: Core + terceros / SO
+-Express: API Web / Router / Middleware
+-Mongoose (ORM): Driver / BD / Middleware
