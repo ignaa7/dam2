@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DataBindingDemo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+adc739e52bb33614474b9da024ad733e20108c08")]
 [assembly: System.Reflection.AssemblyProductAttribute("DataBindingDemo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DataBindingDemo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

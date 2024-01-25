@@ -541,7 +541,6 @@ C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\MauiA
 C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\MauiApp1\MauiApp1\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\hostfxr.dll
 C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\MauiApp1\MauiApp1\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\hostpolicy.dll
 C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\MauiApp1\MauiApp1\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordaccore.dll
-C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\MauiApp1\MauiApp1\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordaccore_amd64_amd64_7.0.1323.51816.dll
 C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\MauiApp1\MauiApp1\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordbi.dll
 C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\MauiApp1\MauiApp1\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscorrc.dll
 C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\MauiApp1\MauiApp1\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\msquic.dll
@@ -646,3 +645,5 @@ C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\MauiA
 C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\MauiApp1\MauiApp1\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\MauiApp1\MauiApp1\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\MauiApp1\MauiApp1\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\MauiApp1\MauiApp1\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordaccore_amd64_amd64_7.0.1523.57226.dll
+C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\MauiApp1\MauiApp1\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\MauiApp1.sourcelink.json

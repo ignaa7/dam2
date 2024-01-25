@@ -1,0 +1,54 @@
+is_global = true
+build_property.PropertyChangedAnalyzerConfiguration = 
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PruebaFinalExamen
+build_property.ProjectDir = C:\Users\ignac\OneDrive\Escritorio\dam2\Desarrollo de Interfaces\Tema4Maui\PruebaFinalExamen\PruebaFinalExamen\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[C:/Users/ignac/OneDrive/Escritorio/dam2/Desarrollo de Interfaces/Tema4Maui/PruebaFinalExamen/PruebaFinalExamen/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PruebaFinalExamen.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/ignac/OneDrive/Escritorio/dam2/Desarrollo de Interfaces/Tema4Maui/PruebaFinalExamen/PruebaFinalExamen/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PruebaFinalExamen.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/ignac/OneDrive/Escritorio/dam2/Desarrollo de Interfaces/Tema4Maui/PruebaFinalExamen/PruebaFinalExamen/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PruebaFinalExamen.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/ignac/OneDrive/Escritorio/dam2/Desarrollo de Interfaces/Tema4Maui/PruebaFinalExamen/PruebaFinalExamen/MVVM/Views/PruebaView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PruebaFinalExamen.MVVM.Views.PruebaView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\PruebaView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\PruebaView.xaml
+
+[C:/Users/ignac/OneDrive/Escritorio/dam2/Desarrollo de Interfaces/Tema4Maui/PruebaFinalExamen/PruebaFinalExamen/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PruebaFinalExamen.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/ignac/OneDrive/Escritorio/dam2/Desarrollo de Interfaces/Tema4Maui/PruebaFinalExamen/PruebaFinalExamen/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PruebaFinalExamen.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
