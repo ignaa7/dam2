@@ -6,5 +6,5 @@ class Task(models.Model):
 
     name = fields.Char(string="Task name", required=True)
     description = fields.Text(string="Description", required=True)
-    creation_date = fields.Text(string="Creation date", required=True)
-    end_date = fields.Text(string="End date", required=True)
+    creation_date = fields.Datetime(string="Creation date", required=True)
+    end_date = fields.Datetime(string="End date", required=True)
