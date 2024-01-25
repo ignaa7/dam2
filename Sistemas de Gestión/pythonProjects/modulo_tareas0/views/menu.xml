@@ -1,0 +1,8 @@
+<!-- File: views/menu.xml -->
+<odoo>
+    <data>
+        <menuitem id="menu_tarea" name="Tareas" sequence="20"/>
+        <menuitem id="menu_tarea_list_form" parent="menu_tarea" name="Lista de Tareas Vista Formulario" action="action_tarea_list_form"/>
+        <menuitem id="menu_tarea_list_tree" parent="menu_tarea" name="Lista de Tareas Vista Árbol" action="action_tarea_list_tree"/>
+    </data>
+</odoo>

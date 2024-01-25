@@ -1,12 +1,8 @@
 {
-    'name': "Módulo tareas",
+    'name': 'Módulo tareas',
     'version': '1.0',
+    'author': 'Ignacio',
     'depends': ['base'],
-    'author': "Ignacio",
-    'category': 'Tareas',
-    'description': """
-    Módulo de gestión de tareas
-    """,
     'data': [
         'views/tarea_vista_arbol.xml',
         'views/tarea_vista_formulario.xml',
