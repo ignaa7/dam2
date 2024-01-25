@@ -1,4 +1,6 @@
-﻿namespace Ejercicio7Calculadora
+﻿using Ejercicio7Calculadora.Views;
+
+namespace Ejercicio7Calculadora
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new CalculadoraView();
         }
     }
 }

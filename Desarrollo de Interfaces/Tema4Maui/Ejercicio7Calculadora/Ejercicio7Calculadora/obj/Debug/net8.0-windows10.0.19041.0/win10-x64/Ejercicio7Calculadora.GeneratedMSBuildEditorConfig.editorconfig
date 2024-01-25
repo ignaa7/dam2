@@ -1,4 +1,5 @@
 is_global = true
+build_property.PropertyChangedAnalyzerConfiguration = 
 build_property.TargetFramework = net8.0-windows10.0.19041.0
 build_property.TargetPlatformMinVersion = 10.0.17763.0
 build_property.UsingMicrosoftNETSdkWeb = 
@@ -41,3 +42,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Ejercicio7Calculadora.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/ignac/OneDrive/Escritorio/dam2/Desarrollo de Interfaces/Tema4Maui/Ejercicio7Calculadora/Ejercicio7Calculadora/Views/CalculadoraView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Ejercicio7Calculadora.Views.CalculadoraView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CalculadoraView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CalculadoraView.xaml
