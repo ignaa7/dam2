@@ -7,8 +7,8 @@ import android.graphics.Paint;
 public class Circle extends Shape {
     private float radio;
 
-    public Circle(float x, float y, float radio) {
-        super(x, y);
+    public Circle(float x, float y, float radio, boolean filled) {
+        super(x, y, filled);
         this.radio = radio;
     }
 
@@ -30,6 +30,13 @@ public class Circle extends Shape {
     @Override
     public void onDraw(Canvas canvas, Paint paint) {
         paint.setColor(Color.BLUE);
+        if (filled) {
+            paint.setStyle(Paint.Style.FILL);
+        } else {
+            paint.setStyle(Paint.Style.STROKE);
+            paint.setStrokeWidth(10);
+        }
+
         canvas.drawCircle(x, y, radio, paint);
     }
 }

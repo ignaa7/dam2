@@ -8,8 +8,8 @@ public class Rectangle extends Shape {
     private double width;
     private double height;
 
-    public Rectangle(float x, float y, double width, double height) {
-        super(x, y);
+    public Rectangle(float x, float y, double width, double height, boolean filled) {
+        super(x, y, filled);
         this.width = width;
         this.height = height;
     }
@@ -38,6 +38,13 @@ public class Rectangle extends Shape {
     @Override
     public void onDraw(Canvas canvas, Paint paint) {
         paint.setColor(Color.RED);
+        if (filled) {
+            paint.setStyle(Paint.Style.FILL);
+        } else {
+            paint.setStyle(Paint.Style.STROKE);
+            paint.setStrokeWidth(10);
+        }
+
         canvas.drawRect(getX(), getY(), getX()+(float)getWidth(), getY()+(float)getHeight(), paint);
     }
 }

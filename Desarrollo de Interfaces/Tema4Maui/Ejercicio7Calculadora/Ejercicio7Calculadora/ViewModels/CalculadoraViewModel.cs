@@ -26,23 +26,30 @@ namespace Ejercicio7Calculadora.ViewModels
                 }
                 else if (text.Equals("x"))
                 {
-                    if (!Calculadora.Resultado.Equals("0"))
+                    if (!Calculadora.Resultado.Equals("0") && Calculadora.Resultado.Length > 0)
                     {
                         Calculadora.Resultado = Calculadora.Resultado.Substring(0, Calculadora.Resultado.Length - 1);
                     }
                 }
-                else if (Calculadora.Resultado.Equals("="))
+                else if (text.Equals("="))
                 {
                     var resultado = Calculator.Calculate(Calculadora.Resultado);
 
-                    if (resultado != null)
+                    if (resultado.IsValid)
                     {
-                        Calculadora.Resultado = $"{resultado}";
+                        Calculadora.Resultado = $"{resultado.Result}";
                     }
                 }
                 else
                 {
-                    Calculadora.Resultado += text;
+                    if (Calculadora.Resultado.Equals("0"))
+                    {
+                        Calculadora.Resultado = text + "";
+                    }
+                    else
+                    {
+                        Calculadora.Resultado += text;
+                    }
                 }
             });
         }

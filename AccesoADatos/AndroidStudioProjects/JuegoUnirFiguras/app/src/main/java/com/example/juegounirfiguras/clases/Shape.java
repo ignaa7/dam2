@@ -8,10 +8,12 @@ public abstract class Shape {
     protected float y;
     protected Float xInicial;
     protected Float yInicial;
+    protected boolean filled;
 
-    public Shape(float x, float y) {
+    public Shape(float x, float y, boolean filled) {
         this.x = x;
         this.y = y;
+        this.filled = filled;
     }
 
     public float getX() {

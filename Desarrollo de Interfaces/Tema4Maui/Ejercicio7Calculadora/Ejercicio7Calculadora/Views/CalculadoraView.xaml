@@ -10,6 +10,9 @@
         <Style TargetType="Button" x:Key="BotonNaranja">
             <Setter Property="TextColor" Value="Orange" />
         </Style>
+        <Style TargetType="Button">
+            <Setter Property="TextColor" Value="{AppThemeBinding Light=Black, Dark=White}" />
+        </Style>
     </ContentPage.Resources>
     
     <VerticalStackLayout>
@@ -30,25 +33,25 @@
             </Grid.ColumnDefinitions>
 
             <Label Text="{Binding Calculadora.Resultado}" HorizontalOptions="End" VerticalOptions="Center" FontSize="Large" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" />
-            <Button Text="AC" Style="{StaticResource BotonNaranja}" Command="{Binding BotonPulsado}" CommandParameter="{Binding Text}" FontSize="Small" Grid.Row="1" Grid.Column="0" />
-            <Button Text="x" Style="{StaticResource BotonNaranja}" Command="{Binding BotonPulsado}" CommandParameter="{Binding Text}" FontSize="Small" Grid.Row="1" Grid.Column="1" />
-            <Button Text="%" Style="{StaticResource BotonNaranja}" Command="{Binding BotonPulsado}" CommandParameter="{Binding Text}" FontSize="Small" Grid.Row="1" Grid.Column="2" />
-            <Button Text="/" Style="{StaticResource BotonRojo}" Command="{Binding BotonPulsado}" CommandParameter="{Binding Text}" FontSize="Small" Grid.Row="1" Grid.Column="3" />
-            <Button Text="7" Command="{Binding BotonPulsado}" CommandParameter="{Binding Text}" FontSize="Small" Grid.Row="2" Grid.Column="0" />
-            <Button Text="8" Command="{Binding BotonPulsado}" CommandParameter="{Binding Text}" FontSize="Small" Grid.Row="2" Grid.Column="1" />
-            <Button Text="9" Command="{Binding BotonPulsado}" CommandParameter="{Binding Text}" FontSize="Small" Grid.Row="2" Grid.Column="2" />
-            <Button Text="*" Style="{StaticResource BotonRojo}" Command="{Binding BotonPulsado}" CommandParameter="{Binding Text}" FontSize="Small" Grid.Row="2" Grid.Column="3" />
-            <Button Text="4" Command="{Binding BotonPulsado}" CommandParameter="{Binding Text}" FontSize="Small" Grid.Row="3" Grid.Column="0" />
-            <Button Text="5" Command="{Binding BotonPulsado}" CommandParameter="{Binding Text}" FontSize="Small" Grid.Row="3" Grid.Column="1" />
-            <Button Text="6" Command="{Binding BotonPulsado}" CommandParameter="{Binding Text}" FontSize="Small" Grid.Row="3" Grid.Column="2" />
-            <Button Text="-" Style="{StaticResource BotonRojo}" Command="{Binding BotonPulsado}" CommandParameter="{Binding Text}" FontSize="Small" Grid.Row="3" Grid.Column="3" />
-            <Button Text="1" Command="{Binding BotonPulsado}" CommandParameter="{Binding Text}" FontSize="Small" Grid.Row="4" Grid.Column="0" />
-            <Button Text="2" Command="{Binding BotonPulsado}" CommandParameter="{Binding Text}" FontSize="Small" Grid.Row="4" Grid.Column="1" />
-            <Button Text="3" Command="{Binding BotonPulsado}" CommandParameter="{Binding Text}" FontSize="Small" Grid.Row="4" Grid.Column="2" />
-            <Button Text="+" Style="{StaticResource BotonRojo}" Command="{Binding BotonPulsado}" CommandParameter="{Binding Text}" FontSize="Small" Grid.Row="4" Grid.Column="3" />
-            <Button Text="0" Command="{Binding BotonPulsado}" CommandParameter="{Binding Text}" FontSize="Small" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" />
-            <Button Text="." Command="{Binding BotonPulsado}" CommandParameter="{Binding Text}" FontSize="Small" Grid.Row="5" Grid.Column="2" />
-            <Button Text="=" Style="{StaticResource BotonRojo}" Command="{Binding BotonPulsado}" CommandParameter="{Binding Text}" FontSize="Small" Grid.Row="5" Grid.Column="3" />
+            <Button Text="AC" Style="{StaticResource BotonNaranja}" Command="{Binding BotonPulsado}" CommandParameter="AC" FontSize="Small" Grid.Row="1" Grid.Column="0" />
+            <Button Text="x" Style="{StaticResource BotonNaranja}" Command="{Binding BotonPulsado}" CommandParameter="x" FontSize="Small" Grid.Row="1" Grid.Column="1" />
+            <Button Text="%" Style="{StaticResource BotonNaranja}" Command="{Binding BotonPulsado}" CommandParameter="%" FontSize="Small" Grid.Row="1" Grid.Column="2" />
+            <Button Text="/" Style="{StaticResource BotonRojo}" Command="{Binding BotonPulsado}" CommandParameter="/" FontSize="Small" Grid.Row="1" Grid.Column="3" />
+            <Button Text="7" Command="{Binding BotonPulsado}" CommandParameter="7" FontSize="Small" Grid.Row="2" Grid.Column="0" />
+            <Button Text="8" Command="{Binding BotonPulsado}" CommandParameter="8" FontSize="Small" Grid.Row="2" Grid.Column="1" />
+            <Button Text="9" Command="{Binding BotonPulsado}" CommandParameter="9" FontSize="Small" Grid.Row="2" Grid.Column="2" />
+            <Button Text="*" Style="{StaticResource BotonRojo}" Command="{Binding BotonPulsado}" CommandParameter="*" FontSize="Small" Grid.Row="2" Grid.Column="3" />
+            <Button Text="4" Command="{Binding BotonPulsado}" CommandParameter="4" FontSize="Small" Grid.Row="3" Grid.Column="0" />
+            <Button Text="5" Command="{Binding BotonPulsado}" CommandParameter="5" FontSize="Small" Grid.Row="3" Grid.Column="1" />
+            <Button Text="6" Command="{Binding BotonPulsado}" CommandParameter="6" FontSize="Small" Grid.Row="3" Grid.Column="2" />
+            <Button Text="-" Style="{StaticResource BotonRojo}" Command="{Binding BotonPulsado}" CommandParameter="-" FontSize="Small" Grid.Row="3" Grid.Column="3" />
+            <Button Text="1" Command="{Binding BotonPulsado}" CommandParameter="1" FontSize="Small" Grid.Row="4" Grid.Column="0" />
+            <Button Text="2" Command="{Binding BotonPulsado}" CommandParameter="2" FontSize="Small" Grid.Row="4" Grid.Column="1" />
+            <Button Text="3" Command="{Binding BotonPulsado}" CommandParameter="3" FontSize="Small" Grid.Row="4" Grid.Column="2" />
+            <Button Text="+" Style="{StaticResource BotonRojo}" Command="{Binding BotonPulsado}" CommandParameter="+" FontSize="Small" Grid.Row="4" Grid.Column="3" />
+            <Button Text="0" Command="{Binding BotonPulsado}" CommandParameter="0" FontSize="Small" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" />
+            <Button Text="." Command="{Binding BotonPulsado}" CommandParameter="." FontSize="Small" Grid.Row="5" Grid.Column="2" />
+            <Button Text="=" Style="{StaticResource BotonRojo}" Command="{Binding BotonPulsado}" CommandParameter="=" FontSize="Small" Grid.Row="5" Grid.Column="3" />
         </Grid>
     </VerticalStackLayout>
 </ContentPage>

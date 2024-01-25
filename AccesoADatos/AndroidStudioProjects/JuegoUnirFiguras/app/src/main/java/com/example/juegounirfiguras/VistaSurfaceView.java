@@ -1,9 +1,11 @@
 package com.example.juegounirfiguras;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -21,24 +23,38 @@ public class VistaSurfaceView extends SurfaceView implements SurfaceHolder.Callb
     private GameThread gameThread;
     private Paint paint;
     private List<Shape> shapes = new ArrayList<>();
-
+    private int screenHeight;
+    private int screenWidth;
     //canvas.drawText
 
 
     public VistaSurfaceView(Context context) {
         super(context);
 
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        ((Activity) getContext()).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        screenHeight = displayMetrics.heightPixels;
+        screenWidth = displayMetrics.widthPixels;
+
         paint = new Paint();
         setBackgroundColor(Color.BLACK);
+
+        generateRandomShape();
     }
 
     private void generateRandomShape() {
         int randomShapeNumber = (int) (Math.random() * 2);
 
         if (randomShapeNumber == 0) {
-            shapes.add(new Circle(100, 100, 100));
+            shapes.add(new Circle((float) (Math.random() * screenWidth), (float) (Math.random() * screenHeight), 100, true));
         } else {
-            shapes.add(new Rectangle(200, 400, 100, 100));
+            shapes.add(new Rectangle((float) (Math.random() * screenWidth), (float) (Math.random() * screenHeight), 100, 100, true));
+        }
+
+        if (randomShapeNumber == 0) {
+            shapes.add(new Circle((float) (Math.random() * screenWidth), (float) (Math.random() * screenHeight), 100, false));
+        } else {
+            shapes.add(new Rectangle((float) (Math.random() * screenWidth), (float) (Math.random() * screenHeight), 100, 100, false));
         }
     }
 
