@@ -17,8 +17,8 @@
     <ScrollView>
         <VerticalStackLayout Spacing="50" HorizontalOptions="Center">
             <VerticalStackLayout>
-                <Image Source="nike.png" WidthRequest="100" />
-                <Label Text="{Binding Carrito.PrecioTotal, StringFormat='{}{0:C}'}" HorizontalOptions="Center" />
+                <Image Source="nike.png" WidthRequest="100" ZIndex="0" />
+                <Label Text="{Binding Carrito.PrecioTotal, StringFormat='{}{0:C}'}" HorizontalOptions="Center" ZIndex="1" />
             </VerticalStackLayout>
 
             <VerticalStackLayout>
