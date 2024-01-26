@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Style TargetType="Grid" x:Key="gridPrincipal">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=Orange, Dark=Green}" />
+    </Style>
+    <Style TargetType="Button" x:Key="btnAyuda">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=LightSlateGray, Dark=DarkBlue}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light=Black, Dark=White}" />
+    </Style>
+    <Style TargetType="Button" x:Key="btnCalificar">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=Black, Dark=LightBlue}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light=White, Dark=DarkBlue}" />
+        <Setter Property="WidthRequest" Value="200" />
+    </Style>
+    <Style TargetType="Label" x:Key="negrita">
+        <Setter Property="FontAttributes" Value="Bold" />
+    </Style>
+    <Style TargetType="Label" x:Key="gris">
+        <Setter Property="TextColor" Value="LightSlateGray" />
+    </Style>
+    <Style TargetType="ImageButton">
+        <Setter Property="WidthRequest" Value="50" />
+    </Style>
+    <Style TargetType="Image" x:Key="iconImage">
+        <Setter Property="WidthRequest" Value="50" />
+        <Setter Property="BackgroundColor" Value="Orange" />
+    </Style>
+    <Style TargetType="Slider">
+        <Setter Property="WidthRequest" Value="1000" />
+    </Style>
+
+</ResourceDictionary>

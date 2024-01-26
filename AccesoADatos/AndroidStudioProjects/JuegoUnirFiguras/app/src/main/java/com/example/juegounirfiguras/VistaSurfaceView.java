@@ -2,6 +2,8 @@ package com.example.juegounirfiguras;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -106,6 +108,20 @@ public class VistaSurfaceView extends SurfaceView implements SurfaceHolder.Callb
     public void surfaceCreated(@NonNull SurfaceHolder surfaceHolder) {
         gameThread = new GameThread(getHolder(), this);
         gameThread.setRunning(true);
+
+        // añadir sprite
+        /*Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.imagen);
+        Bitmap img = bmp.createScaledBitmap(bmp, getWidth() * 0.2, getHeight() * 0.2, true);
+
+        Canvas.drawBitmap(img, posX, posY, null);
+
+        sonidos:
+        setVolumeControlStream(AudioManager.STREAM_MUSIC);
+        soundPool = new SoundPool(20, AudioManager.STREAM_MUSIC, 0);
+
+        onTouch(){
+            soundPool.play(explosionId, 1, 1, 0, 0, 1);
+        }*/
     }
 
     @Override
