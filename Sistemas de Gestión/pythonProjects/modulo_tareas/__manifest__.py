@@ -8,8 +8,8 @@
     'data': [
         'views/tarea_vista_arbol.xml',
         'views/tarea_vista_formulario.xml',
-        'views/menu.xml',
         'views/actions.xml',
+        'views/menu.xml',
     ],
     'installable': True,
     'auto_install': False,
