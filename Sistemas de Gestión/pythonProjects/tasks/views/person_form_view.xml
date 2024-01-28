@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+      <record id="person_form_view" model="ir.ui.view">
+        <field name="name">person.form</field>
+        <field name="model">tasks.person</field>
+        <field name="arch" type="xml">
+          <form>
+            <header>
+              <button name="delete_person" type="object" string="Delete" class="oe_highlight" />
+            </header>
+            <group>
+              <field name="name" />
+              <field name="age" />
+              <field name="tasks_ids" widget="many2many_tags" />
+            </group>
+          </form>
+        </field>
+      </record>
+    </data>
+  </odoo>

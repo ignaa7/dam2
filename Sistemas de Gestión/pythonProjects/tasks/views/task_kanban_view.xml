@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <record id="task_kanban_view" model="ir.ui.view">
+            <field name="name">task.kanban</field>
+            <field name="model">tasks.task</field>
+            <field name="arch" type="xml">
+              <kanban>
+                <templates>
+                  <t t-name="kanban-box">
+                    <div t-attf-class="oe_kanban_global_click">
+                      <div>Name: <field name="name"/></div>
+                      <div>Creation date: <field name="creation_date"/></div>
+                      <div>End date: <field name="end_date"/></div>
+                      <div>Assigned people count: <field name="assigned_people_count"/></div>
+                      <div>State: <field name="state"/></div>
+                    </div>
+                  </t>
+                </templates>
+              </kanban>
+            </field>
+          </record>
+    </data>
+</odoo>

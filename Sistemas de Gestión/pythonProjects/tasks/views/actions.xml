@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+      <record model="ir.actions.act_window" id="tasks_list_tree_action">
+        <field name="name">Tasks list tree view</field>
+        <field name="res_model">tasks.task</field>
+        <field name="view_mode">tree,form,kanban</field>
+      </record>
+      <record model="ir.actions.act_window" id="tasks_list_form_action">
+        <field name="name">Tasks list form view</field>
+        <field name="res_model">tasks.task</field>
+        <field name="view_mode">form</field>
+      </record>
+
+      <record model="ir.actions.act_window" id="people_list_tree_action">
+        <field name="name">People list tree view</field>
+        <field name="res_model">tasks.person</field>
+        <field name="view_mode">tree,form</field>
+      </record>
+      <record model="ir.actions.act_window" id="people_list_form_action">
+        <field name="name">People list form view</field>
+        <field name="res_model">tasks.person</field>
+        <field name="view_mode">form</field>
+      </record>
+    </data>
+  </odoo>

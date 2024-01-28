@@ -1,0 +1,11 @@
+<odoo>
+    <data>
+      <menuitem id="tasks_menu" name="Tasks" sequence="20"/>
+
+      <menuitem id="tasks_list_tree" parent="tasks_menu" name="Tasks list tree view" action="tasks_list_tree_action" />
+      <menuitem id="tasks_list_form" parent="tasks_menu" name="Tasks list form view" action="tasks_list_form_action" />
+
+      <menuitem id="people_list_tree" parent="tasks_menu" name="People list tree view" action="people_list_tree_action" />
+      <menuitem id="people_list_form" parent="tasks_menu" name="People list form view" action="people_list_form_action" />
+    </data>
+  </odoo>
