@@ -93,6 +93,16 @@ public class SurfaceView extends android.view.SurfaceView implements SurfaceHold
                 break;
             case MotionEvent.ACTION_UP:
                 for (Shape shape : filledShapes) {
+                    if (shape.getInitialX() != null && shape.getInitialY() != null) {
+                        int index = filledShapes.indexOf(shape);
+                        Shape emptyShape = emptyShapes.get(index);
+
+                        if (emptyShape.isNear(shape.getX(), shape.getY())) {
+                            shape.setX(emptyShape.getX());
+                            shape.setY(emptyShape.getY());
+                        }
+                    }
+
                     shape.setInitialX(null);
                     shape.setInitialY(null);
                 }

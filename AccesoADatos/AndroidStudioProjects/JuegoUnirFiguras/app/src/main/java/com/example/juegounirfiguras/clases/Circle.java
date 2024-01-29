@@ -39,9 +39,4 @@ public class Circle extends Shape {
 
         canvas.drawCircle(x, y, radio, paint);
     }
-
-    @Override
-    public boolean isNear(float x, float y) {
-        return false;
-    }
 }

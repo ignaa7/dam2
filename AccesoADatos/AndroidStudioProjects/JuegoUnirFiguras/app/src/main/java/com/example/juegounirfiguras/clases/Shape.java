@@ -61,5 +61,7 @@ public abstract class Shape {
 
     public abstract void onDraw(Canvas canvas, Paint paint);
 
-    public abstract boolean isNear(float x, float y);
+    public boolean isNear(float x, float y) {
+        return Math.abs(x - this.x) < 10 && Math.abs(y - this.y) < 10;
+    }
 }

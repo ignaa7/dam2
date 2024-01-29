@@ -47,9 +47,4 @@ public class Rectangle extends Shape {
 
         canvas.drawRect(getX(), getY(), getX()+(float)getWidth(), getY()+(float)getHeight(), paint);
     }
-
-    @Override
-    public boolean isNear(float x, float y) {
-        return false;
-    }
 }
