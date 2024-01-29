@@ -3,8 +3,6 @@ package com.example.juegounirfiguras;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.pm.ActivityInfo;
-import android.content.res.AssetFileDescriptor;
-import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
@@ -30,6 +28,6 @@ public class MainActivity extends AppCompatActivity {
         soundPool.play(explosionId, 1, 1, 0, 0, 1);*/
 
         super.onCreate(savedInstanceState);
-        setContentView(new VistaSurfaceView(this));
+        setContentView(new SurfaceView(this));
     }
 }

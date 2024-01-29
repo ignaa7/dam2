@@ -5,12 +5,12 @@ import android.view.SurfaceHolder;
 
 public class GameThread extends Thread {
     private SurfaceHolder surfaceHolder;
-    private VistaSurfaceView vistaSurfaceView;
+    private SurfaceView surfaceView;
     private boolean run;
 
-    public GameThread(SurfaceHolder surfaceHolder, VistaSurfaceView vistaSurfaceView) {
+    public GameThread(SurfaceHolder surfaceHolder, SurfaceView surfaceView) {
         this.surfaceHolder = surfaceHolder;
-        this.vistaSurfaceView = vistaSurfaceView;
+        this.surfaceView = surfaceView;
         run = false;
     }
 
@@ -29,7 +29,7 @@ public class GameThread extends Thread {
                     canvas = surfaceHolder.lockCanvas(null);
 
                     synchronized (surfaceHolder) {
-                        vistaSurfaceView.draw(canvas);
+                        surfaceView.draw(canvas);
                     }
                 }
             } finally {
@@ -39,6 +39,6 @@ public class GameThread extends Thread {
             }
         }
 
-        vistaSurfaceView.postInvalidate();
+        surfaceView.postInvalidate();
     }
 }

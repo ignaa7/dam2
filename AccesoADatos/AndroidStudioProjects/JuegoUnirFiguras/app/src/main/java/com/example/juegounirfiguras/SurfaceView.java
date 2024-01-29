@@ -2,15 +2,12 @@ package com.example.juegounirfiguras;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
-import android.view.SurfaceView;
 
 import androidx.annotation.NonNull;
 
@@ -21,16 +18,18 @@ import com.example.juegounirfiguras.clases.Rectangle;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VistaSurfaceView extends SurfaceView implements SurfaceHolder.Callback {
+public class SurfaceView extends android.view.SurfaceView implements SurfaceHolder.Callback {
     private GameThread gameThread;
     private Paint paint;
-    private List<Shape> shapes = new ArrayList<>();
+    private List<Shape> filledShapes = new ArrayList<>();
+    private List<Shape> emptyShapes = new ArrayList<>();
     private int screenHeight;
     private int screenWidth;
-    //canvas.drawText
+
+    //canvas.drawText -> write text in the screen
 
 
-    public VistaSurfaceView(Context context) {
+    public SurfaceView(Context context) {
         super(context);
 
         DisplayMetrics displayMetrics = new DisplayMetrics();
@@ -48,15 +47,11 @@ public class VistaSurfaceView extends SurfaceView implements SurfaceHolder.Callb
         int randomShapeNumber = (int) (Math.random() * 2);
 
         if (randomShapeNumber == 0) {
-            shapes.add(new Circle((float) (Math.random() * screenWidth), (float) (Math.random() * screenHeight), 100, true));
+            filledShapes.add(new Circle((float) (Math.random() * screenWidth), (float) (Math.random() * screenHeight), 100, true));
+            emptyShapes.add(new Circle((float) (Math.random() * screenWidth), (float) (Math.random() * screenHeight), 100, false));
         } else {
-            shapes.add(new Rectangle((float) (Math.random() * screenWidth), (float) (Math.random() * screenHeight), 100, 100, true));
-        }
-
-        if (randomShapeNumber == 0) {
-            shapes.add(new Circle((float) (Math.random() * screenWidth), (float) (Math.random() * screenHeight), 100, false));
-        } else {
-            shapes.add(new Rectangle((float) (Math.random() * screenWidth), (float) (Math.random() * screenHeight), 100, 100, false));
+            filledShapes.add(new Rectangle((float) (Math.random() * screenWidth), (float) (Math.random() * screenHeight), 100, 100, true));
+            emptyShapes.add(new Rectangle((float) (Math.random() * screenWidth), (float) (Math.random() * screenHeight), 100, 100, false));
         }
     }
 
@@ -65,7 +60,11 @@ public class VistaSurfaceView extends SurfaceView implements SurfaceHolder.Callb
         super.onDraw(canvas);
         canvas.drawColor(Color.WHITE);
 
-        for (Shape shape : shapes) {
+        for (Shape shape : filledShapes) {
+            shape.onDraw(canvas, paint);
+        }
+
+        for (Shape shape : emptyShapes) {
             shape.onDraw(canvas, paint);
         }
 
@@ -76,16 +75,16 @@ public class VistaSurfaceView extends SurfaceView implements SurfaceHolder.Callb
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                for (Shape shape : shapes) {
+                for (Shape shape : filledShapes) {
                     if (shape.isHovered(event.getX(), event.getY())) {
-                        shape.setxInicial(event.getX());
-                        shape.setyInicial(event.getY());
+                        shape.setInitialX(event.getX());
+                        shape.setInitialY(event.getY());
                     }
                 }
 
                 break;
             case MotionEvent.ACTION_MOVE:
-                for (Shape shape : shapes) {
+                for (Shape shape : filledShapes) {
                     shape.mover(event.getX(), event.getY());
                 }
 
@@ -93,9 +92,9 @@ public class VistaSurfaceView extends SurfaceView implements SurfaceHolder.Callb
             case MotionEvent.ACTION_CANCEL:
                 break;
             case MotionEvent.ACTION_UP:
-                for (Shape shape : shapes) {
-                    shape.setxInicial(null);
-                    shape.setyInicial(null);
+                for (Shape shape : filledShapes) {
+                    shape.setInitialX(null);
+                    shape.setInitialY(null);
                 }
 
                 break;

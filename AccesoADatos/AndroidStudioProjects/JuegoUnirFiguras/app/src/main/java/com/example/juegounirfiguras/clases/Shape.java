@@ -6,8 +6,8 @@ import android.graphics.Paint;
 public abstract class Shape {
     protected float x;
     protected float y;
-    protected Float xInicial;
-    protected Float yInicial;
+    protected Float initialX;
+    protected Float initialY;
     protected boolean filled;
 
     public Shape(float x, float y, boolean filled) {
@@ -32,28 +32,28 @@ public abstract class Shape {
         this.y = y;
     }
 
-    public Float getxInicial() {
-        return xInicial;
+    public Float getInitialX() {
+        return initialX;
     }
 
-    public void setxInicial(Float xInicial) {
-        this.xInicial = xInicial;
+    public void setInitialX(Float initialX) {
+        this.initialX = initialX;
     }
 
-    public Float getyInicial() {
-        return yInicial;
+    public Float getInitialY() {
+        return initialY;
     }
 
-    public void setyInicial(Float yInicial) {
-        this.yInicial = yInicial;
+    public void setInitialY(Float initialY) {
+        this.initialY = initialY;
     }
 
     public void mover(float xActual, float yActual) {
-        if (xInicial != null && yInicial != null) {
-            setX(getX() + xActual - xInicial);
-            setY(getY() + yActual - yInicial);
-            xInicial = xActual;
-            yInicial = yActual;
+        if (initialX != null && initialY != null) {
+            setX(getX() + xActual - initialX);
+            setY(getY() + yActual - initialY);
+            initialX = xActual;
+            initialY = yActual;
         }
     }
 
