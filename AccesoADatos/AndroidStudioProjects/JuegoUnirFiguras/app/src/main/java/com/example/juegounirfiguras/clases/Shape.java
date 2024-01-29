@@ -60,4 +60,6 @@ public abstract class Shape {
     public abstract boolean isHovered(float x, float y);
 
     public abstract void onDraw(Canvas canvas, Paint paint);
+
+    public abstract boolean isNear(float x, float y);
 }
