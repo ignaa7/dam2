@@ -15,6 +15,13 @@ public class Sprite {
     }
 
     private void update() {
+        if (x > moverSprites.getWidth() - bitmap.getWidth() - xSpeed) {
+            xSpeed = -5;
+        }
+        if (x + xSpeed < 0) {
+            xSpeed = 5;
+        }
+
         x = x + xSpeed;
     }
 

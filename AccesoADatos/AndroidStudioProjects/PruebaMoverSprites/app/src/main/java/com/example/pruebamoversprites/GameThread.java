@@ -31,14 +31,15 @@ public class GameThread extends Thread {
             startTime = System.currentTimeMillis();
 
             try {
-                if (canvas != null) {
                     canvas = surfaceHolder.lockCanvas(null);
 
-                    synchronized (surfaceHolder) {
-                        moverSprites.draw(canvas);
-                        //moverSprites.postInvalidate();
+                    if (canvas != null) {
+                        synchronized (surfaceHolder) {
+                            //moverSprites.draw(canvas);
+                            moverSprites.postInvalidate();
+                        }
                     }
-                }
+
             } finally {
                 if (canvas != null) {
                     surfaceHolder.unlockCanvasAndPost(canvas);
@@ -59,6 +60,5 @@ public class GameThread extends Thread {
             }
         }
 
-        moverSprites.postInvalidate();
     }
 }

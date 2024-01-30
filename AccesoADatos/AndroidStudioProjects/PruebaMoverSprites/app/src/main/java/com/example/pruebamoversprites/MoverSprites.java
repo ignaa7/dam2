@@ -1,6 +1,8 @@
 package com.example.pruebamoversprites;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -15,43 +17,26 @@ import java.util.List;
 
 public class MoverSprites extends SurfaceView implements SurfaceHolder.Callback {
     private GameThread gameThread;
-    private Paint paint;
-    private Paint linePaint;
+    private Sprite sprite;
 
 
     public MoverSprites(Context context) {
         super(context);
-
-        paint = new Paint();
-        linePaint = new Paint();
         setBackgroundColor(Color.BLACK);
+        getHolder().addCallback(this);
+
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawColor(Color.WHITE);
 
-        invalidate();
+        sprite.onDraw(canvas);
+
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        //return super.onTouchEvent(event);
-        switch (event.getAction()) {
-            case MotionEvent.ACTION_DOWN:
-
-                break;
-            case MotionEvent.ACTION_MOVE:
-
-                break;
-            case MotionEvent.ACTION_CANCEL:
-                break;
-            case MotionEvent.ACTION_UP:
-
-                break;
-        }
-
         return true;
     }
 
@@ -59,6 +44,10 @@ public class MoverSprites extends SurfaceView implements SurfaceHolder.Callback 
     public void surfaceCreated(@NonNull SurfaceHolder surfaceHolder) {
         gameThread = new GameThread(getHolder(), this);
         gameThread.setRunning(true);
+        gameThread.start();
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bad3);
+        sprite = new Sprite(this, bitmap);
     }
 
     @Override
