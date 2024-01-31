@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ejercicio8AdministradorDeTareas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+3e0cc4cf9e7f755707b2146c23a86239d3e61a5c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+94ddcb2e213cc1fe2458d3081a655fd8cfd10bde")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ejercicio8AdministradorDeTareas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ejercicio8AdministradorDeTareas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

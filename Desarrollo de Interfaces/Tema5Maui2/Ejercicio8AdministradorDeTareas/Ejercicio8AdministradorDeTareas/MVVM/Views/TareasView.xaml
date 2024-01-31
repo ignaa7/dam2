@@ -4,7 +4,7 @@
              x:Class="Ejercicio8AdministradorDeTareas.MVVM.Views.TareasView"
              Title="TareasView"
              Shell.BackgroundColor="Purple">
-    
+
     <ScrollView>
         <VerticalStackLayout
         Padding="10"
@@ -12,13 +12,20 @@
             <Label Text="Mis tareas" Style="{StaticResource titulo}" />
             <Label Text="CATEGORÍAS" Style="{StaticResource subtitulo}" />
 
-            <CollectionView ItemsSource="{Binding Products}"  ItemTemplate="{StaticResource ProductTemplates}">
+            <CollectionView ItemsSource="{Binding Categorias}"  ItemTemplate="{StaticResource ProductTemplates}">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout ItemSpacing="50" Orientation="Horizontal"/>
                 </CollectionView.ItemsLayout>
             </CollectionView>
+            
 
             <Label Text="TAREAS PENDIENTES" Style="{StaticResource subtitulo}" />
+
+            <CollectionView ItemsSource="{Binding Tareas}"  ItemTemplate="{StaticResource TareaStyle}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="50" Orientation="Vertical"/>
+                </CollectionView.ItemsLayout>
+            </CollectionView>
 
         </VerticalStackLayout>
     </ScrollView>

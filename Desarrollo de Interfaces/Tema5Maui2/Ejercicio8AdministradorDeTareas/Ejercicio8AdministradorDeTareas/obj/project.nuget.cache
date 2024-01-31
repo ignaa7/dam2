@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Vsv9N1hlgsdPCB3fijVXt2qCv7wt14ssDxPOffy2IEixHXYYuC5uMGLu3iRVVg0bmG2Svn/M3Ey5WXyhQ+LkJg==",
+  "dgSpecHash": "WlYX/fRg0aoFdVZDmTtHI4SZXmRGToeGtB8i6xh3vE0xtREwFBi5U+ENRJ2c1oKv7oYh/Z4pH0eiBs1z01C/ZA==",
   "success": true,
   "projectFilePath": "C:\\Users\\dam\\Desktop\\dam2\\Desarrollo de Interfaces\\Tema5Maui2\\Ejercicio8AdministradorDeTareas\\Ejercicio8AdministradorDeTareas\\Ejercicio8AdministradorDeTareas.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\dam\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",
     "C:\\Users\\dam\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
     "C:\\Users\\dam\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\dam\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
@@ -28,6 +29,7 @@
     "C:\\Users\\dam\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.1\\microsoft.net.illink.tasks.8.0.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\dam\\.nuget\\packages\\microsoft.windowsappsdk\\1.3.230724000\\microsoft.windowsappsdk.1.3.230724000.nupkg.sha512",
+    "C:\\Users\\dam\\.nuget\\packages\\propertychanged.fody\\4.1.0\\propertychanged.fody.4.1.0.nupkg.sha512",
     "C:\\Users\\dam\\.nuget\\packages\\xamarin.android.glide\\4.15.1.2\\xamarin.android.glide.4.15.1.2.nupkg.sha512",
     "C:\\Users\\dam\\.nuget\\packages\\xamarin.android.glide.annotations\\4.15.1.2\\xamarin.android.glide.annotations.4.15.1.2.nupkg.sha512",
     "C:\\Users\\dam\\.nuget\\packages\\xamarin.android.glide.disklrucache\\4.15.1.2\\xamarin.android.glide.disklrucache.4.15.1.2.nupkg.sha512",
