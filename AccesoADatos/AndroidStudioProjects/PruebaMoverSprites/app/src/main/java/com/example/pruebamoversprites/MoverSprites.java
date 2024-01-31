@@ -18,6 +18,7 @@ import java.util.List;
 public class MoverSprites extends SurfaceView implements SurfaceHolder.Callback {
     private GameThread gameThread;
     private Sprite sprite;
+    private List<Sprite> sprites = new ArrayList<Sprite>();
 
 
     public MoverSprites(Context context) {
@@ -25,13 +26,36 @@ public class MoverSprites extends SurfaceView implements SurfaceHolder.Callback 
         setBackgroundColor(Color.BLACK);
         getHolder().addCallback(this);
 
+        createSprites();
+    }
+
+    private void createSprites() {
+        sprites.add(createSprite(R.drawable.bad1));
+        sprites.add(createSprite(R.drawable.bad2));
+        sprites.add(createSprite(R.drawable.bad3));
+        sprites.add(createSprite(R.drawable.bad4));
+        sprites.add(createSprite(R.drawable.bad5));
+        sprites.add(createSprite(R.drawable.bad6));
+        sprites.add(createSprite(R.drawable.good1));
+        sprites.add(createSprite(R.drawable.good2));
+        sprites.add(createSprite(R.drawable.good3));
+        sprites.add(createSprite(R.drawable.good4));
+        sprites.add(createSprite(R.drawable.good5));
+        sprites.add(createSprite(R.drawable.good6));
+    }
+
+    private Sprite createSprite(int resource) {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), resource);
+        return new Sprite(this, bitmap);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
+        canvas.drawColor(Color.BLACK);
 
-        sprite.onDraw(canvas);
+        for (Sprite sprite : sprites) {
+            sprite.onDraw(canvas);
+        }
 
     }
 
