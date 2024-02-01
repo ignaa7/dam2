@@ -19,6 +19,8 @@ public class MoverSprites extends SurfaceView implements SurfaceHolder.Callback 
     private GameThread gameThread;
     private Sprite sprite;
     private List<Sprite> sprites = new ArrayList<Sprite>();
+    private long lastClick = 0;
+    private Bitmap bitmapSangre;
 
 
     public MoverSprites(Context context) {
@@ -61,6 +63,22 @@ public class MoverSprites extends SurfaceView implements SurfaceHolder.Callback 
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        if (System.currentTimeMillis() - lastClick > 500) {
+            lastClick = System.currentTimeMillis();
+
+            boolean encontrado = false;
+
+            synchronized (sprites) {
+                for (int i = sprites.size() - 1; i >= 0 && !encontrado; i--) {
+                    Sprite sprite = sprites.get(i);
+                    if (sprite.isCollition(event.getX(), event.getY())) {
+                        sprites.remove(sprite);
+                        encontrado = true;
+                    }
+                }
+            }
+        }
+
         return true;
     }
 
@@ -72,6 +90,8 @@ public class MoverSprites extends SurfaceView implements SurfaceHolder.Callback 
 
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bad3);
         sprite = new Sprite(this, bitmap);
+
+        bitmapSangre = BitmapFactory.decodeResource(getResources(), R.drawable.blood1);
     }
 
     @Override

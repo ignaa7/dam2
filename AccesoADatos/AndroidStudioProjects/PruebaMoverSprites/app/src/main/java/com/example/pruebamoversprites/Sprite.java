@@ -10,6 +10,7 @@ public class Sprite {
     private static final int[] DIRECTION_TO_ANIMATION_MAP = {3, 1, 0, 2};
     private static final int BITMAP_FILAS = 4;
     private static final int BITMAP_COLUMNAS = 3;
+    private static final int MAX_SPEED = 100;
     private int x = 0;
     private int y = 0;
     private int xSpeed = 5;
@@ -25,9 +26,12 @@ public class Sprite {
         this.bitmap = bitmap;
         this.width = bitmap.getWidth() / BITMAP_COLUMNAS;
         this.height = bitmap.getHeight() / BITMAP_FILAS;
+
         Random rnd = new Random();
-        xSpeed = rnd.nextInt(10)-5;
-        ySpeed = rnd.nextInt(10)-5;
+        //x = rnd.nextInt(moverSprites.getWidth() - width);
+        //y = rnd.nextInt(moverSprites.getHeight() - height);
+        xSpeed = rnd.nextInt(MAX_SPEED * 2) - MAX_SPEED;
+        ySpeed = rnd.nextInt(MAX_SPEED * 2) - MAX_SPEED;
     }
 
     private void update() {
@@ -55,5 +59,9 @@ public class Sprite {
         double dirDouble = (Math.atan2(xSpeed, ySpeed) / (Math.PI / 2) + 2);
         int direction = (int) Math.round(dirDouble) % BITMAP_FILAS;
         return DIRECTION_TO_ANIMATION_MAP[direction];
+    }
+
+    public boolean isCollition(float x2, float y2) {
+        return x2 > x && x2 < x + width && y2 > y && y2 < y + height;
     }
 }
