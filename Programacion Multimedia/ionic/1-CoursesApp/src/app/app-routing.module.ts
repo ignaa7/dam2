@@ -12,7 +12,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./main-page/main-page.module').then( m => m.MainPagePageModule)
+        loadChildren: () => import('./main-page/main-page.module').then( m => m.MainPagePageModule),
       },
       {
         path: ':courseId',
