@@ -1,0 +1,77 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CollectionViewDem
+build_property.ProjectDir = C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\CollectionViewDem-master\CollectionViewDem\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema5Maui2/CollectionViewDem-master/CollectionViewDem/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CollectionViewDem.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema5Maui2/CollectionViewDem-master/CollectionViewDem/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CollectionViewDem.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema5Maui2/CollectionViewDem-master/CollectionViewDem/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CollectionViewDem.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema5Maui2/CollectionViewDem-master/CollectionViewDem/MVVM/View/ProductView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CollectionViewDem.MVVM.View.ProductView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\View\ProductView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\View\ProductView.xaml
+
+[C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema5Maui2/CollectionViewDem-master/CollectionViewDem/MVVM/View/ProductViewDic.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CollectionViewDem.MVVM.View.ProductViewDic.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\View\ProductViewDic.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\View\ProductViewDic.xaml
+
+[C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema5Maui2/CollectionViewDem-master/CollectionViewDem/MVVM/View/ProductViewEjec.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CollectionViewDem.MVVM.View.ProductViewEjec.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\View\ProductViewEjec.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\View\ProductViewEjec.xaml
+
+[C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema5Maui2/CollectionViewDem-master/CollectionViewDem/MVVM/View/ProductViewOtrosFormatos.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CollectionViewDem.MVVM.View.ProductViewOtrosFormatos.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\View\ProductViewOtrosFormatos.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\View\ProductViewOtrosFormatos.xaml
+
+[C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema5Maui2/CollectionViewDem-master/CollectionViewDem/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CollectionViewDem.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema5Maui2/CollectionViewDem-master/CollectionViewDem/Resources/Styles/ProductStyle.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CollectionViewDem.Resources.Styles.ProductStyle.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\ProductStyle.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\ProductStyle.xaml
+
+[C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema5Maui2/CollectionViewDem-master/CollectionViewDem/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CollectionViewDem.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
