@@ -19,6 +19,7 @@ public class MoverSprites extends SurfaceView implements SurfaceHolder.Callback 
     private GameThread gameThread;
     private Sprite sprite;
     private List<Sprite> sprites = new ArrayList<Sprite>();
+    private List<Sangre> sangres = new ArrayList<Sangre>();
     private long lastClick = 0;
     private Bitmap bitmapSangre;
 
@@ -27,8 +28,6 @@ public class MoverSprites extends SurfaceView implements SurfaceHolder.Callback 
         super(context);
         setBackgroundColor(Color.BLACK);
         getHolder().addCallback(this);
-
-        createSprites();
     }
 
     private void createSprites() {
@@ -59,24 +58,39 @@ public class MoverSprites extends SurfaceView implements SurfaceHolder.Callback 
             sprite.onDraw(canvas);
         }
 
+        for (int i = sangres.size() - 1; i >= 0; i--) {
+            sangres.get(i).onDraw(canvas);
+        }
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if (System.currentTimeMillis() - lastClick > 500) {
-            lastClick = System.currentTimeMillis();
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                if (System.currentTimeMillis() - lastClick > 500) {
+                    lastClick = System.currentTimeMillis();
 
-            boolean encontrado = false;
+                    boolean encontrado = false;
 
-            synchronized (sprites) {
-                for (int i = sprites.size() - 1; i >= 0 && !encontrado; i--) {
-                    Sprite sprite = sprites.get(i);
-                    if (sprite.isCollition(event.getX(), event.getY())) {
-                        sprites.remove(sprite);
-                        encontrado = true;
+                    synchronized (sprites) {
+                        for (int i = sprites.size() - 1; i >= 0 && !encontrado; i--) {
+                            Sprite sprite = sprites.get(i);
+                            if (sprite.isCollition(event.getX(), event.getY())) {
+                                sprites.remove(sprite);
+                                sangres.add(new Sangre(event.getX(), event.getY(), bitmapSangre, sangres));
+                                encontrado = true;
+                            }
+                        }
                     }
                 }
-            }
+
+                break;
+            case MotionEvent.ACTION_MOVE:
+                break;
+            case MotionEvent.ACTION_CANCEL:
+                break;
+            case MotionEvent.ACTION_UP:
+                break;
         }
 
         return true;
@@ -92,6 +106,8 @@ public class MoverSprites extends SurfaceView implements SurfaceHolder.Callback 
         sprite = new Sprite(this, bitmap);
 
         bitmapSangre = BitmapFactory.decodeResource(getResources(), R.drawable.blood1);
+
+        createSprites();
     }
 
     @Override

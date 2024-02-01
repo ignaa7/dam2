@@ -10,7 +10,6 @@ public class Sangre {
     private float x;
     private float y;
     private Bitmap bitmap;
-    private List<Sprite> sprites = new ArrayList<Sprite>();
     private List<Sangre> sangres = new ArrayList<Sangre>();
     private int life = 15;
 
@@ -24,11 +23,6 @@ public class Sangre {
     public void onDraw(Canvas canvas) {
         update();
         canvas.drawBitmap(bitmap, x, y, null);
-
-        //esto no deberia ir en este onDraw, va en el de MoverSprites, y los dos arrays tambien
-        for (int i = sangres.size() - 1; i >= 0; i--) {
-            sangres.get(i).onDraw(canvas);
-        }
     }
 
     private void update() {

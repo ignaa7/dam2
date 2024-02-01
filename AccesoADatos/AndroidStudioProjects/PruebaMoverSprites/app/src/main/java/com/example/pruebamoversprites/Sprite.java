@@ -10,7 +10,7 @@ public class Sprite {
     private static final int[] DIRECTION_TO_ANIMATION_MAP = {3, 1, 0, 2};
     private static final int BITMAP_FILAS = 4;
     private static final int BITMAP_COLUMNAS = 3;
-    private static final int MAX_SPEED = 100;
+    private static final int MAX_SPEED = 20;
     private int x = 0;
     private int y = 0;
     private int xSpeed = 5;
@@ -28,8 +28,8 @@ public class Sprite {
         this.height = bitmap.getHeight() / BITMAP_FILAS;
 
         Random rnd = new Random();
-        //x = rnd.nextInt(moverSprites.getWidth() - width);
-        //y = rnd.nextInt(moverSprites.getHeight() - height);
+        x = rnd.nextInt(moverSprites.getWidth() - width);
+        y = rnd.nextInt(moverSprites.getHeight() - height);
         xSpeed = rnd.nextInt(MAX_SPEED * 2) - MAX_SPEED;
         ySpeed = rnd.nextInt(MAX_SPEED * 2) - MAX_SPEED;
     }
