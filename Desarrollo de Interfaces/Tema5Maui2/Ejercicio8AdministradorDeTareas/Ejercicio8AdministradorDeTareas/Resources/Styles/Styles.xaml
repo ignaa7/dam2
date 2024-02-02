@@ -54,7 +54,7 @@
 
     <DataTemplate x:Key="CategoriaRadioStyle">
         <Frame BorderColor="Transparent">
-            <RadioButton Content="{Binding Nombre}" />
+            <RadioButton Content="{Binding Nombre}" Value="{Binding}" IsChecked="{Binding IsSelected}" GroupName="categoriasRadioButtons" />
         </Frame>
     </DataTemplate>
 

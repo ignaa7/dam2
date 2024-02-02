@@ -13,9 +13,9 @@ public class Sangre {
     private List<Sangre> sangres = new ArrayList<Sangre>();
     private int life = 15;
 
-    public Sangre(float x, float y, Bitmap bitmap, List<Sangre> sangres) {
-        this.x = x;
-        this.y = y;
+    public Sangre(float x, float y, Bitmap bitmap, MoverSprites moverSprites, List<Sangre> sangres) {
+        this.x = Math.min(Math.max(x - bitmap.getWidth() / 2, 0), moverSprites.getWidth() - bitmap.getWidth());
+        this.y = Math.min(Math.max(y - bitmap.getHeight() / 2, 0), moverSprites.getHeight() - bitmap.getHeight());
         this.bitmap = bitmap;
         this.sangres = sangres;
     }

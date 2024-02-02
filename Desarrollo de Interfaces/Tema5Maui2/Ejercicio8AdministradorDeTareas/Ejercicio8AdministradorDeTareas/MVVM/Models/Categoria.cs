@@ -14,6 +14,8 @@ namespace Ejercicio8AdministradorDeTareas.MVVM.Models
         private int _tareasNoTerminadas;
 
         public String Nombre { get; set; }
+        public bool IsSelected { get; set; }
+
         public int TareasTerminadas {
             get
             {
@@ -41,6 +43,8 @@ namespace Ejercicio8AdministradorDeTareas.MVVM.Models
         public Categoria(String nombre)
         {
             Nombre = nombre;
+            _tareasTerminadas = 0;
+            _tareasNoTerminadas = 0;
         }
     }
 }

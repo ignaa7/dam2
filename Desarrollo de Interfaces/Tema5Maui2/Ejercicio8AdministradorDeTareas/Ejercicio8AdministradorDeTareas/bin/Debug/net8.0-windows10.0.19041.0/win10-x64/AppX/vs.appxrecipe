@@ -30,265 +30,265 @@
     <AppXManifest Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-02-01T09:14:26.871</Modified>
+      <Modified>2024-02-02T08:27:05.561</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-02-01T09:06:19.561</Modified>
+      <Modified>2024-02-02T08:24:21.438</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Ejercicio8AdministradorDeTareas.runtimeconfig.json">
       <PackagePath>Ejercicio8AdministradorDeTareas.runtimeconfig.json</PackagePath>
-      <Modified>2024-02-01T08:00:30.632</Modified>
+      <Modified>2024-02-02T08:09:18.199</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Ejercicio8AdministradorDeTareas.dll">
       <PackagePath>Ejercicio8AdministradorDeTareas.dll</PackagePath>
-      <Modified>2024-02-01T09:14:26.480</Modified>
+      <Modified>2024-02-02T08:27:05.108</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Ejercicio8AdministradorDeTareas.exe</PackagePath>
-      <Modified>2024-02-01T09:14:26.480</Modified>
+      <Modified>2024-02-02T08:27:05.108</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
-      <Modified>2024-01-30T16:09:51.699</Modified>
+      <Modified>2024-02-01T18:39:15.453</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.965</Modified>
+      <Modified>2024-02-01T18:39:19.751</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.965</Modified>
+      <Modified>2024-02-01T18:39:19.752</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.965</Modified>
+      <Modified>2024-02-01T18:39:19.752</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.966</Modified>
+      <Modified>2024-02-01T18:39:19.752</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.966</Modified>
+      <Modified>2024-02-01T18:39:19.754</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
-      <Modified>2024-01-30T16:10:00.939</Modified>
+      <Modified>2024-02-01T18:39:19.727</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
-      <Modified>2024-01-30T16:10:00.941</Modified>
+      <Modified>2024-02-01T18:39:19.729</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2024-01-30T16:10:00.942</Modified>
+      <Modified>2024-02-01T18:39:19.730</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.943</Modified>
+      <Modified>2024-02-01T18:39:19.730</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.943</Modified>
+      <Modified>2024-02-01T18:39:19.730</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.943</Modified>
+      <Modified>2024-02-01T18:39:19.731</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.944</Modified>
+      <Modified>2024-02-01T18:39:19.731</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.946</Modified>
+      <Modified>2024-02-01T18:39:19.732</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.946</Modified>
+      <Modified>2024-02-01T18:39:19.732</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.946</Modified>
+      <Modified>2024-02-01T18:39:19.733</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.947</Modified>
+      <Modified>2024-02-01T18:39:19.733</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.947</Modified>
+      <Modified>2024-02-01T18:39:19.733</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.947</Modified>
+      <Modified>2024-02-01T18:39:19.733</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.948</Modified>
+      <Modified>2024-02-01T18:39:19.734</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.948</Modified>
+      <Modified>2024-02-01T18:39:19.734</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.948</Modified>
+      <Modified>2024-02-01T18:39:19.734</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.949</Modified>
+      <Modified>2024-02-01T18:39:19.734</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.949</Modified>
+      <Modified>2024-02-01T18:39:19.735</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.949</Modified>
+      <Modified>2024-02-01T18:39:19.735</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.949</Modified>
+      <Modified>2024-02-01T18:39:19.735</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.950</Modified>
+      <Modified>2024-02-01T18:39:19.736</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.950</Modified>
+      <Modified>2024-02-01T18:39:19.736</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.950</Modified>
+      <Modified>2024-02-01T18:39:19.738</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.950</Modified>
+      <Modified>2024-02-01T18:39:19.738</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.951</Modified>
+      <Modified>2024-02-01T18:39:19.738</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.951</Modified>
+      <Modified>2024-02-01T18:39:19.739</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.951</Modified>
+      <Modified>2024-02-01T18:39:19.739</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.952</Modified>
+      <Modified>2024-02-01T18:39:19.739</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.952</Modified>
+      <Modified>2024-02-01T18:39:19.740</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.952</Modified>
+      <Modified>2024-02-01T18:39:19.740</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.953</Modified>
+      <Modified>2024-02-01T18:39:19.741</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.953</Modified>
+      <Modified>2024-02-01T18:39:19.741</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.953</Modified>
+      <Modified>2024-02-01T18:39:19.742</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.953</Modified>
+      <Modified>2024-02-01T18:39:19.742</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.954</Modified>
+      <Modified>2024-02-01T18:39:19.742</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.954</Modified>
+      <Modified>2024-02-01T18:39:19.743</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.954</Modified>
+      <Modified>2024-02-01T18:39:19.743</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.954</Modified>
+      <Modified>2024-02-01T18:39:19.743</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.955</Modified>
+      <Modified>2024-02-01T18:39:19.744</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.955</Modified>
+      <Modified>2024-02-01T18:39:19.744</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.955</Modified>
+      <Modified>2024-02-01T18:39:19.744</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.955</Modified>
+      <Modified>2024-02-01T18:39:19.745</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.957</Modified>
+      <Modified>2024-02-01T18:39:19.745</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.959</Modified>
+      <Modified>2024-02-01T18:39:19.745</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.959</Modified>
+      <Modified>2024-02-01T18:39:19.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.959</Modified>
+      <Modified>2024-02-01T18:39:19.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.960</Modified>
+      <Modified>2024-02-01T18:39:19.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.960</Modified>
+      <Modified>2024-02-01T18:39:19.747</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.961</Modified>
+      <Modified>2024-02-01T18:39:19.747</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.961</Modified>
+      <Modified>2024-02-01T18:39:19.748</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.962</Modified>
+      <Modified>2024-02-01T18:39:19.749</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.962</Modified>
+      <Modified>2024-02-01T18:39:19.749</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-01-30T16:10:00.964</Modified>
+      <Modified>2024-02-01T18:39:19.751</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Ejercicio8AdministradorDeTareas.deps.json">
       <PackagePath>Ejercicio8AdministradorDeTareas.deps.json</PackagePath>
-      <Modified>2024-02-01T08:33:15.375</Modified>
+      <Modified>2024-02-02T08:09:18.074</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

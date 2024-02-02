@@ -77,7 +77,7 @@ public class MoverSprites extends SurfaceView implements SurfaceHolder.Callback 
                             Sprite sprite = sprites.get(i);
                             if (sprite.isCollition(event.getX(), event.getY())) {
                                 sprites.remove(sprite);
-                                sangres.add(new Sangre(event.getX(), event.getY(), bitmapSangre, sangres));
+                                sangres.add(new Sangre(event.getX(), event.getY(), bitmapSangre, this, sangres));
                                 encontrado = true;
                             }
                         }

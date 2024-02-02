@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ejercicio8AdministradorDeTareas.MVVM.Views.AgregarTareaView"
-             Shell.BackgroundColor="Purple">
-    <VerticalStackLayout>
-        <Entry Placeholder="Introduce Nueva Tarea" />
+             Shell.BackgroundColor="Purple"
+             x:Name="ThisPage">
+    <VerticalStackLayout Spacing="30">
+        <Entry Placeholder="Introduce Nueva Tarea" Text="{Binding Nombre}" />
 
-        <CollectionView ItemsSource="{Binding Categorias}"  ItemTemplate="{StaticResource CategoriaRadioStyle}" SelectionMode="Single">
+        <CollectionView ItemsSource="{Binding Categorias}"
+                        ItemTemplate="{StaticResource CategoriaRadioStyle}"
+                        SelectionMode="Single"
+                        RadioButtonGroup.GroupName="categoriasRadioButtons"
+                        RadioButtonGroup.SelectedValue="{Binding CategoriaRadioButton}"
+                        x:Name="collectionView">
             <CollectionView.ItemsLayout>
                 <GridItemsLayout Orientation="Vertical"
             Span="2" />
             </CollectionView.ItemsLayout>
-
         </CollectionView>
+
+        <HorizontalStackLayout Spacing="30">
+            <Button Text="Añadir tarea"
+                    Command="{Binding AgregarTareaCommand}"
+                    CommandParameter="{x:Reference ThisPage}" />
+            <Button Text="Añadir categoría" Command="{Binding AgregarCategoriaCommand}" />
+        </HorizontalStackLayout>
     </VerticalStackLayout>
-</ContentView>
+</ContentPage>

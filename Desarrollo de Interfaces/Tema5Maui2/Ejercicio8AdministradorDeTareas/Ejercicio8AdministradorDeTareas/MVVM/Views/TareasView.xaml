@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ejercicio8AdministradorDeTareas.MVVM.Views.TareasView"
              Title="TareasView"
-             Shell.BackgroundColor="Purple">
+             Shell.BackgroundColor="Purple"
+             x:Name="ThisPage">
 
     <AbsoluteLayout>
-        <ScrollView>
+        <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
             <VerticalStackLayout
     Padding="10"
     Spacing="10">
@@ -32,13 +33,18 @@
         </ScrollView>
 
         <Button 
-            Text="+" 
-            VerticalOptions="End" 
-            HorizontalOptions="End" 
+            Text="+"
+            Command="{Binding CambiarPaginaCommand}"
+            CommandParameter="{x:Reference ThisPage}"
+            VerticalOptions="CenterAndExpand" 
+            HorizontalOptions="CenterAndExpand" 
             CornerRadius="50" 
             Margin="20"
             AbsoluteLayout.LayoutBounds="1,1,-1,-1"
-            AbsoluteLayout.LayoutFlags="PositionProportional" />
+            AbsoluteLayout.LayoutFlags="PositionProportional" 
+            FontSize="25"
+            HeightRequest="40"
+            WidthRequest="40" />
     </AbsoluteLayout>
     
 </ContentPage>
