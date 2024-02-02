@@ -30,7 +30,7 @@
     <AppXManifest Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-02-02T08:27:05.561</Modified>
+      <Modified>2024-02-02T08:39:34.926</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Ejercicio8AdministradorDeTareas.dll">
       <PackagePath>Ejercicio8AdministradorDeTareas.dll</PackagePath>
-      <Modified>2024-02-02T08:27:05.108</Modified>
+      <Modified>2024-02-02T08:39:33.418</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Ejercicio8AdministradorDeTareas.exe</PackagePath>
-      <Modified>2024-02-02T08:27:05.108</Modified>
+      <Modified>2024-02-02T08:39:33.454</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio8AdministradorDeTareas\Ejercicio8AdministradorDeTareas\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
