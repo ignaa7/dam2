@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ModalController, NavController } from '@ionic/angular';
-import { CreateBookingComponent } from 'src/app/main-page/main/bookings-page/bookings/create-booking-component/create-booking/create-booking.component';
 import { PlacesService } from 'src/services/places-service/places.service';
+import { CreateBookingComponent } from './create-booking-component/create-booking/create-booking.component';
 
 @Component({
   selector: 'app-place-details',
@@ -29,24 +29,41 @@ export class PlaceDetailsPage implements OnInit {
     });
   }
 
-  onBookPlace() {
+  async onBookPlace() {
     // this.router.navigateByUrl('/places/tabs/discover');
     // this.navCtrl.navigateBack('/places/tabs/discover');
     // this.navCtrl.pop();
-    this.modalCtrl
-      .create({
-        component: CreateBookingComponent,
-        componentProps: { selectedPlace: this.place }
-      })
-      .then(modalEl => {
-        modalEl.present();
-        return modalEl.onDidDismiss();
-      })
-      .then(resultData => {
+    // this.modalCtrl
+    //   .create({
+    //     component: CreateBookingComponent,
+    //     componentProps: { selectedPlace: this.place }
+    //   })
+    //   .then(modalEl => {
+    //     modalEl.present();
+    //     return modalEl.onDidDismiss();
+    //   })
+    //   .then(resultData => {
+    //     console.log(resultData.data, resultData.role);
+    //     if (resultData.role === 'confirm') {
+    //       console.log('BOOKED!');
+    //     }
+    //   });
+
+      try {
+        const modal = await this.modalCtrl.create({
+          component: CreateBookingComponent,
+          componentProps: { selectedPlace: this.place }
+        });
+
+        modal.present();
+        let resultData = await modal.onDidDismiss();
+
         console.log(resultData.data, resultData.role);
         if (resultData.role === 'confirm') {
           console.log('BOOKED!');
         }
-      });
+      } catch(e) {
+        console.log(e);
+      }
   }
 }
