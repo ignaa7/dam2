@@ -129,7 +129,7 @@ namespace BDDemo2.Repository
      
         public void SaveItemWithChildren(T item, bool recursive = false)
         {
-            connection.InsertWithChildren(item, recursive);
+            connection.InsertOrReplaceWithChildren(item, recursive);
         }
 
         public List<T> GetItemWithChildren()
