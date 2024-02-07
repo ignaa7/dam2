@@ -10,7 +10,8 @@ const routes: Routes = [
   },
   {
     path: 'main',
-    loadChildren: () => import('./main-page/main/main.module').then( m => m.MainPageModule)
+    loadChildren: () => import('./main-page/main/main.module').then( m => m.MainPageModule),
+    canMatch: [authGuard],
   },
   {
     path: 'auth',
