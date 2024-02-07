@@ -12,11 +12,17 @@ export class AuthService {
 
   constructor() { }
 
-  logIn() {
+  logIn(username: string, password: string) {
     this._userIsAuthenticated = true;
+
+    return this._userIsAuthenticated;
   }
 
   logOut() {
     this._userIsAuthenticated = false;
+  }
+
+  signUp(name: string, surnames: string, email: string, username: string, password: string): boolean {
+    return true;
   }
 }
