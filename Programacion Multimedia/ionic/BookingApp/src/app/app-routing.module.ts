@@ -17,6 +17,14 @@ const routes: Routes = [
     path: 'auth',
     loadChildren: () => import('./auth-page/auth/auth.module').then( m => m.AuthPageModule)
   },
+  {
+    path: 'bookings',
+    loadChildren: () => import('./bookings-page/bookings/bookings.module').then( m => m.BookingsPageModule)
+  },  {
+    path: 'bookings',
+    loadChildren: () => import('./bookings-page/bookings/bookings.module').then( m => m.BookingsPageModule)
+  }
+
 
 ];
 

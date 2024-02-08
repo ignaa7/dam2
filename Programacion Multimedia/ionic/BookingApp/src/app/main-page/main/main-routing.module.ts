@@ -9,10 +9,6 @@ const routes: Routes = [
     component: MainPage,
     children: [
       {
-        path: 'bookings',
-        loadChildren: () => import('./bookings-page/bookings/bookings.module').then( m => m.BookingsPageModule)
-      },
-      {
         path: 'discover',
         loadChildren: () => import('./discover-page/discover/discover.module').then( m => m.DiscoverPageModule)
       },

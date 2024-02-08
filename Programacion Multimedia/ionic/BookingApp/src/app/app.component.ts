@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { SplashScreen } from '@capacitor/splash-screen';
 import { StatusBar, Style } from '@capacitor/status-bar';
 import { Platform } from '@ionic/angular';
-import { AuthService } from 'src/services/auth-service/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +9,7 @@ import { AuthService } from 'src/services/auth-service/auth.service';
 })
 export class AppComponent {
   constructor(
-    private platform: Platform,
-    private authService: AuthService,
-    private router: Router
+    private platform: Platform
   ) {
     this.initializeApp();
   }
@@ -24,10 +19,5 @@ export class AppComponent {
       await StatusBar.setStyle({ style: Style.Dark });
       await StatusBar.setStyle({ style: Style.Light });
     });
-  }
-
-  onLogout() {
-    this.authService.logOut();
-    this.router.navigateByUrl('/auth');
   }
 }
