@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { PlacesService } from 'src/services/places-service/places.service';
 
 @Component({
@@ -7,13 +8,14 @@ import { PlacesService } from 'src/services/places-service/places.service';
   styleUrls: ['./discover.page.scss'],
 })
 export class DiscoverPage implements OnInit {
-  loadedPlaces!: any[];
+  observable: Observable<any>;
 
   constructor(
     private placesService: PlacesService,
-  ) {}
+  ) {
+    this.observable = placesService.getObservable();
+  }
 
   ngOnInit() {
-    this.loadedPlaces = this.placesService.places;
   }
 }

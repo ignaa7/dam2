@@ -49,6 +49,7 @@ const userSchema = new mongoose.Schema({
     }]
 })
 
+// virtual???
 userSchema.virtual('tasks', {
     ref: 'Task',
     localField: '_id',
@@ -111,4 +112,4 @@ userSchema.pre('remove', async function (next) {
 
 const User = mongoose.model('User', userSchema)
 
-module.exports = User
+module.exports = User;

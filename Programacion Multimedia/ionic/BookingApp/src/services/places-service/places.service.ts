@@ -30,22 +30,22 @@ export class PlacesService {
     )
   ];
 
-  private _subject: BehaviorSubject<Object[]>;
+  private _subject: BehaviorSubject<any[]>;
 
 
   constructor() {
-    this._subject = new BehaviorSubject<Object[]>(this.places);
+    this._subject = new BehaviorSubject<any[]>(this.places);
   }
 
   getObservable() {
     return this._subject.asObservable();
   }
 
-  public get places() : Object[] {
+  public get places() : any[] {
     return this.getPlacesCopy(this._places);
   }
 
-  public getPlace(id: string) : Object | undefined {
+  public getPlace(id: string) : any | undefined {
     let place: Place | undefined = this._places.find(place => place.id === id);
     if (place) {
       return {

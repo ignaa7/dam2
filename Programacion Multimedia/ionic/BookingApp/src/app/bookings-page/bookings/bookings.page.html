@@ -1,13 +1,39 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>bookings</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<div id="menu">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">bookings</ion-title>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Bookings</ion-title>
     </ion-toolbar>
   </ion-header>
+</div>
+
+<ion-content [fullscreen]="true">
+  <ion-grid *ngIf="(observable | async).length > 0">
+    <ion-row>
+      <ion-col size="12" size-sm="8" offset-sm="2" class="ion-text-center">
+        <ion-list>
+          <ion-item
+            *ngFor="let place of (observable | async)"
+            detail
+          >
+            <ion-thumbnail slot="start">
+              <ion-img [src]="place.imageUrl"></ion-img>
+            </ion-thumbnail>
+            <ion-label>
+              <h2>{{ place.title }}</h2>
+              <p>{{ place.description }}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="ion-text-center ion-padding">
+    <ion-label *ngIf="(observable | async).length <= 0">
+      No hay ningún alojamiento disponible
+    </ion-label>
+  </div>
 </ion-content>
