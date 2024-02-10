@@ -21,6 +21,8 @@ export class AuthPage implements OnInit {
     if (username && password) {
       if (password.length >= 8) {
         if (this.authService.logIn(username, password)) {
+          this.error = false;
+          this.errorText = "";
           this.router.navigateByUrl('/main/discover');
         } else {
           this.error = true;
