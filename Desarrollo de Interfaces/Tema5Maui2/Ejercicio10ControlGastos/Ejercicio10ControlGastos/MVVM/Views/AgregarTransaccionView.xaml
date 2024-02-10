@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ejercicio10ControlGastos.MVVM.Views.AgregarTransaccionView"
+             x:Name="ThisPage"
              Title="AgregarTransaccionView">
     <AbsoluteLayout>
         <Frame AbsoluteLayout.LayoutBounds="0, 0, 1, 0.3" AbsoluteLayout.LayoutFlags="All">
@@ -10,39 +11,22 @@
                 </HorizontalStackLayout>
         </Frame>
         <Frame AbsoluteLayout.LayoutBounds="0.5, 0.2, 0.95, 0.2" AbsoluteLayout.LayoutFlags="All">
-            <StackLayout>
-                <VerticalStackLayout>
-                    <HorizontalStackLayout>
-                        <Label Text="Total del balance" />
-                    </HorizontalStackLayout>
-                    <HorizontalStackLayout>
-                        <Label Text="{Binding TotalBalance}" />
-                    </HorizontalStackLayout>
-                </VerticalStackLayout>
-
-                <VerticalStackLayout>
-                    <HorizontalStackLayout>
-                        <Label Text="Ingresos" HorizontalOptions="Start" />
-                        <Label Text="Gastos" HorizontalOptions="End" />
-                    </HorizontalStackLayout>
-                    <HorizontalStackLayout>
-                        <Label Text="{Binding Ingresos}" HorizontalOptions="Start" />
-                        <Label Text="{Binding Gastos}" HorizontalOptions="End" />
-                    </HorizontalStackLayout>
-                </VerticalStackLayout>
-            </StackLayout>
+            <VerticalStackLayout>
+                <Label Text="Nombre de la transacción" />
+                <Entry />
+                <Label Text="Cantidad" />
+                <Entry />
+                <Label Text="Fecha de la transacción" />
+                <DatePicker />
+                <CheckBox />
+                <Label Text="¿Es un ingreso?"/>
+                <Button Text="Guardar"
+                        Command="{Binding AddCommand}"
+                        CommandParameter="{x:Reference ThisPage}" />
+                <Button Text="Cancelar"
+                        Command="{Binding VolverCommand}"
+                        CommandParameter="{x:Reference ThisPage}" />
+            </VerticalStackLayout>
         </Frame>
-        <Button 
-        Text="+"
-        Command="{Binding CambiarPaginaCommand}"
-        CommandParameter="{x:Reference ThisPage}"
-        VerticalOptions="CenterAndExpand" 
-        HorizontalOptions="CenterAndExpand" 
-        CornerRadius="50" 
-        AbsoluteLayout.LayoutBounds="0.95,0.35,-1,-1"
-        AbsoluteLayout.LayoutFlags="PositionProportional" 
-        FontSize="25"
-        HeightRequest="40"
-        WidthRequest="40" />
     </AbsoluteLayout>
 </ContentPage>

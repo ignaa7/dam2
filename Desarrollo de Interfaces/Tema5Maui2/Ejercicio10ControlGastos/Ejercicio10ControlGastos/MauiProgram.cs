@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Ejercicio10ControlGastos.MVVM.Models;
+using Ejercicio10ControlGastos.Repository;
+using Microsoft.Extensions.Logging;
 
 namespace Ejercicio10ControlGastos
 {
@@ -18,6 +20,7 @@ namespace Ejercicio10ControlGastos
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            builder.Services.AddSingleton<BaseRepository<Transaccion>>();
 
             return builder.Build();
         }
