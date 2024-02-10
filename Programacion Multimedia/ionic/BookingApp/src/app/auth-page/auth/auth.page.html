@@ -12,8 +12,8 @@
     <div class="wrapper">
       <div class="container">
         <form class="form">
-          <label for="username">Usuario:</label>
-          <input type="text" #username id="username" name="username">
+          <label for="email">Correo electrónico:</label>
+          <input type="text" #email id="email" name="email">
 
           <label for="password">Contraseña:</label>
           <input type="password" #password id="password" name="password">
@@ -22,7 +22,7 @@
             <p class="error">{{errorText}}</p>
           </div>
 
-          <button type="button" (click)="logInUser(username.value, password.value)">Iniciar sesión</button>
+          <button type="button" (click)="logInUser(email.value, password.value)">Iniciar sesión</button>
         </form>
       </div>
       <a (click)="goToSignupPage()">¿No tienes una cuenta? Regístrate</a>
@@ -33,27 +33,24 @@
     <div class="wrapper">
       <div class="container">
         <form class="form">
-          <label for="name">Nombre:</label>
-          <input type="text" #name id="name" name="name" required>
-
-          <label for="surnames">Apellidos:</label>
-          <input type="text" #surnames id="surnames" name="surnames" required>
+          <label for="username">Usuario:</label>
+          <input type="text" #username id="username" name="username" required>
 
           <label for="email">Correo electrónico:</label>
           <input type="text" #email id="email" name="email" required>
 
-          <label for="username">Usuario:</label>
-          <input type="text" #username id="username" name="username" required>
-
           <label for="password">Contraseña:</label>
           <input type="password" #password id="password" name="password" required>
+
+          <label for="age">Edad:</label>
+          <input type="age" #age id="age" name="age" required>
 
           <div *ngIf="error">
             <p class="error">{{errorText}}</p>
           </div>
 
           <button type="button"
-            (click)="signUpUser(name.value, surnames.value, email.value, username.value, password.value)">Registrarse</button>
+            (click)="signUpUser(username.value, email.value, password.value, age.value)">Registrarse</button>
         </form>
       </div>
       <a (click)="goToLoginPage()">¿Ya tienes una cuenta? Inicia sesión</a>

@@ -21,8 +21,8 @@ export class MainPage implements OnInit {
   ngOnInit() {
   }
 
-  onLogout() {
-    this.authService.logOut();
+  async onLogout() {
+    await this.authService.logOut();
     this.router.navigateByUrl('/auth');
   }
 

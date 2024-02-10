@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { HttpService } from '../http-service/http.service';
+import { StorageService } from '../storage-service/storage.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,19 +12,48 @@ export class AuthService {
     return this._userIsAuthenticated;
   }
 
-  constructor() { }
+  constructor(private httpService: HttpService, private storageService: StorageService) { }
 
-  logIn(username: string, password: string) {
-    this._userIsAuthenticated = true;
+  async logIn(email: string, password: string): Promise<boolean> {
+    try {
+      let response = await this.httpService.post('users/login', {
+        email,
+        password
+      });
 
-    return this._userIsAuthenticated;
+      this._userIsAuthenticated = true;
+      await this.storageService.setOnStorage(response.token);
+      return true;
+      
+    } catch(error) {
+      this._userIsAuthenticated = false;
+      return false;
+    }
   }
 
-  logOut() {
+  async logOut(): Promise<void> {
+    await this.httpService.post('users/logout', {});
+
     this._userIsAuthenticated = false;
+    await this.storageService.clearStorage();
   }
 
-  signUp(name: string, surnames: string, email: string, username: string, password: string): boolean {
-    return true;
+  async signUp(username: string, email: string, password: string, age: number): Promise<boolean> {
+    try {
+      let response = await this.httpService.post('users', {
+        name: username,
+        email,
+        password,
+        age
+      });
+
+      this._userIsAuthenticated = true;
+      await this.storageService.setOnStorage(response.token);
+      return true;
+
+    } catch(error) {
+      this._userIsAuthenticated = false;
+      return false;
+    }
   }
 }

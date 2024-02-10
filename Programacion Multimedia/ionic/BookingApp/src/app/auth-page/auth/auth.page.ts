@@ -17,10 +17,11 @@ export class AuthPage implements OnInit {
   ngOnInit() {
   }
 
-  logInUser(username: string, password: string) {
-    if (username && password) {
+  async logInUser(email: string, password: string) {
+    if (email && password) {
       if (password.length >= 8) {
-        if (this.authService.logIn(username, password)) {
+        let isCorrect: boolean = await this.authService.logIn(email, password);
+        if (isCorrect) {
           this.error = false;
           this.errorText = "";
           this.router.navigateByUrl('/main/discover');
@@ -38,10 +39,10 @@ export class AuthPage implements OnInit {
     }
   }
 
-  signUpUser(name: string, surnames: string, email: string, username: string, password: string) {
-    if (name && surnames && email && username && password) {
+  async signUpUser(username: string, email: string, password: string, age: string) {
+    if (username && email && password && age) {
       if (password.length >= 8) {
-        if (this.authService.signUp(name, surnames, email, username, password)) {
+        if (await this.authService.signUp(username, email, password, parseInt(age))) {
           this.login = true;
         } else {
           this.error = true;
