@@ -6,13 +6,12 @@ import { StorageService } from '../storage-service/storage.service';
   providedIn: 'root'
 })
 export class AuthService {
-  private _userIsAuthenticated = false;
+  constructor(private httpService: HttpService, private storageService: StorageService) {
+   }
 
-  get userIsAuthenticated() {
-    return this._userIsAuthenticated;
-  }
-
-  constructor(private httpService: HttpService, private storageService: StorageService) { }
+   async getToken(): Promise<string | null> {
+    return await this.storageService.getFromStorage('token');
+   }
 
   async logIn(email: string, password: string): Promise<boolean> {
     try {
@@ -21,12 +20,10 @@ export class AuthService {
         password
       });
 
-      this._userIsAuthenticated = true;
-      await this.storageService.setOnStorage(response.token);
+      await this.storageService.setOnStorage('token', response.token);
       return true;
       
     } catch(error) {
-      this._userIsAuthenticated = false;
       return false;
     }
   }
@@ -34,8 +31,7 @@ export class AuthService {
   async logOut(): Promise<void> {
     await this.httpService.post('users/logout', {});
 
-    this._userIsAuthenticated = false;
-    await this.storageService.clearStorage();
+    await this.storageService.removeFromStorage('token');
   }
 
   async signUp(username: string, email: string, password: string, age: number): Promise<boolean> {
@@ -47,12 +43,10 @@ export class AuthService {
         age
       });
 
-      this._userIsAuthenticated = true;
-      await this.storageService.setOnStorage(response.token);
+      await this.storageService.setOnStorage('token', response.token);
       return true;
 
-    } catch(error) {
-      this._userIsAuthenticated = false;
+    } catch(error: any) {
       return false;
     }
   }

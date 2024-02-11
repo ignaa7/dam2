@@ -1,42 +1,28 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage-angular';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StorageService {
-  private _jwtToken: string | null;
-  private _subject: BehaviorSubject<string>;
 
   constructor(private storage: Storage) {
-    this._jwtToken = null;
-    this._subject = new BehaviorSubject<string>('');
-
-    this.getFromStorage();
+    this.createDatabase();
   }
 
-  get subject(): BehaviorSubject<string> {
-    return this._subject;
+  async createDatabase() {
+    await this.storage.create();
   }
 
-  async getFromStorage(): Promise<void> {
-    this._jwtToken = await this.storage.get('token');
-    
-    if (this._jwtToken) {
-      this.subject.next(this._jwtToken);
-    }
+  async getFromStorage(key: string): Promise<string | null> {
+    return (await this.storage.get(key));
   }
 
-  async setOnStorage(token: string): Promise<void> {
-    if (!this._jwtToken) {
-      this.storage.set('token', token);
-      this._jwtToken = token;
-      this.subject.next(this._jwtToken);
-    }
+  async setOnStorage(key: string, value: string): Promise<void> {
+      await this.storage.set(key, value);
   }
 
-  async clearStorage(): Promise<void> {
-    this.storage.clear();
+  async removeFromStorage(key: string): Promise<void> {
+    this.storage.remove(key);
   }
 }

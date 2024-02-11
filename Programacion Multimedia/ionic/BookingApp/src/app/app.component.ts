@@ -13,14 +13,7 @@ export class AppComponent {
   constructor(
     private authService: AuthService,
     private router: Router,
-    private storage: Storage,
-    private storageService: StorageService
   ) {
-  }
-
-  async ngOnInit() {
-    await this.storage.create();
-    await this.storageService.getFromStorage();
   }
 
   async onLogout() {

@@ -5,7 +5,7 @@ import { authGuard } from 'src/guards/auth-guard/auth.guard';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'main',
+    redirectTo: 'main/discover',
     pathMatch: 'full'
   },
   {
@@ -15,11 +15,12 @@ const routes: Routes = [
   },
   {
     path: 'auth',
-    loadChildren: () => import('./auth-page/auth/auth.module').then( m => m.AuthPageModule)
+    loadChildren: () => import('./auth-page/auth/auth.module').then( m => m.AuthPageModule),
   },
   {
     path: 'bookings',
-    loadChildren: () => import('./bookings-page/bookings/bookings.module').then( m => m.BookingsPageModule)
+    loadChildren: () => import('./bookings-page/bookings/bookings.module').then( m => m.BookingsPageModule),
+    canMatch: [authGuard],
   }
 
 

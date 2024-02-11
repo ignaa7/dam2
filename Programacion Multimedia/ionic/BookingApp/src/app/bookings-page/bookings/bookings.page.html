@@ -1,13 +1,15 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Title</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div id="menu">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Title</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</div>
 
-<ion-content [fullscreen]="true">
+<ion-content class="ion-padding">
   <ion-grid *ngIf="(observable | async).length > 0">
     <ion-row>
       <ion-col size="12" size-sm="8" offset-sm="2" class="ion-text-center">

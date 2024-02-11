@@ -1,14 +1,24 @@
 const express = require('express')
 const Place = require('../models/place')
+const User = require('../models/user')
+const auth = require('../middlewares/auth')
 const router = new express.Router()
 
-router.post('/users', async (req, res) => {
-    const user = new User(req.body)
-
+router.get('/places', async (req, res) => {
     try {
-        await user.save()
-        const token = await user.generateAuthToken()
-        res.status(201).send({ user, token })
+        res.send(await Place.find({}))
+    } catch (e) {
+        res.status(400).send(e)
+    }
+})
+
+router.post('/addPlace', async (req, res) => {
+    const user = await User.findOne({email: req.body.ownerEmail})
+    req.body.owner = user._id
+    const place = new Place(req.body)
+    try {
+        await place.save();
+        res.status(201).send({ place })
     } catch (e) {
         res.status(400).send(e)
     }

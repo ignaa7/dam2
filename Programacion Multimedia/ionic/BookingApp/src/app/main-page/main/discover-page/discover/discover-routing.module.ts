@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { DiscoverPage } from './discover.page';
+import { authGuard } from 'src/guards/auth-guard/auth.guard';
 
 const routes: Routes = [
   {
@@ -10,7 +11,8 @@ const routes: Routes = [
   },
   {
     path: ':placeId',
-    loadChildren: () => import('./place-details-page/place-details/place-details.module').then( m => m.PlaceDetailsPageModule)
+    loadChildren: () => import('./place-details-page/place-details/place-details.module').then( m => m.PlaceDetailsPageModule),
+    canMatch: [authGuard],
   }
 ];
 

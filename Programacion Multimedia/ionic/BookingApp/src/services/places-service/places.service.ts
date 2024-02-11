@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Place } from 'src/models/place/place';
+import { HttpService } from '../http-service/http.service';
+import { User } from 'src/models/user/user';
 
 @Injectable({
   providedIn: 'root'
@@ -12,29 +14,39 @@ export class PlacesService {
       'Manhattan Mansion',
       'In the heart of New York City.',
       'https://lonelyplanetimages.imgix.net/mastheads/GettyImages-538096543_medium.jpg?sharp=10&vib=20&w=1200',
-      149.99
+      149.99,
+      'laura@gmail.com'
     ),
     new Place(
       'p2',
       "L'Amour Toujours",
       'A romantic place in Paris!',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Paris_Night.jpg/1024px-Paris_Night.jpg',
-      189.99
+      189.99,
+      'laura@gmail.com'
     ),
     new Place(
       'p3',
       'The Foggy Palace',
       'Not your average city trip!',
       'https://upload.wikimedia.org/wikipedia/commons/0/01/San_Francisco_with_two_bridges_and_the_fog.jpg',
-      99.99
+      99.99,
+      'laura@gmail.com'
     )
   ];
 
   private _subject: BehaviorSubject<any[]>;
 
 
-  constructor() {
-    this._subject = new BehaviorSubject<any[]>(this.places);
+  constructor(private httpService: HttpService) {
+    this.loadPlaces();
+    this._subject = new BehaviorSubject<any[]>(this._places);
+  }
+
+  public async loadPlaces() : Promise<void> {
+    this._places = await this.httpService.get('places');
+    console.log(this._places)
+    this._subject.next(this._places);
   }
 
   getObservable() {

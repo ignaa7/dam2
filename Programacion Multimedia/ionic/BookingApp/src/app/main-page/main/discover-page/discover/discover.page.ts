@@ -13,6 +13,7 @@ export class DiscoverPage implements OnInit {
   constructor(
     private placesService: PlacesService,
   ) {
+    placesService.loadPlaces();
     this.observable = placesService.getObservable();
   }
 
