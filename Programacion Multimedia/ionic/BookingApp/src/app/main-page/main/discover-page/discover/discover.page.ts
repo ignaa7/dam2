@@ -19,4 +19,8 @@ export class DiscoverPage implements OnInit {
 
   ngOnInit() {
   }
+
+  ionViewWillEnter() {
+    this.placesService.filterPlaces('discover');
+  }
 }

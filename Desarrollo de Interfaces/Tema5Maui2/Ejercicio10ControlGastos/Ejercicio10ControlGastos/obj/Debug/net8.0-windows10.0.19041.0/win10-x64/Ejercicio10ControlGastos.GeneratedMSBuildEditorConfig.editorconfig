@@ -9,47 +9,47 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Ejercicio10ControlGastos
-build_property.ProjectDir = C:\Users\ignac\OneDrive\Escritorio\Ejercicio10ControlGastos\Ejercicio10ControlGastos\
+build_property.ProjectDir = C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio10ControlGastos\Ejercicio10ControlGastos\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[C:/Users/ignac/OneDrive/Escritorio/Ejercicio10ControlGastos/Ejercicio10ControlGastos/App.xaml]
+[C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema5Maui2/Ejercicio10ControlGastos/Ejercicio10ControlGastos/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Ejercicio10ControlGastos.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/ignac/OneDrive/Escritorio/Ejercicio10ControlGastos/Ejercicio10ControlGastos/AppShell.xaml]
+[C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema5Maui2/Ejercicio10ControlGastos/Ejercicio10ControlGastos/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Ejercicio10ControlGastos.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/ignac/OneDrive/Escritorio/Ejercicio10ControlGastos/Ejercicio10ControlGastos/MainPage.xaml]
+[C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema5Maui2/Ejercicio10ControlGastos/Ejercicio10ControlGastos/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Ejercicio10ControlGastos.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[C:/Users/ignac/OneDrive/Escritorio/Ejercicio10ControlGastos/Ejercicio10ControlGastos/MVVM/Views/AgregarTransaccionView.xaml]
+[C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema5Maui2/Ejercicio10ControlGastos/Ejercicio10ControlGastos/MVVM/Views/AgregarTransaccionView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Ejercicio10ControlGastos.MVVM.Views.AgregarTransaccionView.xaml
 build_metadata.AdditionalFiles.TargetPath = MVVM\Views\AgregarTransaccionView.xaml
 build_metadata.AdditionalFiles.RelativePath = MVVM\Views\AgregarTransaccionView.xaml
 
-[C:/Users/ignac/OneDrive/Escritorio/Ejercicio10ControlGastos/Ejercicio10ControlGastos/MVVM/Views/ControlGastosView.xaml]
+[C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema5Maui2/Ejercicio10ControlGastos/Ejercicio10ControlGastos/MVVM/Views/ControlGastosView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Ejercicio10ControlGastos.MVVM.Views.ControlGastosView.xaml
 build_metadata.AdditionalFiles.TargetPath = MVVM\Views\ControlGastosView.xaml
 build_metadata.AdditionalFiles.RelativePath = MVVM\Views\ControlGastosView.xaml
 
-[C:/Users/ignac/OneDrive/Escritorio/Ejercicio10ControlGastos/Ejercicio10ControlGastos/Resources/Styles/Colors.xaml]
+[C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema5Maui2/Ejercicio10ControlGastos/Ejercicio10ControlGastos/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Ejercicio10ControlGastos.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/ignac/OneDrive/Escritorio/Ejercicio10ControlGastos/Ejercicio10ControlGastos/Resources/Styles/Styles.xaml]
+[C:/Users/dam/Desktop/dam2/Desarrollo de Interfaces/Tema5Maui2/Ejercicio10ControlGastos/Ejercicio10ControlGastos/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Ejercicio10ControlGastos.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml

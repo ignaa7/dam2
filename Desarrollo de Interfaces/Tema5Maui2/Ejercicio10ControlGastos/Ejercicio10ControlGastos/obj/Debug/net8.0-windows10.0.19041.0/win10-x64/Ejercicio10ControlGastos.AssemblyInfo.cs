@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ejercicio10ControlGastos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+747d451528294a552fabb404dda656eb17612e59")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ejercicio10ControlGastos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ejercicio10ControlGastos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

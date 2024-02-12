@@ -9,8 +9,8 @@ export class AuthService {
   constructor(private httpService: HttpService, private storageService: StorageService) {
    }
 
-   async getToken(): Promise<string | null> {
-    return await this.storageService.getFromStorage('token');
+   async hasToken(): Promise<boolean> {
+    return await this.storageService.getFromStorage('token') ? true : false;
    }
 
   async logIn(email: string, password: string): Promise<boolean> {

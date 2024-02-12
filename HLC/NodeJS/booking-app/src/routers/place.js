@@ -12,9 +12,8 @@ router.get('/places', async (req, res) => {
     }
 })
 
-router.post('/addPlace', async (req, res) => {
-    const user = await User.findOne({email: req.body.ownerEmail})
-    req.body.owner = user._id
+router.post('/places/add', auth, async (req, res) => {
+    req.body.owner = req.user
     const place = new Place(req.body)
     try {
         await place.save();

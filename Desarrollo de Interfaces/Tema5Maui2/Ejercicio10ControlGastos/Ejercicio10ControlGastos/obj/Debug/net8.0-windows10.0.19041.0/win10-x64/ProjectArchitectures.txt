@@ -1,1 +1,1 @@
-C:\Users\ignac\OneDrive\Escritorio\Ejercicio10ControlGastos\Ejercicio10ControlGastos\Ejercicio10ControlGastos.csproj;x64
+C:\Users\dam\Desktop\dam2\Desarrollo de Interfaces\Tema5Maui2\Ejercicio10ControlGastos\Ejercicio10ControlGastos\Ejercicio10ControlGastos.csproj;x64

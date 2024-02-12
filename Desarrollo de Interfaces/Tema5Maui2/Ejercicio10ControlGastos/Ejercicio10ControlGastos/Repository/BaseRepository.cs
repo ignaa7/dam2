@@ -18,7 +18,7 @@ namespace Ejercicio10ControlGastos.Repository
         public BaseRepository()
         {
             connection = new SQLiteConnection(Constants.DatabasePath, Constants.Flags);
-            connection.CreateTable<T>();
+            connection.CreateTable<Transaccion>();
 
         }
         public void DeleteItem(T item)

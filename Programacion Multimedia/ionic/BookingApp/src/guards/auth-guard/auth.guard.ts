@@ -9,5 +9,5 @@ export const authGuard: CanMatchFn = async (
   const authService: AuthService = inject(AuthService);
   const router: Router = inject(Router);
 
-  return await authService.getToken() ? true : router.createUrlTree(['/auth']);
+  return await authService.hasToken() ? true : router.createUrlTree(['/auth']);
 };
