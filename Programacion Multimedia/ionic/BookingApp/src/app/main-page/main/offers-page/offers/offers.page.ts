@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { PlacesService } from 'src/services/places-service/places.service';
 
 @Component({
@@ -7,11 +8,16 @@ import { PlacesService } from 'src/services/places-service/places.service';
   styleUrls: ['./offers.page.scss'],
 })
 export class OffersPage implements OnInit {
-  offers!: any[];
+  observable: Observable<any>;
 
-  constructor(private placesService: PlacesService) { }
+  constructor(private placesService: PlacesService) {
+    this.observable = placesService.getObservable();
+  }
 
   ngOnInit() {
-    this.offers = this.placesService.places;
+  }
+
+  ionViewWillEnter() {
+    this.placesService.filterPlaces('offers');
   }
 }

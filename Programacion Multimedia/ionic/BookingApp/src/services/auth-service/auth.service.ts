@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpService } from '../http-service/http.service';
 import { StorageService } from '../storage-service/storage.service';
+import { UserHttpService } from '../user-http-service/user-http.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(private httpService: HttpService, private storageService: StorageService) {
+  constructor(private userHttpService: UserHttpService, private storageService: StorageService) {
    }
 
    async hasToken(): Promise<boolean> {
@@ -14,40 +14,27 @@ export class AuthService {
    }
 
   async logIn(email: string, password: string): Promise<boolean> {
-    try {
-      let response = await this.httpService.post('users/login', {
-        email,
-        password
-      });
+    let token = await this.userHttpService.logIn(email, password);
 
-      await this.storageService.setOnStorage('token', response.token);
+    if (token) {
+      await this.storageService.setOnStorage('token', token);
       return true;
-      
-    } catch(error) {
+    }
+    else {
       return false;
     }
+    
   }
 
   async logOut(): Promise<void> {
-    await this.httpService.post('users/logout', {});
+    let token = await this.storageService.getFromStorage('token');
 
-    await this.storageService.removeFromStorage('token');
+    if (await this.userHttpService.logOut(token!)) {
+      await this.storageService.removeFromStorage('token');
+    }
   }
 
   async signUp(username: string, email: string, password: string, age: number): Promise<boolean> {
-    try {
-      let response = await this.httpService.post('users', {
-        name: username,
-        email,
-        password,
-        age
-      });
-
-      await this.storageService.setOnStorage('token', response.token);
-      return true;
-
-    } catch(error: any) {
-      return false;
-    }
+    return await this.userHttpService.signUp(username, email, password, age);
   }
 }

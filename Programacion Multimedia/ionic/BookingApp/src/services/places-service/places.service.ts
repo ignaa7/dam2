@@ -1,31 +1,31 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Place } from 'src/models/place/place';
-import { HttpService } from '../http-service/http.service';
+import { PlaceHttpService } from '../place-http-service/place-http.service';
+import { StorageService } from '../storage-service/storage.service';
 import { User } from 'src/models/user/user';
+import { UserHttpService } from '../user-http-service/user-http.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PlacesService {
   private _places: Place[] = [];
+  private _filteredPlaces: Place[] = [];
   private _fakePlaces = [
     new Place(
-      'p1',
       'Manhattan Mansion',
       'In the heart of New York City.',
       'https://lonelyplanetimages.imgix.net/mastheads/GettyImages-538096543_medium.jpg?sharp=10&vib=20&w=1200',
       149.99
     ),
     new Place(
-      'p2',
       "L'Amour Toujours",
       'A romantic place in Paris!',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Paris_Night.jpg/1024px-Paris_Night.jpg',
       189.99
     ),
     new Place(
-      'p3',
       'The Foggy Palace',
       'Not your average city trip!',
       'https://upload.wikimedia.org/wikipedia/commons/0/01/San_Francisco_with_two_bridges_and_the_fog.jpg',
@@ -36,18 +36,17 @@ export class PlacesService {
   private _subject: BehaviorSubject<any[]>;
 
 
-  constructor(private httpService: HttpService) {
-    this._subject = new BehaviorSubject<any[]>(this._places);
+  constructor(private placeHttpService: PlaceHttpService, private userHttpService: UserHttpService, private storageService: StorageService) {
+    this._subject = new BehaviorSubject<any[]>(this._filteredPlaces);
   }
 
   public async loadPlaces() : Promise<void> {
-    this._places = await this.httpService.get('places');
-    console.log(this._places.length)
+    this._places = await this.placeHttpService.getPlaces();
+    
     if (this._places.length == 0) {
-      this._fakePlaces.forEach(async place => await this.httpService.post('places/add', place));
+      let token = await this.storageService.getFromStorage('token');
+      this._fakePlaces.forEach(async place => this.placeHttpService.addPlace(place, token!));
     }
-
-    this._subject.next(this._places);
   }
 
   getObservable() {
@@ -59,17 +58,22 @@ export class PlacesService {
   }
 
   public async filterPlaces(page: string): Promise<void> {
+    let token = await this.storageService.getFromStorage('token');
+    let user: any = await this.userHttpService.getMyUser(token!);
+    console.log(user)
+
     if (page === 'discover') {
-      this._places = this._places.filter(async place => place.owner !== (await this.httpService.get('users/me'))._id);
+      this._filteredPlaces = this._places.filter(async place => place.owner !== user._id);
     }
     else if (page === 'offers') {
-      this._places = this._places.filter(async place => place.owner === (await this.httpService.get('users/me'))._id);
+      this._filteredPlaces = this._places.filter(async place => place.owner === user._id);
     }
     else if (page === 'bookings') {
-      this._places = this._places.filter(async place => place.renter === (await this.httpService.get('users/me'))._id);
+      this._filteredPlaces = this._places.filter(async place => place.renter === user._id);
     }
 
-    this._subject.next(this._places);
+    console.log(this._filteredPlaces)
+    this._subject.next(this._filteredPlaces);
   }
 
   public getPlace(id: string) : any | undefined {

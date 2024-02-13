@@ -13,23 +13,29 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-grid>
+  <ion-grid *ngIf="(observable | async).length > 0">
     <ion-row>
       <ion-col size="12" size-sm="8" offset-sm="2">
         <ion-list>
           <ion-item
-            *ngFor="let offer of offers"
-            [routerLink]="['/', 'main', 'offers', offer['id']]"
+            *ngFor="let offer of observable | async"
+            [routerLink]="['/', 'main', 'offers', offer.id]"
           >
             <ion-thumbnail slot="start">
-              <ion-img [src]="offer['imageUrl']"></ion-img>
+              <ion-img [src]="offer.imageUrl"></ion-img>
             </ion-thumbnail>
             <ion-label>
-              <h1>{{ offer['title'] }}</h1>
+              <h1>{{ offer.title }}</h1>
             </ion-label>
           </ion-item>
         </ion-list>
       </ion-col>
     </ion-row>
   </ion-grid>
+
+  <div class="ion-text-center ion-padding">
+    <ion-label *ngIf="(observable | async).length == 0">
+      No hay ningún alojamiento disponible
+    </ion-label>
+  </div>
 </ion-content>
