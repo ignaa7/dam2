@@ -60,19 +60,17 @@ export class PlacesService {
   public async filterPlaces(page: string): Promise<void> {
     let token = await this.storageService.getFromStorage('token');
     let user: any = await this.userHttpService.getMyUser(token!);
-    console.log(user)
 
     if (page === 'discover') {
-      this._filteredPlaces = this._places.filter(async place => place.owner !== user._id);
+      this._filteredPlaces = this._places.filter(place => place.owner !== user._id);
     }
     else if (page === 'offers') {
-      this._filteredPlaces = this._places.filter(async place => place.owner === user._id);
+      this._filteredPlaces = this._places.filter(place => place.owner === user._id);
     }
     else if (page === 'bookings') {
-      this._filteredPlaces = this._places.filter(async place => place.renter === user._id);
+      this._filteredPlaces = this._places.filter(place => place.renter === user._id);
     }
 
-    console.log(this._filteredPlaces)
     this._subject.next(this._filteredPlaces);
   }
 

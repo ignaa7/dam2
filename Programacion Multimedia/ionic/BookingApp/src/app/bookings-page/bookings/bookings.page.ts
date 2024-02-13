@@ -19,4 +19,8 @@ export class BookingsPage implements OnInit {
   ngOnInit() {
   }
 
+  ionViewWillEnter() {
+    this.placesService.filterPlaces('bookings');
+  }
+
 }
