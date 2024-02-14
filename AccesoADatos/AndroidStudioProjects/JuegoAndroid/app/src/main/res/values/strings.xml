@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">JuegoAndroid</string>
+    <string name="btnPlayText">Jugar</string>
+    <string name="btnExitText">Salir</string>
 </resources>
