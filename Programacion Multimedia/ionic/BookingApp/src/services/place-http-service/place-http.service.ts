@@ -43,6 +43,24 @@ export class PlaceHttpService {
     }
   }
 
+  async editPlace(place: Place, token: string) : Promise<boolean> {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': token
+      })
+    };
+
+    try {
+      await this.httpService.patch('places/edit', header, place);
+
+      return true;
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
+  }
+
   async bookPlace(id: string, token: string) : Promise<boolean> {
     let header = {
       headers: new HttpHeaders({
@@ -56,7 +74,29 @@ export class PlaceHttpService {
     }
 
     try {
-      await this.httpService.post('places/book', header, data);
+      await this.httpService.patch('places/book', header, data);
+
+      return true;
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
+  }
+
+  async removeBooking(id: string, token: string) : Promise<boolean> {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': token
+      })
+    };
+
+    let data = {
+      id
+    }
+
+    try {
+      await this.httpService.patch('places/removeBooking', header, data);
 
       return true;
     } catch (error) {

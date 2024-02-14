@@ -10,7 +10,7 @@ const routes: Routes = [
     component: OfferDetailsPage
   },
   {
-    path: 'edit/:placeId',
+    path: ':placeId',
     loadChildren: () => import('./edit-offer-page/edit-offer/edit-offer.module').then( m => m.EditOfferPageModule),
     canMatch: [authGuard],
   }

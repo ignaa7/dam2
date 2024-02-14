@@ -67,6 +67,7 @@ export class PlacesService {
     }
 
     this._subject.next(this._filteredPlaces);
+
   }
 
   public async addPlace(title: string, description: string, imageUrl: string, price: number) : Promise<void> {
@@ -74,6 +75,15 @@ export class PlacesService {
     let place = new Place(title, description, imageUrl, price);
 
     await this.placeHttpService.addPlace(place, token!);
+    await this.loadPlaces();
+  }
+
+  public async editPlace(id: string, title: string, description: string, imageUrl: string, price: number) : Promise<void> {
+    let token = await this.storageService.getFromStorage('token');
+    let place = new Place(title, description, imageUrl, price);
+    place._id = id;
+
+    await this.placeHttpService.editPlace(place, token!);
     await this.loadPlaces();
   }
 
@@ -96,8 +106,13 @@ export class PlacesService {
     let token = await this.storageService.getFromStorage('token');
 
     await this.placeHttpService.bookPlace(id, token!);
-    this._places.forEach(place => console.log(place.renter))
     await this.loadPlaces();
-    this._places.forEach(place => console.log(place))
+  }
+
+  public async removeBooking(id: string) : Promise<void> {
+    let token = await this.storageService.getFromStorage('token');
+
+    await this.placeHttpService.removeBooking(id, token!);
+    await this.loadPlaces();
   }
 }
