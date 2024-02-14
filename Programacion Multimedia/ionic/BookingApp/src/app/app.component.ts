@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Storage } from '@ionic/storage-angular';
 import { AuthService } from 'src/services/auth-service/auth.service';
-import { StorageService } from 'src/services/storage-service/storage.service';
+import { defineCustomElements } from '@ionic/pwa-elements/loader';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +13,7 @@ export class AppComponent {
     private authService: AuthService,
     private router: Router,
   ) {
+    defineCustomElements(window);
   }
 
   async onLogout() {

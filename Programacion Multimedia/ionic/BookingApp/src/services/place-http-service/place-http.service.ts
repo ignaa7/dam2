@@ -42,4 +42,26 @@ export class PlaceHttpService {
       return false;
     }
   }
+
+  async bookPlace(id: string, token: string) : Promise<boolean> {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': token
+      })
+    };
+
+    let data = {
+      id
+    }
+
+    try {
+      await this.httpService.post('places/book', header, data);
+
+      return true;
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
+  }
 }

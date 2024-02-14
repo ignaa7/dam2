@@ -1,10 +1,10 @@
-<div id="menu">
+<div id="menu2">
   <ion-header>
     <ion-toolbar>
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title>Title</ion-title>
+      <ion-title>Your bookings</ion-title>
     </ion-toolbar>
   </ion-header>
 </div>
@@ -33,7 +33,7 @@
 
   <div class="ion-text-center ion-padding">
     <ion-label *ngIf="(observable | async).length === 0">
-      No hay ningún alojamiento disponible
+      No places found
     </ion-label>
   </div>
 </ion-content>

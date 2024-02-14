@@ -32,7 +32,7 @@
                 '/',
                 'main',
                 'discover',
-                (observable | async)[0].id
+                (observable | async)[0]._id
               ]"
             >
               More
@@ -46,7 +46,7 @@
         <ion-list>
           <ion-item
             *ngFor="let place of (observable | async).slice(1)"
-            [routerLink]="['/', 'main', 'discover', place.id]"
+            [routerLink]="['/', 'main', 'discover', place._id]"
             detail
           >
             <ion-thumbnail slot="start">
@@ -64,7 +64,7 @@
 
   <div class="ion-text-center ion-padding">
     <ion-label *ngIf="(observable | async).length === 0">
-      No hay ningún alojamiento disponible
+      No places found
     </ion-label>
   </div>
   

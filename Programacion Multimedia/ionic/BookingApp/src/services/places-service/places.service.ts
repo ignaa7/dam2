@@ -3,7 +3,6 @@ import { BehaviorSubject } from 'rxjs';
 import { Place } from 'src/models/place/place';
 import { PlaceHttpService } from '../place-http-service/place-http.service';
 import { StorageService } from '../storage-service/storage.service';
-import { User } from 'src/models/user/user';
 import { UserHttpService } from '../user-http-service/user-http.service';
 
 @Injectable({
@@ -53,16 +52,12 @@ export class PlacesService {
     return this._subject.asObservable();
   }
 
-  public get places() : any[] {
-    return this.getPlacesCopy(this._places);
-  }
-
   public async filterPlaces(page: string): Promise<void> {
     let token = await this.storageService.getFromStorage('token');
     let user: any = await this.userHttpService.getMyUser(token!);
 
     if (page === 'discover') {
-      this._filteredPlaces = this._places.filter(place => place.owner !== user._id);
+      this._filteredPlaces = this._places.filter(place => place.owner !== user._id && !place.renter);
     }
     else if (page === 'offers') {
       this._filteredPlaces = this._places.filter(place => place.owner === user._id);
@@ -74,11 +69,19 @@ export class PlacesService {
     this._subject.next(this._filteredPlaces);
   }
 
+  public async addPlace(title: string, description: string, imageUrl: string, price: number) : Promise<void> {
+    let token = await this.storageService.getFromStorage('token');
+    let place = new Place(title, description, imageUrl, price);
+
+    await this.placeHttpService.addPlace(place, token!);
+    await this.loadPlaces();
+  }
+
   public getPlace(id: string) : any | undefined {
-    let place: Place | undefined = this._places.find(place => place.id === id);
+    let place: Place | undefined = this._places.find(place => place._id === id);
     if (place) {
       return {
-        id: place.id,
+        _id: place._id,
         title: place.title,
         description: place.description,
         imageUrl: place.imageUrl,
@@ -89,18 +92,12 @@ export class PlacesService {
     return undefined;
   }
 
-  private getPlacesCopy(places : Place[]): Object[] {
-    let placesCopy : Object[] = [];
-    
-    places.forEach(place => {
-      placesCopy.push({
-        id: place.id,
-        title: place.title,
-        description: place.description,
-        imageUrl: place.imageUrl,
-        price: place.price
-      })
-    });
-    return placesCopy;
+  public async bookPlace(id: string) : Promise<void> {
+    let token = await this.storageService.getFromStorage('token');
+
+    await this.placeHttpService.bookPlace(id, token!);
+    this._places.forEach(place => console.log(place.renter))
+    await this.loadPlaces();
+    this._places.forEach(place => console.log(place))
   }
 }

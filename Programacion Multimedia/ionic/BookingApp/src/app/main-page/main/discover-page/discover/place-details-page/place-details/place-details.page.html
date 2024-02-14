@@ -12,4 +12,5 @@
   <p>{{place.description}}</p>
   <p>{{place.price | currency}}</p>
   <ion-button color="primary" margin (click)="onBookPlace()">Book</ion-button>
+  <ion-alert [isOpen]="isAlertOpen" (didDismiss)="setAlertOpen(false)" header="Booked!" message="Place booked correctly" [buttons]="alertButtons" />
 </ion-content>

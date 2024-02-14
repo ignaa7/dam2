@@ -7,4 +7,37 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding"> </ion-content>
+<ion-content class="ion-padding">
+  <div class="general">
+    <div class="wrapper">
+      <div class="container">
+        <form class="form">
+          <label for="title">Title:</label>
+          <input type="text" #title id="title" name="title" required>
+
+          <label for="description">Description:</label>
+          <input type="text" #description id="description" name="description" required>
+
+          <ion-card id="imageSelector">
+            <ion-card-content>
+              <ion-img *ngIf="imageUrl" [src]="imageUrl" alt="Place image"></ion-img>
+              <ion-text *ngIf="!imageUrl" color="medium">Pick an image</ion-text>
+            </ion-card-content>
+          </ion-card>
+
+          <ion-action-sheet trigger="imageSelector" header="Image selection" [buttons]="actionSheetButtons"></ion-action-sheet>
+
+          <label for="price">Price:</label>
+          <input type="price" #price id="price" name="price" required>
+
+          <div *ngIf="error">
+            <p class="error">{{errorText}}</p>
+          </div>
+
+          <button type="button"
+            (click)="addOffer(title.value, description.value, price.value)">Add offer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</ion-content>

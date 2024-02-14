@@ -27,15 +27,15 @@ export class AuthPage implements OnInit {
           this.router.navigateByUrl('/main/discover');
         } else {
           this.error = true;
-          this.errorText = "Usuario o contraseña incorrectos";
+          this.errorText = "Invalid email or password";
         }
       } else {
         this.error = true;
-        this.errorText = "Introduzca una contraseña de 8 caracteres como mínimo";
+        this.errorText = "Your password must be at least 8 characters long";
       }
     } else {
       this.error = true;
-      this.errorText = "Rellene todos los campos";
+      this.errorText = "Please fill in all fields";
     }
   }
 
@@ -43,18 +43,20 @@ export class AuthPage implements OnInit {
     if (username && email && password && age) {
       if (password.length >= 8) {
         if (await this.authService.signUp(username, email, password, parseInt(age))) {
+          this.error = false;
+          this.errorText = "";
           this.login = true;
         } else {
           this.error = true;
-          this.errorText = "Este usuario ya existe";
+          this.errorText = "This user already exists";
         }
       } else {
         this.error = true;
-        this.errorText = "Introduzca una contraseña de 8 caracteres como mínimo";
+        this.errorText = "Your password must be at least 8 characters long";
       }
     } else {
       this.error = true;
-      this.errorText = "Rellene todos los campos";
+      this.errorText = "Please fill in all fields";
     }
   }
 

@@ -1,5 +1,5 @@
 export class Place {
-  public id: string | undefined;
+  public _id: string | undefined;
   public owner: string | undefined;
   public renter: string | undefined;
 
