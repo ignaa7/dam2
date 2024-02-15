@@ -1,4 +1,5 @@
 ﻿using Ejercicio10ControlGastos.Abstraction;
+using Ejercicio10ControlGastos.MVVM.Models;
 using SQLite;
 using SQLiteNetExtensions.Extensions;
 using System;
