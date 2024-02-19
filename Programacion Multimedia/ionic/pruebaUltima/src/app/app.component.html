@@ -1,0 +1,39 @@
+<ion-app>
+  <ion-menu side="start" contentId="menu">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>
+          PairBnB
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+  
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item lines="none" routerLink="/home/child">
+            <ion-icon name="business" slot="start"></ion-icon>
+            <ion-label>Discover Places</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item lines="none" routerLink="/child2">
+            <ion-icon name="business" slot="start"></ion-icon>
+            <ion-label>Offers</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="menu"></ion-router-outlet>
+  <ion-tabs>
+    <ion-tab-bar>
+      <ion-tab-button tab="home/child">
+        <ion-label>Primera página</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="child2">
+        <ion-label>Segunda página</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-app>

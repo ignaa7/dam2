@@ -1,0 +1,7 @@
+{
+  "name": "pruebaUltima",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
