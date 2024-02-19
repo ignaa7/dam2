@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExamenIgnacio2.MVVM.Views.ContactosView">
+    <ContentPage Title="Favoritos" x:Name="ThisPage">
+        <ScrollView>
+            <VerticalStackLayout>
+                <CollectionView ItemsSource="{Binding ContactosFavoritos}" SelectedItem="{Binding ContactoActual}" SelectionMode="Single" SelectionChanged="CollectionView_SelectionChanged" >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <HorizontalStackLayout HeightRequest="50" Spacing="30" VerticalOptions="Center">
+                                <Image Source="dotnet_bot.png" />
+                                <Label Text="{Binding Nombre}" VerticalOptions="Center" />
+                                <Button Text="Ver detalles" Command="{Binding VerDetalles}" />
+                            </HorizontalStackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <ContentPage Title="Contactos">
+        <ScrollView>
+            <VerticalStackLayout>
+                <Button Text="+" Command="{Binding IrAgregarContactoView}" CommandParameter="{x:Reference ThisPage}" HorizontalOptions="End" />
+                <CollectionView ItemsSource="{Binding Contactos}" SelectedItem="{Binding ContactoActual}" SelectionMode="Single" SelectionChanged="CollectionView_SelectionChanged" >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <HorizontalStackLayout HeightRequest="50" Spacing="30" VerticalOptions="Center">
+                                <Image Source="dotnet_bot.png" />
+                                <Label Text="{Binding Nombre}" VerticalOptions="Center" />
+                                <Button Text="Ver detalles" Command="{Binding VerDetalles}" />
+                            </HorizontalStackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+</TabbedPage>
