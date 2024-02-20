@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>shoppingCart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let product in async | observable">
+      <ion-button onclick="modifyProductQuantity('-')">-</ion-button>
+      <ion-label>{{product.name}}</ion-label>
+      <ion-button onclick="modifyProductQuantity({$product}, '+')">+</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-button onclick="buyProducts()">Buy products</ion-button>
+
+  <ion-alert
+  trigger="present-alert"
+  header="Buy products"
+  message="Do you really want to buy all the selected products?"
+  [buttons]="alertButtons"
+></ion-alert>
+</ion-content>
