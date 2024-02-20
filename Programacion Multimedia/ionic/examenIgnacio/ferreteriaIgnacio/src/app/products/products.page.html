@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>products</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let product in async | observable">
+      <ion-label>{{product.name}}</ion-label>
+      <ion-button onclick="addToShoppingCart({$product})">Add to shopping cart</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
