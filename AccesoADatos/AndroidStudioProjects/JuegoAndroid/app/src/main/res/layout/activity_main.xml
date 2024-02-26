@@ -4,18 +4,5 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/menu_background"
-    tools:context=".MenuScreen">
-
-    <Button
-        android:id="@+id/btnPlay"
-        android:layout_width="79dp"
-        android:layout_height="41dp"
-        android:onClick="goToGameScreen"
-        android:text="@string/btnPlayText"
-        android:textSize="11sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="234dp" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:background="@drawable/main_background"
+    tools:context=".MainActivity"/>

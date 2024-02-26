@@ -15,7 +15,7 @@ import com.example.juegoandroid.threads.GameThread;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SurfaceView extends android.view.SurfaceView implements SurfaceHolder.Callback {
+public class GameSurfaceView extends android.view.SurfaceView implements SurfaceHolder.Callback {
     private GameThread gameThread;
     //private Sprite spriteBread;
     //private Sprite spriteBurguer;
@@ -26,7 +26,7 @@ public class SurfaceView extends android.view.SurfaceView implements SurfaceHold
     private Bitmap bitmapSangre;
 
 
-    public SurfaceView(Context context) {
+    public GameSurfaceView(Context context) {
         super(context);
         setBackgroundColor(Color.BLACK);
         getHolder().addCallback(this);

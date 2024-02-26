@@ -3,17 +3,17 @@ package com.example.juegoandroid.threads;
 import android.graphics.Canvas;
 import android.view.SurfaceHolder;
 
-import com.example.juegoandroid.surfaceViews.GameSurfaceView;
+import com.example.juegoandroid.surfaceViews.MainSurfaceView;
 
-public class GameThread extends Thread {
+public class MainActivityThread extends Thread {
     static final long FPS = 10;
     private SurfaceHolder surfaceHolder;
-    private GameSurfaceView gameSurfaceView;
+    private MainSurfaceView mainSurfaceView;
     private boolean run;
 
-    public GameThread(SurfaceHolder surfaceHolder, GameSurfaceView gameSurfaceView) {
+    public MainActivityThread(SurfaceHolder surfaceHolder, MainSurfaceView mainSurfaceView) {
         this.surfaceHolder = surfaceHolder;
-        this.gameSurfaceView = gameSurfaceView;
+        this.mainSurfaceView = mainSurfaceView;
         run = false;
     }
 
@@ -37,7 +37,7 @@ public class GameThread extends Thread {
 
                 if (canvas != null) {
                     synchronized (surfaceHolder) {
-                        gameSurfaceView.postInvalidate();
+                        mainSurfaceView.postInvalidate();
                     }
                 }
 
