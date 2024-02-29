@@ -190,7 +190,7 @@ public class GameSurfaceView extends android.view.SurfaceView implements Surface
                     if (burguerBox.isTouched(touchedX, touchedY)) {
                         boolean found = false;
 
-                        for (int key = 0; key < 4 && !found; key++) {
+                        for (int key = 0; key < grills.size() && !found; key++) {
                             if (!burguerMeats.containsKey(key)) {
                                 if (burguerMeats.isEmpty()) {
                                     grillSound.start();
