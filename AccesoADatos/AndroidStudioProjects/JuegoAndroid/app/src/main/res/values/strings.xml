@@ -1,4 +1,20 @@
 <resources>
-    <string name="app_name">JuegoAndroid</string>
+    <string name="app_name">Rápido y jugoso</string>
     <string name="btnPlayText">Jugar</string>
+    <string name="btnExitText">Salir</string>
+    <string name="btnSettingsText">Ajustes</string>
+    <string name="btnStoreText">Tienda</string>
+    <string name="btnScoreText">Puntos</string>
+    <string name="bestScoreText">Mejor puntuación:</string>
+    <string name="yourBestScoreText">Tu mejor puntuación:</string>
+    <string name="btnLogInText">Iniciar sesión</string>
+    <string name="btnBackText">Volver</string>
+    <string name="txtUsernameText">Nombre de usuario:</string>
+    <string name="edtUsernameHint">Nombre de usuario</string>
+    <string name="btnConfirmText">Confirmar</string>
+    <string name="txtDifficultyText">Dificultad</string>
+    <string name="rbHardText">Difícil (hamburguesas quemadas en 1s)</string>
+    <string name="rbMediumText">Media (hamburguesas quemadas en 3s)</string>
+    <string name="rbEasyText">Fácil (hamburguesas quemadas en 5s)</string>
+    <string name="txtStoreText">Mejoras</string>
 </resources>

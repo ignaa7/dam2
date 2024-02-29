@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_background"
+    tools:context=".MenuScreen">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPlay"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="188dp"
+        android:layout_height="67dp"
+        android:onClick="goToGameScreen"
+        android:text="@string/btnPlayText"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:backgroundTint="#FF9800"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#FF5722" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnScore"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="188dp"
+        android:layout_height="67dp"
+        android:onClick="goToScoreScreen"
+        android:text="@string/btnScoreText"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:backgroundTint="#FF9800"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline1"
+        app:rippleColor="#FF5722" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStore"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="188dp"
+        android:layout_height="67dp"
+        android:onClick="goToStoreScreen"
+        android:text="@string/btnStoreText"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:backgroundTint="#FF9800"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2"
+        app:rippleColor="#FF5722" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSettings"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="188dp"
+        android:layout_height="67dp"
+        android:onClick="goToSettingsScreen"
+        android:text="@string/btnSettingsText"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:backgroundTint="#FF9800"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline3"
+        app:rippleColor="#FF5722" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnExit"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="188dp"
+        android:layout_height="67dp"
+        android:onClick="exit"
+        android:text="@string/btnExitText"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:backgroundTint="#FF9800"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline4"
+        app:rippleColor="#FF5722" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

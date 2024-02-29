@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.RectF;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.MotionEvent;
@@ -16,6 +17,7 @@ import android.view.SurfaceView;
 import androidx.annotation.NonNull;
 
 import com.example.juegoandroid.GameScreen;
+import com.example.juegoandroid.MenuScreen;
 import com.example.juegoandroid.R;
 import com.example.juegoandroid.threads.MainActivityThread;
 
@@ -27,6 +29,8 @@ public class MainSurfaceView extends SurfaceView implements SurfaceHolder.Callba
     private Bitmap backgroundImage;
     private Paint paint;
     private String messageText;
+    private int textAlpha;
+    private int textAlphaVariation = 20;
 
     public MainSurfaceView(Context context) {
         super(context);
@@ -39,19 +43,39 @@ public class MainSurfaceView extends SurfaceView implements SurfaceHolder.Callba
         super.onDraw(canvas);
 
         if (backgroundImage != null) {
-            canvas.drawBitmap(backgroundImage, 0, 0, null);
+            float scaleWidth = (float) getWidth() / backgroundImage.getWidth();
+            float scaleHeight = (float) getHeight() / backgroundImage.getHeight();
+
+            float scaleFactor = Math.min(scaleWidth, scaleHeight);
+
+            float newWidth = backgroundImage.getWidth() * scaleFactor;
+            float newHeight = backgroundImage.getHeight() * scaleFactor;
+
+            float x = (getWidth() - newWidth) / 2;
+            float y = (getHeight() - newHeight) / 2;
+
+            canvas.drawBitmap(backgroundImage, null, new RectF(x, y, x + newWidth, y + newHeight), null);
         }
 
         float textWidth = paint.measureText(messageText);
         float x = (canvas.getWidth() - textWidth) / 2;
         float y = (canvas.getHeight() / 2) - ((paint.descent() + paint.ascent()) / 2);
+
+        paint.setColor(Color.argb(textAlpha, Color.red(paint.getColor()), Color.green(paint.getColor()), Color.blue(paint.getColor())));
+
+        if (textAlpha + textAlphaVariation > 255 || textAlpha + textAlphaVariation < 0) {
+            textAlphaVariation *= -1;
+        }
+
+        textAlpha += textAlphaVariation;
+
         canvas.drawText(messageText, x, y, paint);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
-            getContext().startActivity(new Intent(getContext(), GameScreen.class));
+            getContext().startActivity(new Intent(getContext(), MenuScreen.class));
             return true;
         }
         return super.onTouchEvent(event);
@@ -94,7 +118,6 @@ public class MainSurfaceView extends SurfaceView implements SurfaceHolder.Callba
 
     private void showMessageAfterTime() {
         ExecutorService executor = Executors.newSingleThreadExecutor();
-        Handler handler = new Handler(Looper.getMainLooper());
 
         executor.execute(() -> {
             try {
@@ -106,6 +129,7 @@ public class MainSurfaceView extends SurfaceView implements SurfaceHolder.Callba
                 throw new RuntimeException(e);
             }
 
+            textAlpha = 0;
             messageText = "Pulse para continuar...";
         });
     }
